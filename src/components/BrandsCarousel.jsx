@@ -1,114 +1,284 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import styled, { createGlobalStyle } from "styled-components";
-// import { brands, bgColors } from "../db";
-import { Container } from "./Layout";
-import { H1Animate } from "./Typography";
+import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
+import { brands, bgColors } from "../db";
+
+/* ---------------- GLOBAL STYLE ---------------- */
 
 const GlobalStyle = createGlobalStyle`
   * {
     box-sizing: border-box;
   }
-
   body {
     margin: 0;
     font-family: sans-serif;
   }
 `;
 
+/* ---------------- LAYOUT ---------------- */
+
 const Main = styled.main``;
 
 const HorizontalSection = styled.section`
-    position: relative;
-    width: 100%;
-    min-height: 100vh;
+  position: relative;
+  width: 99vw;
+  min-height: 480px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (max-width: 576px) {
+    width: 100vw;
+    min-height: 320px;
+  }
 `;
 
 const BumperSection = styled.section`
-    text-align: center;
-    padding: 12px 16px;
-    background-color: #0000;
+  text-align: center;
+  padding: 12px 16px;
 `;
 
-const CardsContainer = styled.div`
-    position: relative;
-    height: 90%;
-    padding: 0 0 0 150px;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+/* ---------------- HEADER ---------------- */
+
+const HeaderSection = styled.div`
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 24px 56px;
+
+  @media (max-width: 768px) {
+    padding: 48px 16px 40px;
+  }
 `;
 
-const SampleCard = styled.div`
-    position: relative;
-    height: 300px;
-    width: 500px;
-    background-color: #111f30;
-    margin-right: 75px;
-    flex-shrink: 0;
+const HeaderTitle = styled.h1`
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+
+  @media (max-width: 768px) {
+    font-size: 1.8rem;
+    
+  }
 `;
 
-// const SampleCards = React.memo(() =>
-//     Array(5)
-//         .fill(0)
-//         .map((_e, i) => <SampleCard key={`sampleCard-${i}`} />)
-// );
+const HeaderSubtitle = styled.p`
 
-const SampleCards = ({ item, handler }) => {
+  margin-bottom: 30px;
+`;
+
+const KnowMoreButton = styled.button`
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+  padding: 12px 30px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: #ffffff;
+    color: #000000;
+  }
+
+  @media (max-width: 768px) {
+    padding: 5px !important;
+    font-size: 0.9rem;
+  }
+`;
+
+
+
+/* ---------------- SLICK ARROWS ---------------- */
+
+const Arrow = styled.div`
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  color: #000000;
+  border-radius: 999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 10;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+
+  /* Apply hover only on devices that support hover */
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+`;
+
+
+const PrevArrow = (props) => {
+    const { onClick } = props;
     return (
-        <div className="group backdrop-blur-lg backdrop-brightness-0 backdrop-contrast-0 backdrop-grayscale-0 backdrop-hue-rotate-0 backdrop-invert-0 backdrop-opacity-0 backdrop-saturate-0 backdrop-sepia-0 relative flex flex-col mt-6 text-gray-300 border-2 border-gray-800 overflow-hidden bg-[#110f0f] rounded-[20px] w-[350px] ">
-            {/* <div className="absolute bg-gray-900 inset-0 h-48 rounded-b-full group-hover:h-full group-hover:rounded-none transition-all duration-200" />
-            <div className="absolute bg-green-700 inset-0 h-0 rounded-b-full group-hover:h-48 group-hover:rounded-b-full transition-all duration-200" /> */}
-            <div
-                className={`absolute bottom-0 h-60 w-full rounded-t-full blur-2xl z-40`}
-                style={{ background: bgColors[item?.id - 1] }}
-            />
-            <div className="p-6 z-50">
-                <h5 className="cursive-regular mb-2 font-sans text-2xl antialiased !font-bold leading-snug tracking-normal text-yellow-500">
-                    {item?.label}
-                </h5>
-                <p className="whitespace-pre-wrap pt-3">
-                    {item?.desc.substring(0, 100) +
-                        (item?.desc.length > 100 ? "..." : "")}
-                </p>
-            </div>
-            <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 absolute bottom-0 p-6 pt-0 z-[100]">
-                <button
-                    onClick={handler}
-                    className="align-middle select-none font-sans font-bold text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none text-xs py-3 px-6 rounded-lg bg-gray-900 text-white shadow-md shadow-gray-900/10 hover:shadow-lg hover:shadow-gray-900/20 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none"
-                    type="button">
-                    Know More
-                </button>
-            </div>
-            <div className="z-50">
-                <div className="size-80 mx-auto px-4 py-10">
-                    <img
-                        src={item?.image}
-                        alt="card-image"
-                        className="size-full"
-                    />
-                </div>
-            </div>
-        </div >
+        <Arrow
+            style={{ position: "absolute", top: "50%" }}
+            onClick={onClick}
+            className="cursor-pointer left-1 lg:left-4"
+        >
+            <FaChevronLeft />
+        </Arrow>
     );
 };
-export default function BrandsCarousel() {
-    const navigate = useNavigate()
-    return (
-        <div className="text-center pt-32 bg-gray-70">
-            <H1Animate className="w-1/2 mx-auto text-center">
-                From Amma's Kitchen
-                {/* Bringing Amma's <br /> */}
-                {/* <span className="flex justify-center gap-5">
-                    <p>Kitchen to</p>
-                    <p className="text-primary">Every Home</p>
-                </span> */}
-            </H1Animate>
 
-            {/* <Container className="abs olute w-full h-[300px] "></Container> */}
+const NextArrow = (props) => {
+    const { onClick } = props;
+    return (
+        <Arrow
+            style={{ position: "absolute", top: "50%" }}
+            onClick={onClick}
+            className="cursor-pointer right-0 lg:right-4"
+        >
+            <FaChevronRight />
+        </Arrow>
+    );
+};
+
+/* ---------------- CARD ---------------- */
+
+const SampleCard = ({ item, handler }) => {
+  return (
+    <div className="px-5">
+      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-[340px] h-[360px] lg:h-[460px] text-gray-300 overflow-hidden mx-auto transition-all duration-500">
+
+        {/* Glow Background */}
+        <div
+          className="absolute bottom-0 h-0 w-full rounded-t-full blur-2xl transition-all duration-500 group-hover:h-48"
+          style={{ background: bgColors[item?.id - 1] }}
+        />
+
+        {/* Content */}
+        <div className="pt-6 z-10 text-center px-6">
+          <h5 className="font-bricolageBold text-2xl font-bold text-white">
+            {item?.label}
+          </h5>
+
+          <p className="pt-3">
+            {item?.desc.substring(0, 100)}...
+          </p>
+        </div>
+
+        {/* Button */}
+        <div className="z-10 flex flex-col items-center pt-6">
+          <button
+            onClick={handler}
+            className="
+            text-xs py-3 px-6 rounded-lg
+            border-2 border-white
+            font-bold uppercase
+            transition-all duration-300
+            bg-transparent text-white
+            group-hover:bg-[#f2b44c]
+                        group-hover:border-none
+            group-hover:text-black
+            "
+          >
+            View Menu
+          </button>
+        </div>
+
+        {/* Image */}
+        <div className="mt-auto pb-6 z-10 flex justify-center px-4">
+          <img
+            src={item?.image}
+            alt="card"
+            className="w-full max-h-[240px] object-contain transition-transform duration-500 group-hover:-rotate-[10deg]"
+          />
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+/* ---------------- MAIN COMPONENT ---------------- */
+
+export default function BrandsCarousel() {
+    const navigate = useNavigate();
+
+    const settings = {
+        infinite: false,
+        speed: 600,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: { slidesToShow: 2 }
+            },
+            {
+                breakpoint: 768,
+                settings: { slidesToShow: 1 }
+            }
+        ]
+    };
+
+    return (
+        <div className="bg-black text-center">
             <GlobalStyle />
-            
+
+            <div className="max-w-6xl mx-auto rounded-xl">
+                <HeaderSection>
+                    <HeaderTitle className="font-bricolageBold">
+                      24+ Brands Power
+                    </HeaderTitle>
+
+                    <HeaderSubtitle className="!text-white text-2xl ">
+Multiple brands. One kitchen. One investment
+                    </HeaderSubtitle>
+
+                    {/* <div
+                        style={{
+                            display: "flex",
+                            gap: "16px",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                        <KnowMoreButton onClick={() => navigate("/franchise")}>
+                            Become A Franchise Partner
+                        </KnowMoreButton>
+
+                        <KnowMoreButton
+                            onClick={() => {
+                                window.location.href = "tel:+919099237617";
+                            }}
+                        >
+                            Talk to Our Team
+                        </KnowMoreButton>
+                    </div> */}
+
+
+                </HeaderSection>
+
+                <Main>
+                    <HorizontalSection>
+                        <Slider {...settings}>
+                            {brands?.map((item, i) => {
+                                return (
+                                    <React.Fragment key={i}>
+                                        <SampleCard item={item} handler={() => navigate(`brands/${item?.slug}`, { state: { slug: item?.slug } })} />
+                                    </React.Fragment>
+                                );
+                            })}
+                        </Slider>
+                    </HorizontalSection>
+                </Main>
+
+                <BumperSection />
+            </div>
         </div>
     );
 }

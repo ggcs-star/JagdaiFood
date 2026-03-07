@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { CheckCircle } from "lucide-react";
-import bag from '../../../../assets/home/capital/bag.png'
+import CapitalGuarantee from "./MyJagdaiFoods";
 
 /* Rotating stacked badge */
 function StackedBadge({ texts, color }) {
@@ -180,41 +180,7 @@ export default function HowYouEarn() {
         </div>
 
         {/* Capital Guarantee Section */}
-   <div className="bg-gradient-to-r from-green-400 to-yellow-400 rounded-2xl overflow-hidden p-10">
-  
-  <div className="grid md:grid-cols-2 gap-10 items-center">
-
-    {/* Left */}
-    <div className="text-black flex flex-col justify-center">
-      <h3 className="font-bricolageBold text-3xl md:text-4xl font-bold mb-6">
-        Capital <br /> Guarantee
-      </h3>
-
-      <img
-        src={bag}
-        alt="capital"
-        className="w-40"
-      />
-    </div>
-
-    {/* Right */}
-    <div className="space-y-4">
-
-      {capitalPoints.map((point, i) => (
-        <div
-          key={i}
-          className="bg-white/50 backdrop-blur rounded-lg px-5 py-3 text-black flex items-center gap-3 shadow-sm"
-        >
-          <CheckCircle size={18} />
-          {point}
-        </div>
-      ))}
-
-    </div>
-
-  </div>
-
-</div>
+<CapitalGuarantee/>
 
       </div>
     </section>

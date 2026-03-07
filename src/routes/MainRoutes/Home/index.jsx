@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "./components/HeroSection";
 import MyJagdaiFoods from "./components/MyJagdaiFoods";
 import HowYouEarn from "./components/HowYouEarn";
+import SystemDriven from "./components/SystemDriven";
+import FranchiseModels from "./components/FranchiseModels";
+import AdditionalFranchiseModels from "./components/AdditionalFranchiseModels";
+import WhyMultiFormatModel from "./components/WhyMultiFormatModel.JSX";
+import FranchiseCTA from "./components/FranchiseCTA";
+import JagodsAppSection from "./components/JagodsAppSection";
+import BrandsCarousel from "../../../components/BrandsCarousel";
 
 
 export default function Home() {
@@ -40,9 +47,15 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
-      <MyJagdaiFoods/>
-      <HowYouEarn/>
-   
+      {/* <MyJagdaiFoods /> */}
+      <HowYouEarn />
+      <BrandsCarousel/>
+      <SystemDriven />
+      <FranchiseModels/>
+      <AdditionalFranchiseModels/>
+      <WhyMultiFormatModel/>
+      <FranchiseCTA/>
+      <JagodsAppSection/>
 
       {scrollPercentage > 0 && (
         <div
