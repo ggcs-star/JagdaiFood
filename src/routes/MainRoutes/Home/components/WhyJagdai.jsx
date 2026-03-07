@@ -1,32 +1,31 @@
 import React from "react";
 import { Check } from "lucide-react";
 import { Container } from "../../../../components/Layout";
-import multiformat from '../../../../assets/home/franchise/multiformat.png'; // replace with your image
+import modelImage from "../../../../assets/home/model/franchise.png"; // replace with your image
 
-export default function WhyMultiFormatModel() {
+export default function WhyJagdai() {
 
   const points = [
-    "24+ Brands Under One Investment",
-    "Centralized Kitchen = Reduced Wastage + Uniform Taste",
-    "Standardized SOP Framework",
-    "Full Training & Continuous Support",
-    "Manpower Assistance",
-    "50–55% Margin Structure",
-    "Royalty-Based Additional Revenue Channels",
+    "24+ in-house food brands",
+    "10,000+ sq.ft centralized master cloud kitchen",
+    "Centralized production system",
+    "Technology-driven operations and delivery",
+    "Structured FOFO & FOCO models",
+    "Capital guarantee provisions (as per agreement terms)"
   ];
 
   return (
-    <section className="bg-black text-white py-8">
+    <section className="bg-black text-white py-16">
       <Container>
 
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="font-bricolageBold text-3xl md:text-4xl mb-4">
-            Why This Multi-Format Model Works
+            Why Jagdai Foods is Different?
           </h2>
 
-          <p className="text-gray-400">
-            Unlike traditional single-brand franchises, Jagdai Foods offers:
+          <p className="text-gray-400 text-lg">
+            A smarter way to own food business
           </p>
         </div>
 
@@ -34,16 +33,15 @@ export default function WhyMultiFormatModel() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Media */}
-          <div className="w-full h-[320px] rounded-2xl bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] overflow-hidden">
+          <div className="w-full h-[360px] md:h-[420px] rounded-2xl bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] overflow-hidden">
 
             <img
-              src={multiformat}
-              alt="model"
+              src={modelImage}
+              alt="Jagdai business ecosystem"
               className="w-full h-full object-cover"
             />
 
           </div>
-
 
           {/* Right Points */}
           <div>
@@ -67,18 +65,6 @@ export default function WhyMultiFormatModel() {
               ))}
 
             </ul>
-
-            {/* Bottom Text */}
-            <div className="mt-8 space-y-3 text-white">
-
-              <p>This is not just a food franchise.</p>
-
-              <p>
-                It is a structured ecosystem designed for scalable and
-                sustainable returns.
-              </p>
-
-            </div>
 
           </div>
 

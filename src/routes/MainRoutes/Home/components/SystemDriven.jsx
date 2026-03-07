@@ -57,7 +57,7 @@ export default function SystemDriven() {
   ];
 
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-8">
       <Container>
 
         {/* Heading */}

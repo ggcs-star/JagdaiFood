@@ -3,7 +3,7 @@ import { Container } from "../../../../components/Layout";
 
 export default function FranchiseCTA() {
   return (
-    <section className="bg-black py-20">
+    <section className="bg-black py-8">
       <Container>
 
         {/* CTA Card */}

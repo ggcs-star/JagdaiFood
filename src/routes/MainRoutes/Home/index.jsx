@@ -9,6 +9,7 @@ import WhyMultiFormatModel from "./components/WhyMultiFormatModel.JSX";
 import FranchiseCTA from "./components/FranchiseCTA";
 import JagodsAppSection from "./components/JagodsAppSection";
 import BrandsCarousel from "../../../components/BrandsCarousel";
+import WhyJagdai from "./components/WhyJagdai";
 
 
 export default function Home() {
@@ -48,6 +49,7 @@ export default function Home() {
     <div className="">
       <HeroSection />
       {/* <MyJagdaiFoods /> */}
+      <WhyJagdai/>
       <HowYouEarn />
       <BrandsCarousel/>
       <SystemDriven />
@@ -57,7 +59,7 @@ export default function Home() {
       <FranchiseCTA/>
       <JagodsAppSection/>
 
-      {scrollPercentage > 0 && (
+      {/* {scrollPercentage > 0 && (
         <div
           className="back-to-top right-aligned primary-color scroll-position-style active"
           onClick={scrollToTop}
@@ -114,7 +116,7 @@ export default function Home() {
             />
           </svg>
         </div>
-      )}
+      )} */}
 
     </div>
   );

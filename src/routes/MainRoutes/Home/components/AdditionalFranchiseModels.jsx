@@ -2,8 +2,8 @@ import React from "react";
 import { Check } from "lucide-react";
 import { Container } from "../../../../components/Layout";
 
-// import cloudKitchenImg from "../../../../assets/home/franchise/cloud-kitchen.png";
-// import territoryImg from "../../../../assets/home/franchise/territory.png";
+import cloudkitchen from "../../../../assets/home/franchise/cloudkitchen.png";
+import master from "../../../../assets/home/franchise/master.png";
 
 export default function AdditionalFranchiseModels() {
 
@@ -72,20 +72,20 @@ export default function AdditionalFranchiseModels() {
             </div>
 
             {/* Image */}
-            <div className="mt-10">
+            <div className="mt-10 h-72">
               <img
-                src={''}
+                src={cloudkitchen}
                 alt="cloud kitchen"
-                className="w-full object-contain"
+                className="w-full object-contain h-72"
               />
             </div>
 
           </div>
 
           {/* Territory Card */}
-          <div className="rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] p-10 flex flex-col justify-between">
+          <div className="rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] flex flex-col justify-between">
 
-            <div>
+            <div className="p-10">
 
               <h3 className="text-3xl font-bricolageBold mb-4">
                 Master Franchise / Territory Model
@@ -124,11 +124,11 @@ export default function AdditionalFranchiseModels() {
             </div>
 
             {/* Image */}
-            <div className="mt-10">
+            <div className="mt-10 h-72">
               <img
-                src={''}
+                src={master}
                 alt="territory model"
-                className="w-full object-contain"
+                className="w-full object-cover h-72"
               />
             </div>
 

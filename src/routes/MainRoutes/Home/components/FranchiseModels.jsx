@@ -25,7 +25,7 @@ export default function FranchiseModels() {
   ];
 
   return (
-    <section className="bg-black text-white py-24">
+    <section className="bg-black text-white py-8">
       <Container>
 
         {/* Heading */}
@@ -102,11 +102,11 @@ export default function FranchiseModels() {
 
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 h-72">
               <img
                 src={qsrImage}
                 alt="QSR Franchise"
-                className="w-full object-contain"
+                className="w-full h-72 object-contain"
               />
             </div>
 
@@ -156,11 +156,11 @@ export default function FranchiseModels() {
 
             </div>
 
-            <div className="mt-8">
+            <div className="mt-8 h-72">
               <img
                 src={trolleyImage}
                 alt="Trolley Franchise"
-                className="w-full object-contain"
+                className="w-full h-72 object-contain"
               />
             </div>
 

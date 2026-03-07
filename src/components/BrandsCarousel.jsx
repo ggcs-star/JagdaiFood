@@ -24,16 +24,16 @@ const Main = styled.main``;
 
 const HorizontalSection = styled.section`
   position: relative;
-  width: 99vw;
+  width: 100%;
+  max-width: 80rem; /* max-w-7xl = 1280px */
   min-height: 480px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin: 0 auto;
 
   @media (max-width: 576px) {
-    width: 100vw;
     min-height: 320px;
+    padding: 0 16px;
   }
-`;
+`;      
 
 const BumperSection = styled.section`
   text-align: center;
@@ -46,7 +46,7 @@ const HeaderSection = styled.div`
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  padding: 80px 24px 56px;
+  padding: 10px 24px 56px;
 
   @media (max-width: 768px) {
     padding: 48px 16px 40px;
@@ -148,7 +148,7 @@ const NextArrow = (props) => {
 const SampleCard = ({ item, handler }) => {
   return (
     <div className="px-5">
-      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-[340px] h-[360px] lg:h-[460px] text-gray-300 overflow-hidden mx-auto transition-all duration-500">
+      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-[400px] h-[360px] lg:h-[460px] text-gray-300 overflow-hidden mx-auto transition-all duration-500">
 
         {/* Glow Background */}
         <div
@@ -208,7 +208,7 @@ export default function BrandsCarousel() {
     const settings = {
         infinite: false,
         speed: 600,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
         prevArrow: <PrevArrow />,
@@ -229,7 +229,7 @@ export default function BrandsCarousel() {
         <div className="bg-black text-center">
             <GlobalStyle />
 
-            <div className="max-w-6xl mx-auto rounded-xl">
+            <div className="max-w-7xl mx-auto rounded-xl">
                 <HeaderSection>
                     <HeaderTitle className="font-bricolageBold">
                       24+ Brands Power

@@ -117,7 +117,7 @@ export default function HowYouEarn() {
         </h2>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-10 mb-20">
+        <div className="grid md:grid-cols-2 gap-10 mb-8">
 
           {/* FOFO Card */}
           <div className="relative bg-gradient-to-b from-gray-800 to-gray-900 rounded-2xl p-8 pb-32 shadow-lg">
