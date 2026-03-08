@@ -38,58 +38,58 @@ export default function CapitalGuarantee() {
             <Container>
 
                 {/* Main Card */}
-                <div className="relative rounded-[28px] overflow-hidden bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] p-10 md:p-8">
+                    <div className="relative rounded-[28px] overflow-hidden bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] p-10 md:p-8">
 
-                    <div className="grid lg:grid-cols-2 gap-10 items-center">
+                        <div className="grid lg:grid-cols-2 gap-10 items-center">
 
-                        {/* LEFT SIDE */}
-                        <div className="relative h-full flex flex-col justify-start pt-4">
+                            {/* LEFT SIDE */}
+                            <div className="relative h-full flex flex-col justify-start pt-4">
 
-                            <h2 className="font-bricolageBold text-3xl md:text-4xl text-black mb-6 leading-tight">
-                                Capital <br /> Guarantee
-                            </h2>
+                                <h2 className="font-bricolageBold text-3xl md:text-4xl text-black mb-6 leading-tight">
+                                    Capital <br /> Guarantee
+                                </h2>
 
-                            {/* Bag Image */}
-                            <img
-                                src={bag}
-                                alt="capital"
-                                className="absolute bottom-0 left-0 w-[260px] md:w-[320px] object-contain"
-                            />
+                                {/* Bag Image */}
+                                <img
+                                    src={bag}
+                                    alt="capital"
+                                    className="absolute bottom-0 left-0 w-[260px] md:w-[320px] object-contain"
+                                />
 
-                        </div>
+                            </div>
 
 
-                        {/* RIGHT SIDE FEATURES */}
-                        <div className="space-y-5">
+                            {/* RIGHT SIDE FEATURES */}
+                            <div className="space-y-5">
 
-                            {features.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-4 shadow-sm"
-                                >
+                                {features.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-4 shadow-sm"
+                                    >
 
-                                    {/* Icon */}
-                                    <div className="w-[44px] h-[44px] rounded-xl bg-[#F3B24C] flex items-center justify-center">
+                                        {/* Icon */}
+                                        <div className="w-[44px] h-[44px] rounded-xl bg-[#F3B24C] flex items-center justify-center">
 
-                                        <img
-                                            src={item.icon}
-                                            alt="icon"
-                                            className="w-8 h-8 object-contain"
-                                        />
+                                            <img
+                                                src={item.icon}
+                                                alt="icon"
+                                                className="w-8 h-8 object-contain"
+                                            />
+
+                                        </div>
+
+                                        {/* Text */}
+                                        <p className="text-black font-medium text-sm md:text-base">
+                                            {item.text}
+                                        </p>
 
                                     </div>
+                                ))}
 
-                                    {/* Text */}
-                                    <p className="text-black font-medium text-sm md:text-base">
-                                        {item.text}
-                                    </p>
-
-                                </div>
-                            ))}
+                            </div>
 
                         </div>
-
-                    </div>
 
                 </div>
 
