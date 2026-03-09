@@ -6,15 +6,14 @@ import growth from "../../../../assets/franchisemodels/build.png";
 export default function RevenueIllustrationCard() {
   return (
     <div
-      className="w-[1100px] h-[432px] mx-auto mt-[80px] rounded-[24px] relative flex items-center px-[60px] overflow-hidden"
+      className="w-full max-w-[1100px] min-h-[432px] mx-auto mt-[80px] rounded-[24px] relative flex flex-col lg:flex-row items-start lg:items-center px-[24px] sm:px-[40px] lg:px-[60px] py-[40px] lg:py-[0px] overflow-hidden"
       style={{
         background: "#5a5a5a",
         backdropFilter: "blur(30px)",
       }}
     >
-      {/* LEFT CONTENT */}
-      <div className="w-[520px] z-10">
-        <h3 className="text-white font-bricolageSemiBold text-[32px] leading-[40px] mb-[24px]">
+      <div className="w-full lg:w-[520px] z-10">
+        <h3 className="text-white font-bricolageSemiBold text-[26px] sm:text-[30px] lg:text-[32px] leading-[34px] lg:leading-[40px] mb-[24px]">
           Revenue Illustration
         </h3>
 
@@ -24,7 +23,7 @@ export default function RevenueIllustrationCard() {
 
         <div className="flex items-center gap-[10px] mb-[18px]">
           <img src={check} className="w-[18px]" />
-          <span className="text-white font-inter text-[16px]">
+          <span className="text-white font-inter text-[15px] sm:text-[16px]">
             Monthly Revenue ₹13,50,000
           </span>
         </div>
@@ -35,12 +34,11 @@ export default function RevenueIllustrationCard() {
 
         <div className="flex items-center gap-[10px] mb-[18px]">
           <img src={check} className="w-[18px]" />
-          <span className="text-white font-inter text-[16px]">
+          <span className="text-white font-inter text-[15px] sm:text-[16px]">
             ₹1,35,000 per month (illustrative scenario)
           </span>
         </div>
 
-        {/* OR Divider */}
         <div className="flex items-center gap-[12px] mb-[12px]">
           <div className="w-[70px] h-[1px] bg-[#7a7a7a]" />
           <span className="text-[#34D399] text-[14px] font-semibold">OR</span>
@@ -52,26 +50,24 @@ export default function RevenueIllustrationCard() {
         </p>
 
         <p className="text-white text-[15px] leading-[22px] max-w-[420px]">
-          Ideal for passive investors seeking predictable <br/> income without
-          operational responsibility.
+          Ideal for passive investors seeking predictable{" "}
+          <br className="hidden sm:block" /> income without operational
+          responsibility.
         </p>
       </div>
 
-      {/* RIGHT VISUAL */}
-      <div className="absolute right-[0px] top-0 w-[550px] h-[432px]">
-        {/* GREEN GLOW */}
+      <div className="relative w-full lg:w-[550px] h-[300px] sm:h-[360px] lg:h-[432px] mt-[40px] lg:mt-0">
         <div
-          className="absolute right-[-150px] top-1/2 -translate-y-1/2 w-[600px] h-[600px]"
+          className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-[300px] md:w-[520px] h-[300px] md:h-[520px]"
           style={{
             background:
               "radial-gradient(circle at center, rgba(52,211,153,0.55) 0%, rgba(52,211,153,0.30) 35%, rgba(52,211,153,0.12) 60%, transparent 75%)",
-            filter: "blur(35px)",
+            filter: "blur(25px)",
           }}
         />
 
-        {/* DOT GRID */}
         <div
-          className="absolute right-[0px] top-[10px] w-[420px] h-[420px]"
+          className="absolute right-[0px] top-[10px] w-[260px] sm:w-[340px] lg:w-[420px] h-[260px] sm:h-[340px] lg:h-[420px]"
           style={{
             background:
               "radial-gradient(circle, rgba(52,211,153,0.9) 2px, transparent 2px)",
@@ -83,10 +79,9 @@ export default function RevenueIllustrationCard() {
           }}
         />
 
-        {/* COINS IMAGE */}
         <img
           src={growth}
-          className="absolute left-[80px] bottom-[0px] h-[380px] z-10 object-contain"
+          className="absolute left-[40px] sm:left-[60px] lg:left-[80px] bottom-[0px] h-[240px] sm:h-[300px] lg:h-[380px] z-10 object-contain"
         />
       </div>
     </div>

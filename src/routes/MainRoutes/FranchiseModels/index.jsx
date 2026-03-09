@@ -45,20 +45,15 @@ export default function FranchiseModels() {
 
   return (
     <div className="bg-black min-h-screen text-white">
+      <HeroFranchiseModel />
+      <FofoModelSection />
+      <FocoModelSection />
+      <InvestmentOverview />
+      <CapitalProtectionFramework />
+      <EcosystemBenefitsCard />
+      <ModelFitSection />
 
-      <HeroFranchiseModel/>
-      <FofoModelSection/>
-      <FocoModelSection/>
-      <InvestmentOverview/>
-      <CapitalProtectionFramework/>
-      <EcosystemBenefitsCard/>
-      <ModelFitSection/>
-     
-        <ExploreFranchiseSection />
-
-      
-      
-
+      <ExploreFranchiseSection />
 
       {scrollPercentage > 0 && (
         <div
@@ -115,7 +110,6 @@ export default function FranchiseModels() {
           </svg>
         </div>
       )}
-      
     </div>
   );
 }
