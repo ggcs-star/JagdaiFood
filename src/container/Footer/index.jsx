@@ -64,21 +64,35 @@ const Footer = () => {
                 <div className="bg-gray-700 p-3 rounded-full">
                   <HiOutlineMail className="text-white" />
                 </div>
+
                 <div>
                   <p className="text-xs text-gray-400 uppercase">Email</p>
-                  <p className="text-white">info@jagdaifoods.com</p>
+
+                  <a
+                    href="mailto:info@jagdaifoods.com"
+                    className="text-white hover:underline"
+                  >
+                    info@jagdaifoods.com
+                  </a>
                 </div>
               </div>
 
-              <div className="flex items-center gap-4">
-                <div className="bg-gray-700 p-3 rounded-full">
-                  <HiOutlinePhone className="text-white" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-400 uppercase">Phone</p>
-                  <p className="text-white">+91 6352305842</p>
-                </div>
-              </div>
+             <div className="flex items-center gap-4">
+  <div className="bg-gray-700 p-3 rounded-full">
+    <HiOutlinePhone className="text-white" />
+  </div>
+
+  <div>
+    <p className="text-xs text-gray-400 uppercase">Phone</p>
+
+    <a
+      href="tel:+916352305842"
+      className="text-white hover:underline"
+    >
+      +91 6352305842
+    </a>
+  </div>
+</div>
 
             </div>
           </div>
