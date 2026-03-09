@@ -4,11 +4,11 @@ import stall from '../../../../assets/investment/stall.png'
 
 export default function FranchiseModels() {
     return (
-        <section className="bg-black py-8">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 min-h-[920px]">
+        <section className="bg-black py-8 px-3 lg:px-0">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-[40%_60%] gap-10 min-h-[920px]">
 
                 {/* LEFT CARD */}
-                <div className="bg-[#63b885] rounded-3xl p-10 relative overflow-hidden ">
+                <div className="bg-[#63b885] rounded-3xl p-3 lg:p-6 relative overflow-hidden ">
 
                     {/* Content */}
                     <div className="max-w-md pb-40">
@@ -67,7 +67,7 @@ export default function FranchiseModels() {
                 </div>
 
                 {/* RIGHT CARD */}
-                <div className="bg-[#1c1c1c] rounded-3xl p-10 text-white">
+                <div className="bg-[#1c1c1c] rounded-3xl p-3 lg:p-6 text-white">
 
                         <h2 className="text-3xl font-bricolageBold mb-4">
                         Food Court Franchise (Chatori Gali)

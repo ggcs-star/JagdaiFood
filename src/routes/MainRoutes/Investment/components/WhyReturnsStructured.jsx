@@ -14,7 +14,7 @@ export default function WhyReturnsStructured() {
 
   return (
     <section className="bg-black py-24 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-3 lg:px-6">
 
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl font-bricolageBold text-center mb-16">
@@ -48,13 +48,13 @@ export default function WhyReturnsStructured() {
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="mt-20 bg-gradient-to-r from-[#5ac47a] to-[#f0b458] rounded-2xl p-10 text-center text-black">
+        <div className="mt-8 lg:mt-20 bg-gradient-to-r from-[#5ac47a] to-[#f0b458] rounded-2xl p-3 lg:p-10 text-center text-black">
 
           <h3 className="font-bricolageBold text-2xl md:text-3xl font-semibold mb-6">
             Evaluate Your Format
           </h3>
 
-          <div className="flex flex-wrap justify-center gap-8 mb-8">
+          <div className="flex lg:flex-wrap justify-center gap-2 lg:gap-8 mb-8">
 
             <div className="flex items-center gap-2">
               <div className="bg-yellow-400 rounded-full p-1.5">

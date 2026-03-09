@@ -1,14 +1,14 @@
 import React from "react";
 import qsr from '../../../../assets/investment/qsr.png'
-import mobile from '../../../../assets/investment/mobile.png'
+import mobile from '../../../../assets/investment/internet.png'
 
 export default function FranchiseInvestment() {
     return (
-        <section className="bg-black py-8 px-6">
-            <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+        <section className="bg-black py-8 px-3 lg:px-6">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-[60%_40%] gap-8">
 
                 {/* Card 1 */}
-                <div className="bg-[#1a1a1a] text-white rounded-2xl p-6 relative overflow-hidden">
+                <div className="bg-[#1a1a1a] text-white rounded-2xl p-3 lg:p-6 relative overflow-hidden">
 
                     <h3 className=" font-bricolageBold text-3xl mb-6">
                         QSR Restaurant Franchise
@@ -61,7 +61,7 @@ export default function FranchiseInvestment() {
                 {/* Card 2 */}
             <div className="bg-[#f0b458] text-black rounded-2xl relative overflow-hidden flex flex-col">
 
-  <div className="p-6">
+  <div className="p-3 lg:p-6">
     <h3 className="font-bricolageBold text-3xl mb-6">
       Internet Restaurant Franchise
     </h3>
