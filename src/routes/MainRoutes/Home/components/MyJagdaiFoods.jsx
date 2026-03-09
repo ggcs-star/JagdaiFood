@@ -34,7 +34,7 @@ export default function CapitalGuarantee() {
     ];
 
     return (
-        <section className="bg-black py-20">
+        <section className="bg-black py-8">
             <Container>
 
                 {/* Main Card */}

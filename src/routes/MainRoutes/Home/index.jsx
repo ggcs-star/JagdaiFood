@@ -2,6 +2,14 @@ import React, { useEffect, useState } from "react";
 import HeroSection from "./components/HeroSection";
 import MyJagdaiFoods from "./components/MyJagdaiFoods";
 import HowYouEarn from "./components/HowYouEarn";
+import SystemDriven from "./components/SystemDriven";
+import FranchiseModels from "./components/FranchiseModels";
+import AdditionalFranchiseModels from "./components/AdditionalFranchiseModels";
+import WhyMultiFormatModel from "./components/WhyMultiFormatModel.JSX";
+import FranchiseCTA from "./components/FranchiseCTA";
+import JagodsAppSection from "./components/JagodsAppSection";
+import BrandsCarousel from "../../../components/BrandsCarousel";
+import WhyJagdai from "./components/WhyJagdai";
 
 
 export default function Home() {
@@ -40,11 +48,18 @@ export default function Home() {
   return (
     <div className="">
       <HeroSection />
-      <MyJagdaiFoods/>
-      <HowYouEarn/>
-   
+      {/* <MyJagdaiFoods /> */}
+      <WhyJagdai/>
+      <HowYouEarn />
+      <BrandsCarousel/>
+      <SystemDriven />
+      <FranchiseModels/>
+      <AdditionalFranchiseModels/>
+      <WhyMultiFormatModel/>
+      <FranchiseCTA/>
+      <JagodsAppSection/>
 
-      {scrollPercentage > 0 && (
+      {/* {scrollPercentage > 0 && (
         <div
           className="back-to-top right-aligned primary-color scroll-position-style active"
           onClick={scrollToTop}
@@ -101,7 +116,7 @@ export default function Home() {
             />
           </svg>
         </div>
-      )}
+      )} */}
 
     </div>
   );
