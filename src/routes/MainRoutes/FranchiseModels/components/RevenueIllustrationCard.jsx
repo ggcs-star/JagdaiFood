@@ -67,15 +67,15 @@ export default function RevenueIllustrationCard() {
         />
 
         <div
-          className="absolute right-[0px] top-[10px] w-[260px] sm:w-[340px] lg:w-[420px] h-[260px] sm:h-[340px] lg:h-[420px]"
+          className="absolute right-[-20px] top-1/2 -translate-y-1/2 w-[220px] md:w-[460px] h-[220px] md:h-[460px]"
           style={{
             background:
-              "radial-gradient(circle, rgba(52,211,153,0.9) 2px, transparent 2px)",
+              "radial-gradient(circle, rgba(52,211,153,0.95) 2px, transparent 2px)",
             backgroundSize: "20px 20px",
             maskImage:
-              "radial-gradient(circle at center, black 65%, transparent 100%)",
+              "radial-gradient(circle at center, black 65%, transparent 85%)",
             WebkitMaskImage:
-              "radial-gradient(circle at center, black 65%, transparent 100%)",
+              "radial-gradient(circle at center, black 65%, transparent 85%)",
           }}
         />
 

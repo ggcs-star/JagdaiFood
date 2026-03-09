@@ -3,8 +3,13 @@ import check from "../../../../assets/franchisemodels/check.svg";
 
 export default function EcosystemBenefitsCard() {
   const benefits = [
-    "24+ in-house brands",
-    "10,000+ sq.ft centralized cloud kitchen",
+    <>
+      <span className="font-bold italic">24+</span> in-house brands
+    </>,
+    <>
+      <span className="font-bold italic">10,000+</span> sq.ft centralized cloud
+      kitchen
+    </>,
     "Reduced wastage & uniform taste",
     "Standardized SOP execution",
     "Multi-Brand cross-selling advantage",

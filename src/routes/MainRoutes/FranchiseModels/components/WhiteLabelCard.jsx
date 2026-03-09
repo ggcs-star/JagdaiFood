@@ -5,7 +5,7 @@ import girl from "../../../../assets/franchisemodels/whiteLabel2.png";
 export default function WhiteLabelCard() {
   return (
     <div
-      className="w-full max-w-[1100px] min-h-[420px] mx-auto mt-[80px] md:mt-[120px] rounded-[24px] relative flex flex-col md:flex-row md:items-center px-[24px] sm:px-[40px] md:px-[60px] py-[40px] md:py-0 overflow-hidden"
+      className="w-full max-w-[1100px] min-h-[420px] mx-auto mt-[80px] md:mt-[120px] rounded-[24px] relative flex flex-col md:flex-row md:items-center md:justify-between px-[24px] sm:px-[40px] md:px-[60px] py-[40px] md:py-0 overflow-hidden"
       style={{
         background: "#5a5a5a",
         backdropFilter: "blur(30px)",
@@ -67,8 +67,7 @@ export default function WhiteLabelCard() {
 
       <img
         src={girl}
-        className="absolute right-[0px] md:right-[15px] bottom-[-10px] h-[260px] sm:h-[320px] md:h-[450px] object-contain"
-      />
+className="relative md:absolute right-[0px] md:right-[15px] bottom-0 md:bottom-[-10px] h-[240px] sm:h-[280px] md:h-[450px] object-contain mx-auto md:mx-0 mt-[30px] md:mt-0"      />
     </div>
   );
 }
