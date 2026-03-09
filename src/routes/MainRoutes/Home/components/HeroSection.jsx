@@ -1,11 +1,10 @@
 import React from "react";
-import { Container } from "../../../../components/Layout";
 import heroImage from "../../../../assets/home/herosection/herosection.png";
 
 export default function FranchiseHero() {
   return (
     <section
-      className="w-full text-white bg-no-repeat bg-right bg-contain"
+      className="w-screen min-h-[85vh] text-white bg-center bg-cover bg-no-repeat"
       style={{
         backgroundImage: `
           url(${heroImage}),
@@ -14,53 +13,33 @@ export default function FranchiseHero() {
         `
       }}
     >
-      <Container className="mx-auto py-4 lg:py-20">
+      <div className="py-12 lg:py-20">
+        <div className="px-6 lg:px-38 max-w-[950px]">
 
-        <div className="max-w-[650px]">
-
-          <p className="font-bricolageBold text-[#FDBD5B] font-medium mb-4">
+          <p className="font-bricolageBold text-[#FDBD5B] mb-4">
             Built on Amma’s Legacy.
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
-            Engineered for <br />
-            Scalable Food <br />
+            Engineered for 
+            Scalable Food 
             Entrepreneurship.
           </h1>
 
-          <p className="text-gray-200 mb-6 leading-relaxed">
-            Jagdai Foods is a 24+ brand, technology-driven food franchise ecosystem
-            inspired by Amma’s love for authentic taste and designed for
-            structured, scalable, and sustainable growth.
-          </p>
-
-          <p className="text-gray-200 mb-6 leading-relaxed">
-            Through centralized operations, standardized systems, and clearly
-            defined FOFO & FOCO franchise models, we enable entrepreneurs to build
-            profitable food businesses with operational clarity and predictable
-            returns.
-          </p>
-
-          <p className="text-gray-200 mb-10">
-            Structured franchise formats. Capital protection framework.
-            Multi-brand scale.
-          </p>
+          <p className="text-gray-200 mb-6 leading-relaxed"> Jagdai Foods is a 24+ brand, technology-driven food franchise ecosystem inspired by Amma’s love for authentic taste and designed for structured, scalable, and sustainable growth. </p> <p className="text-gray-200 mb-6 leading-relaxed"> Through centralized operations, standardized systems, and clearly defined FOFO & FOCO franchise models, we enable entrepreneurs to build profitable food businesses with operational clarity and predictable returns. </p> <p className="text-gray-200 mb-10"> Structured franchise formats. Capital protection framework. Multi-brand scale. </p>
 
           <div className="flex gap-4 flex-wrap">
-
-            <button className="bg-[#f3b24c] text-black font-medium px-6 py-3 rounded-lg hover:opacity-90 transition">
+            <button className="bg-[#f3b24c] text-black px-6 py-3 rounded-lg">
               Apply for Franchise
             </button>
 
-            <button className="border border-white/40 px-6 py-3 rounded-lg hover:border-white transition">
+            <button className="border border-white/40 px-6 py-3 rounded-lg">
               Schedule Consultation
             </button>
-
           </div>
 
         </div>
-
-      </Container>
+      </div>
     </section>
   );
 }
