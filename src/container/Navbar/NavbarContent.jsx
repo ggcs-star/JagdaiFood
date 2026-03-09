@@ -15,7 +15,7 @@ export default function NavbarContent() {
 
   return (
     <header className="w-full bg-black text-white">
-      <div className="max-w-[1300px] mx-auto px-6 py-4 flex items-center justify-between">
+      <div className="max-w-[1300px] mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
         <Link to="/" className="flex items-center">

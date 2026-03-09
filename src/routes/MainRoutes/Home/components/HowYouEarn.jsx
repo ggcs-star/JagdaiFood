@@ -80,7 +80,7 @@ export default function HowYouEarn() {
   ];
 
   return (
-    <section className="bg-black text-white py-10 lg:py-16 px-4">
+    <section className="bg-black text-white py-10 lg:py-16 px-3 lg:px-4">
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}

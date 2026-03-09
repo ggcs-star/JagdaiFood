@@ -10,16 +10,16 @@ export default function FranchiseInvestment() {
                 {/* Card 1 */}
                 <div className="bg-[#1a1a1a] text-white rounded-2xl p-3 lg:p-6 relative overflow-hidden">
 
-                    <h3 className=" font-bricolageBold text-3xl mb-6">
+                    <h3 className="font-bricolageBold text-3xl mb-6">
                         QSR Restaurant Franchise
                     </h3>
 
                     <div className="bg-black rounded-xl p-5 mb-4">
-                        <p className="font-bricolageBold  text-sm text-gray-400">Franchise Fee</p>
+                        <p className="text-green-500 font-bricolageBold  text-sm text-gray-400">Franchise Fee</p>
                         <p className="text-lg font-bold">₹6,00,000 (+ GST)</p>
 
 
-                        <p className="font-bricolageBold  mt-3 text-sm text-gray-400">Total Investment</p>
+                        <p className="text-green-500 font-bricolageBold  mt-3 text-sm text-gray-400">Total Investment</p>
                         <p className="text-lg font-bold">₹16 Lakhs</p>
 
                         <p className="text-sm text-gray-400">
@@ -29,18 +29,18 @@ export default function FranchiseInvestment() {
 
                     <div className="grid grid-cols-2 gap-4 mb-4">
                         <div className="bg-black p-4 rounded-lg">
-                            <p className="font-bricolageBold  text-sm text-gray-400">ROI</p>
+                            <p className="font-bricolageBold text-green-500 text-sm">ROI</p>
                             <p className="font-semibold">12–15 Months</p>
                         </div>
 
                         <div className="bg-black p-4 rounded-lg">
-                            <p className="font-bricolageBold  text-sm text-gray-400">Breakeven</p>
+                            <p className="font-bricolageBold text-green-500 text-sm">Breakeven</p>
                             <p className="font-semibold">Within 6 Months</p>
                         </div>
                     </div>
 
                     <div className="bg-black p-4 rounded-lg mb-4">
-                        <p className="font-bricolageBold  text-sm text-gray-400">Gross Profit</p>
+                        <p className="font-bricolageBold text-green-500 text-sm">Gross Profit</p>
                         <p className="font-semibold">Approx. 35%</p>
                     </div>
 
@@ -108,7 +108,7 @@ export default function FranchiseInvestment() {
     <img
       src={mobile}
       alt="delivery"
-      className="w-full object-contain"
+      className="w-full object-contain lg:object-cover h-[400px]"
     />
   </div>
 
