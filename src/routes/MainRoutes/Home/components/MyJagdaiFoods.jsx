@@ -56,36 +56,36 @@ export default function CapitalGuarantee() {
                                 className="hidden lg:flex absolute -bottom-8 left-16 w-[260px] md:w-[420px] object-cover h-[400px]"
                             />
 
-                        </div>
+                            </div>
 
 
                         {/* RIGHT SIDE FEATURES */}
                         <div className="space-y-5 p-4 md:p-8">
 
-                            {features.map((item, index) => (
-                                <div
-                                    key={index}
-                                    className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-4 shadow-sm"
-                                >
+                                {features.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-4 shadow-sm"
+                                    >
 
-                                    {/* Icon */}
-                                    <div className="w-[44px] h-[44px] rounded-xl bg-[#F3B24C] flex items-center justify-center">
+                                        {/* Icon */}
+                                        <div className="w-[44px] h-[44px] rounded-xl bg-[#F3B24C] flex items-center justify-center">
 
-                                        <img
-                                            src={item.icon}
-                                            alt="icon"
-                                            className="w-8 h-8 object-contain"
-                                        />
+                                            <img
+                                                src={item.icon}
+                                                alt="icon"
+                                                className="w-8 h-8 object-contain"
+                                            />
 
-                                    </div>
+                                        </div>
 
                                     {/* Text */}
                                     <p className="font-bricolageBold text-black text-sm md:text-lg">
                                         {item.text}
                                     </p>
 
-                                </div>
-                            ))}
+                                    </div>
+                                ))}
 
                              <img
                                 src={bag}
