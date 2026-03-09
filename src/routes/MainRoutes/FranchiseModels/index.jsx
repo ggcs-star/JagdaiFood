@@ -4,6 +4,9 @@ import FofoModelSection from "./components/FofoModelSection";
 import FocoModelSection from "./components/FocoModelSection";
 import InvestmentOverview from "./components/InvestMentOverView";
 import CapitalProtectionFramework from "./components/CapitalProtectionFramework";
+import EcosystemBenefitsCard from "./components/EcosystemBenefitsCard";
+import ModelFitSection from "./components/ModelFitSection";
+import ExploreFranchiseSection from "./components/ExploreFranchiseSection";
 
 export default function FranchiseModels() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -48,6 +51,13 @@ export default function FranchiseModels() {
       <FocoModelSection/>
       <InvestmentOverview/>
       <CapitalProtectionFramework/>
+      <EcosystemBenefitsCard/>
+      <ModelFitSection/>
+     
+        <ExploreFranchiseSection />
+
+      
+      
 
 
       {scrollPercentage > 0 && (

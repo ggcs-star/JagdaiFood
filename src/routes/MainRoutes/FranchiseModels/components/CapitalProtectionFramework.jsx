@@ -11,7 +11,7 @@ export default function CapitalProtectionFramework() {
   ];
 
   return (
-    <section className="w-[1200px] mx-auto mt-[140px]">
+    <section className="w-[1200px] mx-auto mt-[80px]">
 
       <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-[#63C07A] via-[#A9C27B] to-[#F2B44F] p-[70px]">
 
