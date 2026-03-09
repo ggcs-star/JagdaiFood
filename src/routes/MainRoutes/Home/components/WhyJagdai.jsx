@@ -15,7 +15,7 @@ export default function WhyJagdai() {
   ];
 
   return (
-    <section className="bg-black text-white py-16">
+    <section className="bg-black text-white py-8 lg:py-16">
       <Container>
 
         {/* Heading */}
@@ -30,7 +30,7 @@ export default function WhyJagdai() {
         </div>
 
         {/* Grid */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
           {/* Left Media */}
           <div className="w-full h-[360px] md:h-[420px] rounded-2xl bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] overflow-hidden">
@@ -52,12 +52,12 @@ export default function WhyJagdai() {
                 <li key={index} className="flex items-start gap-4">
 
                   {/* Icon */}
-                  <div className="min-w-[30px] h-[30px] rounded-full bg-[#f3b24c] flex items-center justify-center">
+                  <div className="w-[20px] h-[20px] lg:min-w-[30px] lg:h-[30px] rounded-full bg-[#f3b24c] flex items-center justify-center">
                     <Check size={16} className="text-black" />
                   </div>
 
                   {/* Text */}
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-300 text-sm lg:text-lg leading-relaxed">
                     {item}
                   </p>
 

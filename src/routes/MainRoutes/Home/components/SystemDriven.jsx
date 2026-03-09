@@ -78,7 +78,7 @@ export default function SystemDriven() {
           {cards.map((item, index) => (
             <div
               key={index}
-              className="bg-[#1f1f1f] rounded-2xl p-6 hover:bg-[#262626] transition duration-300"
+              className="bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 hover:bg-[#262626] transition duration-300"
             >
 
               {/* Icon */}
@@ -106,7 +106,7 @@ export default function SystemDriven() {
         </div>
 
         {/* Bottom Full Card */}
-        <div className="mt-6 bg-[#1f1f1f] rounded-2xl p-6 flex items-start gap-4">
+        <div className="mt-6 bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 flex flex-col lg:flex-row items-start gap-4">
 
           <div className="w-10 h-10 rounded-md bg-[#f3b24c] flex items-center justify-center">
             <img

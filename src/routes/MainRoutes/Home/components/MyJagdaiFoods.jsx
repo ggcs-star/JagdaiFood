@@ -38,29 +38,29 @@ export default function CapitalGuarantee() {
             <Container>
 
                 {/* Main Card */}
-                    <div className="relative rounded-[28px] overflow-hidden bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] p-10 md:p-8">
+                <div className="relative rounded-[28px] overflow-hidden bg-gradient-to-r from-[#6BC07F] to-[#F2B44F]">
 
-                        <div className="grid lg:grid-cols-2 gap-10 items-center">
+                    <div className="grid lg:grid-cols-2 lg:gap-10 items-center">
 
-                            {/* LEFT SIDE */}
-                            <div className="relative h-full flex flex-col justify-start pt-4">
+                        {/* LEFT SIDE */}
+                        <div className="relative h-full flex flex-col justify-start pt-4 p-4 md:p-8">
 
-                                <h2 className="font-bricolageBold text-3xl md:text-4xl text-black mb-6 leading-tight">
-                                    Capital <br /> Guarantee
-                                </h2>
+                            <h2 className="font-bricolageBold text-3xl md:text-4xl text-black lg:mb-6 leading-tight">
+                                Capital <br /> Guarantee
+                            </h2>
 
-                                {/* Bag Image */}
-                                <img
-                                    src={bag}
-                                    alt="capital"
-                                    className="absolute bottom-0 left-0 w-[260px] md:w-[320px] object-contain"
-                                />
+                            {/* Bag Image */}
+                            <img
+                                src={bag}
+                                alt="capital"
+                                className="hidden lg:flex absolute -bottom-8 left-16 w-[260px] md:w-[420px] object-cover h-[400px]"
+                            />
 
                             </div>
 
 
-                            {/* RIGHT SIDE FEATURES */}
-                            <div className="space-y-5">
+                        {/* RIGHT SIDE FEATURES */}
+                        <div className="space-y-5 p-4 md:p-8">
 
                                 {features.map((item, index) => (
                                     <div
@@ -79,17 +79,25 @@ export default function CapitalGuarantee() {
 
                                         </div>
 
-                                        {/* Text */}
-                                        <p className="text-black font-medium text-sm md:text-base">
-                                            {item.text}
-                                        </p>
+                                    {/* Text */}
+                                    <p className="font-bricolageBold text-black text-sm md:text-lg">
+                                        {item.text}
+                                    </p>
 
                                     </div>
                                 ))}
 
-                            </div>
+                             <img
+                                src={bag}
+                                alt="capital"
+                                className="flex lg:hidden mx-auto w-[260px] md:w-[420px] object-contain h-[200px]"
+                            />  
 
                         </div>
+
+                        
+
+                    </div>
 
                 </div>
 

@@ -38,8 +38,8 @@ export default function FranchiseModels() {
         </div>
 
         {/* Ecosystem Card */}
-        <div className="bg-[#2a2a2a] rounded-2xl p-8 text-center mx-auto mb-12">
-              <h3 className="text-3xl font-bricolageBold mb-4">
+        <div className="bg-[#2a2a2a] rounded-2xl p-4 lg:p-6 text-center mx-auto mb-12">
+          <h3 className="text-3xl font-bricolageBold mb-4">
             Multiple Formats. One Powerful Ecosystem.
           </h3>
 
@@ -57,12 +57,12 @@ export default function FranchiseModels() {
         </div>
 
         {/* Franchise Cards */}
-        <div className="grid lg:grid-cols-2 gap-8">
+        <div className="grid lg:grid-cols-[60%_40%] gap-8">
 
           {/* QSR Card */}
           <div className="bg-[#1f1f1f] rounded-2xl flex flex-col justify-between">
 
-            <div className="p-8">
+            <div className="p-4 lg:p-6">
 
               <h3 className="text-3xl font-bricolageBold text-white mb-4">
                 Multi-Brand QSR Franchise
@@ -76,8 +76,7 @@ export default function FranchiseModels() {
                 Operate a full-scale Quick Service Restaurant powered by centralized production and standardized systems.
               </p>
 
-              <ul className="space-y-4 text-sm text-gray-300">
-
+              <ul className="space-y-3 text-sm text-gray-300">
                 {qsrPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
 
@@ -89,24 +88,23 @@ export default function FranchiseModels() {
 
                   </li>
                 ))}
-
               </ul>
 
-              <p className="text-yellow-400 text-sm mt-6">
+              <p className="text-yellow-400 text-sm mt-5">
                 Ideal for entrepreneurs seeking long-term scale and control.
               </p>
 
-              <button className="mt-6 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium">
+              <button className="mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium">
                 Apply for QSR Franchise
               </button>
 
             </div>
 
-            <div className="mt-8 h-72">
+            <div className="mt-4 h-96">
               <img
                 src={qsrImage}
                 alt="QSR Franchise"
-                className="w-full h-72 object-contain"
+                className="w-full h-96 object-contain"
               />
             </div>
 
@@ -116,7 +114,7 @@ export default function FranchiseModels() {
           {/* Trolley Card */}
           <div className="bg-[#F3B24C] rounded-2xl text-black flex flex-col justify-between">
 
-            <div className="p-8">
+            <div className="p-4 lg:p-6">
 
               <h3 className="text-3xl font-bricolageBold mb-4">
                 Food Trolley / Bike-Cart Franchise
@@ -130,8 +128,7 @@ export default function FranchiseModels() {
                 A plug-and-operate format designed for high-footfall zones with simplified operations.
               </p>
 
-              <ul className="space-y-4 text-sm">
-
+              <ul className="space-y-3 text-sm">
                 {trolleyPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
 
@@ -143,24 +140,23 @@ export default function FranchiseModels() {
 
                   </li>
                 ))}
-
               </ul>
 
-              <p className="text-sm mt-6 font-medium">
+              <p className="text-sm mt-5 font-medium">
                 Perfect for first-time entrepreneurs and micro-investors.
               </p>
 
-              <button className="mt-6 bg-white text-black px-5 py-2 rounded-md text-sm font-medium">
+              <button className="mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-medium">
                 Explore Trolley Model
               </button>
 
             </div>
 
-            <div className="mt-8 h-72">
+            <div className="mt-4 h-96">
               <img
                 src={trolleyImage}
                 alt="Trolley Franchise"
-                className="w-full h-72 object-contain"
+                className="w-full h-96 object-contain"
               />
             </div>
 

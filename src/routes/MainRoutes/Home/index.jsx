@@ -10,6 +10,7 @@ import FranchiseCTA from "./components/FranchiseCTA";
 import JagodsAppSection from "./components/JagodsAppSection";
 import BrandsCarousel from "../../../components/BrandsCarousel";
 import WhyJagdai from "./components/WhyJagdai";
+import CapitalGuarantee from "./components/MyJagdaiFoods";
 
 
 export default function Home() {
@@ -51,6 +52,8 @@ export default function Home() {
       {/* <MyJagdaiFoods /> */}
       <WhyJagdai/>
       <HowYouEarn />
+<CapitalGuarantee/>
+
       <BrandsCarousel/>
       <SystemDriven />
       <FranchiseModels/>
