@@ -148,7 +148,7 @@ const NextArrow = (props) => {
 const SampleCard = ({ item, handler }) => {
   return (
     <div className="px-5">
-      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-[400px] h-[360px] lg:h-[460px] text-gray-300 overflow-hidden mx-auto transition-all duration-500">
+      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] lg:w-[400px] h-[460px] lg:h-[460px] text-gray-300 overflow-hidden mx-auto transition-all duration-500">
 
         {/* Glow Background */}
         <div

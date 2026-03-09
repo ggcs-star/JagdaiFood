@@ -16,9 +16,9 @@ export default function JagodsAppSection() {
     <section className="bg-black py-8 text-white">
       <Container>
 
-        <div className="relative rounded-[30px] bg-gradient-to-r from-[#2d2d2d] to-[#1f1f1f] p-10 md:p-0 overflow-hidden">
+        <div className="relative rounded-[30px] bg-gradient-to-r from-[#2d2d2d] to-[#1f1f1f] pt-4 px-4 lg:p-0 overflow-visible">
 
-          <div className="grid lg:grid-cols-2 gap-12 items-end">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
 
             {/* LEFT CONTENT */}
             <div className="md:p-14">
@@ -43,25 +43,25 @@ export default function JagodsAppSection() {
                       <Check size={16} className="text-black" />
                     </div>
 
-                    <span className="text-gray-300">{item}</span>
+                    <span className="text-gray-200">{item}</span>
 
                   </li>
                 ))}
               </ul>
 
-              <p className="text-gray-400 italic">
+              <p className="text-gray-200 italic">
                 Built for scalable, tech-enabled food entrepreneurship.
               </p>
 
             </div>
 
-            {/* RIGHT PHONE MOCKUP */}
-           <div className="relative flex justify-center items-end w-full h-full">
+            {/* RIGHT SIDE */}
+      <div className="relative h-[320px] lg:h-[520px] flex items-end justify-center overflow-hidden">
 
   <img
     src={jagods}
     alt="jagods"
-    className="h-[500px] w-auto object-contain"
+    className="absolute bottom-[-110px] lg:bottom-0 h-[520px] lg:h-full w-auto object-contain"
   />
 
 </div>

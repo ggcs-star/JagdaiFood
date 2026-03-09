@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 export default function AdditionalFranchises() {
   return (
-    <section className="bg-black ">
+    <section className="bg-black px-3">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
         {/* Food Trolley Franchise */}

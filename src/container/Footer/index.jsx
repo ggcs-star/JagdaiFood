@@ -40,7 +40,7 @@ const Footer = () => {
   return (
     <footer className="bg-[#1f1f1f] text-gray-300 font-helvetica">
 
-      <Container className="py-16">
+      <Container className="py-8 lg:py-16">
 
         <div className="grid md:grid-cols-4 gap-10">
 
@@ -55,7 +55,6 @@ const Footer = () => {
 
             <p className="text-gray-200 leading-7 mb-8">
               Multiple brands. One kitchen.
-              <br />
               One investment.
             </p>
 

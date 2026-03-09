@@ -14,7 +14,7 @@ export default function FranchiseHero() {
         `
       }}
     >
-      <Container className="mx-auto py-20">
+      <Container className="mx-auto py-4 lg:py-20">
 
         <div className="max-w-[650px]">
 
@@ -29,7 +29,7 @@ export default function FranchiseHero() {
           </h1>
 
           <p className="text-gray-200 mb-6 leading-relaxed">
-            Jagdal Foods is a 24+ brand, technology-driven food franchise ecosystem
+            Jagdai Foods is a 24+ brand, technology-driven food franchise ecosystem
             inspired by Amma’s love for authentic taste and designed for
             structured, scalable, and sustainable growth.
           </p>
