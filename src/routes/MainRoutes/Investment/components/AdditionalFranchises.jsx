@@ -7,7 +7,7 @@ export default function AdditionalFranchises() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
 
         {/* Food Trolley Franchise */}
-        <div className="bg-[#1f1f1f] rounded-2xl p-8 text-white">
+        <div className="bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 text-white">
           <h3 className="font-bricolageBold text-3xl mb-2">
             Food Trolley Franchise
           </h3>
@@ -41,7 +41,7 @@ export default function AdditionalFranchises() {
         </div>
 
         {/* Influencer Franchise */}
-        <div className="bg-[#1f1f1f] rounded-2xl p-8 text-white">
+        <div className="bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 text-white">
           <h3 className="font-bricolageBold text-3xl mb-3">
             Influencer Franchise
           </h3>

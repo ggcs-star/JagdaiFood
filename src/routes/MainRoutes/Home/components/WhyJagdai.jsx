@@ -6,12 +6,20 @@ import modelImage from "../../../../assets/home/model/franchise.png"; // replace
 export default function WhyJagdai() {
 
   const points = [
-    "24+ in-house food brands",
-    "10,000+ sq.ft centralized master cloud kitchen",
+    <>
+      <span className="font-bold italic">24+</span> in-house food brands
+    </>,
+    <>
+      <span className="font-bold italic">10,000+</span> sq.ft centralized master cloud kitchen
+    </>,
     "Centralized production system",
     "Technology-driven operations and delivery",
-    "Structured FOFO & FOCO models",
-    "Capital guarantee provisions (as per agreement terms)"
+     <>
+      Structured <span className="font-bold italic">FOFO & FOCO</span> models
+    </>,
+         <>
+      Capital guarantee provisions  <br/><span className="text-sm">(as per agreement terms)</span>
+    </>,
   ];
 
   return (
@@ -57,7 +65,7 @@ export default function WhyJagdai() {
                   </div>
 
                   {/* Text */}
-                  <p className="text-gray-300 text-sm lg:text-lg leading-relaxed">
+                  <p className="text-white text-sm lg:text-lg leading-relaxed">
                     {item}
                   </p>
 
