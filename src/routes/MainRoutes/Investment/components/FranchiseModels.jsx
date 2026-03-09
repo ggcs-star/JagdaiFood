@@ -5,7 +5,7 @@ import stall from '../../../../assets/investment/stall.png'
 export default function FranchiseModels() {
     return (
         <section className="bg-black py-8 px-3 lg:px-0">
-            <div className="max-w-7xl mx-auto grid lg:grid-cols-[40%_60%] gap-10 min-h-[920px]">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-[40%_60%] gap-10 min-h-[870px]">
 
                 {/* LEFT CARD */}
                 <div className="bg-[#63b885] rounded-3xl p-3 lg:p-6 relative overflow-hidden ">
