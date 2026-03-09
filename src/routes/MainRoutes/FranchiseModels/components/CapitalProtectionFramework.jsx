@@ -21,7 +21,7 @@ export default function CapitalProtectionFramework() {
             <img
               src={capital}
               alt="capital"
-              className="absolute bottom-0 left-0 h-[300px] sm:h-[360px] md:h-[420px] lg:h-[480px] object-contain"
+              className="absolute bottom-0 left-0 h-[380px] sm:h-[360px] md:h-[420px] lg:h-[480px] object-contain"
             />
           </div>
 
