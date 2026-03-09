@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import whyReturns from '../../../../assets/investment/whyreturns.png'
 
 export default function WhyReturnsStructured() {
   const points = [
@@ -13,7 +14,7 @@ export default function WhyReturnsStructured() {
   ];
 
   return (
-    <section className="bg-black py-24 text-white">
+    <section className="bg-black py-8 text-white">
       <div className="max-w-7xl mx-auto px-3 lg:px-6">
 
         {/* Heading */}
@@ -24,8 +25,14 @@ export default function WhyReturnsStructured() {
         {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Left Media Placeholder */}
-          <div className="bg-[#1f1f1f] rounded-2xl h-[320px] md:h-[360px]" />
+          {/* Left Image */}
+          <div className="flex justify-center">
+            <img
+              src={whyReturns}
+              alt="Why Returns"
+              className="w-full max-w-[520px] object-contain"
+            />
+          </div>
 
           {/* Right Points */}
           <div className="space-y-4">
@@ -35,7 +42,7 @@ export default function WhyReturnsStructured() {
                 <div className="bg-yellow-400 rounded-full p-1.5">
                   <Check size={16} className="text-black" />
                 </div>
-                <span className="text-gray-200">{item}</span>
+                <span className="text-gray-200 text-xl">{item}</span>
               </div>
             ))}
 
