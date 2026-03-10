@@ -4,7 +4,7 @@ import RevenueIllustrationCard from "./RevenueIllustrationCard";
 export default function FocoModelSection() {
   return (
 <section className="w-full px-[16px] sm:px-[20px]">
-  <div className="max-w-[1200px] mx-auto mt-[40px] rounded-[24px] bg-[#262626] px-[20px] sm:px-[40px] md:px-[60px] py-[60px] md:py-[80px] relative overflow-hidden">    
+  <div className="max-w-[1200px] mx-auto mt-[40px] rounded-[24px] bg-[#262626] px-[20px] sm:px-[40px] md:px-[60px] py-[40px] md:py-[80px] relative overflow-hidden">    
      <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[300px] md:w-[400px] h-[220px] md:h-[300px] bg-[#60D186] opacity-30 blur-[70px]" />
 
       <div className="text-center">
