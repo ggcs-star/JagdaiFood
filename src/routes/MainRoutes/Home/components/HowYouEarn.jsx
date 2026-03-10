@@ -97,7 +97,7 @@ export default function HowYouEarn() {
 
               <h3 className="text-xl font-semibold mb-1">FOFO Model</h3>
 
-              <p className="text-sm text-yellow-400 mb-6">
+              <p className="text-md font-medium text-yellow-400 mb-6 italic">
                 Franchise Owned, Franchise Operated
               </p>
 
@@ -136,7 +136,7 @@ export default function HowYouEarn() {
 
               <h3 className="text-xl font-semibold mb-1">FOCO Model</h3>
 
-              <p className="text-sm text-green-400 mb-6">
+              <p className="text-md font-medium italic text-green-400 mb-6">
                 Franchise Owned, Company Operated
               </p>
 
