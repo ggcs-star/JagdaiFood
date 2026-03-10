@@ -18,7 +18,7 @@ export default function NavbarContent() {
 
   return (
     <header className="w-full bg-black text-white">
-      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-0 flex items-center justify-between">
 
         {/* Logo */}
         <Link to="/" className="flex items-center">

@@ -34,16 +34,15 @@ export default function WhyMultiFormatModel() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
           {/* Left Media */}
-         {/* Left Media */}
-<div className="w-full h-[450px] overflow-hidden rounded-lg">
+          <div className="w-full h-[450px] overflow-hidden rounded-lg">
 
-  <img
-    src={multiformat}
-    alt="model"
-    className="w-full h-full object-cover"
-  />
+            <img
+              src={multiformat}
+              alt="model"
+              className="w-full h-full object-cover"
+            />
 
-</div>
+          </div>
 
 
           {/* Right Points */}
