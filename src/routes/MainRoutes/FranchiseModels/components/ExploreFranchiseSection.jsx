@@ -1,5 +1,4 @@
 import React from "react";
-import check from "../../../../assets/franchisemodels/check.svg";
 
 export default function ExploreFranchiseSection() {
   const items = [
@@ -10,29 +9,36 @@ export default function ExploreFranchiseSection() {
   ];
 
   return (
-    <section className="w-full bg-black flex justify-center mt-[80px] pb-[120px] px-[20px]">
+    <section className="w-full bg-black flex justify-center mt-[40px] pb-[120px] px-[16px] md:px-[20px]">
+
       <div
-        className="w-full max-w-[1200px] min-h-[475px] rounded-[24px] flex flex-col items-center text-center pt-[70px] md:pt-[90px] pb-[40px] px-[20px]"
+        className="w-full max-w-[1200px] min-h-[475px] rounded-[24px] flex flex-col items-center text-center pt-[60px] md:pt-[90px] pb-[40px] px-[20px] md:px-[20px]"
         style={{
           background: "linear-gradient(96deg,#60D186 0%,#FDBD5B 100%)",
         }}
       >
-        <h2 className="font-bricolageBold text-[28px] sm:text-[34px] md:text-[40px] leading-[36px] md:leading-[50px] text-black w-full max-w-[580px]">
+
+        {/* TITLE */}
+        <h2 className="font-bricolageBold text-[26px] sm:text-[34px] md:text-[40px] leading-[34px] md:leading-[50px] text-black w-full max-w-[580px]">
           Ready to Explore Your Franchise Opportunity?
         </h2>
 
-        <p className="mt-[16px] text-[16px] md:text-[18px] font-inter font-medium text-black">
+        {/* SUBTEXT */}
+        <p className="mt-[14px] text-[15px] md:text-[18px] font-inter font-medium text-black">
           Speak with our franchise advisor to understand:
         </p>
 
-        <div className="flex flex-wrap justify-center gap-[30px] md:gap-[70px] mt-[40px]">
+        {/* ITEMS */}
+        <div className="flex flex-wrap justify-center gap-[24px] md:gap-[70px] mt-[36px]">
+
           {items.map((item, index) => (
             <div
               key={index}
-              className="flex items-center gap-[12px] w-[160px] md:w-[180px]"
+              className="flex items-center gap-[12px] w-[140px] sm:w-[160px] md:w-[180px]"
             >
+
               <svg
-                className="w-[26px] md:w-[28px] h-[26px] md:h-[28px]"
+                className="w-[24px] md:w-[28px] h-[24px] md:h-[28px]"
                 viewBox="0 0 24 24"
                 fill="none"
               >
@@ -46,18 +52,22 @@ export default function ExploreFranchiseSection() {
                 />
               </svg>
 
-              <p className="text-[18px] md:text-[20px] font-inter font-semibold text-black text-left leading-[24px] md:leading-[26px]">
+              <p className="text-[16px] md:text-[20px] font-inter font-semibold text-black text-left leading-[22px] md:leading-[26px]">
                 {item.line1}
                 <br />
                 {item.line2}
               </p>
+
             </div>
           ))}
+
         </div>
 
-        <button className="mt-[45px] w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold">
+        {/* BUTTON */}
+        <button className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold">
           Schedule a Franchise Consultation
         </button>
+
       </div>
     </section>
   );
