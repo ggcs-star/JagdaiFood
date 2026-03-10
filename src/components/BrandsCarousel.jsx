@@ -46,7 +46,7 @@ const HeaderSection = styled.div`
   text-align: center;
   max-width: 800px;
   margin: 0 auto;
-  padding: 10px 24px 56px;
+  padding: 28px 24px 20px;
 
   @media (max-width: 768px) {
     padding: 48px 16px 40px;
@@ -226,17 +226,17 @@ export default function BrandsCarousel() {
     };
 
     return (
-        <div className="bg-black text-center">
+        <div className="bg-black text-center ">
             <GlobalStyle />
 
-            <div className="max-w-7xl mx-auto rounded-xl">
+            <div className="max-w-7xl mx-auto rounded-xl ">
                 <HeaderSection>
                     <HeaderTitle className="font-bricolageBold">
                       24+ Brands Power
                     </HeaderTitle>
 
                     <HeaderSubtitle className="!text-white text-2xl ">
-Multiple brands. One kitchen. One investment
+                      Multiple brands. One kitchen. One investment
                     </HeaderSubtitle>
 
                     {/* <div
