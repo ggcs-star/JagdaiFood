@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
+import { FaChevronDown, FaPhoneAlt } from "react-icons/fa";
 import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/navbar/logo.webp";
 
@@ -7,58 +8,68 @@ export default function NavbarContent() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { name: "About Us", link: "/about" },
-    { name: "Franchise Models", link: "/franchise-models" },
-    { name: "Investment & Returns", link: "/investment" },
-    { name: "Franchises", link: "/franchises" },
+    { name: "About Us", link: "/about", dropdown: true },
+    { name: "Franchise Models", link: "/franchise-models", dropdown: true },
+    { name: "Franchise Formats", link: "/franchise-formats", dropdown: true },
+    { name: "Investment", link: "/investment" },
+    { name: "Our Brands", link: "/brands" },
+    { name: "Resources", link: "/resources", dropdown: true },
   ];
 
   return (
     <header className="w-full bg-black text-white">
-      <div className="max-w-[1300px] mx-auto px-6 flex items-center justify-between">
+      <div className="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
         <Link to="/" className="flex items-center">
           <img
             src={logo}
-            alt="Jagdal Foods"
+            alt="Jagdai Foods"
             className="h-20 object-contain"
           />
         </Link>
 
-        {/* Desktop Navigation */}
-        <ul className="hidden lg:flex items-center gap-10 text-sm font-medium">
+        {/* Desktop Menu */}
+        <ul className="hidden lg:flex items-center gap-8 text-sm font-medium">
           {navLinks.map((item, index) => (
             <li key={index}>
               <NavLink
                 to={item.link}
                 className={({ isActive }) =>
-                  isActive
-                    ? "text-[#f2b44c]"
-                    : "hover:text-[#f2b44c] transition duration-300"
+                  `flex items-center gap-1 ${
+                    isActive
+                      ? "text-[#f2b44c]"
+                      : "hover:text-[#f2b44c] transition"
+                  }`
                 }
               >
                 {item.name}
+                {item.dropdown && (
+                  <FaChevronDown className="text-[10px] mt-[2px]" />
+                )}
               </NavLink>
             </li>
           ))}
         </ul>
 
-        {/* Right Buttons */}
-        <div className="hidden lg:flex items-center gap-4">
-          <Link
-            to="/brochure"
-            className="border border-gray-400 px-5 py-2 rounded-lg hover:border-white transition"
-          >
-            Download Brochure
-          </Link>
+        {/* Phone CTA */}
+        <div className="hidden lg:flex items-center gap-6">
 
-          <Link
-            to="/contact"
-            className="bg-[#f2b44c] text-black font-semibold px-5 py-2 rounded-lg hover:opacity-90 transition"
-          >
-            Contact Now
-          </Link>
+          <div className="h-10 w-[1px] bg-gray-600"></div>
+
+          <div className="flex items-center gap-3">
+            <div className="bg-[#F4A62A] p-2 rounded-full text-black">
+              <FaPhoneAlt size={14} />
+            </div>
+
+            <div className="leading-tight">
+              <p className="text-xs text-gray-300">For Franchise</p>
+              <p className="font-semibold text-[#F4A62A]">
+                +91 78629 31074
+              </p>
+            </div>
+          </div>
+
         </div>
 
         {/* Mobile Menu Button */}
@@ -91,20 +102,15 @@ export default function NavbarContent() {
             ))}
           </ul>
 
-          <div className="flex flex-col gap-3 mt-6">
-            <Link
-              to="/brochure"
-              className="border border-gray-400 px-4 py-2 rounded-lg text-center"
-            >
-              Download Brochure
-            </Link>
-
-            <Link
-              to="/contact"
-              className="bg-[#f2b44c] text-black font-semibold px-4 py-2 rounded-lg text-center"
-            >
-              Contact Now
-            </Link>
+          {/* Mobile Phone */}
+          <div className="flex items-center gap-3 mt-6">
+            <FaPhoneAlt className="text-[#F4A62A]" />
+            <div>
+              <p className="text-xs text-gray-300">For Franchise</p>
+              <p className="text-[#F4A62A] font-semibold">
+                +91 78629 31074
+              </p>
+            </div>
           </div>
         </div>
       )}

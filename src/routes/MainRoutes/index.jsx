@@ -4,6 +4,7 @@ import { useRoutes, Outlet } from "react-router-dom";
 import Home from "./Home";
 import FranchiseModels from "./FranchiseModels";
 import Investment from "./Investment";
+import OurBrands from "./OurBrands";
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -19,6 +20,7 @@ export default function MainRoutes(props) {
         { path: "", element: <Home {...props} /> },
         { path: "/franchise-models", element: <FranchiseModels {...props} /> },
         { path: "/investment", element: <Investment {...props} /> },
+        { path: "/brands", element: <OurBrands {...props} /> },
         // { path: "/pharmretail", element: <Pharmretail {...props} /> },
         // { path: "/pharmconnect", element: <Pharmconnect {...props} /> },
         // { path: "/pharmanalytics", element: <Pharmanalytics {...props} /> },
