@@ -9,7 +9,7 @@ import profit from "../../../../assets/franchisemodels/profit.png";
 
 export default function WhiteLabelProfitCard() {
   return (
-    <div className="w-full max-w-[1100px] md:h-[427px] mx-auto mt-[40px] rounded-[24px] bg-[#5A5A5A] pt-[40px] pb-[40px] px-[20px] sm:px-[40px] md:px-[60px] box-border">
+    <div className="lg:w-full lg:max-w-[1100px] mx-3 md:h-[427px] lg:mx-auto mt-[40px] rounded-[24px] bg-[#5A5A5A] pt-[40px] pb-[40px] px-[20px] sm:px-[40px] md:px-[60px] box-border">
       {" "}
       <h3 className="text-white font-bricolageSemiBold text-[20px] leading-[24px] mb-[40px] text-left">
         White-Label / Own Brand Option Available

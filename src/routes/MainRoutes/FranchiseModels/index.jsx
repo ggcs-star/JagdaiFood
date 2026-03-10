@@ -55,61 +55,7 @@ export default function FranchiseModels() {
 
       <ExploreFranchiseSection />
 
-      {scrollPercentage > 0 && (
-        <div
-          onClick={scrollToTop}
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            cursor: "pointer",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-          }}
-        >
-          <span
-            style={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              fontSize: "20px",
-              color: "#fff",
-            }}
-          >
-            ↑
-          </span>
-
-          <svg height="50" width="50" viewBox="0 0 50 50">
-            <circle
-              cx="25"
-              cy="25"
-              r="23"
-              style={{
-                fill: "none",
-                stroke: getStrokeColor(),
-                strokeWidth: "2",
-                strokeDasharray: `${2 * Math.PI * 24}`,
-                strokeDashoffset: getStrokeDashoffset(),
-                transition: "stroke-dashoffset 0.3s ease, stroke 0.3s ease",
-                transform: "rotate(-90deg)",
-                transformOrigin: "center",
-              }}
-            />
-
-            <circle
-              cx="25"
-              cy="25"
-              r="22"
-              style={{
-                fill: "rgba(0,0,0,0.5)",
-              }}
-            />
-          </svg>
-        </div>
-      )}
+   
     </div>
   );
 }
