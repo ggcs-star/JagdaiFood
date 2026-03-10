@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { IoMdMenu, IoMdClose } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../../assets/navbar/logo.webp";
 
 export default function NavbarContent() {
@@ -30,19 +30,22 @@ export default function NavbarContent() {
         <ul className="hidden lg:flex items-center gap-10 text-sm font-medium">
           {navLinks.map((item, index) => (
             <li key={index}>
-              <Link
+              <NavLink
                 to={item.link}
-                className="hover:text-[#f2b44c] transition duration-300"
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-[#f2b44c]"
+                    : "hover:text-[#f2b44c] transition duration-300"
+                }
               >
                 {item.name}
-              </Link>
+              </NavLink>
             </li>
           ))}
         </ul>
 
         {/* Right Buttons */}
         <div className="hidden lg:flex items-center gap-4">
-
           <Link
             to="/brochure"
             className="border border-gray-400 px-5 py-2 rounded-lg hover:border-white transition"
@@ -56,7 +59,6 @@ export default function NavbarContent() {
           >
             Contact Now
           </Link>
-
         </div>
 
         {/* Mobile Menu Button */}
@@ -74,13 +76,17 @@ export default function NavbarContent() {
           <ul className="flex flex-col gap-4 mt-4 text-base">
             {navLinks.map((item, index) => (
               <li key={index}>
-                <Link
+                <NavLink
                   to={item.link}
                   onClick={() => setMenuOpen(false)}
-                  className="block hover:text-[#f2b44c]"
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#f2b44c] font-semibold"
+                      : "hover:text-[#f2b44c]"
+                  }
                 >
                   {item.name}
-                </Link>
+                </NavLink>
               </li>
             ))}
           </ul>

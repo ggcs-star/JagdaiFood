@@ -124,11 +124,11 @@ export default function AdditionalFranchiseModels() {
             </div>
 
             {/* Image */}
-            <div className="mt-10 h-72">
+            <div className=" h-96">
               <img
                 src={master}
                 alt="territory model"
-                className="w-full object-cover h-72"
+                className="w-full object-contain h-96"
               />
             </div>
 

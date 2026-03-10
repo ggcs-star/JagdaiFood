@@ -15,10 +15,10 @@ export default function WhyReturnsStructured() {
 
   return (
     <section className="bg-black py-8 text-white">
-      <div className="max-w-7xl mx-auto px-3 lg:px-6">
+      <div className="max-w-7xl mx-auto px-3 lg:px-0">
 
         {/* Heading */}
-        <h2 className="text-3xl md:text-4xl font-bricolageBold text-center mb-16">
+        <h2 className="text-3xl md:text-4xl font-bricolageBold text-center mb-8">
           Why Returns Are Structured
         </h2>
 

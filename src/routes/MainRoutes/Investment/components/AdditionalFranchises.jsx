@@ -4,7 +4,7 @@ import { Check } from "lucide-react";
 export default function AdditionalFranchises() {
   return (
     <section className="bg-black px-3">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 pb-4">
 
         {/* Food Trolley Franchise */}
         <div className="bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 text-white">
