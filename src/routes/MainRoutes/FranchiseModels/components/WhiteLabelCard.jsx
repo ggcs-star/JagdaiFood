@@ -11,6 +11,7 @@ export default function WhiteLabelCard() {
         backdropFilter: "blur(30px)",
       }}
     >
+      {/* LEFT TEXT SECTION */}
       <div className="max-w-[520px] text-left z-10">
         <h3 className="text-white font-bricolageSemiBold text-[26px] sm:text-[30px] md:text-[36px] leading-[34px] sm:leading-[38px] md:leading-[43px] mb-[16px] md:mb-[20px] max-w-[428px]">
           White-Label /Own Brand Option Available
@@ -43,8 +44,9 @@ export default function WhiteLabelCard() {
         </p>
       </div>
 
+      {/* GLOW BACKGROUND */}
       <div
-        className="absolute right-[-40px] top-1/2 -translate-y-1/2 w-[300px] md:w-[520px] h-[300px] md:h-[520px]"
+        className="absolute right-[0px] bottom-[0px] w-[260px] md:w-[520px] h-[260px] md:h-[520px] z-0"
         style={{
           background:
             "radial-gradient(circle at center, rgba(253,189,91,0.55) 0%, rgba(253,189,91,0.30) 35%, rgba(253,189,91,0.12) 60%, transparent 75%)",
@@ -52,8 +54,9 @@ export default function WhiteLabelCard() {
         }}
       />
 
+      {/* DOT BACKGROUND */}
       <div
-        className="absolute right-[-20px] top-1/2 -translate-y-1/2 w-[220px] md:w-[460px] h-[220px] md:h-[460px]"
+        className="absolute right-[10px] bottom-[20px] w-[200px] md:w-[460px] h-[200px] md:h-[460px] z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(253,189,91,0.95) 2px, transparent 2px)",
@@ -65,9 +68,12 @@ export default function WhiteLabelCard() {
         }}
       />
 
+      {/* GIRL IMAGE */}
       <img
         src={girl}
-className="relative md:absolute right-[0px] md:right-[15px] bottom-0 md:bottom-[-10px] h-[240px] sm:h-[280px] md:h-[450px] object-contain mx-auto md:mx-0 mt-[30px] md:mt-0"      />
+        alt="girl"
+        className="relative md:absolute md:right-[15px] md:bottom-[-10px] h-[240px] sm:h-[280px] md:h-[450px] object-contain mx-auto md:mx-0 mt-[30px] md:mt-0 z-10"
+      />
     </div>
   );
 }
