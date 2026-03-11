@@ -59,7 +59,7 @@ export default function FranchiseInvestment() {
   <img
     src={qsr}
     alt="restaurant"
-    className="w-[460px] object-contain ml-auto"
+    className="lg:w-[460px] object-contain ml-8 lg:ml-auto"
   />
 
   <p className="absolute top-6 left-0 text-gray-400 max-w-[55%]">
@@ -117,14 +117,14 @@ export default function FranchiseInvestment() {
           {/* Bottom Row */}
       <div className="relative mt-4 h-[220px]">
 
-  <p className="absolute -top-20 left-0 max-w-[55%] leading-relaxed">
+  <p className="absolute lg:-top-20 left-0 w-[40%] lg:max-w-[55%] leading-relaxed">
     A delivery-first, low-capex, high-velocity model built for digital growth.
   </p>
 
   <img
     src={mobile}
     alt="delivery"
-    className="absolute right-0 -top-20 w-[450px] object-contain"
+    className="absolute right-0 lg:-top-20 w-[450px] object-contain"
   />
 
 </div>

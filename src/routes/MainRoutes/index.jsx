@@ -6,6 +6,7 @@ import FranchiseModels from "./FranchiseModels";
 import Investment from "./Investment";
 import OurBrands from "./OurBrands";
 import WhatWeDo from "./WhatWeDo";
+import BrandsDetails from "./BrandsDetails";
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -23,6 +24,8 @@ export default function MainRoutes(props) {
         { path: "/investment", element: <Investment {...props} /> },
         { path: "/brands", element: <OurBrands {...props} /> },
         { path: "/what-we-do", element: <WhatWeDo {...props} /> },
+        { path: "brands/:key", element: <BrandsDetails {...props} /> },
+
         // { path: "/pharmretail", element: <Pharmretail {...props} /> },
         // { path: "/pharmconnect", element: <Pharmconnect {...props} /> },
         // { path: "/pharmanalytics", element: <Pharmanalytics {...props} /> },
@@ -31,7 +34,7 @@ export default function MainRoutes(props) {
         // { path: "/media", element: <Media {...props} /> },
         // { path: "/contact-us", element: <Contact {...props} /> },
         // { path: "/about-us", element: <About {...props} /> },
-        
+
         Outlet,
     ]);
     return <div className="">{routes}</div>;
