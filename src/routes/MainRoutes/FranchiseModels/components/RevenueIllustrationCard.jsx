@@ -12,7 +12,7 @@ export default function RevenueIllustrationCard() {
         backdropFilter: "blur(30px)",
       }}
     >
-      {/* LEFT CONTENT */}
+      
       <div className="w-full lg:w-[520px] z-10">
         <h3 className="text-white font-bricolageSemiBold text-[24px] sm:text-[30px] lg:text-[32px] leading-[32px] sm:leading-[36px] lg:leading-[40px] mb-[22px]">
           Revenue Illustration
@@ -57,10 +57,10 @@ export default function RevenueIllustrationCard() {
         </p>
       </div>
 
-      {/* RIGHT IMAGE */}
+      
       <div className="relative w-full lg:w-[550px] h-[260px] sm:h-[340px] lg:h-[432px] mt-[40px] lg:mt-0 flex justify-center lg:block">
 
-        {/* glow */}
+        
         <div
           className="absolute right-[-40px] lg:right-[-40px] sm:right-[-20px] top-1/2 -translate-y-1/2 w-[260px] sm:w-[420px] md:w-[520px] h-[260px] sm:h-[420px] md:h-[520px]"
           style={{
@@ -70,7 +70,7 @@ export default function RevenueIllustrationCard() {
           }}
         />
 
-        {/* dotted */}
+       
         <div
           className="absolute right-[-10px] sm:right-[-20px] top-1/2 -translate-y-1/2 w-[200px] sm:w-[360px] md:w-[460px] h-[200px] sm:h-[360px] md:h-[460px]"
           style={{

@@ -18,17 +18,17 @@ export default function ExploreFranchiseSection() {
         }}
       >
 
-        {/* TITLE */}
+        
         <h2 className="font-bricolageBold text-[26px] sm:text-[34px] md:text-[40px] leading-[34px] md:leading-[50px] text-black w-full max-w-[580px]">
           Ready to Explore Your Franchise Opportunity?
         </h2>
 
-        {/* SUBTEXT */}
+       
         <p className="mt-[14px] text-[15px] md:text-[18px] font-inter font-medium text-black">
           Speak with our franchise advisor to understand:
         </p>
 
-        {/* ITEMS */}
+        
         <div className="flex flex-wrap justify-center gap-[24px] md:gap-[70px] mt-[36px]">
 
           {items.map((item, index) => (
@@ -63,7 +63,7 @@ export default function ExploreFranchiseSection() {
 
         </div>
 
-        {/* BUTTON */}
+       
         <button className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold">
           Schedule a Franchise Consultation
         </button>
