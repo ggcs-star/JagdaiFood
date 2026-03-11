@@ -56,7 +56,7 @@ export default function WhiteLabelCard() {
         </p>
       </div>
 
-      {/* GLOW */}
+      
       <div
         className="absolute right-0 bottom-0 w-[240px] md:w-[520px] h-[240px] md:h-[520px] z-0"
         style={{
@@ -66,7 +66,7 @@ export default function WhiteLabelCard() {
         }}
       />
 
-      {/* DOT PATTERN */}
+      
       <div
         className="absolute right-[10px] bottom-[20px] w-[200px] md:w-[460px] h-[200px] md:h-[460px] z-0"
         style={{
@@ -80,7 +80,7 @@ export default function WhiteLabelCard() {
         }}
       />
 
-      {/* IMAGE */}
+      
       <img
         src={girl}
         alt="girl"

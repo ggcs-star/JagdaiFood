@@ -15,7 +15,7 @@ export default function CapitalProtectionFramework() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] md:gap-[80px] items-center">
 
-          {/* LEFT */}
+          
           <div className="flex flex-col">
 
             <h2 className="font-bricolageBold text-[26px] sm:text-[30px] md:text-[36px] lg:text-[40px] leading-[34px] sm:leading-[38px] md:leading-[44px] lg:leading-[46px] text-black mb-[20px] md:mb-[30px]">
@@ -30,7 +30,7 @@ export default function CapitalProtectionFramework() {
 
           </div>
 
-          {/* RIGHT */}
+          
           <div className="space-y-[16px] md:space-y-[24px]">
 
             <p className="text-black font-bricolageBold text-[15px] sm:text-[16px] md:text-[18px]">
