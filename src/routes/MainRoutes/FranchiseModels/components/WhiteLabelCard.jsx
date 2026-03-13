@@ -23,8 +23,8 @@ export default function WhiteLabelCard() {
         backdropFilter: "blur(30px)",
       }}
     >
-      {/* TEXT SECTION */}
-      <div className="w-full md:max-w-[520px] z-10">
+      
+      <div className="w-full md:max-w-[520px] z-10 ">
         <h3 className="text-white font-bricolageSemiBold text-[24px] sm:text-[30px] md:text-[36px] leading-[34px] md:leading-[42px] mb-[16px]">
           White-Label /Own Brand Option Available
         </h3>

@@ -1,5 +1,6 @@
 import React from "react";
 import check from "../../../../assets/franchisemodels/check.svg";
+import orangeDots from "../../../../assets/franchisemodels/orangeDots.png";
 
 export default function OriginStory() {
   return (
@@ -17,7 +18,6 @@ export default function OriginStory() {
         flex items-center
         "
       >
-        
         <div
           className="
         w-full
@@ -77,7 +77,6 @@ export default function OriginStory() {
             Our foundation rests on two core beliefs:
           </p>
 
-          
           <div className="flex items-start gap-[10px] mb-[10px]">
             <img src={check} className="w-[16px] md:w-[18px] mt-[3px]" />
             <span
@@ -94,7 +93,6 @@ export default function OriginStory() {
             </span>
           </div>
 
-         
           <div className="flex items-start gap-[10px] mb-[16px]">
             <img src={check} className="w-[16px] md:w-[18px] mt-[3px]" />
             <span
@@ -126,51 +124,44 @@ export default function OriginStory() {
           </p>
         </div>
 
-       
-            <div
-              className="
-              absolute
-
-              right-[-20px]
-              top-[-20px]
-
-              w-[90px]
-              h-[90px]
-
-              sm:w-[120px]
-              sm:h-[120px]
-
-              md:right-[0px]
-              md:top-1/2
-              md:-translate-y-1/2
-              md:w-[420px]
-              md:h-[420px]
-
-              pointer-events-none
-              opacity-60 md:opacity-100
-            "
-            >
-        
+        <div
+          className="
+  hidden md:block
+  absolute
+  right-0
+  top-1/2
+  -translate-y-1/2
+  w-[420px]
+  h-[420px]
+  pointer-events-none
+"
+        >
           <div
             className="absolute inset-0"
             style={{
               background:
-                "radial-gradient(circle at center, rgba(253,189,91,0.45) 0%, rgba(253,189,91,0.15) 45%, transparent 70%)",
+                "radial-gradient(circle at center, rgba(253,189,91,0.45) 0%, rgba(253,189,91,0.15) 85%, transparent 70%)",
               filter: "blur(40px)",
             }}
           />
 
-         
-          <div
-            className="absolute inset-0"
+          <img
+            src={orangeDots}
+            alt="dots"
+            className="
+  absolute
+  right-[20px]
+  top-1/2
+  -translate-y-1/2
+  w-[600px]
+  max-w-none
+  pointer-events-none
+  "
             style={{
-              background:
-                "radial-gradient(circle, rgba(253,189,91,1) 2px, transparent 2px)",
-              backgroundSize: "18px 18px",
               maskImage:
-                "radial-gradient(circle at center, black 60%, transparent 75%)",
+                "radial-gradient(circle at center, black 60%, transparent 85%)",
               WebkitMaskImage:
-                "radial-gradient(circle at center, black 60%, transparent 75%)",
+                "radial-gradient(circle at center, black 60%, transparent 85%)",
             }}
           />
         </div>

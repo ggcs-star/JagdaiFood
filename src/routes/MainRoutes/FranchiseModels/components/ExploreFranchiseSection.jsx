@@ -1,6 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function ExploreFranchiseSection() {
+
+  const navigate = useNavigate();
+  
   const items = [
     { line1: "Agreement", line2: "structure" },
     { line1: "Investment", line2: "breakdown" },
@@ -64,7 +68,9 @@ export default function ExploreFranchiseSection() {
         </div>
 
        
-        <button className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold">
+        <button
+        onClick={()=>navigate("/contact")}
+         className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold hover:opacity-90 transition">
           Schedule a Franchise Consultation
         </button>
 

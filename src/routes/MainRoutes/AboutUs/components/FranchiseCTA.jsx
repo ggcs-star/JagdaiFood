@@ -1,6 +1,8 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function FranchiseCTA() {
+  const navigate = useNavigate();
   return (
     <div className="w-full flex justify-center mt-[40px] px-[20px]">
 
@@ -88,7 +90,8 @@ export default function FranchiseCTA() {
         >
 
           
-          <button className="bg-[#262626] text-white text-[15px] sm:text-[16px] font-inter px-[24px] py-[12px] rounded-[10px] hover:opacity-90 transition">
+          <button onClick={()=> navigate("/contact")}
+           className="bg-[#262626] text-white text-[15px] sm:text-[16px] font-inter px-[24px] py-[12px] rounded-[10px] hover:opacity-90 transition">
             Schedule a Franchise Consultation
           </button>
 
