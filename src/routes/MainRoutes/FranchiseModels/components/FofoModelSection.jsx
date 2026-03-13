@@ -8,8 +8,7 @@ export default function FofoModelSection() {
     <section className="w-full flex justify-center px-3">
       <div className="relative w-full max-w-[1200px] rounded-[24px] overflow-hidden text-center pt-[60px] md:pt-[80px] pb-[20px] lg:pb-[40px] bg-gradient-to-b from-[#2b2b2b] to-[#1f1f1f] backdrop-blur-[30px]">
         {" "}
-        <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[300px] md:w-[420px] h-[240px] md:h-[320px] bg-[#FDBD5B] opacity-30 blur-[70px]" />
-        <p className="text-[26px] md:text-[32px] font-bricolageSemiBold text-[#FDBD5B]">
+<div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[300px] md:w-[420px] h-[240px] md:h-[320px] bg-[#FDBD5B] bg-[0%_0%] bg-no-repeat bg-origin-padding opacity-30 blur-[70px]" />        <p className="text-[26px] md:text-[32px] font-bricolageSemiBold text-[#FDBD5B]">  
           FOFO Model
         </p>
         <p className="mt-[8px] italic text-[14px] md:text-[16px] leading-[20px] font-semibold text-white">

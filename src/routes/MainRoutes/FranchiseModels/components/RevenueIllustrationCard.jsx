@@ -2,11 +2,13 @@ import React from "react";
 
 import check from "../../../../assets/franchisemodels/greenCheck.png";
 import growth from "../../../../assets/franchisemodels/build.png";
+import greenDots from "../../../../assets/franchisemodels/greenDots1.png";
 
 export default function RevenueIllustrationCard() {
   return (
     <div
-      className="w-full max-w-[1100px] min-h-[432px] mx-auto mt-[80px] rounded-[24px] relative flex flex-col lg:flex-row items-start lg:items-center px-[20px] sm:px-[40px] lg:px-[60px] py-[40px] lg:py-[0px] overflow-hidden"
+      className="w-full max-w-[1100px] min-h-[432px] mx-auto mt-[80px] rounded-[24px] relative flex flex-col lg:flex-row items-start lg:items-center px-[20px] sm:px-[40px] lg:px-[60px] py-[40px] lg:py-[0px] 
+      overflow-hidden"
       style={{
         background: "#5a5a5a",
         backdropFilter: "blur(30px)",
@@ -71,18 +73,21 @@ export default function RevenueIllustrationCard() {
         />
 
        
-        <div
-          className="absolute right-[-10px] sm:right-[-20px] top-1/2 -translate-y-1/2 w-[200px] sm:w-[360px] md:w-[460px] h-[200px] sm:h-[360px] md:h-[460px]"
-          style={{
-            background:
-              "radial-gradient(circle, rgba(52,211,153,0.95) 2px, transparent 2px)",
-            backgroundSize: "20px 20px",
-            maskImage:
-              "radial-gradient(circle at center, black 65%, transparent 85%)",
-            WebkitMaskImage:
-              "radial-gradient(circle at center, black 65%, transparent 85%)",
-          }}
-        />
+      <div
+  className="absolute right-[-10px] sm:right-[-20px] top-1/2 -translate-y-1/2 w-[220px] sm:w-[380px] md:w-[480px] h-[220px] sm:h-[380px] md:h-[480px]"
+  style={{
+    maskImage:
+      "radial-gradient(circle at center, black 65%, transparent 85%)",
+    WebkitMaskImage:
+      "radial-gradient(circle at center, black 65%, transparent 85%)",
+  }}
+>
+  <img
+    src={greenDots}
+    alt="green dots"
+    className="w-full h-full object-cover"
+  />
+</div>
 
         <img
           src={growth}
