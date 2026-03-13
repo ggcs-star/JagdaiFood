@@ -753,7 +753,7 @@ export const franchise = [
     extraDetails: {
       label: "Franchise Fees ",
       fees: "₹6,00,000",
-      percent: "6% ROYALTY TO JAGDAI FOODS ON TOTAL SALE AMOUNT",
+      percent: "6% Royalty to Jagdai Foods On Total Sale Amount",
       total: "/- +GST",
       price: "16,00,000",
       // note: "NON-VEG Option also available for all brands",
@@ -931,14 +931,14 @@ export const franchise = [
       price: "₹540000",
       note: "NON-VEG Option also available for all brands",
       list: [
-        { label: "Food Tempo", icon: bikecart1 },
+        { subTitle: "Food Tempo", icon: bikecart1 },
         {
-          label: "Food Supply from Central Kitchen",
+          subTitle: "Food Supply from Central Kitchen",
           icon: bikecart1,
         },
-        { label: "No Location Constraint", icon: bikecart1 },
-        { label: "In-Built Freezer", icon: bikecart1 },
-        { label: "Ultra Modern Design", icon: bikecart1 },
+        { subTitle: "No Location Constraint", icon: bikecart1 },
+        { subTitle: "In-Built Freezer", icon: bikecart1 },
+        { subTitle: "Ultra Modern Design", icon: bikecart1 },
       ],
       details: [
         {
@@ -1028,7 +1028,7 @@ export const franchise = [
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹20,00,000",
-      percent: "6% ROYALTY FROM THE TROLLEY",
+      percent: "6% Royalty from the Trolley",
       total: "/- +GST",
       price: "20,00,000",
       note: "NON-VEG Option also available",
@@ -1144,12 +1144,12 @@ export const franchise = [
       // note: "NON-VEG Option also available for all brands",
       list: [
         {
-          label: "Compact and Mobile Setup",
+          subTitle: "Compact and Mobile Setup",
           icon: trolleyFranchise,
         },
-        { label: "Food Supply from Central Kitchen", icon: trolleyFranchise },
-        { label: "No Location Constraint", icon: trolleyFranchise },
-        { label: "Ultra Modern Design", icon: trolleyFranchise },
+        { subTitle: "Food Supply from Central Kitchen", icon: trolleyFranchise },
+        { subTitle: "No Location Constraint", icon: trolleyFranchise },
+        { subTitle: "Ultra Modern Design", icon: trolleyFranchise },
       ],
       details: [
         {
