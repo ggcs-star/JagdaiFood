@@ -19,14 +19,6 @@ export function PrimaryBtn({ children, className, onClick, type, color }) {
     );
 }
 
-
-
-
-
-
-
-
-
 export function OutlinedBtn({ children, className, onClick }) {
     return (
         <button
@@ -51,11 +43,11 @@ export function SecondaryBtn({ children, className, onClick }) {
 export const ApplyButton = ({ children, onClick }) => {
     return (
         <button
-            className="group relative py-3 px-4 overflow-hidden rounded-full text-lg shadow border-2 border-primary hover:border-primary"
+            className="group relative py-3 px-4 overflow-hidden rounded-full text-lg shadow border-2 border-[#f3b24c] hover:border-[#f3b24c]"
             onClick={onClick}
         >
-            <div className="absolute inset-0 w-0 bg-primary transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span className="relative text-primary group-hover:text-white font-semibold px-3">
+            <div className="absolute inset-0 w-0 bg-[#f3b24c] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+            <span className="relative text-[#f3b24c] group-hover:text-white font-semibold px-3">
                 {children ?? "Franchises"}
             </span>
         </button>

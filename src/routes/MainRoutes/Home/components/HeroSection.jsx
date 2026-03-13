@@ -50,7 +50,7 @@ export default function FranchiseHero() {
             food businesses with operational clarity and predictable returns.
           </p>
 
-          <p className="text-sm lg:text-lg text-gray-200 mb-10">
+          <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
             Structured franchise formats. Capital protection framework. Multi-brand scale.
           </p>
 

@@ -84,7 +84,7 @@ export default function HowYouEarn() {
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-semibold mb-16">
+        <h2 className="text-center text-3xl md:text-4xl font-bricolageBold mb-16">
           How You Earn?
         </h2>
 
