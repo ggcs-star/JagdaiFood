@@ -2,7 +2,7 @@ import React from "react";
 
 export default function InvestmentOverview() {
   return (
-    <section className="w-full max-w-[1200px] mx-auto mt-[80px] px-[16px] md:px-0">
+    <section className="w-full max-w-[1200px] mx-auto pt-[80px] px-[16px] md:px-0">
       <h2 className="text-white text-[32px] md:text-[36px] lg:text-[42px] font-bricolageSemiBold text-center mb-[50px] md:mb-[70px]">
         Investment Overview
       </h2>
