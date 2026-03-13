@@ -16,18 +16,19 @@ const Footer = () => {
   ];
 
   const businessModels = [
-    { label: "FOFO Model", desc: "(Franchise Owned Franchise Operated)", slug: "/fofo" },
-    { label: "FOCO Model", desc: "(Franchise Owned Company Operated)", slug: "/foco" },
-    { label: "Investment & ROI", slug: "/investment-roi" },
+    { label: "FOFO Model", desc: "(Franchise Owned Franchise Operated)", slug: "/fofo-model" },
+    { label: "FOCO Model", desc: "(Franchise Owned Company Operated)", slug: "/foco-model" },
+    { label: "Investment & ROI", slug: "/investment" },
   ];
 
   const resources = [
     { label: "Download Investment Brochure", slug: "/brochure" },
     { label: "Franchise Application", slug: "/franchise-apply" },
-    { label: "Schedule Consultation", slug: "/consultation" },
-    { label: "Franchise FAQs", slug: "/faqs" },
+    { label: "Schedule Consultation", slug: "/contact" },
+    { label: "Franchise FAQs", slug: "/faq" },
     { label: "Terms & Conditions", slug: "/terms" },
     { label: "Privacy Policy", slug: "/privacy" },
+    {label: "Disclaimer", slug:"/disclaimer"}
   ];
 
   const socials = [

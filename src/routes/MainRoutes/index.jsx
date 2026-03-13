@@ -15,6 +15,9 @@ import EarningPotential from "./EarningPotential";
 import FranchiseFormats from "./FranchiseFormats";
 import FOFOModel from "./FOFOModel";
 import FOCOModel from "./FOCOModel";
+import TermsConditions from "./Terms&Conditions";
+import PrivacyPolicy from "./PrivacyPolicy";
+import Disclaimer from "./Disclaimer";
 import ModelComparison from "./ModelComparison";
 import FranchisesDetails from "./FranchisesDetails";
 
@@ -47,6 +50,11 @@ export default function MainRoutes(props) {
 
         { path: "/faq", element: <FAQ {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
+        {path: "/terms", element: <TermsConditions {...props} />},
+        
+        {path: "/privacy", element: <PrivacyPolicy {...props}/>},
+        {path: "/disclaimer", element: <Disclaimer {...props}/>},
+
         // { path: "/pharmretail", element: <Pharmretail {...props} /> },
         // { path: "/pharmconnect", element: <Pharmconnect {...props} /> },
         // { path: "/pharmanalytics", element: <Pharmanalytics {...props} /> },

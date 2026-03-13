@@ -1,7 +1,9 @@
 import React from "react";
 import heroImage from "../../../../assets/home/herosection/herosection.png";
+import { useNavigate } from "react-router-dom";
 
 export default function FranchiseHero() {
+  const navigate = useNavigate();
   return (
     <section className="relative w-screen min-h-[85vh] text-white overflow-hidden">
 
@@ -27,7 +29,7 @@ export default function FranchiseHero() {
         <div className="px-3 lg:px-38 max-w-[950px]">
 
           <p className="font-bricolageBold text-[#FDBD5B] mb-4">
-            Built on Amma’s Legacy.
+            Built on Amma’s Legacy
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
@@ -35,7 +37,7 @@ export default function FranchiseHero() {
             <br className="hidden lg:block" />
             {' '} Scalable Food
             <br className="hidden lg:block" />
-            {' '} Entrepreneurship.
+            {' '} Entrepreneurship
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
@@ -59,7 +61,9 @@ export default function FranchiseHero() {
               Apply for Franchise
             </button>
 
-            <button className="border border-white/40 px-3 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
+            <button
+            onClick={()=> navigate("/contact")}
+             className="border border-white/40 px-3 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>
