@@ -1,7 +1,9 @@
 import React from "react";
 import heroImage from "../../../../assets/home/herosection/herosection.png";
+import { useNavigate } from "react-router-dom";
 
 export default function FranchiseHero() {
+  const navigate = useNavigate();
   return (
     <section className="relative w-screen min-h-[85vh] text-white overflow-hidden">
 
@@ -59,7 +61,9 @@ export default function FranchiseHero() {
               Apply for Franchise
             </button>
 
-            <button className="border border-white/40 px-3 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
+            <button
+            onClick={()=> navigate("/contact")}
+             className="border border-white/40 px-3 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>

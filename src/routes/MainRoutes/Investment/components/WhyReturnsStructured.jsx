@@ -1,8 +1,10 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import whyReturns from '../../../../assets/investment/whyreturns.png'
 
 export default function WhyReturnsStructured() {
+  const navigate = useNavigate();
   const points = [
     "Fresh and hygienic food",
     "24+ Brand and revenue Diversification",
@@ -79,7 +81,9 @@ export default function WhyReturnsStructured() {
 
           </div>
 
-          <button className="bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition">
+          <button
+          onClick={()=>{navigate("/contact")}}
+           className="bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition">
             Schedule a Franchise Consultation
           </button>
 
