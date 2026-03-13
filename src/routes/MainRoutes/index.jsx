@@ -18,6 +18,7 @@ import FOCOModel from "./FOCOModel";
 import TermsConditions from "./Terms&Conditions";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Disclaimer from "./Disclaimer";
+import ModelComparison from "./ModelComparison";
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -35,6 +36,7 @@ export default function MainRoutes(props) {
         { path: "/franchise-models", element: <FranchiseModels {...props} /> },
         { path: "/fofo-model", element: <FOFOModel {...props} /> },
         { path: "/foco-model", element: <FOCOModel {...props} /> },
+        { path: "/model-comparison", element: <ModelComparison {...props} /> },
         { path: "/franchise-formats", element: <FranchiseFormats {...props} /> },
         { path: "/investment", element: <Investment {...props} /> },
         { path: "/brands", element: <OurBrands {...props} /> },

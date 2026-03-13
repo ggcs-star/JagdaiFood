@@ -327,7 +327,7 @@ export default function EarningPotentialComponent(props) {
                     Calculate Your Monthly Earning Potential
                 </h2>
                </div>
-                <div className="grid grid-cols-1 lg:grid-cols-4 mt-10 py-4 lg:py-0 items-center gap-4 lg:gap-10 bg-gray-900 px-4 lg:px-0">
+                <div className="grid grid-cols-1 lg:grid-cols-4 mt-10 py-4 lg:py-0 items-center gap-4 lg:gap-10 bg-gray-900 px-4 lg:px-20">
                     {inputFields?.map((item) => (
                         <div
                             key={item?.id}
