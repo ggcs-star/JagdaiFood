@@ -83,8 +83,7 @@ export default function AdditionalFranchiseModels() {
           </div>
 
           {/* Territory Card */}
-          <div className="rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] flex flex-col justify-between">
-
+<div className="relative rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] flex flex-col justify-between">
             <div className="p-4 lg:p-6">
 
               <h3 className="text-3xl font-bricolageBold mb-4">
@@ -128,7 +127,7 @@ export default function AdditionalFranchiseModels() {
               <img
                 src={master}
                 alt="territory model"
-                className="w-full object-contain h-96"
+                className="w-full object-contain absolute right-0 bottom-0"
               />
             </div>
 

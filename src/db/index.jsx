@@ -68,6 +68,20 @@ import reel7 from '../assets/reels/reel7.mp4'
 import reel8 from '../assets/reels/reel8.mp4'
 import reel9 from '../assets/reels/reel9.mp4'
 
+import dilliBackground from "../assets/brands/background/dillibackground.png";
+import scanner from '../assets/brands/scanner.png'
+import playstoreimage from '../assets/brands/playstoreimage.png'
+import appstoreimage from '../assets/brands/appstoreimage.png'
+import jagodsLogo from '../assets/brands/jagodsLogo.svg'
+
+import dilli1 from '../assets/brands/menu/dilli/1.png'
+import dilli2 from '../assets/brands/menu/dilli/2.png'
+import dilli3 from '../assets/brands/menu/dilli/3.png'
+import dilli4 from '../assets/brands/menu/dilli/4.png'
+import dilli5 from '../assets/brands/menu/dilli/5.png'
+import dilli6 from '../assets/brands/menu/dilli/6.png'
+
+
 export const brands = [
   {
     id: 1,
@@ -177,6 +191,7 @@ export const brands = [
   },
   {
     id: 5,
+    backgroundImg: dilliBackground,
     image: dbh,
     label: "Dilli by Heart",
     slug: "dilli-by-heart",
@@ -202,6 +217,70 @@ export const brands = [
           "Your journey to the capital’s soul begins with a plate full of nostalgia.",
       },
     ],
+
+    menuDownloadLink: "/menus/dilli-by-heart-menu.pdf",
+
+    menuCategories: [
+      "North Indian",
+      "Ek Free ka Jugad",
+      "Combo",
+      "By Kilo",
+      "Others"
+    ],
+
+    menuItems: [
+      {
+        title: "Puri Sabji",
+        desc: "Gobi and Poori Shaadi Style features a festive blend of spices.",
+        image: dilli1,
+        category: "North Indian"
+      },
+      {
+        title: "Shaadi Style Aloo Gobi",
+        desc: "Authentic Delhi style aloo gobi cooked with festive spices.",
+        image: dilli2,
+        category: "North Indian"
+      },
+      {
+        title: "Chole with Poori",
+        desc: "Classic Delhi street style chole served with soft pooris.",
+        image: dilli3,
+        category: "North Indian"
+      },
+        {
+        title: "Puri Sabji",
+        desc: "Gobi and Poori Shaadi Style features a festive blend of spices.",
+        image: dilli4,
+        category: "North Indian"
+      },
+      {
+        title: "Shaadi Style Aloo Gobi",
+        desc: "Authentic Delhi style aloo gobi cooked with festive spices.",
+        image: dilli5,
+        category: "North Indian"
+      },
+      {
+        title: "Chole with Poori",
+        desc: "Classic Delhi street style chole served with soft pooris.",
+        image: dilli6,
+        category: "North Indian"
+      }
+    ],
+mobileApp: {
+  logo: jagodsLogo,
+  // phoneImage: scanner,
+  qrCode: scanner,
+
+  playStore: {
+    badge: playstoreimage,
+    link: "https://play.google.com/store/apps/details?id=com.jagdai"
+  },
+
+  appStore: {
+    badge: appstoreimage,
+    link: "https://apps.apple.com/app/jagdai"
+  }
+}
   },
   {
     id: 6,
@@ -1227,7 +1306,7 @@ export const franchise = [
       img2: qsrnon,
     },
   },
-    {
+  {
     title: "Cart On Rent",
     sub_title: "Cart",
     franchiseType: "cart",
@@ -2036,8 +2115,8 @@ export const sliderCategories = [
 
 
 
-      
-            "https://www.youtube.com/embed/p0RmDevoqp0?mute=1&loop=1&playlist=p0RmDevoqp0&controls=1&rel=0",
+
+      "https://www.youtube.com/embed/p0RmDevoqp0?mute=1&loop=1&playlist=p0RmDevoqp0&controls=1&rel=0",
 
       "https://www.youtube.com/embed/D9sFqC_QyKU?mute=1&loop=1&playlist=D9sFqC_QyKU&controls=1&rel=0",
       "https://www.youtube.com/embed/PNIoArEXztE?mute=1&loop=1&playlist=PNIoArEXztE&controls=1&rel=0",
@@ -2052,7 +2131,7 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/PNIoArEXztE?mute=1&loop=1&playlist=PNIoArEXztE&controls=1&rel=0",
       "https://www.youtube.com/embed/N2rytkiHOwc?mute=1&loop=1&playlist=N2rytkiHOwc&controls=1&rel=0",
       "https://www.youtube.com/embed/T1aZ8jh18SY?mute=1&loop=1&playlist=T1aZ8jh18SY&controls=1&rel=0",
-      
+
     ],
 
   },

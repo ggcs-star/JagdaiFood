@@ -8,7 +8,13 @@ import OurBrands from "./OurBrands";
 import AboutUs from "./AboutUs";
 import FAQ from "./FAQ";
 import WhatWeDo from "./WhatWeDo";
+import BrandsDetails from "./BrandsDetails";
 import Contact from "./Contact";
+import LegacyOfAmma from "./LegacyOfAmma";
+import EarningPotential from "./EarningPotential";
+import FranchiseFormats from "./FranchiseFormats";
+import FOFOModel from "./FOFOModel";
+import FOCOModel from "./FOCOModel";
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -22,11 +28,18 @@ import Contact from "./Contact";
 export default function MainRoutes(props) {
     const routes = useRoutes([
         { path: "", element: <Home {...props} /> },
+        { path: "/about", element: <LegacyOfAmma {...props} /> },
         { path: "/franchise-models", element: <FranchiseModels {...props} /> },
+        { path: "/fofo-model", element: <FOFOModel {...props} /> },
+        { path: "/foco-model", element: <FOCOModel {...props} /> },
+        { path: "/franchise-formats", element: <FranchiseFormats {...props} /> },
         { path: "/investment", element: <Investment {...props} /> },
         { path: "/brands", element: <OurBrands {...props} /> },
-        { path: "/about", element: <AboutUs {...props} /> },
+        { path: "/who-we-are", element: <AboutUs {...props} /> },
         { path: "/what-we-do", element: <WhatWeDo {...props} /> },
+        { path: "brands/:key", element: <BrandsDetails {...props} /> },
+        { path: "/roi-calculator", element: <EarningPotential {...props} /> },
+
         { path: "/faq", element: <FAQ {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         // { path: "/pharmretail", element: <Pharmretail {...props} /> },
@@ -37,7 +50,7 @@ export default function MainRoutes(props) {
         // { path: "/media", element: <Media {...props} /> },
         // { path: "/contact-us", element: <Contact {...props} /> },
         // { path: "/about-us", element: <About {...props} /> },
-        
+
         Outlet,
     ]);
     return <div className="">{routes}</div>;

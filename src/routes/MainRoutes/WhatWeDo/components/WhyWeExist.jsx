@@ -18,7 +18,7 @@ export default function WhyWeExist() {
         {/* Right Content */}
         <div className="space-y-6">
 
-          <h2 className="text-3xl md:text-4xl font-semibold">
+          <h2 className="text-3xl md:text-4xl font-bricolageBold">
             Why We Exist?
           </h2>
 

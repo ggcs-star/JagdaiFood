@@ -9,11 +9,11 @@ const SampleCard = ({ item, handler }) => {
     <div className="">
       <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-full h-[460px] text-gray-300 overflow-hidden transition-all duration-500">
 
-        {/* Glow Background */}
-        <div
-          className="absolute bottom-0 h-0 w-full rounded-t-full blur-2xl transition-all duration-500 group-hover:h-48"
-          style={{ background: bgColors[item?.id - 1] }}
-        />
+           {/* Glow Background */}
+       <div
+     className="absolute bottom-0 h-40 w-full rounded-t-full blur-2xl"
+     style={{ background: bgColors[item?.id - 1] }}
+   />
 
         {/* Content */}
         <div className="pt-6 z-10 text-center px-6">
@@ -27,22 +27,21 @@ const SampleCard = ({ item, handler }) => {
         </div>
 
         {/* Button */}
-        <div className="z-10 flex flex-col items-center pt-6">
+  <div className="z-10 flex flex-col items-center pt-6">
           <button
-            onClick={handler}
-            className="
-            text-xs py-3 px-6 rounded-lg
-            border-2 border-white
-            font-bold uppercase
-            transition-all duration-300
-            bg-transparent text-white
-            group-hover:bg-[#f2b44c]
-            group-hover:border-none
-            group-hover:text-black
-            "
-          >
-            View Menu
-          </button>
+  onClick={handler}
+className="
+  text-xs py-3 px-6 rounded-lg
+  border-2 border-white
+  font-bold uppercase
+  bg-transparent text-white
+  group-hover:bg-[#f2b44c]
+  group-hover:border-[#f2b44c]
+  group-hover:text-black
+"
+>
+  View Menu
+</button>
         </div>
 
         {/* Image */}
@@ -50,7 +49,7 @@ const SampleCard = ({ item, handler }) => {
           <img
             src={item?.image}
             alt="card"
-            className="w-full max-h-[240px] object-contain transition-transform duration-500 group-hover:-rotate-[10deg]"
+            className="w-full max-h-[240px] object-contain"
           />
         </div>
 

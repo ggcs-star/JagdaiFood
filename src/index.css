@@ -50,6 +50,10 @@
     --shadow-header: 0px 2px 10px 5px rgba(1,15,28,0.1);
 }
 
+.apexcharts-legend-text {
+  color: #ffffff !important;
+}
+
 @keyframes stackReveal {
   0% {
     transform: translateY(40px);
