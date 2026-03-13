@@ -108,10 +108,8 @@ export default function FofoModelSection() {
             </div>
           </div>
         </div>
-
         <WhiteLabelCard />
         <WhiteLabelProfitCard />
-
       </div>
     </section>
   );

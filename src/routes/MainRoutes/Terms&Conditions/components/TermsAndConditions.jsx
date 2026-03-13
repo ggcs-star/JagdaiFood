@@ -64,12 +64,12 @@ export default function TermsAndConditions() {
           >
             <div className="bg-[#242424] px-[18px] sm:px-[22px] md:px-[26px] lg:px-[30px] py-[14px] sm:py-[16px]">
               <h3 className="text-white font-bricolageSemiBold text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px]">
-                {item.title}
+                {item.title} :
               </h3>
             </div>
 
             <div className="bg-[#2f2f2f] px-[18px] sm:px-[22px] md:px-[26px] lg:px-[30px] py-[16px] sm:py-[18px] md:py-[20px]">
-              <p className="text-gray-300 text-[13px] sm:text-[14px] md:text-[15px] leading-[22px] sm:leading-[24px] md:leading-[26px]">
+              <p className="text-gray-200 text-[13px] sm:text-[14px] md:text-[16px] leading-[22px] sm:leading-[24px] md:leading-[26px]">
                 {item.content}
               </p>
             </div>

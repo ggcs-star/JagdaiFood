@@ -1,8 +1,11 @@
 import React from 'react'
+import DisclaimerPage from './components/DisclaimerPage'
 
 const Disclaimer = () => {
   return (
-    <div>Disclaimer</div>
+    <div>
+        <DisclaimerPage/>
+    </div>
   )
 }
 

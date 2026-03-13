@@ -29,7 +29,7 @@ export default function FranchiseHero() {
         <div className="px-3 lg:px-38 max-w-[950px]">
 
           <p className="font-bricolageBold text-[#FDBD5B] mb-4">
-            Built on Amma’s Legacy.
+            Built on Amma’s Legacy
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
@@ -37,7 +37,7 @@ export default function FranchiseHero() {
             <br className="hidden lg:block" />
             {' '} Scalable Food
             <br className="hidden lg:block" />
-            {' '} Entrepreneurship.
+            {' '} Entrepreneurship
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">

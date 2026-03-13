@@ -4,8 +4,8 @@ import qsr from "../../../../assets/franchiseformats/qsr.png";
 import cloud from "../../../../assets/franchiseformats/cloude.png";
 import tempo from "../../../../assets/franchiseformats/tempo.png";
 import trolley from "../../../../assets/franchiseformats/trolley.png";
-import foodcourt from "../../../../assets/franchiseformats/trolley.png";
-import influencer from "../../../../assets/franchiseformats/trolley.png";
+import foodcourt from "../../../../assets/franchiseformats/black.png";
+import influencer from "../../../../assets/franchiseformats/influencer_franchise.png";
 
 export default function FranchiseFormats() {
 
