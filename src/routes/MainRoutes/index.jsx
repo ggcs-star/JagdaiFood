@@ -15,6 +15,7 @@ import EarningPotential from "./EarningPotential";
 import FranchiseFormats from "./FranchiseFormats";
 import FOFOModel from "./FOFOModel";
 import FOCOModel from "./FOCOModel";
+import ModelComparison from "./ModelComparison";
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -32,6 +33,7 @@ export default function MainRoutes(props) {
         { path: "/franchise-models", element: <FranchiseModels {...props} /> },
         { path: "/fofo-model", element: <FOFOModel {...props} /> },
         { path: "/foco-model", element: <FOCOModel {...props} /> },
+        { path: "/model-comparison", element: <ModelComparison {...props} /> },
         { path: "/franchise-formats", element: <FranchiseFormats {...props} /> },
         { path: "/investment", element: <Investment {...props} /> },
         { path: "/brands", element: <OurBrands {...props} /> },

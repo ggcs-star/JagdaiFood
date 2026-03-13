@@ -11,7 +11,7 @@ import JagodsAppSection from "./components/JagodsAppSection";
 import BrandsCarousel from "../../../components/BrandsCarousel";
 import WhyJagdai from "./components/WhyJagdai";
 import CapitalGuarantee from "./components/MyJagdaiFoods";
-import FAQAccordion from "../FAQ/components/FAQAccordion";
+import FAQAccordion from "./components/FAQAccordion";
 
 
 
