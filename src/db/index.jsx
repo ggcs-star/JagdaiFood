@@ -54,33 +54,32 @@ import {
   bikecart1,
   man,
   nawabi,
-  rent
+  rent,
 } from "../assets";
 // import img from "../../../assets/images/qsrFrachise.jpg";
 
-import reel1 from '../assets/reels/reel1.mp4'
-import reel2 from '../assets/reels/reel2.mp4'
-import reel3 from '../assets/reels/reel3.mp4'
-import reel4 from '../assets/reels/reel4.mp4'
-import reel5 from '../assets/reels/reel5.mp4'
-import reel6 from '../assets/reels/reel6.mp4'
-import reel7 from '../assets/reels/reel7.mp4'
-import reel8 from '../assets/reels/reel8.mp4'
-import reel9 from '../assets/reels/reel9.mp4'
+import reel1 from "../assets/reels/reel1.mp4";
+import reel2 from "../assets/reels/reel2.mp4";
+import reel3 from "../assets/reels/reel3.mp4";
+import reel4 from "../assets/reels/reel4.mp4";
+import reel5 from "../assets/reels/reel5.mp4";
+import reel6 from "../assets/reels/reel6.mp4";
+import reel7 from "../assets/reels/reel7.mp4";
+import reel8 from "../assets/reels/reel8.mp4";
+import reel9 from "../assets/reels/reel9.mp4";
 
 import dilliBackground from "../assets/brands/background/dillibackground.png";
-import scanner from '../assets/brands/scanner.png'
-import playstoreimage from '../assets/brands/playstoreimage.png'
-import appstoreimage from '../assets/brands/appstoreimage.png'
-import jagodsLogo from '../assets/brands/jagodsLogo.svg'
+import scanner from "../assets/brands/scanner.png";
+import playstoreimage from "../assets/brands/playstoreimage.png";
+import appstoreimage from "../assets/brands/appstoreimage.png";
+import jagodsLogo from "../assets/brands/jagodsLogo.svg";
 
-import dilli1 from '../assets/brands/menu/dilli/1.png'
-import dilli2 from '../assets/brands/menu/dilli/2.png'
-import dilli3 from '../assets/brands/menu/dilli/3.png'
-import dilli4 from '../assets/brands/menu/dilli/4.png'
-import dilli5 from '../assets/brands/menu/dilli/5.png'
-import dilli6 from '../assets/brands/menu/dilli/6.png'
-
+import dilli1 from "../assets/brands/menu/dilli/1.png";
+import dilli2 from "../assets/brands/menu/dilli/2.png";
+import dilli3 from "../assets/brands/menu/dilli/3.png";
+import dilli4 from "../assets/brands/menu/dilli/4.png";
+import dilli5 from "../assets/brands/menu/dilli/5.png";
+import dilli6 from "../assets/brands/menu/dilli/6.png";
 
 export const brands = [
   {
@@ -225,7 +224,7 @@ export const brands = [
       "Ek Free ka Jugad",
       "Combo",
       "By Kilo",
-      "Others"
+      "Others",
     ],
 
     menuItems: [
@@ -233,54 +232,54 @@ export const brands = [
         title: "Puri Sabji",
         desc: "Gobi and Poori Shaadi Style features a festive blend of spices.",
         image: dilli1,
-        category: "North Indian"
+        category: "North Indian",
       },
       {
         title: "Shaadi Style Aloo Gobi",
         desc: "Authentic Delhi style aloo gobi cooked with festive spices.",
         image: dilli2,
-        category: "North Indian"
+        category: "North Indian",
       },
       {
         title: "Chole with Poori",
         desc: "Classic Delhi street style chole served with soft pooris.",
         image: dilli3,
-        category: "North Indian"
+        category: "North Indian",
       },
-        {
+      {
         title: "Puri Sabji",
         desc: "Gobi and Poori Shaadi Style features a festive blend of spices.",
         image: dilli4,
-        category: "North Indian"
+        category: "North Indian",
       },
       {
         title: "Shaadi Style Aloo Gobi",
         desc: "Authentic Delhi style aloo gobi cooked with festive spices.",
         image: dilli5,
-        category: "North Indian"
+        category: "North Indian",
       },
       {
         title: "Chole with Poori",
         desc: "Classic Delhi street style chole served with soft pooris.",
         image: dilli6,
-        category: "North Indian"
-      }
+        category: "North Indian",
+      },
     ],
-mobileApp: {
-  logo: jagodsLogo,
-  // phoneImage: scanner,
-  qrCode: scanner,
+    mobileApp: {
+      logo: jagodsLogo,
+      // phoneImage: scanner,
+      qrCode: scanner,
 
-  playStore: {
-    badge: playstoreimage,
-    link: "https://play.google.com/store/apps/details?id=com.jagdai"
-  },
+      playStore: {
+        badge: playstoreimage,
+        link: "https://play.google.com/store/apps/details?id=com.jagdai",
+      },
 
-  appStore: {
-    badge: appstoreimage,
-    link: "https://apps.apple.com/app/jagdai"
-  }
-}
+      appStore: {
+        badge: appstoreimage,
+        link: "https://apps.apple.com/app/jagdai",
+      },
+    },
   },
   {
     id: 6,
@@ -596,23 +595,21 @@ mobileApp: {
     label: "Maggchi",
     slug: "maggchi",
     desc: "At Maggchi, every dish is a celebration of flavors, bringing together the best of Indian and international street food in a single, satisfying experience, From the comforting warmth of Tadka Maggi to the bold zest of Kimchi Ramen, every bite is a perfect blend of nostalgia and innovation.",
-    shortDesc: "Masala Maggi, Maggi Bhajiya, Maggi Sandwich, Korean Ramen & many more...",
+    shortDesc:
+      "Masala Maggi, Maggi Bhajiya, Maggi Sandwich, Korean Ramen & many more...",
     infoTitle: "What Sets Us Apart ?",
     infoList: [
       {
         label: "Maggi, but More Fun! Enjoy new flavors with a tasty twist.",
       },
       {
-        label:
-          "Crispy, Cheesy, Spicy! Maggi in many yummy ways.",
+        label: "Crispy, Cheesy, Spicy! Maggi in many yummy ways.",
       },
       {
-        label:
-          "Maggi, But Extra Special! Try exciting new flavors today.",
+        label: "Maggi, But Extra Special! Try exciting new flavors today.",
       },
       {
-        label:
-          "From Indian Tadka to Korean Ramen! So many flavors to enjoy.",
+        label: "From Indian Tadka to Korean Ramen! So many flavors to enjoy.",
       },
     ],
   },
@@ -622,23 +619,22 @@ mobileApp: {
     label: "Brew Bit",
     slug: "brew-bit",
     desc: "Brew Bit is your go-to destination for the perfect coffee break, offering a rich selection of handcrafted brews, indulgent beverages, and refreshing sips. From bold espressos to creamy frappés, every drink is crafted to elevate your mood and awaken your senses.",
-    shortDesc: "BrewBit Espresso, Cappuccino, Cold Coffee, Hot Chocolate & many more…",
+    shortDesc:
+      "BrewBit Espresso, Cappuccino, Cold Coffee, Hot Chocolate & many more…",
     infoTitle: "What Sets Us Apart ?",
     infoList: [
       {
-        label: "BrewBit Perfect Coffee Every Time! From rich espressos to creamy lattes.",
+        label:
+          "BrewBit Perfect Coffee Every Time! From rich espressos to creamy lattes.",
       },
       {
-        label:
-          "Cool & Refreshing Sips! Iced coffee, frappés, and more.",
+        label: "Cool & Refreshing Sips! Iced coffee, frappés, and more.",
       },
       {
-        label:
-          "Sweet & Indulgent Treats! Hot chocolate, mochas, and desserts.",
+        label: "Sweet & Indulgent Treats! Hot chocolate, mochas, and desserts.",
       },
       {
-        label:
-          "Relax & Recharge! The best spot for coffee lovers.",
+        label: "Relax & Recharge! The best spot for coffee lovers.",
       },
     ],
   },
@@ -716,6 +712,21 @@ mobileApp: {
   // },
 ];
 
+export const mobileAppCommon = {
+  logo: jagodsLogo,
+  qrCode: scanner,
+
+  playStore: {
+    badge: playstoreimage,
+    link: "https://play.google.com/store/apps/details?id=com.jagdai",
+  },
+
+  appStore: {
+    badge: appstoreimage,
+    link: "https://apps.apple.com/app/jagdai",
+  },
+};
+
 export const bgColors = [
   "#669bbc",
   "#83c5be",
@@ -737,6 +748,15 @@ export const bgColors = [
   "#fb8b24",
   "#e07a5f",
   "#22577a",
+  "#669bbc",
+  ,
+  "#e07a5f",
+  "#a68a64",
+  ,
+  "#457b9d",
+  "#e07a5f",
+  "#00afb9",
+  "#e07a5f",
 ];
 
 export const franchise = [
@@ -1191,7 +1211,8 @@ export const franchise = [
             "Go where the crowd is. Your bike goes with you, unlocking earning potential across multiple locations.",
         },
         {
-          label: "Ride in style with a modern, eye-catching setup built for both performance and profit.",
+          label:
+            "Ride in style with a modern, eye-catching setup built for both performance and profit.",
         },
       ],
     },
@@ -1281,7 +1302,8 @@ export const franchise = [
             "Go where the crowd is. Your bike goes with you, unlocking earning potential across multiple locations.",
         },
         {
-          label: "Ride in style with a modern, eye-catching setup built for both performance and profit.",
+          label:
+            "Ride in style with a modern, eye-catching setup built for both performance and profit.",
         },
       ],
     },
@@ -1373,7 +1395,8 @@ export const franchise = [
             "Go where the crowd is. Your bike goes with you, unlocking earning potential across multiple locations.",
         },
         {
-          label: "Ride in style with a modern, eye-catching setup built for both performance and profit.",
+          label:
+            "Ride in style with a modern, eye-catching setup built for both performance and profit.",
         },
       ],
     },
@@ -1657,16 +1680,29 @@ export const reelVideos = [
     linkId: "dfadf",
     title: "Jagdai Foods",
     videoUrl: reel1,
-    description: "Ab Gujarat ke food culture ka hissa banne ka sapna pura kijiye Jagdai Foods ke saath! Live counters se lekar cloud kitchen tak, Ahmedabad ka swaad ab aapki pahunch mein hai.Sirf ₹3 lakh mein chuniye apna brand aur shuru kijiye apna food business. Aapka sapna, hamari expertise - milke likhte hain success ki nayi kahani!",
-    shortDescription: "Ab Gujarat ke food culture ka hissa banne ka sapna pura kijiye Jagdai Foods ke saath! Live counters se lekar cloud kitchen tak, Ahmedabad ka swaad ab aapki pahunch mein hai.Sirf ₹3 lakh mein chuniye apna brand aur shuru kijiye apna food business. Aapka sapna, hamari expertise - milke likhte hain success ki nayi kahani!",
+    description:
+      "Ab Gujarat ke food culture ka hissa banne ka sapna pura kijiye Jagdai Foods ke saath! Live counters se lekar cloud kitchen tak, Ahmedabad ka swaad ab aapki pahunch mein hai.Sirf ₹3 lakh mein chuniye apna brand aur shuru kijiye apna food business. Aapka sapna, hamari expertise - milke likhte hain success ki nayi kahani!",
+    shortDescription:
+      "Ab Gujarat ke food culture ka hissa banne ka sapna pura kijiye Jagdai Foods ke saath! Live counters se lekar cloud kitchen tak, Ahmedabad ka swaad ab aapki pahunch mein hai.Sirf ₹3 lakh mein chuniye apna brand aur shuru kijiye apna food business. Aapka sapna, hamari expertise - milke likhte hain success ki nayi kahani!",
     likes: 1250,
     comments: 89,
     views: 15600,
     location: "Beverly Hills, CA",
     price: "$4,500,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Live Video Commerce", "Interactive Product Explorations", "No Distractions", "Fast & Cost Effective", "Seamless Transactions"],
-    suitableFor: ["Content Creators", "Influencers", "Media Companies and Broadcasters", "Product-based companies"],
+    projectFeatures: [
+      "Live Video Commerce",
+      "Interactive Product Explorations",
+      "No Distractions",
+      "Fast & Cost Effective",
+      "Seamless Transactions",
+    ],
+    suitableFor: [
+      "Content Creators",
+      "Influencers",
+      "Media Companies and Broadcasters",
+      "Product-based companies",
+    ],
   },
   // {
   //   id: 2,
@@ -1688,16 +1724,29 @@ export const reelVideos = [
     linkId: "lkjkl",
     title: "Jagdai Foods",
     videoUrl: reel2,
-    description: "Cooking hai ek responsibility! 🧑‍🍳 Jagdai Foods ke saath apna food business shuru karo, sirf ₹3 lakhs se. Quick Service Restaurant, Food Trolley, ya Internet Restaurant - Choose your model aur apna brand banao!",
-    shortDescription: "Cooking hai ek responsibility! 🧑‍🍳 Jagdai Foods ke saath apna food business shuru karo, sirf ₹3 lakhs se. Quick Service Restaurant, Food Trolley, ya Internet Restaurant - Choose your model aur apna brand banao!",
+    description:
+      "Cooking hai ek responsibility! 🧑‍🍳 Jagdai Foods ke saath apna food business shuru karo, sirf ₹3 lakhs se. Quick Service Restaurant, Food Trolley, ya Internet Restaurant - Choose your model aur apna brand banao!",
+    shortDescription:
+      "Cooking hai ek responsibility! 🧑‍🍳 Jagdai Foods ke saath apna food business shuru karo, sirf ₹3 lakhs se. Quick Service Restaurant, Food Trolley, ya Internet Restaurant - Choose your model aur apna brand banao!",
     likes: 980,
     comments: 45,
     views: 12400,
     location: "Manhattan, NY",
     price: "$2,800,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Live Video Commerce", "Interactive Product Explorations", "No Distractions", "Fast & Cost Effective", "Seamless Transactions"],
-    suitableFor: ["Content Creators", "Influencers", "Media Companies and Broadcasters", "Product-based companies"],
+    projectFeatures: [
+      "Live Video Commerce",
+      "Interactive Product Explorations",
+      "No Distractions",
+      "Fast & Cost Effective",
+      "Seamless Transactions",
+    ],
+    suitableFor: [
+      "Content Creators",
+      "Influencers",
+      "Media Companies and Broadcasters",
+      "Product-based companies",
+    ],
   },
   // {
   //   id: 4,
@@ -1719,16 +1768,29 @@ export const reelVideos = [
     linkId: "ewrew",
     title: "Jagdai Foods",
     videoUrl: reel3,
-    description: "Dreaming of owning a food franchise? Hold up! Before diving in, make sure to check these must-know points. From operational size to digital integration, and central kitchen efficiency to brand reputation—get the full picture or risk running into roadblocks! 📊💼 Remember, the right franchise isn't just about profits, it's about long-term growth and support. Choose wisely, grow smartly! ",
-    shortDescription: "Dreaming of owning a food franchise? Hold up! Before diving in, make sure to check these must-know points. From operational size to digital integration, and central kitchen efficiency to brand reputation—get the full picture or risk running into roadblocks! 📊💼 Remember, the right franchise isn't just about profits, it's about long-term growth and support. Choose wisely, grow smartly! ",
+    description:
+      "Dreaming of owning a food franchise? Hold up! Before diving in, make sure to check these must-know points. From operational size to digital integration, and central kitchen efficiency to brand reputation—get the full picture or risk running into roadblocks! 📊💼 Remember, the right franchise isn't just about profits, it's about long-term growth and support. Choose wisely, grow smartly! ",
+    shortDescription:
+      "Dreaming of owning a food franchise? Hold up! Before diving in, make sure to check these must-know points. From operational size to digital integration, and central kitchen efficiency to brand reputation—get the full picture or risk running into roadblocks! 📊💼 Remember, the right franchise isn't just about profits, it's about long-term growth and support. Choose wisely, grow smartly! ",
     likes: 2100,
     comments: 156,
     views: 28900,
     location: "Miami Beach, FL",
     price: "$3,200,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Live Video Commerce", "Interactive Product Explorations", "No Distractions", "Fast & Cost Effective", "Seamless Transactions"],
-    suitableFor: ["Content Creators", "Influencers", "Media Companies and Broadcasters", "Product-based companies"],
+    projectFeatures: [
+      "Live Video Commerce",
+      "Interactive Product Explorations",
+      "No Distractions",
+      "Fast & Cost Effective",
+      "Seamless Transactions",
+    ],
+    suitableFor: [
+      "Content Creators",
+      "Influencers",
+      "Media Companies and Broadcasters",
+      "Product-based companies",
+    ],
   },
   // {
   //   id: 6,
@@ -1750,16 +1812,30 @@ export const reelVideos = [
     linkId: "oieji",
     title: "Jagdai Foods",
     videoUrl: reel4,
-    description: "Food franchise lena mehenga padega” — yeh sirf ek myth hai! Jagdai Foods ke saath apna food business shuru karo — simple, smart aur solid! ✅ Proven model ✅ Trusted brand ✅ Low investment Call: +91 88663 73077 Visit: jagdaifoods.com Follow @jagdaifoods & start your journey!",
-    shortDescription: "Food franchise lena mehenga padega” — yeh sirf ek myth hai! Jagdai Foods ke saath apna food business shuru karo — simple, smart aur solid! ✅ Proven model ✅ Trusted brand ✅ Low investment Call: +91 88663 73077 Visit: jagdaifoods.com Follow @jagdaifoods & start your journey!",
+    description:
+      "Food franchise lena mehenga padega” — yeh sirf ek myth hai! Jagdai Foods ke saath apna food business shuru karo — simple, smart aur solid! ✅ Proven model ✅ Trusted brand ✅ Low investment Call: +91 88663 73077 Visit: jagdaifoods.com Follow @jagdaifoods & start your journey!",
+    shortDescription:
+      "Food franchise lena mehenga padega” — yeh sirf ek myth hai! Jagdai Foods ke saath apna food business shuru karo — simple, smart aur solid! ✅ Proven model ✅ Trusted brand ✅ Low investment Call: +91 88663 73077 Visit: jagdaifoods.com Follow @jagdaifoods & start your journey!",
     likes: 1750,
     comments: 92,
     views: 19800,
     location: "Aspen, CO",
     price: "$5,800,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["License", "Subscription", "Enterprise", "Modules", "Shared"],
-    suitableFor: ["Small Business", "Startups", "Agencies", "Enterprises", "Freelancers"],
+    projectFeatures: [
+      "License",
+      "Subscription",
+      "Enterprise",
+      "Modules",
+      "Shared",
+    ],
+    suitableFor: [
+      "Small Business",
+      "Startups",
+      "Agencies",
+      "Enterprises",
+      "Freelancers",
+    ],
   },
   // {
   //   id: 8,
@@ -1781,16 +1857,30 @@ export const reelVideos = [
     linkId: "asdfg",
     title: "Jagdai Foods",
     videoUrl: reel5,
-    description: "Have you ever dreamed of owning a business under a trusted brand name? FOFO stands for Franchise Owned, Franchise Operated model. This means you own and manage everything under the trusted name of Jagdai Foods, giving you the following: ✅ The power of a well-established reputation. ✅ Freedom to run operations your way! It’s the perfect blend of independence and brand trust, allowing you to grow your business confidently. Contact us at: +91 88663 73077 jagdaifoods.com",
-    shortDescription: "Have you ever dreamed of owning a business under a trusted brand name? FOFO stands for Franchise Owned, Franchise Operated model. This means you own and manage everything under the trusted name of Jagdai Foods, giving you the following: ✅ The power of a well-established reputation. ✅ Freedom to run operations your way! It’s the perfect blend of independence and brand trust, allowing you to grow your business confidently. Contact us at: +91 88663 73077 jagdaifoods.com",
+    description:
+      "Have you ever dreamed of owning a business under a trusted brand name? FOFO stands for Franchise Owned, Franchise Operated model. This means you own and manage everything under the trusted name of Jagdai Foods, giving you the following: ✅ The power of a well-established reputation. ✅ Freedom to run operations your way! It’s the perfect blend of independence and brand trust, allowing you to grow your business confidently. Contact us at: +91 88663 73077 jagdaifoods.com",
+    shortDescription:
+      "Have you ever dreamed of owning a business under a trusted brand name? FOFO stands for Franchise Owned, Franchise Operated model. This means you own and manage everything under the trusted name of Jagdai Foods, giving you the following: ✅ The power of a well-established reputation. ✅ Freedom to run operations your way! It’s the perfect blend of independence and brand trust, allowing you to grow your business confidently. Contact us at: +91 88663 73077 jagdaifoods.com",
     likes: 890,
     comments: 67,
     views: 11200,
     location: "Chicago, IL",
     price: "$1,950,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["License", "Subscription", "Enterprise", "Modules", "Shared"],
-    suitableFor: ["Small Business", "Startups", "Agencies", "Enterprises", "Freelancers"],
+    projectFeatures: [
+      "License",
+      "Subscription",
+      "Enterprise",
+      "Modules",
+      "Shared",
+    ],
+    suitableFor: [
+      "Small Business",
+      "Startups",
+      "Agencies",
+      "Enterprises",
+      "Freelancers",
+    ],
   },
   // {
   //   id: 10,
@@ -1976,66 +2066,114 @@ export const reelVideos = [
     linkId: "opwed",
     title: "Jagdai Foods",
     videoUrl: reel6,
-    description: "Choose your franchise wisely! Make the right decision for growth, higher earnings, and brand support. Take a step that aligns with your vision and business goals.",
-    shortDescription: "Choose your franchise wisely! Make the right decision for growth, higher earnings, and brand support. Take a step that aligns with your vision and business goals.",
+    description:
+      "Choose your franchise wisely! Make the right decision for growth, higher earnings, and brand support. Take a step that aligns with your vision and business goals.",
+    shortDescription:
+      "Choose your franchise wisely! Make the right decision for growth, higher earnings, and brand support. Take a step that aligns with your vision and business goals.",
     likes: 890,
     comments: 67,
     views: 11200,
     location: "Chicago, IL",
     price: "$1,950,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Inventory Management", "Marketing & Reward System", "Real-Time Analytics & Reporting", "Reduce Working Capital"],
-    suitableFor: ["Small Businesses", "Communities", "Business Network", "Shop Owners"],
+    projectFeatures: [
+      "Inventory Management",
+      "Marketing & Reward System",
+      "Real-Time Analytics & Reporting",
+      "Reduce Working Capital",
+    ],
+    suitableFor: [
+      "Small Businesses",
+      "Communities",
+      "Business Network",
+      "Shop Owners",
+    ],
   },
   {
     id: 22,
     linkId: "opwed",
     title: "Jagdai Foods",
     videoUrl: reel7,
-    description: "Start Your Own Food Franchise with Jagdai Foods! Ever dreamed of running your own food business? Now’s your chance! Jagdai Foods provides everything—from QSR setup to Tandoor, BBQ Grill & all essential equipment! Big dreams need the right support, and we make it simple & hassle-free! Be your own boss, serve delicious food, and build a thriving business. Contact us at: +91 88663 73077 jagdaifoods.com",
-    shortDescription: "Start Your Own Food Franchise with Jagdai Foods! Ever dreamed of running your own food business? Now’s your chance! Jagdai Foods provides everything—from QSR setup to Tandoor, BBQ Grill & all essential equipment! Big dreams need the right support, and we make it simple & hassle-free! Be your own boss, serve delicious food, and build a thriving business. Contact us at: +91 88663 73077 jagdaifoods.com",
+    description:
+      "Start Your Own Food Franchise with Jagdai Foods! Ever dreamed of running your own food business? Now’s your chance! Jagdai Foods provides everything—from QSR setup to Tandoor, BBQ Grill & all essential equipment! Big dreams need the right support, and we make it simple & hassle-free! Be your own boss, serve delicious food, and build a thriving business. Contact us at: +91 88663 73077 jagdaifoods.com",
+    shortDescription:
+      "Start Your Own Food Franchise with Jagdai Foods! Ever dreamed of running your own food business? Now’s your chance! Jagdai Foods provides everything—from QSR setup to Tandoor, BBQ Grill & all essential equipment! Big dreams need the right support, and we make it simple & hassle-free! Be your own boss, serve delicious food, and build a thriving business. Contact us at: +91 88663 73077 jagdaifoods.com",
     likes: 890,
     comments: 67,
     views: 11200,
     location: "Chicago, IL",
     price: "$1,950,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Inventory Management", "Marketing & Reward System", "Real-Time Analytics & Reporting", "Reduce Working Capital"],
-    suitableFor: ["Small Businesses", "Communities", "Business Network", "Shop Owners"],
+    projectFeatures: [
+      "Inventory Management",
+      "Marketing & Reward System",
+      "Real-Time Analytics & Reporting",
+      "Reduce Working Capital",
+    ],
+    suitableFor: [
+      "Small Businesses",
+      "Communities",
+      "Business Network",
+      "Shop Owners",
+    ],
   },
   {
     id: 22,
     linkId: "opwed",
     title: "Jagdai Foods",
     videoUrl: reel8,
-    description: "Street food vibes. 5-star standards. One powerful franchise. Dilli By Heart, backed by Jagdai Foods, gives you the chance to own a food business full of flavour, love, and opportunity. One franchise. Multiple brands. Endless growth. Call: +91 88663 73077 Visit: jagdaifoods.com Follow me for more food business tips & inspiring journeys!",
-    shortDescription: "Street food vibes. 5-star standards. One powerful franchise. Dilli By Heart, backed by Jagdai Foods, gives you the chance to own a food business full of flavour, love, and opportunity. One franchise. Multiple brands. Endless growth. Call: +91 88663 73077 Visit: jagdaifoods.com Follow me for more food business tips & inspiring journeys!",
+    description:
+      "Street food vibes. 5-star standards. One powerful franchise. Dilli By Heart, backed by Jagdai Foods, gives you the chance to own a food business full of flavour, love, and opportunity. One franchise. Multiple brands. Endless growth. Call: +91 88663 73077 Visit: jagdaifoods.com Follow me for more food business tips & inspiring journeys!",
+    shortDescription:
+      "Street food vibes. 5-star standards. One powerful franchise. Dilli By Heart, backed by Jagdai Foods, gives you the chance to own a food business full of flavour, love, and opportunity. One franchise. Multiple brands. Endless growth. Call: +91 88663 73077 Visit: jagdaifoods.com Follow me for more food business tips & inspiring journeys!",
     likes: 890,
     comments: 67,
     views: 11200,
     location: "Chicago, IL",
     price: "$1,950,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Inventory Management", "Marketing & Reward System", "Real-Time Analytics & Reporting", "Reduce Working Capital"],
-    suitableFor: ["Small Businesses", "Communities", "Business Network", "Shop Owners"],
+    projectFeatures: [
+      "Inventory Management",
+      "Marketing & Reward System",
+      "Real-Time Analytics & Reporting",
+      "Reduce Working Capital",
+    ],
+    suitableFor: [
+      "Small Businesses",
+      "Communities",
+      "Business Network",
+      "Shop Owners",
+    ],
   },
   {
     id: 23,
     linkId: "opwed",
     title: "Jagdai Foods",
     videoUrl: reel9,
-    description: "𝐑𝐞𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐢𝐳𝐞 𝐘𝐨𝐮𝐫 𝐅𝐨𝐨𝐝 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐰𝐢𝐭𝐡 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬! Welcome to Ahmedabad’s biggest 10,000 sq. ft. cloud kitchen, where we don’t just sell franchises—we bring you into the world of sustainable 𝐟𝐨𝐨𝐝 𝐛𝐮𝐬𝐢𝐧𝐞𝐬𝐬. 𝐖𝐡𝐲 𝐂𝐡𝐨𝐨𝐬𝐞 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬? ✔️ 𝐔𝐧𝐦𝐚𝐭𝐜𝐡𝐞𝐝 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞: Handle bulk catering and party orders effortlessly ✔️𝐎𝐰𝐧 𝐘𝐨𝐮𝐫 𝐁𝐫𝐚𝐧𝐝: The only franchise that helps you build your identity ✔️ 𝐓𝐨𝐩-𝐍𝐨𝐭𝐜𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲: Stainless steel utensils ensure premium taste and safety 𝐂𝐡𝐨𝐨𝐬𝐞 𝐘𝐨𝐮𝐫 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞 𝐌𝐨𝐝𝐞𝐥: ➡️ 𝐐𝐒𝐑: Quick Service Restaurant with Zomato & Swiggy benefits ➡️ 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Cost-effective, no rent or salaries ➡️ 𝐓𝐫𝐨𝐥𝐥𝐞𝐲 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Affordable and flexible options 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐁𝐞𝐧𝐞𝐟𝐢𝐭𝐬: 🎁 𝐅𝐑𝐄𝐄 𝐔𝐏𝐎𝐒 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐌𝐚𝐥𝐥: Sell 20 crore+ products & services 🎁 CashAqua SIS Franchise included 🎁 Add Tapri ki Tafri for just ₹1 lakh 📈 Maximize Revenue: Supply trolleys, franchises, and more to earn 10% royalty—because it’s not just about food, it’s about profits too! 📞 Ready to Begin? Contact us at: +91 88663 73077 jagdaifoods.com",
-    shortDescription: "𝐑𝐞𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐢𝐳𝐞 𝐘𝐨𝐮𝐫 𝐅𝐨𝐨𝐝 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐰𝐢𝐭𝐡 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬! Welcome to Ahmedabad’s biggest 10,000 sq. ft. cloud kitchen, where we don’t just sell franchises—we bring you into the world of sustainable 𝐟𝐨𝐨𝐝 𝐛𝐮𝐬𝐢𝐧𝐞𝐬𝐬. 𝐖𝐡𝐲 𝐂𝐡𝐨𝐨𝐬𝐞 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬? ✔️ 𝐔𝐧𝐦𝐚𝐭𝐜𝐡𝐞𝐝 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞: Handle bulk catering and party orders effortlessly ✔️𝐎𝐰𝐧 𝐘𝐨𝐮𝐫 𝐁𝐫𝐚𝐧𝐝: The only franchise that helps you build your identity ✔️ 𝐓𝐨𝐩-𝐍𝐨𝐭𝐜𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲: Stainless steel utensils ensure premium taste and safety 𝐂𝐡𝐨𝐨𝐬𝐞 𝐘𝐨𝐮𝐫 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞 𝐌𝐨𝐝𝐞𝐥: ➡️ 𝐐𝐒𝐑: Quick Service Restaurant with Zomato & Swiggy benefits ➡️ 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Cost-effective, no rent or salaries ➡️ 𝐓𝐫𝐨𝐥𝐥𝐞𝐲 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Affordable and flexible options 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐁𝐞𝐧𝐞𝐟𝐢𝐭𝐬: 🎁 𝐅𝐑𝐄𝐄 𝐔𝐏𝐎𝐒 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐌𝐚𝐥𝐥: Sell 20 crore+ products & services 🎁 CashAqua SIS Franchise included 🎁 Add Tapri ki Tafri for just ₹1 lakh 📈 Maximize Revenue: Supply trolleys, franchises, and more to earn 10% royalty—because it’s not just about food, it’s about profits too! 📞 Ready to Begin? Contact us at: +91 88663 73077 jagdaifoods.com",
+    description:
+      "𝐑𝐞𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐢𝐳𝐞 𝐘𝐨𝐮𝐫 𝐅𝐨𝐨𝐝 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐰𝐢𝐭𝐡 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬! Welcome to Ahmedabad’s biggest 10,000 sq. ft. cloud kitchen, where we don’t just sell franchises—we bring you into the world of sustainable 𝐟𝐨𝐨𝐝 𝐛𝐮𝐬𝐢𝐧𝐞𝐬𝐬. 𝐖𝐡𝐲 𝐂𝐡𝐨𝐨𝐬𝐞 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬? ✔️ 𝐔𝐧𝐦𝐚𝐭𝐜𝐡𝐞𝐝 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞: Handle bulk catering and party orders effortlessly ✔️𝐎𝐰𝐧 𝐘𝐨𝐮𝐫 𝐁𝐫𝐚𝐧𝐝: The only franchise that helps you build your identity ✔️ 𝐓𝐨𝐩-𝐍𝐨𝐭𝐜𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲: Stainless steel utensils ensure premium taste and safety 𝐂𝐡𝐨𝐨𝐬𝐞 𝐘𝐨𝐮𝐫 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞 𝐌𝐨𝐝𝐞𝐥: ➡️ 𝐐𝐒𝐑: Quick Service Restaurant with Zomato & Swiggy benefits ➡️ 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Cost-effective, no rent or salaries ➡️ 𝐓𝐫𝐨𝐥𝐥𝐞𝐲 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Affordable and flexible options 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐁𝐞𝐧𝐞𝐟𝐢𝐭𝐬: 🎁 𝐅𝐑𝐄𝐄 𝐔𝐏𝐎𝐒 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐌𝐚𝐥𝐥: Sell 20 crore+ products & services 🎁 CashAqua SIS Franchise included 🎁 Add Tapri ki Tafri for just ₹1 lakh 📈 Maximize Revenue: Supply trolleys, franchises, and more to earn 10% royalty—because it’s not just about food, it’s about profits too! 📞 Ready to Begin? Contact us at: +91 88663 73077 jagdaifoods.com",
+    shortDescription:
+      "𝐑𝐞𝐯𝐨𝐥𝐮𝐭𝐢𝐨𝐧𝐢𝐳𝐞 𝐘𝐨𝐮𝐫 𝐅𝐨𝐨𝐝 𝐁𝐮𝐬𝐢𝐧𝐞𝐬𝐬 𝐰𝐢𝐭𝐡 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬! Welcome to Ahmedabad’s biggest 10,000 sq. ft. cloud kitchen, where we don’t just sell franchises—we bring you into the world of sustainable 𝐟𝐨𝐨𝐝 𝐛𝐮𝐬𝐢𝐧𝐞𝐬𝐬. 𝐖𝐡𝐲 𝐂𝐡𝐨𝐨𝐬𝐞 𝐉𝐚𝐠𝐝𝐚𝐢 𝐅𝐨𝐨𝐝𝐬? ✔️ 𝐔𝐧𝐦𝐚𝐭𝐜𝐡𝐞𝐝 𝐈𝐧𝐟𝐫𝐚𝐬𝐭𝐫𝐮𝐜𝐭𝐮𝐫𝐞: Handle bulk catering and party orders effortlessly ✔️𝐎𝐰𝐧 𝐘𝐨𝐮𝐫 𝐁𝐫𝐚𝐧𝐝: The only franchise that helps you build your identity ✔️ 𝐓𝐨𝐩-𝐍𝐨𝐭𝐜𝐡 𝐐𝐮𝐚𝐥𝐢𝐭𝐲: Stainless steel utensils ensure premium taste and safety 𝐂𝐡𝐨𝐨𝐬𝐞 𝐘𝐨𝐮𝐫 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞 𝐌𝐨𝐝𝐞𝐥: ➡️ 𝐐𝐒𝐑: Quick Service Restaurant with Zomato & Swiggy benefits ➡️ 𝐈𝐧𝐭𝐞𝐫𝐧𝐞𝐭 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Cost-effective, no rent or salaries ➡️ 𝐓𝐫𝐨𝐥𝐥𝐞𝐲 𝐅𝐫𝐚𝐧𝐜𝐡𝐢𝐬𝐞: Affordable and flexible options 𝐒𝐩𝐞𝐜𝐢𝐚𝐥 𝐁𝐞𝐧𝐞𝐟𝐢𝐭𝐬: 🎁 𝐅𝐑𝐄𝐄 𝐔𝐏𝐎𝐒 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐌𝐚𝐥𝐥: Sell 20 crore+ products & services 🎁 CashAqua SIS Franchise included 🎁 Add Tapri ki Tafri for just ₹1 lakh 📈 Maximize Revenue: Supply trolleys, franchises, and more to earn 10% royalty—because it’s not just about food, it’s about profits too! 📞 Ready to Begin? Contact us at: +91 88663 73077 jagdaifoods.com",
     likes: 890,
     comments: 67,
     views: 11200,
     location: "Chicago, IL",
     price: "$1,950,000",
     product: "Aaloo Tikki Chaat",
-    projectFeatures: ["Inventory Management", "Marketing & Reward System", "Real-Time Analytics & Reporting", "Reduce Working Capital"],
-    suitableFor: ["Small Businesses", "Communities", "Business Network", "Shop Owners"],
+    projectFeatures: [
+      "Inventory Management",
+      "Marketing & Reward System",
+      "Real-Time Analytics & Reporting",
+      "Reduce Working Capital",
+    ],
+    suitableFor: [
+      "Small Businesses",
+      "Communities",
+      "Business Network",
+      "Shop Owners",
+    ],
   },
-]
+];
 
 export const sliderCategories = [
   {
@@ -2043,11 +2181,7 @@ export const sliderCategories = [
     label: "Promotional Content",
     value: "promotional_content",
     videoUrls: [
-
       "https://www.youtube.com/embed/uZZcDUDmhwc?mute=1&loop=1&playlist=uZZcDUDmhwc&controls=1&rel=0",
-
-
-
 
       "https://www.youtube.com/embed/KRCMTk4TAGo?mute=1&loop=1&playlist=KRCMTk4TAGo&controls=1&rel=0",
       "https://www.youtube.com/embed/WFBNj7c2Rhs?mute=1&loop=1&playlist=WFBNj7c2Rhs&controls=1&rel=0",
@@ -2057,7 +2191,6 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/sL06r42kLgo?mute=1&loop=1&playlist=sL06r42kLgo&controls=1&rel=0",
       "https://www.youtube.com/embed/dmAfo7GvCX8?mute=1&loop=1&playlist=dmAfo7GvCX8&controls=1&rel=0",
       "https://www.youtube.com/embed/gSiW_XjcBKc?mute=1&loop=1&playlist=gSiW_XjcBKc&controls=1&rel=0",
-
 
       "https://www.youtube.com/embed/U3wnNjGl4cM?mute=1&loop=1&playlist=U3wnNjGl4cM&controls=1&rel=0",
       "https://www.youtube.com/embed/0H1_zQFrBCA?mute=1&loop=1&playlist=0H1_zQFrBCA&controls=1&rel=0",
@@ -2103,19 +2236,12 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/YNeAR5yKp6Q?mute=1&loop=1&playlist=YNeAR5yKp6Q&controls=1&rel=0",
       "https://www.youtube.com/embed/aHmYpUMRlY8?mute=1&loop=1&playlist=aHmYpUMRlY8&controls=1&rel=0",
     ],
-
   },
   {
     id: 3,
     label: "Food Making",
     value: "food_making",
     videoUrls: [
-
-
-
-
-
-
       "https://www.youtube.com/embed/p0RmDevoqp0?mute=1&loop=1&playlist=p0RmDevoqp0&controls=1&rel=0",
 
       "https://www.youtube.com/embed/D9sFqC_QyKU?mute=1&loop=1&playlist=D9sFqC_QyKU&controls=1&rel=0",
@@ -2131,9 +2257,7 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/PNIoArEXztE?mute=1&loop=1&playlist=PNIoArEXztE&controls=1&rel=0",
       "https://www.youtube.com/embed/N2rytkiHOwc?mute=1&loop=1&playlist=N2rytkiHOwc&controls=1&rel=0",
       "https://www.youtube.com/embed/T1aZ8jh18SY?mute=1&loop=1&playlist=T1aZ8jh18SY&controls=1&rel=0",
-
     ],
-
   },
   {
     id: 4,
@@ -2148,7 +2272,6 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/fP50_rtN1-A?mute=1&loop=1&playlist=fP50_rtN1-A&controls=1&rel=0",
       "https://www.youtube.com/embed/pphw_75dhTw?mute=1&loop=1&playlist=pphw_75dhTw&controls=1&rel=0",
     ],
-
   },
   {
     id: 5,
@@ -2163,7 +2286,6 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/5bCIihKa6iw?mute=1&loop=1&playlist=5bCIihKa6iw&controls=1&rel=0",
       "https://www.youtube.com/embed/JHBpywpLRlE?mute=1&loop=1&playlist=JHBpywpLRlE&controls=1&rel=0",
     ],
-
   },
   {
     id: 6,
@@ -2178,7 +2300,6 @@ export const sliderCategories = [
       "https://www.youtube.com/embed/UAFDs32_i6E?mute=1&loop=1&playlist=UAFDs32_i6E&controls=1&rel=0",
       "https://www.youtube.com/embed/T516uyTQ0nY?mute=1&loop=1&playlist=T516uyTQ0nY&controls=1&rel=0",
     ],
-
   },
   {
     id: 7,
