@@ -7,6 +7,7 @@ import CapitalProtectionFramework from "./components/CapitalProtectionFramework"
 import EcosystemBenefitsCard from "./components/EcosystemBenefitsCard";
 import ModelFitSection from "./components/ModelFitSection";
 import ExploreFranchiseSection from "./components/ExploreFranchiseSection";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 export default function FranchiseModels() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -45,6 +46,11 @@ export default function FranchiseModels() {
 
   return (
     <div className="bg-black min-h-screen text-white">
+      <Breadcrumbs
+                    titleMap={{
+                      "/franchise-models": "Franchise Models",
+                    }}
+                  />  
       <HeroFranchiseModel />
       <FofoModelSection />
       <FocoModelSection />

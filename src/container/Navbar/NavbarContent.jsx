@@ -13,7 +13,7 @@ export default function NavbarContent() {
       name: "About Us",
       link: "/about",
       dropdown: [
-        { name: "Vision & Mission", link: "/vision-mission" },
+        { name: "Vision & Mission", link: "/about" },
         { name: "Who We Are", link: "/who-we-are" },
         { name: "What We Do", link: "/what-we-do" },
       ],
@@ -31,13 +31,13 @@ export default function NavbarContent() {
       name: "Franchise Formats",
       link: "/franchise-formats",
       dropdown: [
-        { name: "QSR Franchise", link: "/qsr-franchise" },
-        { name: "Cloud Kitchen", link: "/cloud-kitchen" },
-        { name: "Food Trolley", link: "/food-trolley" },
-        { name: "Food Tempo", link: "/food-tempo" },
-        { name: "Food Court", link: "/food-court" },
-        { name: "Influencer Franchise", link: "/influencer-franchise" },
-      ],
+        { name: "QSR Franchise", link: "/franchise-details?type=qsr-restaurant-franchise" },
+        { name: "Cloud Kitchen", link: "/franchise-details?type=internet-restaurants-franchise" },
+        { name: "Food Trolley", link: "/franchise-details?type=food-trolley-franchise" },
+        { name: "Food Tempo", link: "/franchise-details?type=food-tempo-franchise" },
+        { name: "Food Court", link: "/franchise-details?type=chatori-gali" },
+        { name: "Influencer Franchise", link: "/franchise-details?type=influencer-franchise" }
+      ]
     },
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
@@ -48,9 +48,10 @@ export default function NavbarContent() {
         { name: "ROI Calculator", link: "/roi-calculator" },
         { name: "Download Brochure", link: "/download-brochure" },
         { name: "FAQs", link: "/faq" },
+        { name: "Contact", link: "/contact" },
+
       ],
     },
-    { name: "Contact", link: "/contact" },
   ];
 
   return (
@@ -71,10 +72,9 @@ export default function NavbarContent() {
               <NavLink
                 to={item.link}
                 className={({ isActive }) =>
-                  `flex items-center gap-1 ${
-                    isActive
-                      ? "text-[#f2b44c]"
-                      : "hover:text-[#f2b44c] transition"
+                  `flex items-center gap-1 ${isActive
+                    ? "text-[#f2b44c]"
+                    : "hover:text-[#f2b44c] transition"
                   }`
                 }
               >

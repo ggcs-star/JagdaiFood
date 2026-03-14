@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Container } from "../../../../components/Layout";
 
 import qsrImage from "../../../../assets/home/franchise/qsr.png";
@@ -94,9 +95,12 @@ export default function FranchiseModels() {
                 Ideal for entrepreneurs seeking long-term scale and control.
               </p>
 
-              <button className="mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium">
+              <Link
+                to="/franchise-details?type=qsr-restaurant-franchise"
+                className="inline-block mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium"
+              >
                 Apply for QSR Franchise
-              </button>
+              </Link>
 
             </div>
 
@@ -146,9 +150,12 @@ export default function FranchiseModels() {
                 Perfect for first-time entrepreneurs and micro-investors.
               </p>
 
-              <button className="mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-medium">
+              <Link
+                to="/franchise-details?type=food-trolley-franchise"
+                className="inline-block mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-medium"
+              >
                 Explore Trolley Model
-              </button>
+              </Link>
 
             </div>
 

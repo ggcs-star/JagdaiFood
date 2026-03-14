@@ -24,7 +24,7 @@ export default function WhiteLabelCard() {
       }}
     >
       {/* TEXT SECTION */}
-      <div className="w-full md:max-w-[520px] z-10">
+      <div className="w-full md:max-w-[520px] z-10 text-left">
         <h3 className="text-white font-bricolageSemiBold text-[24px] sm:text-[30px] md:text-[36px] leading-[34px] md:leading-[42px] mb-[16px]">
           White-Label /Own Brand Option Available
         </h3>
