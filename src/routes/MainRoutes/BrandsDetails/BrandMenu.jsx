@@ -1,76 +1,79 @@
-import React, { useState } from "react";
-import { FiDownload } from "react-icons/fi";
-import download from '../../../assets/brands/download.png'
+import React, { useState, useEffect } from "react";
+import download from "../../../assets/brands/download.png";
+import { getRestaurantDetails } from "../../../api/restaurantApi";
 
 export default function BrandMenu({ item }) {
+  const [menuItems, setMenuItems] = useState([]);
 
-  const [active, setActive] = useState(item?.menuCategories?.[0] || "");
+  useEffect(() => {
+    fetchMenu();
+  }, [item]);
 
-  const filtered =
-    item?.menuItems?.filter((i) => i.category === active) || [];
+  const fetchMenu = async () => {
+    if (!item?.id) return;
+
+    try {
+      const res = await getRestaurantDetails(item.id);
+
+      const apiItems = res?.data?.menuItems || [];
+
+      const formatted = apiItems.map((food) => ({
+        title: food.name,
+        desc: food.description,
+        image: food.image,
+      }));
+
+      setMenuItems(formatted);
+    } catch (error) {
+      console.log("API ERROR:", error);
+    }
+  };
+
+  const firstSix = menuItems.slice(0, 6);
+  const restCards = menuItems.slice(6);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-14 text-white">
+    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14 text-white">
 
-      {/* Header */}
-      <div className="flex justify-between items-center mb-8">
-
-        <h2 className="text-3xl font-bricolageSemiBold ">Menu</h2>
+      {/* Download button */}
+      <div className="flex justify-end mb-6 md:mb-10">
 
         {item?.menuDownloadLink && (
-  <a
-    href={item.menuDownloadLink}
-    className="border border-yellow-400 text-yellow-400 px-5 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-400 hover:text-black transition"
-  >
-<img src={download} alt="Download" className="size-4"/>    Download Menu
-  </a>
-)}
 
-      </div>
-
-      {/* Category Pills */}
-      <div className="flex flex-wrap gap-3 mb-10">
-
-        {item?.menuCategories?.map((cat, i) => (
-
-          <button
-            key={i}
-            onClick={() => setActive(cat)}
-            className={`px-5 py-2 rounded-full text-sm transition
-            ${
-              active === cat
-                ? "bg-white text-black"
-                : "bg-[#262626] text-gray-300"
-            }`}
+          <a
+            href={item.menuDownloadLink}
+            className="border border-yellow-400 text-yellow-400 px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-400 hover:text-black transition text-sm md:text-base"
           >
-            {cat}
-          </button>
+            <img src={download} alt="Download" className="size-4" />
+            Download Menu
+          </a>
 
-        ))}
+        )}
 
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+      {/* FIRST 6 CARDS + PHONE */}
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-12">
 
-        {/* Menu Grid */}
-        <div className="lg:col-span-3 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Food Cards */}
+        <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
 
-          {filtered.map((food, i) => (
+          {firstSix.map((food, i) => (
 
             <div key={i}>
 
               <img
-                src={food?.image}
-                alt={food?.title}
-                className="w-full h-[200px] object-cover rounded-xl"
+                src={food.image}
+                alt={food.title}
+                className="w-full h-[180px] sm:h-[200px] object-cover rounded-xl"
               />
 
-              <h3 className="mt-3 text-lg font-semibold">
-                {food?.title}
+              <h3 className="mt-3 text-base md:text-lg font-semibold">
+                {food.title}
               </h3>
 
               <p className="text-gray-400 text-sm line-clamp-2">
-                {food?.desc}
+                {food.desc}
               </p>
 
             </div>
@@ -79,76 +82,96 @@ export default function BrandMenu({ item }) {
 
         </div>
 
-        {/* QR Download Card */}
-    {item?.mobileApp && (
-  <div className="relative bg-[#2a2a2a] rounded-2xl p-6 flex flex-col items-center text-center overflow-hidden">
+        {/* MOBILE APP CARD */}
+        {item?.mobileApp && (
 
-    {/* Phone Frame Background */}
-    {item.mobileApp?.phoneImage && (
-      <img
-        src={item.mobileApp.phoneImage}
-        alt="Phone"
-        className="absolute inset-0 w-full h-full object-contain opacity-40 pointer-events-none"
-      />
-    )}
+          <div className="bg-[#2a2a2a] rounded-2xl px-6 py-8 flex flex-col items-center text-center w-full max-w-[340px] mx-auto lg:mx-0">
 
-    <div className="relative z-10 flex flex-col items-center">
+            {item.mobileApp?.logo && (
+              <img
+                src={item.mobileApp.logo}
+                alt="logo"
+                className="w-26 sm:w-30 md:w-34 mb-5"
+              />
+            )}
 
-      {/* Logo */}
-      {item.mobileApp?.logo && (
-        <img
-          src={item.mobileApp.logo}
-          alt="logo"
-          className="w-28 mb-4"
-        />
-      )}
+            <img
+              src={item.mobileApp?.qrCode}
+              alt="QR"
+              className="w-42 sm:w-46 md:w-50 mb-4"
+            />
 
-      {/* QR Code */}
-      <img
-        src={item.mobileApp?.qrCode}
-        alt="QR"
-        className="w-44 mb-4"
-      />
+            <p className="text-sm text-gray-300 mb-5">
+              Scan to download
+            </p>
 
-      <p className="text-sm text-gray-300 mb-6">
-        Scan to download
-      </p>
+            {item.mobileApp?.playStore && (
 
-      {/* Playstore */}
-      {item.mobileApp?.playStore && (
-        <a
-          href={item.mobileApp.playStore.link}
-          target="_blank"
-          rel="noreferrer"
-          className="mb-3"
-        >
-          <img
-            src={item.mobileApp.playStore.badge}
-            alt="Google Play"
-            className="w-40"
-          />
-        </a>
-      )}
+              <a
+                href={item.mobileApp.playStore.link}
+                target="_blank"
+                rel="noreferrer"
+                className="mb-3"
+              >
 
-      {/* Appstore */}
-      {item.mobileApp?.appStore && (
-        <a
-          href={item.mobileApp.appStore.link}
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img
-            src={item.mobileApp.appStore.badge}
-            alt="App Store"
-            className="w-40"
-          />
-        </a>
-      )}
+                <img
+                  src={item.mobileApp.playStore.badge}
+                  alt="Google Play"
+                  className="w-42 sm:w-46 md:w-50"
+                />
 
-    </div>
+              </a>
 
-  </div>
-)}
+            )}
+
+            {item.mobileApp?.appStore && (
+
+              <a
+                href={item.mobileApp.appStore.link}
+                target="_blank"
+                rel="noreferrer"
+              >
+
+                <img
+                  src={item.mobileApp.appStore.badge}
+                  alt="App Store"
+                  className="w-42 sm:w-46 md:w-50"
+                />
+
+              </a>
+
+            )}
+
+          </div>
+
+        )}
+
+      </div>
+
+      {/* REST CARDS */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
+
+        {restCards.map((food, i) => (
+
+          <div key={i}>
+
+            <img
+              src={food.image}
+              alt={food.title}
+              className="w-full h-[180px] sm:h-[200px] object-cover rounded-xl"
+            />
+
+            <h3 className="mt-3 text-base md:text-lg font-semibold">
+              {food.title}
+            </h3>
+
+            <p className="text-gray-400 text-sm line-clamp-2">
+              {food.desc}
+            </p>
+
+          </div>
+
+        ))}
 
       </div>
 
