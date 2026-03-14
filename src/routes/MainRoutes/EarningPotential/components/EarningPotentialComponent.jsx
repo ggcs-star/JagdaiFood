@@ -320,7 +320,7 @@ export default function EarningPotentialComponent(props) {
     };
 
     return (
-        <div className="bg-black">
+        <div className="bg-black py-6">
             <Container >
                <div>
                  <h2 className="text-white text-center text-4xl font-bricolageBold md:text-5xl leading-tight mb-6">

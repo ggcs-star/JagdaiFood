@@ -16,6 +16,7 @@ import { H3, H5, P } from "../../../components/Typography";
 import Hero from "./hero";
 import { ApplyButton } from "../../../components/Button";
 import InfluencerFranchise from "./InfluencerFranchise";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const Desc = ({ details }) => {
 
@@ -34,7 +35,7 @@ const Desc = ({ details }) => {
             <div className="max-w-7xl mx-auto">
 
                 {/* TOP BENEFITS CARD */}
-<div className="rounded-3xl bg-gradient-to-r from-[#1f1f1f] via-[#2a2a2a] to-[#6a5434] grid lg:grid-cols-[60%_40%] gap-10 items-stretch overflow-hidden">
+                <div className="rounded-3xl bg-gradient-to-r from-[#1f1f1f] via-[#2a2a2a] to-[#6a5434] grid lg:grid-cols-[60%_40%] gap-10 items-stretch overflow-hidden">
                     {/* LEFT TEXT */}
                     <div className="p-10">
                         <h2 className="text-3xl lg:text-4xl font-bricolageRegular font-medium text-white mb-6 leading-snug">
@@ -86,10 +87,6 @@ const Desc = ({ details }) => {
     );
 };
 
-
-
-
-
 function FranchisesDetails() {
     const navigate = useNavigate(),
         [searchParams] = useSearchParams();
@@ -111,7 +108,12 @@ function FranchisesDetails() {
     if (params === "influencer-franchise") {
         return (
             <>
-                <Hero details={details} data={details} />
+                <Breadcrumbs
+                    titleMap={{
+                        "/franchise-details": "Franchise Formats",
+                        "influencer-franchise": "Influencer Franchise",
+                    }}
+                />                <Hero details={details} data={details} />
                 <InfluencerFranchise />
             </>
         );
@@ -119,6 +121,16 @@ function FranchisesDetails() {
 
     return (
         <div className="lg:w-[99vw] w-screen">
+            <Breadcrumbs
+                titleMap={{
+                    "/franchise-details": "Franchise Formats",
+                    "qsr-restaurant-franchise": "QSR Franchise",
+                    "internet-restaurants-franchise": "Internet Restaurant Franchise",
+                    "food-trolley-franchise": "Food Trolley Franchise",
+                    "food-tempo-franchise": "Food Tempo Franchise",
+                    "chatori-gali": "Food Court Franchise",
+                }}
+            />
             <Hero details={details} data={details} />
             <Desc details={details} />
             <div className=" bg-black">
@@ -161,78 +173,78 @@ function FranchisesDetails() {
 
                             <div className="relative flex flex-col lg:flex-row items-stretch justify-center mt-12 mx-auto -gap-20 lg:gap-6">
 
-  {/* LEFT CARD */}
-  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
-    <p className="font-bricolageRegular text-green-400 !text-md mb-3">
-      Franchise Fee
-    </p>
+                                {/* LEFT CARD */}
+                                <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
+                                    <p className="font-bricolageRegular text-green-400 !text-md mb-3">
+                                        Franchise Fee
+                                    </p>
 
-    <h2 className="text-white text-2xl font-semibold">
-      <a
-        href="https://www.globalgarner.com/upos"
-        target="_blank"
-        className="hover:underline"
-      >
-        UPOS – The Digital Mall
-      </a>
-    </h2>
+                                    <h2 className="text-white text-2xl font-semibold">
+                                        <a
+                                            href="https://www.globalgarner.com/upos"
+                                            target="_blank"
+                                            className="hover:underline"
+                                        >
+                                            UPOS – The Digital Mall
+                                        </a>
+                                    </h2>
 
-    <p className="text-gray-300 mt-2 text-sm">
-      With <span className="font-semibold text-white">20 Crores +</span> Products & Services
-    </p>
-  </div>
+                                    <p className="text-gray-300 mt-2 text-sm">
+                                        With <span className="font-semibold text-white">20 Crores +</span> Products & Services
+                                    </p>
+                                </div>
 
-  {/* MOBILE + */}
-<div className="flex lg:hidden justify-center -my-4 z-10">
-        <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="black"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      >
-        <path d="M12 5v14M5 12h14" />
-      </svg>
-    </div>
-  </div>
+                                {/* MOBILE + */}
+                                <div className="flex lg:hidden justify-center -my-4 z-10">
+                                    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
+                                        <svg
+                                            width="28"
+                                            height="28"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="black"
+                                            strokeWidth="3.5"
+                                            strokeLinecap="round"
+                                        >
+                                            <path d="M12 5v14M5 12h14" />
+                                        </svg>
+                                    </div>
+                                </div>
 
-  {/* RIGHT CARD */}
-  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
-    <p className="font-bricolageRegular text-green-400 !text-md mb-3">
-      Franchise Fee
-    </p>
+                                {/* RIGHT CARD */}
+                                <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
+                                    <p className="font-bricolageRegular text-green-400 !text-md mb-3">
+                                        Franchise Fee
+                                    </p>
 
-    <h2 className="text-white text-2xl font-semibold">
-      Tapri Ki Tafri (chai)
-    </h2>
+                                    <h2 className="text-white text-2xl font-semibold">
+                                        Tapri Ki Tafri (chai)
+                                    </h2>
 
-    <p className="text-gray-300 mt-2 text-sm">
-      with all QSR Franchise Complimentary <br />
-      at <span className="text-white font-semibold">just 1 Lakh Extra</span> (optional)
-    </p>
-  </div>
+                                    <p className="text-gray-300 mt-2 text-sm">
+                                        with all QSR Franchise Complimentary <br />
+                                        at <span className="text-white font-semibold">just 1 Lakh Extra</span> (optional)
+                                    </p>
+                                </div>
 
-  {/* DESKTOP + */}
-  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="black"
-        strokeWidth="3.5"
-        strokeLinecap="round"
-      >
-        <path d="M12 5v14M5 12h14" />
-      </svg>
-    </div>
-  </div>
+                                {/* DESKTOP + */}
+                                <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+                                    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
+                                        <svg
+                                            width="28"
+                                            height="28"
+                                            viewBox="0 0 24 24"
+                                            fill="none"
+                                            stroke="black"
+                                            strokeWidth="3.5"
+                                            strokeLinecap="round"
+                                        >
+                                            <path d="M12 5v14M5 12h14" />
+                                        </svg>
+                                    </div>
+                                </div>
 
-</div>
+                            </div>
 
                         )}
 
@@ -468,128 +480,128 @@ function FranchisesDetails() {
 
             <div className="py-8 bg-black">
 
-  {/* TITLE */}
-  <div className="text-center pb-6 px-3">
-    <h1 className="px-3 lg:px-0 text-white text-3xl md:text-4xl font-bricolageSemiBold leading-tight mb-2">
-      Franchise Models
-    </h1>
-  </div>
+                {/* TITLE */}
+                <div className="text-center pb-6 px-3">
+                    <h1 className="px-3 lg:px-0 text-white text-3xl md:text-4xl font-bricolageSemiBold leading-tight mb-2">
+                        Franchise Models
+                    </h1>
+                </div>
 
-  <Container>
+                <Container>
 
-    {showAllFormats ? (
+                    {showAllFormats ? (
 
-      <div className="grid md:grid-cols-3 gap-8">
+                        <div className="grid md:grid-cols-3 gap-8">
 
-        {/* WHITE LABEL */}
-        <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
+                            {/* WHITE LABEL */}
+                            <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
 
-          <H3 className="text-white text-xl font-semibold mb-3">
-            White Label
-          </H3>
+                                <H3 className="text-white text-xl font-semibold mb-3">
+                                    White Label
+                                </H3>
 
-          <p className="text-gray-400 mb-6">
-            Operate under your brand name with full support.
-          </p>
+                                <p className="text-gray-400 mb-6">
+                                    Operate under your brand name with full support.
+                                </p>
 
-          <button
-            // onClick={() =>
-            //   navigate("/franchise-details/apply-form", {
-            //     state: { slug: "whitelisting-model" },
-            //   })
-            // }
-            className="text-yellow-400 font-medium flex items-center gap-2"
-          >
-            Know More →
-          </button>
+                                <button
+                                    // onClick={() =>
+                                    //   navigate("/franchise-details/apply-form", {
+                                    //     state: { slug: "whitelisting-model" },
+                                    //   })
+                                    // }
+                                    className="text-yellow-400 font-medium flex items-center gap-2"
+                                >
+                                    Know More →
+                                </button>
 
-        </div>
+                            </div>
 
-        {/* FOFO */}
-        <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
+                            {/* FOFO */}
+                            <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
 
-          <H3 className="text-white text-xl font-semibold mb-3">
-            FOFO
-          </H3>
+                                <H3 className="text-white text-xl font-semibold mb-3">
+                                    FOFO
+                                </H3>
 
-          <p className="text-gray-400 mb-6">
-            Franchise Owned, Franchise Operated model for independence.
-          </p>
+                                <p className="text-gray-400 mb-6">
+                                    Franchise Owned, Franchise Operated model for independence.
+                                </p>
 
-          <button
-            // onClick={() =>
-            //   navigate("/franchise-details/apply-form", {
-            //     state: { slug: "fofo-model" },
-            //   })
-            // }
-            className="text-yellow-400 font-medium flex items-center gap-2"
-          >
-            Know More →
-          </button>
+                                <button
+                                    // onClick={() =>
+                                    //   navigate("/franchise-details/apply-form", {
+                                    //     state: { slug: "fofo-model" },
+                                    //   })
+                                    // }
+                                    className="text-yellow-400 font-medium flex items-center gap-2"
+                                >
+                                    Know More →
+                                </button>
 
-        </div>
+                            </div>
 
-        {/* FOCO */}
-        <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
+                            {/* FOCO */}
+                            <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
 
-          <H3 className="text-white text-xl font-semibold mb-3">
-            FOCO
-          </H3>
+                                <H3 className="text-white text-xl font-semibold mb-3">
+                                    FOCO
+                                </H3>
 
-          <p className="text-gray-400 mb-6">
-            Franchise Owned, Company Operated model for ease.
-          </p>
+                                <p className="text-gray-400 mb-6">
+                                    Franchise Owned, Company Operated model for ease.
+                                </p>
 
-          <button
-            // onClick={() =>
-            //   navigate("/franchise-details/apply-form", {
-            //     state: { slug: "foco-model" },
-            //   })
-            // }
-            className="text-yellow-400 font-medium flex items-center gap-2"
-          >
-            Know More →
-          </button>
+                                <button
+                                    // onClick={() =>
+                                    //   navigate("/franchise-details/apply-form", {
+                                    //     state: { slug: "foco-model" },
+                                    //   })
+                                    // }
+                                    className="text-yellow-400 font-medium flex items-center gap-2"
+                                >
+                                    Know More →
+                                </button>
 
-        </div>
+                            </div>
 
-      </div>
+                        </div>
 
-    ) : (
+                    ) : (
 
-      <div className="grid md:grid-cols-1 max-w-md mx-auto">
+                        <div className="grid md:grid-cols-1 max-w-md mx-auto">
 
-        {/* ONLY FOCO */}
-        <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
+                            {/* ONLY FOCO */}
+                            <div className="bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a] rounded-3xl p-8 transition hover:scale-[1.02]">
 
-          <H3 className="text-white text-xl font-semibold mb-3">
-            FOCO
-          </H3>
+                                <H3 className="text-white text-xl font-semibold mb-3">
+                                    FOCO
+                                </H3>
 
-          <p className="text-gray-400 mb-6">
-            Franchise Owned, Company Operated model for ease.
-          </p>
+                                <p className="text-gray-400 mb-6">
+                                    Franchise Owned, Company Operated model for ease.
+                                </p>
 
-          <button
-            // onClick={() =>
-            //   navigate("/franchise-details/apply-form", {
-            //     state: { slug: "foco-model" },
-            //   })
-            // }
-            className="text-yellow-400 font-medium flex items-center gap-2"
-          >
-            Know More →
-          </button>
+                                <button
+                                    // onClick={() =>
+                                    //   navigate("/franchise-details/apply-form", {
+                                    //     state: { slug: "foco-model" },
+                                    //   })
+                                    // }
+                                    className="text-yellow-400 font-medium flex items-center gap-2"
+                                >
+                                    Know More →
+                                </button>
 
-        </div>
+                            </div>
 
-      </div>
+                        </div>
 
-    )}
+                    )}
 
-  </Container>
+                </Container>
 
-</div>
+            </div>
 
             {/* <Container>
                 {details?.stats && (

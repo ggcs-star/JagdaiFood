@@ -14,7 +14,7 @@ export default function Hero({ details }) {
       <div className="relative bg-black">
 
 
-            <div className="pt-16">
+            <div className="lg:pt-16">
                   <div className="text-center lg:py-0 py-10 ">
                     <h1 className="px-3 lg:px-0 text-white text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-2">
               {details?.title}

@@ -43,7 +43,7 @@ export function SecondaryBtn({ children, className, onClick }) {
 export const ApplyButton = ({ children, onClick }) => {
     return (
         <button
-            className="group relative py-3 px-4 overflow-hidden rounded-full text-lg shadow border-2 border-[#f3b24c] hover:border-[#f3b24c]"
+            className="group relative py-3 px-4 overflow-hidden rounded-xl cursor-pointer text-lg shadow border-2 border-[#f3b24c] hover:border-[#f3b24c]"
             onClick={onClick}
         >
             <div className="absolute inset-0 w-0 bg-[#f3b24c] transition-all duration-[250ms] ease-out group-hover:w-full"></div>

@@ -7,15 +7,20 @@ import TechnologyGrowth from "./components/TechnologyGrowth";
 import StructuredFranchiseModels from "./components/StructuredFranchiseModels";
 import FranchiseFormats from "./components/FranchiseFormats";
 import FranchiseCTA from "./components/FranchiseCta";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const AboutUs = () => {
   return (
     <div className="bg-black">
+      <Breadcrumbs
+        titleMap={{
+          "/who-we-are": "Who We Are",
+        }}
+      />
       <AboutHero />
-
       <OriginStory />
 
-      
+
       <div
         className="
         max-w-[1200px]
@@ -33,7 +38,7 @@ const AboutUs = () => {
         <CentralizedOperations />
       </div>
 
-      
+
       <div
         className="
         max-w-[1200px]
