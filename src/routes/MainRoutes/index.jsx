@@ -19,6 +19,8 @@ import TermsConditions from "./Terms&Conditions";
 import PrivacyPolicy from "./PrivacyPolicy";
 import Disclaimer from "./Disclaimer";
 import ModelComparison from "./ModelComparison";
+import FranchisesDetails from "./FranchisesDetails";
+
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
 // import Pharmanalytics from "./Pharmanalytics";
@@ -44,6 +46,7 @@ export default function MainRoutes(props) {
         { path: "/what-we-do", element: <WhatWeDo {...props} /> },
         { path: "brands/:key", element: <BrandsDetails {...props} /> },
         { path: "/roi-calculator", element: <EarningPotential {...props} /> },
+        { path: "franchise-details", element: <FranchisesDetails {...props} /> },
 
         { path: "/faq", element: <FAQ {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },

@@ -139,7 +139,7 @@ import streetFoodFlavours from "./images/streetFoodFlavours.jpg";
 import uniformTaste from "./images/uniformTaste.jpg";
 import qualityIngredient from "./images/qualityIngredient.jpg";
 
-import qsrFranchise from "./images/qsrFranchise.jpeg";
+import qsrFranchise from "./images/qsrFranchise.svg";
 import internet from "./images/internet.jpeg";
 import trolleyFranchise from "./images/trolleyFranchise.png";
 import bikecart1 from "./images/Electric_Food_Trolley.png";

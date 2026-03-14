@@ -1,5 +1,6 @@
 import React from "react";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Container } from "../../../../components/Layout";
 
 import cloudkitchen from "../../../../assets/home/franchise/cloudkitchen.png";
@@ -65,9 +66,12 @@ export default function AdditionalFranchiseModels() {
                 Built for digital-first food business operators.
               </p>
 
-              <button className="bg-white text-black px-6 py-3 rounded-lg font-medium">
+              <Link
+                // to="/franchise-details?type=cloud-kitchen-franchise"
+                className="inline-block bg-white text-black px-6 py-3 rounded-lg font-medium"
+              >
                 Learn About Cloud Kitchen Model
-              </button>
+              </Link>
 
             </div>
 
@@ -83,7 +87,8 @@ export default function AdditionalFranchiseModels() {
           </div>
 
           {/* Territory Card */}
-<div className="relative rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] flex flex-col justify-between">
+          <div className="relative rounded-[26px] bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] flex flex-col justify-between">
+
             <div className="p-4 lg:p-6">
 
               <h3 className="text-3xl font-bricolageBold mb-4">
@@ -116,14 +121,17 @@ export default function AdditionalFranchiseModels() {
                 Perfect for first-time entrepreneurs and micro-investors.
               </p>
 
-              <button className="bg-green-400 text-black px-6 py-3 rounded-lg font-medium">
+              <Link
+                to="/franchise-details?type=master-franchise"
+                className="inline-block bg-green-400 text-black px-6 py-3 rounded-lg font-medium"
+              >
                 Enquire for Territory Rights
-              </button>
+              </Link>
 
             </div>
 
             {/* Image */}
-            <div className=" h-96">
+            <div className="h-96">
               <img
                 src={master}
                 alt="territory model"
