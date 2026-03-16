@@ -14,17 +14,17 @@ export default function FAQAccordion() {
     {
       question: "What is the Jagdai Foods Franchise?",
       answer:
-        "The Jagdai Foods franchise allows partners to operate multiple food brands through a centralized kitchen and operational ecosystem.",
+        "The Jagdai Foods franchise model allows partners to operate their own branches using the company’s trusted brand and resources. In return for an initial investment and regular royalties, franchisees benefit from established business processes, well-known products, and comprehensive support from the parent company.",
     },
     {
       question: "How many franchise options does Jagdai Foods have?",
       answer:
-        "Jagdai Foods offers multiple franchise formats including QSR restaurants, cloud kitchens, food trolleys, food tempos and food court formats.",
+        "Jagdai Foods offers 3 Franchise Options, (QSR)Quick Service Restaurant, Internet Restaurants (IR)Franchise and Food Trolley (FT)Franchise.",
     },
     {
       question: "Who is the founder of Jagdai foods?",
       answer:
-        "Jagdai Foods was founded with the vision to build a scalable and technology driven multi-brand food ecosystem.",
+        "Jagdai Foods was founded by Vikas Rawat and Tanushree , visionaries with a passion for delivering exceptional food experiences. With a deep understanding of the food industry and a commitment to innovation, they have created a brand that blends quality, taste, and convenience.",
     },
   ];
 
