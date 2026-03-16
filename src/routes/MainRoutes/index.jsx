@@ -46,8 +46,7 @@ export default function MainRoutes(props) {
         { path: "/what-we-do", element: <WhatWeDo {...props} /> },
         { path: "brands/:key", element: <BrandsDetails {...props} /> },
         { path: "/roi-calculator", element: <EarningPotential {...props} /> },
-        { path: "franchise-details", element: <FranchisesDetails {...props} /> },
-
+{ path: "franchise-formats/:slug", element: <FranchisesDetails {...props} /> },
         { path: "/faq", element: <FAQ {...props} /> },
         { path: "/contact", element: <Contact {...props} /> },
         {path: "/terms", element: <TermsConditions {...props} />},

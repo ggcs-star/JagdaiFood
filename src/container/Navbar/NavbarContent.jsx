@@ -31,22 +31,22 @@ export default function NavbarContent() {
       name: "Franchise Formats",
       link: "/franchise-formats",
       dropdown: [
-        { name: "QSR Franchise", link: "/franchise-details?type=qsr-restaurant-franchise" },
-        { name: "Cloud Kitchen", link: "/franchise-details?type=internet-restaurants-franchise" },
-        { name: "Food Trolley", link: "/franchise-details?type=food-trolley-franchise" },
-        { name: "Food Tempo", link: "/franchise-details?type=food-tempo-franchise" },
-        { name: "Food Court", link: "/franchise-details?type=chatori-gali" },
-        { name: "Influencer Franchise", link: "/franchise-details?type=influencer-franchise" }
+        { name: "QSR Franchise", link: "/franchise-formats/qsr-restaurant-franchise" },
+        { name: "Cloud Kitchen", link: "/franchise-formats/internet-restaurants-franchise" },
+        { name: "Food Trolley", link: "/franchise-formats/food-trolley-franchise" },
+        { name: "Food Tempo", link: "/franchise-formats/food-tempo-franchise" },
+        { name: "Food Court", link: "/franchise-formats/chatori-gali" },
+        { name: "Influencer Franchise", link: "/franchise-formats/influencer-franchise" }
       ]
     },
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
     {
       name: "Resources",
-      link: "/resources",
+      link: "/",
       dropdown: [
         { name: "ROI Calculator", link: "/roi-calculator" },
-        { name: "Download Brochure", link: "/download-brochure" },
+        { name: "Download Brochure", link: "/" },
         { name: "FAQs", link: "/faq" },
         { name: "Contact", link: "/contact" },
 

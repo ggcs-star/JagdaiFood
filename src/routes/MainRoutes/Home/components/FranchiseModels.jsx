@@ -96,7 +96,7 @@ export default function FranchiseModels() {
               </p>
 
               <Link
-                to="/franchise-details?type=qsr-restaurant-franchise"
+                to="/franchise-formats?type=qsr-restaurant-franchise"
                 className="inline-block mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium"
               >
                 Apply for QSR Franchise
@@ -151,7 +151,7 @@ export default function FranchiseModels() {
               </p>
 
               <Link
-                to="/franchise-details?type=food-trolley-franchise"
+                to="/franchise-formats?type=food-trolley-franchise"
                 className="inline-block mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-medium"
               >
                 Explore Trolley Model

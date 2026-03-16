@@ -47,7 +47,7 @@ export default function FranchiseInvestment() {
             </div>
 
             <Link
-              to="/franchise-details?type=qsr-restaurant-franchise"
+              to="/franchise-formats/qsr-restaurant-franchise"
               className="inline-block border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More
@@ -117,7 +117,7 @@ export default function FranchiseInvestment() {
             </div>
 
             <Link
-              to="/franchise-details?type=internet-restaurants-franchise"
+              to="/franchise-formats/internet-restaurants-franchise"
               className="inline-block border border-black px-5 py-2 rounded-lg text-sm hover:bg-black hover:text-white transition"
             >
               Know More

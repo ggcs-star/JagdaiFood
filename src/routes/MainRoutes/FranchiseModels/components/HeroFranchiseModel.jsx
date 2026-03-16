@@ -2,7 +2,7 @@ import React from "react";
 
 export default function HeroFranchiseModel() {
   return (
-    <section className="w-full bg-black flex items-center justify-center py-[70px] md:py-[90px] px-[16px] md:px-0">
+    <section className="w-full bg-black flex items-center justify-center py-8 md:py-16 px-[16px] md:px-0">
       
       <div className="w-full max-w-[1440px] text-center">
 
