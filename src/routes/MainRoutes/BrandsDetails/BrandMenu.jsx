@@ -68,17 +68,36 @@ export default function BrandMenu({ item }) {
 
       </div> */}
 
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
-        <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">Menu</h2>
+     <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
 
-        <a
-          href={item?.menuDownloadLink || "#"}
-          className="border border-yellow-400 text-yellow-400 px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-400 hover:text-black transition text-sm md:text-base"
-        >
-          <img src={download} alt="Download" className="size-4" />
-          Download Menu
-        </a>
-      </div>
+  <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">
+    Menu
+  </h2>
+
+  <a
+    href={item?.menuDownloadLink || "#"}
+    className="
+    inline-flex
+    items-center
+    gap-2
+    border border-yellow-400
+    text-yellow-400
+    px-5
+    py-2
+    rounded-full
+    hover:bg-yellow-400
+    hover:text-black
+    transition
+    text-sm
+    md:text-base
+    whitespace-nowrap
+    "
+  >
+    <img src={download} alt="Download" className="w-4 h-4" />
+    Download Menu
+  </a>
+
+</div>
 
       {/* CATEGORY PILLS */}
       {/* <div className="flex flex-wrap gap-3 mb-10">
@@ -98,9 +117,7 @@ export default function BrandMenu({ item }) {
         ))}
       </div> */}
 
-      {/* FIRST 6 + PHONE */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-12">
-        {/* MENU GRID */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {firstSix.map((food, i) => (
             <div key={i}>
@@ -119,7 +136,6 @@ export default function BrandMenu({ item }) {
           ))}
         </div>
 
-        {/* PHONE CARD */}
         {item?.mobileApp && (
           <div className="bg-[#2a2a2a] rounded-2xl px-6 py-8 flex flex-col items-center text-center w-full max-w-[340px] mx-auto lg:mx-0">
             {item.mobileApp?.logo && (
@@ -170,7 +186,7 @@ export default function BrandMenu({ item }) {
         )}
       </div>
 
-      {/* REST CARDS */}
+      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {restCards.map((food, i) => (
           <div key={i}>
