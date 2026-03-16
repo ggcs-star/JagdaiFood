@@ -30,7 +30,7 @@ export default function AdditionalFranchises() {
             </p>
 
             <Link
-              to="/franchise-details?type=food-trolley-franchise"
+              to="/franchise-formats/food-trolley-franchise"
               className="inline-block border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More
@@ -60,7 +60,7 @@ export default function AdditionalFranchises() {
             </p>
 
             <Link
-              to="/franchise-details?type=influencer-franchise"
+              to="/franchise-formats/influencer-franchise"
               className="inline-block border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More

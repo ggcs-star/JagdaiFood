@@ -8,12 +8,32 @@ import logo from "../../assets/footer/logo.webp";
 const Footer = () => {
   const navigate = useNavigate();
 
-  const quickLinks = [
-    { label: "QSR Franchise", slug: "/qsr-franchise" },
-    { label: "Cloud Kitchen Franchise", slug: "/cloud-kitchen" },
-    { label: "Food Trolley Franchise", slug: "/food-trolley" },
-    { label: "Territory / Master Franchise", slug: "/master-franchise" },
-  ];
+const quickLinks = [
+  {
+    label: "QSR Franchise",
+    slug: "/franchise-formats/qsr-restaurant-franchise",
+  },
+  {
+    label: "Cloud Kitchen",
+    slug: "/franchise-formats/internet-restaurants-franchise",
+  },
+  {
+    label: "Food Trolley",
+    slug: "/franchise-formats/food-trolley-franchise",
+  },
+  {
+    label: "Food Tempo",
+    slug: "/franchise-formats/food-tempo-franchise",
+  },
+  {
+    label: "Food Court",
+    slug: "/franchise-formats/chatori-gali",
+  },
+  {
+    label: "Influencer Franchise",
+    slug: "/franchise-formats/influencer-franchise",
+  },
+];
 
   const businessModels = [
     { label: "FOFO Model", desc: "(Franchise Owned Franchise Operated)", slug: "/fofo-model" },
@@ -23,7 +43,6 @@ const Footer = () => {
 
   const resources = [
     { label: "Download Investment Brochure", slug: "/brochure" },
-    { label: "Franchise Application", slug: "/franchise-apply" },
     { label: "Schedule Consultation", slug: "/contact" },
     { label: "Franchise FAQs", slug: "/faq" },
     { label: "Terms & Conditions", slug: "/terms" },

@@ -45,7 +45,7 @@ export default function FranchiseModels() {
             </div>
 
             <Link
-              to="/franchise-details?type=food-tempo-franchise"
+              to="/franchise-formats/food-tempo-franchise"
               className="inline-block border border-black px-6 py-2 rounded-lg text-sm font-medium hover:bg-black hover:text-white transition"
             >
               Know More
@@ -106,7 +106,7 @@ export default function FranchiseModels() {
             </div>
 
             <Link
-              to="/franchise-details?type=chatori-gali"
+              to="/franchise-formats/chatori-gali"
               className="inline-block border border-gray-500 px-6 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More

@@ -67,7 +67,7 @@ export default function AdditionalFranchiseModels() {
               </p>
 
               <Link
-                // to="/franchise-details?type=cloud-kitchen-franchise"
+                // to="/franchise-formats?type=cloud-kitchen-franchise"
                 className="inline-block bg-white text-black px-6 py-3 rounded-lg font-medium"
               >
                 Learn About Cloud Kitchen Model
@@ -122,7 +122,7 @@ export default function AdditionalFranchiseModels() {
               </p>
 
               <Link
-                to="/franchise-details?type=master-franchise"
+                to="/franchise-formats?type=master-franchise"
                 className="inline-block bg-green-400 text-black px-6 py-3 rounded-lg font-medium"
               >
                 Enquire for Territory Rights
