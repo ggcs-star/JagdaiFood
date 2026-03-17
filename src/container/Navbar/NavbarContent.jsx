@@ -11,7 +11,7 @@ export default function NavbarContent() {
   const navLinks = [
     {
       name: "About Us",
-      link: "/about",
+      link: "/about", // ✅ added
       dropdown: [
         { name: "Vision & Mission", link: "/about" },
         { name: "Who We Are", link: "/who-we-are" },
@@ -20,7 +20,7 @@ export default function NavbarContent() {
     },
     {
       name: "Franchise Models",
-      link: "/franchise-models",
+      link: "/franchise-models", // ✅ added (choose main page)
       dropdown: [
         { name: "FOFO Model", link: "/fofo-model" },
         { name: "FOCO Model", link: "/foco-model" },
@@ -29,7 +29,7 @@ export default function NavbarContent() {
     },
     {
       name: "Franchise Formats",
-      link: "/franchise-formats",
+      link: "/franchise-formats", // ✅ added
       dropdown: [
         { name: "QSR Franchise", link: "/franchise-formats/qsr-restaurant-franchise" },
         { name: "Cloud Kitchen", link: "/franchise-formats/internet-restaurants-franchise" },
@@ -43,13 +43,11 @@ export default function NavbarContent() {
     { name: "Our Brands", link: "/brands" },
     {
       name: "Resources",
-      link: "/",
       dropdown: [
         { name: "ROI Calculator", link: "/roi-calculator" },
         { name: "Download Brochure", link: "/" },
         { name: "FAQs", link: "/faq" },
         { name: "Contact", link: "/contact" },
-
       ],
     },
   ];
@@ -69,24 +67,33 @@ export default function NavbarContent() {
           {navLinks.map((item, index) => (
             <li key={index} className="relative group">
 
-              <NavLink
-                to={item.link}
-                className={({ isActive }) =>
-                  `flex items-center gap-1 ${isActive
-                    ? "text-[#f2b44c]"
-                    : "hover:text-[#f2b44c] transition"
-                  }`
-                }
-              >
-                {item.name}
-                {item.dropdown && (
-                  <FaChevronDown className="text-[10px] mt-[2px]" />
-                )}
-              </NavLink>
+              {/* Parent Menu */}
+              {item.link ? (
+                <NavLink
+                  to={item.link}
+                  className={({ isActive }) =>
+                    `flex items-center gap-1 ${
+                      isActive
+                        ? "text-[#f2b44c]"
+                        : "hover:text-[#f2b44c] transition"
+                    }`
+                  }
+                >
+                  {item.name}
+                  {item.dropdown && (
+                    <FaChevronDown className="text-[10px]" />
+                  )}
+                </NavLink>
+              ) : (
+                <button className="flex items-center gap-1 cursor-default">
+                  {item.name}
+                  <FaChevronDown className="text-[10px]" />
+                </button>
+              )}
 
-              {/* Desktop Dropdown */}
+              {/* Dropdown */}
               {item.dropdown && (
-                <div className="absolute left-0 top-full mt-3 w-[200px] bg-[#2c2c2c] rounded-xl border border-gray-600 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                <div className="absolute left-0 top-full mt-3 w-[220px] bg-[#2c2c2c] rounded-xl border border-gray-600 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
 
                   {item.dropdown.map((subItem, i) => (
                     <NavLink
@@ -107,7 +114,6 @@ export default function NavbarContent() {
 
         {/* Desktop Phone */}
         <div className="hidden lg:flex items-center gap-6">
-
           <div className="h-10 w-[1px] bg-gray-600"></div>
 
           <div className="flex items-center gap-3">
@@ -115,14 +121,13 @@ export default function NavbarContent() {
               <FaPhoneAlt size={14} />
             </div>
 
-            <div className="leading-tight">
+            <div>
               <p className="text-xs text-gray-300">For Franchise</p>
               <p className="font-semibold text-[#F4A62A]">
                 +91 78629 31074
               </p>
             </div>
           </div>
-
         </div>
 
         {/* Mobile Menu Button */}
@@ -132,17 +137,14 @@ export default function NavbarContent() {
         >
           <IoMdMenu />
         </div>
-
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="lg:hidden fixed inset-0 z-[9999] bg-black flex flex-col">
 
-          {/* Top Bar */}
           <div className="flex items-center justify-between px-3 border-b border-gray-700">
-
-            <img src={logo} alt="logo" className="h-20 object-contain" />
+            <img src={logo} alt="logo" className="h-20" />
 
             <button
               onClick={() => {
@@ -153,12 +155,9 @@ export default function NavbarContent() {
             >
               <IoMdClose />
             </button>
-
           </div>
 
-          {/* Menu Content */}
           <div className="flex-1 overflow-y-auto px-4 py-6">
-
             <ul className="flex flex-col gap-6 text-lg">
 
               {navLinks.map((item, index) => (
@@ -166,13 +165,16 @@ export default function NavbarContent() {
 
                   <div className="flex items-center justify-between">
 
-                    <NavLink
-                      to={item.link}
-                      onClick={() => setMenuOpen(false)}
-                      className="hover:text-[#f2b44c]"
-                    >
-                      {item.name}
-                    </NavLink>
+                    {item.link ? (
+                      <NavLink
+                        to={item.link}
+                        onClick={() => setMenuOpen(false)}
+                      >
+                        {item.name}
+                      </NavLink>
+                    ) : (
+                      <span>{item.name}</span>
+                    )}
 
                     {item.dropdown && (
                       <button
@@ -181,7 +183,6 @@ export default function NavbarContent() {
                             openDropdown === index ? null : index
                           )
                         }
-                        className="text-xl font-bold"
                       >
                         {openDropdown === index ? "-" : "+"}
                       </button>
@@ -190,14 +191,13 @@ export default function NavbarContent() {
                   </div>
 
                   {item.dropdown && openDropdown === index && (
-                    <ul className="ml-4 mt-3 flex flex-col gap-3 text-gray-300 text-base">
+                    <ul className="ml-4 mt-3 flex flex-col gap-3 text-gray-300">
 
                       {item.dropdown.map((subItem, i) => (
                         <li key={i}>
                           <NavLink
                             to={subItem.link}
                             onClick={() => setMenuOpen(false)}
-                            className="hover:text-[#f2b44c]"
                           >
                             {subItem.name}
                           </NavLink>
@@ -211,23 +211,9 @@ export default function NavbarContent() {
               ))}
 
             </ul>
-
-            {/* Mobile Phone */}
-            <div className="flex items-center gap-3 mt-10">
-              <FaPhoneAlt className="text-[#F4A62A]" />
-              <div>
-                <p className="text-xs text-gray-300">For Franchise</p>
-                <p className="text-[#F4A62A] font-semibold">
-                  +91 78629 31074
-                </p>
-              </div>
-            </div>
-
           </div>
-
         </div>
       )}
-
     </header>
   );
 }
