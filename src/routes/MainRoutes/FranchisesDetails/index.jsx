@@ -25,6 +25,16 @@ import BenefitsSectionqsr from "./BenefitsSectionqsr";
 import CloudKitchenIntro from "./CloudKitchenIntro";
 import FranchiseModelsInternet from "./FranchiseModelsInternet";
 import InternetRestaurantBenefits from "./InternetRestaurantBenefits";
+import FoodTrolleyIntro from "./FoodTrolleyIntro";
+import FoodTrolleySection from "./FoodTrolleySection";
+import FocoAdvantages from "./FocoAdvantages";
+import FoodTempoIntro from "./FoodTempoIntro";
+import TempoAdvantages from "./TempoAdvantages";
+import WhyFoodTempo from "./WhyFoodTempo";
+import FocoEarningSectionTempo from "./FocoEarningSectionTempo";
+import FoodCourtIntro from "./FoodCourtIntro";
+import FoodCourtBenefits from "./FoodCourtBenefits";
+import FoodCourtInfo from "./FoodCourtInfo";
 
 /* ---------------- DESC COMPONENT ---------------- */
 
@@ -181,16 +191,33 @@ function FranchisesDetails() {
         <QsrShowcase />
       )}
 
-           {slug == "qsr-restaurant-franchise" && (
-        <QsrShowcase />
-      )}
+
 
       {slug == "internet-restaurants-franchise" && (
         <CloudKitchenIntro />
       )}
 
-      {!["qsr-restaurant-franchise", "internet-restaurants-franchise"].includes(slug) && (
+      {slug == "food-trolley-franchise" && (
+        <FoodTrolleyIntro />
+      )}
+
+
+      {slug == "food-tempo-franchise" && (
+        <FoodTempoIntro />
+      )}
+
+      {slug == "chatori-gali" && (
+        <FoodCourtIntro />
+      )}
+
+
+
+      {!["qsr-restaurant-franchise", "internet-restaurants-franchise", "food-tempo-franchise", "chatori-gali", "food-trolley-franchise"].includes(slug) && (
         <Desc details={details} slug={slug} />
+      )}
+
+      {slug == "food-tempo-franchise" && (
+        <TempoAdvantages />
       )}
 
       <div className="bg-black">
@@ -357,8 +384,31 @@ function FranchisesDetails() {
 
         </Container>
       </div>
+
+      {slug == "food-tempo-franchise" && (
+        <WhyFoodTempo />
+      )}
+      {slug == "food-tempo-franchise" && (
+        <FocoEarningSectionTempo />
+      )}
       {slug == "qsr-restaurant-franchise" && (
         <BenefitsSectionqsr />
+      )}
+
+      {slug == "chatori-gali" && (
+        <FoodCourtBenefits />
+      )}
+
+       {slug == "chatori-gali" && (
+        <FoodCourtInfo />
+      )}
+
+      {slug == "food-trolley-franchise" && (
+        <FoodTrolleySection />
+      )}
+
+      {slug == "food-trolley-franchise" && (
+        <FocoAdvantages />
       )}
 
       {slug == "internet-restaurants-franchise" && (
@@ -376,65 +426,61 @@ function FranchisesDetails() {
 
       <div className="py-8 bg-black">
 
-        <div className="text-center pb-6 px-3">
-          <h1 className="font-bricolageSemiBold text-white text-3xl md:text-4xl">
-            Franchise Models
-          </h1>
-        </div>
 
-        <Container>
 
-          {showAllFormats ? (
+        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali"].includes(slug) && (
+          <Container>
+            {showAllFormats ? (
+              <>
+                <div className="text-center pb-6 px-3">
+                  <h1 className="font-bricolageSemiBold text-white text-3xl md:text-4xl">
+                    Franchise Models
+                  </h1>
+                </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      White Label
+                    </H3>
+                    <p className="text-gray-400">
+                      Operate under your brand name with full support.
+                    </p>
+                  </div>
 
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  White Label
-                </H3>
-                <p className="text-gray-400">
-                  Operate under your brand name with full support.
-                </p>
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      FOFO
+                    </H3>
+                    <p className="text-gray-400">
+                      Franchise Owned, Franchise Operated model.
+                    </p>
+                  </div>
+
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      FOCO
+                    </H3>
+                    <p className="text-gray-400">
+                      Franchise Owned, Company Operated model.
+                    </p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="max-w-md mx-auto">
+                <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                  <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                    FOCO
+                  </H3>
+                  <p className="text-gray-400">
+                    Franchise Owned, Company Operated model for ease.
+                  </p>
+                </div>
               </div>
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOFO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Franchise Operated model.
-                </p>
-              </div>
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOCO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Company Operated model.
-                </p>
-              </div>
-
-            </div>
-
-          ) : (
-
-            <div className="max-w-md mx-auto">
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOCO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Company Operated model for ease.
-                </p>
-              </div>
-
-            </div>
-
-          )}
-
-        </Container>
+            )}
+          </Container>
+        )}
 
         <Container className="mx-auto flex justify-center">
           <FranchiseCTA1 />
