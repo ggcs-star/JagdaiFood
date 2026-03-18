@@ -1,80 +1,105 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import master from "../../../../assets/franchisemodels/MasterFranchise1.png";
 
 export default function ExploreFranchiseSection() {
-
   const navigate = useNavigate();
-  
+
   const items = [
-    { line1: "Agreement", line2: "structure" },
-    { line1: "Investment", line2: "breakdown" },
-    { line1: "Unit", line2: "economics" },
-    { line1: "Location", line2: "analysis" },
+    "Agreement Structure",
+    "Investment Breakdown",
+    "Unit Economics",
+    "Location Analysis",
   ];
 
   return (
-    <section className="w-full bg-black flex justify-center mt-[40px] pb-[120px] px-[16px] md:px-[20px]">
+    <section className="w-full">
 
+      {/* MAIN CARD */}
       <div
-        className="w-full max-w-[1200px] min-h-[475px] rounded-[24px] flex flex-col items-center text-center pt-[60px] md:pt-[90px] pb-[40px] px-[20px] md:px-[20px]"
+        className="relative w-full max-w-[1100px] 
+        min-h-[520px] md:h-[495px] 
+        rounded-[20px] md:rounded-[24px] 
+        overflow-hidden mx-auto px-4 sm:px-6 md:px-0 py-6 md:py-0"
         style={{
-          background: "linear-gradient(96deg,#60D186 0%,#FDBD5B 100%)",
+          background: "linear-gradient(97deg,#60D186 0%,#FDBD5B 100%)",
         }}
       >
 
-        
-        <h2 className="font-bricolageBold text-[26px] sm:text-[34px] md:text-[40px] leading-[34px] md:leading-[50px] text-black w-full max-w-[580px]">
-          Ready to Explore Your Franchise Opportunity?
-        </h2>
+        {/* LEFT CONTENT */}
+        <div className="h-full flex flex-col justify-center 
+        pl-0 md:pl-[60px] 
+        pr-0 md:pr-[40px] 
+        max-w-full md:max-w-[600px]">
 
-       
-        <p className="mt-[14px] text-[15px] md:text-[18px] font-inter font-medium text-black">
-          Speak with our franchise advisor to understand:
-        </p>
+          {/* HEADING */}
+          <h2 className="text-black 
+          text-[22px] sm:text-[28px] md:text-[36px] 
+          leading-[30px] sm:leading-[36px] md:leading-[44px] 
+          font-bricolageBold 
+          whitespace-normal md:whitespace-nowrap">
+            Ready to Explore Your Franchise Opportunity?
+          </h2>
 
-        
-        <div className="flex flex-wrap justify-center gap-[24px] md:gap-[70px] mt-[36px]">
+          {/* SUBTEXT */}
+          <p className="mt-[12px] md:mt-[14px] text-black text-[14px] md:text-[16px]">
+            Speak with our franchise advisor to understand:
+          </p>
 
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-[12px] w-[140px] sm:w-[160px] md:w-[180px]"
-            >
+          {/* LIST */}
+          <div className="mt-[18px] md:mt-[24px] space-y-[14px] md:space-y-[18px]">
+            {items.map((item, index) => (
+              <div key={index} className="flex items-center gap-[10px] md:gap-[14px]">
 
-              <svg
-                className="w-[24px] md:w-[28px] h-[24px] md:h-[28px]"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <circle cx="12" cy="12" r="12" fill="#FDBD5B" />
-                <path
-                  d="M7 12L10 15L17 8"
-                  stroke="black"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
+                {/* CHECK ICON */}
+                <div className="w-[22px] h-[22px] md:w-[26px] md:h-[26px] rounded-full bg-[#FDBD5B] flex items-center justify-center shrink-0">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                    <path
+                      d="M5 12L10 17L19 7"
+                      stroke="black"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </div>
 
-              <p className="text-[16px] md:text-[20px] font-inter font-semibold text-black text-left leading-[22px] md:leading-[26px]">
-                {item.line1}
-                <br />
-                {item.line2}
-              </p>
+                <p className="text-black text-[15px] md:text-[18px] font-semibold">
+                  {item}
+                </p>
+              </div>
+            ))}
+          </div>
 
-            </div>
-          ))}
+          {/* BUTTON */}
+          <button
+            onClick={() => navigate("/contact")}
+            className="mt-[24px] md:mt-[30px] 
+            w-full sm:w-[260px] h-[46px] md:h-[48px] 
+            bg-[#252525] rounded-[8px] 
+            text-white text-[14px] md:text-[16px] font-semibold">
+            Talk to Franchise Advisor
+          </button>
 
         </div>
 
-       
-        <button
-        onClick={()=>navigate("/contact")}
-         className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold hover:opacity-90 transition">
-          Schedule a Franchise Consultation
-        </button>
+        {/* RIGHT IMAGE */}
+        <img
+          src={master}
+          alt="franchise"
+    className="
+absolute 
+bottom-[-20px] sm:bottom-[-25px] md:bottom-0 
+right-[-10px] sm:right-[-20px] md:right-[-30px]
+
+h-[260px] sm:h-[320px] md:h-[105%]
+
+w-auto object-contain
+"
+        />
 
       </div>
+
     </section>
   );
 }

@@ -59,7 +59,7 @@ export default function FranchiseModels() {
       <EcosystemBenefitsCard />
       <ModelFitSection />
 
-      <ExploreFranchiseSection />
+      {/* <ExploreFranchiseSection /> */}
 
    
     </div>
