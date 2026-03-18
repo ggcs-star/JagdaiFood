@@ -43,7 +43,7 @@ const InfluencerFranchise = () => {
             key={plan.id}
             className="bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-2xl p-3 lg:p-8 text-white"
           >
-            <p className="text-green-400 font-semibold mb-1">
+            <p className="text-[#60D186] font-semibold mb-1">
               {plan.subtitle}
             </p>
 
@@ -54,21 +54,21 @@ const InfluencerFranchise = () => {
             <div className="space-y-4 text-sm text-gray-300">
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400">
+                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
                   <Check className="w-3 h-3 text-black" strokeWidth={3} />
                 </div>
                 Fee: {plan.fee}
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400">
+                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
                   <Check className="w-3 h-3 text-black" strokeWidth={3} />
                 </div>
                 Earnings: {plan.earnings}
               </div>
 
               <div className="flex items-start gap-3">
-                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400">
+                <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
                   <Check className="w-3 h-3 text-black" strokeWidth={3} />
                 </div>
                 Bonus: {plan.bonus}
@@ -76,7 +76,7 @@ const InfluencerFranchise = () => {
 
               {plan.specialOffer && (
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400">
+                  <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
                     <Check className="w-3 h-3 text-black" strokeWidth={3} />
                   </div>
                   Special Offer: {plan.specialOffer}

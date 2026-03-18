@@ -36,7 +36,7 @@ export default function WhyJagdai() {
         </div>
 
         {/* Grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-center">
 
           {/* Left Image */}
           <div className="w-full h-[320px] md:h-[460px] rounded-2xl overflow-hidden bg-gradient-to-r from-[#2a2a2a] to-[#3a3a3a]">
@@ -55,7 +55,7 @@ export default function WhyJagdai() {
                 <li key={index} className="flex items-start gap-4">
 
                   {/* Icon */}
-                  <div className="w-6 h-6 min-w-[24px] rounded-full bg-[#f3b24c] flex items-center justify-center mt-1">
+                  <div className="w-6 h-6 min-w-[24px] rounded-full bg-[#FDBD5B] flex items-center justify-center mt-1">
                     <Check size={14} className="text-black" />
                   </div>
 

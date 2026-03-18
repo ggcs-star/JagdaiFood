@@ -51,7 +51,7 @@ export default function AdditionalFranchiseModels() {
               <ul className="space-y-4 mb-6">
                 {cloudKitchenPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-white/80">
-                    <span className="w-6 h-6 rounded-full bg-green-400 flex items-center justify-center">
+                    <span className="w-6 h-6 rounded-full bg-[#60D186] flex items-center justify-center">
                       <Check size={14} className="text-black" />
                     </span>
                     {item}
@@ -64,7 +64,7 @@ export default function AdditionalFranchiseModels() {
               </p>
 
               <Link
-                className="inline-block bg-green-400 text-black px-6 py-3 rounded-lg font-semibold"
+                className="inline-block bg-[#60D186] text-black px-6 py-3 rounded-lg font-semibold"
                 to="/franchise-formats/internet-restaurants-franchise"
 
               >
@@ -140,7 +140,7 @@ export default function AdditionalFranchiseModels() {
         <div className="flex justify-center mt-10 pb-10">
           <Link
             to="/franchise-formats"
-            className="bg-yellow-400 text-black px-6 py-3 rounded-lg font-semibold"
+            className="bg-[#FDBD5B] text-black px-6 py-3 rounded-lg font-semibold"
           >
             Explore More Franchise
           </Link>

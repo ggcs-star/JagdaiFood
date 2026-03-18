@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function FranchiseHero() {
   const navigate = useNavigate();
   return (
-    <section className="relative w-screen min-h-[85vh] text-white overflow-hidden">
+    <section className="relative w-screen min-h-[85vh] text-white overflow-hidden pt-18 lg:pt-32">
 
       {/* Gradient Background (always visible) */}
       <div
@@ -28,16 +28,16 @@ export default function FranchiseHero() {
       <div className="relative z-10 py-8 lg:py-10">
         <div className="px-3 lg:px-38 max-w-[950px]">
 
-          <p className="font-bricolageBold text-[#FDBD5B] mb-4">
+          <p className="text-3xl md:text-5xl font-bricolageBold text-[#FDBD5B] mb-4">
             Built on Amma’s Legacy
           </p>
 
           <h1 className="text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
-            Engineered for
+            Engineered for Scalable
+            {/* <br className="hidden lg:block" />
+            {' '}   */}
             <br className="hidden lg:block" />
-            {' '} Scalable Food
-            <br className="hidden lg:block" />
-            {' '} Entrepreneurship
+            {' '} Food Entrepreneurship
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
@@ -52,12 +52,12 @@ export default function FranchiseHero() {
             food businesses with operational clarity and predictable returns.
           </p>
 
-          <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
+          <p className="text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
             Structured franchise formats. Capital protection framework. Multi-brand scale.
           </p>
 
           <div className="flex gap-4 lg:flex-wrap">
-            <button className="text-sm lg:text-lg bg-[#f3b24c] text-black px-2 lg:px-6 py-3 rounded-lg hover:bg-[#e0a43f] transition">
+            <button className="text-sm lg:text-lg bg-[#FDBD5B] text-black px-2 lg:px-6 py-3 rounded-lg hover:bg-[#e0a43f] transition">
               Apply for Franchise
             </button>
 

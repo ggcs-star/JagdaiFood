@@ -19,24 +19,50 @@ import { ApplyButton } from "../../../components/Button";
 import InfluencerFranchise from "./InfluencerFranchise";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import FranchiseCTA1 from "./FranchiseCTA1";
+import QsrShowcase from "./QsrShowcase";
+import RevenueOpportunitiesqsr from "./RevenueOpportunities";
+import BenefitsSectionqsr from "./BenefitsSectionqsr";
+import CloudKitchenIntro from "./CloudKitchenIntro";
+import FranchiseModelsInternet from "./FranchiseModelsInternet";
+import InternetRestaurantBenefits from "./InternetRestaurantBenefits";
+import FoodTrolleyIntro from "./FoodTrolleyIntro";
+import FoodTrolleySection from "./FoodTrolleySection";
+import FocoAdvantages from "./FocoAdvantages";
+import FoodTempoIntro from "./FoodTempoIntro";
+import TempoAdvantages from "./TempoAdvantages";
+import WhyFoodTempo from "./WhyFoodTempo";
+import FocoEarningSectionTempo from "./FocoEarningSectionTempo";
+import FoodCourtIntro from "./FoodCourtIntro";
+import FoodCourtBenefits from "./FoodCourtBenefits";
+import FoodCourtInfo from "./FoodCourtInfo";
 
 /* ---------------- DESC COMPONENT ---------------- */
 
 const Desc = ({ details, slug }) => {
   if (!details) return null;
 
-  const imageClass =
-    slug === "internet-restaurants-franchise"
-      ? "lg:w-[500px]"
-      : "lg:w-[520px]";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      setIsMobile(window.innerWidth < 1024); // lg breakpoint
+    };
+
+    checkScreen();
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
 
   return (
-    <section className="bg-black py-16 px-4 md:px-10">
+    <section className="bg-black py-8 lg:py-16 px-4 md:px-10">
       <div className="max-w-7xl mx-auto">
 
+        {/* TOP SECTION */}
         <div className="rounded-3xl bg-gradient-to-r from-[#1f1f1f] via-[#2a2a2a] to-[#6a5434] grid lg:grid-cols-[60%_40%] gap-10 items-stretch overflow-hidden">
 
-          <div className="p-10">
+          {/* LEFT CONTENT */}
+          <div className="p-3 lg:p-10">
             <h2 className="font-bricolageRegular text-3xl lg:text-4xl text-white mb-6 leading-snug">
               Benefits of joining our <br />
               <span>{details?.title} Business</span>
@@ -44,28 +70,50 @@ const Desc = ({ details, slug }) => {
 
             <ul className="space-y-4">
               {details?.benefits?.details?.map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-200 text-lg">
-                  <span className="flex items-center justify-center w-6 h-6 bg-yellow-400 text-black rounded-full text-sm font-bold">
+                <li
+                  key={i}
+                  className="flex items-start gap-3 text-gray-200 text-base lg:text-lg"
+                >
+                  <span className="flex-shrink-0 flex items-center justify-center w-6 h-6 min-w-[24px] min-h-[24px] bg-[#FDBD5B] text-black rounded-full text-sm font-bold mt-1">
                     ✓
                   </span>
-                  {item?.label}
+
+                  <p className="leading-relaxed">
+                    {item?.label}
+                  </p>
                 </li>
               ))}
             </ul>
           </div>
 
-          <div className="flex items-end justify-end">
+          {/* RIGHT IMAGE */}
+          <div className="flex lg:items-end lg:justify-end relative overflow-hidden">
             <img
               src={details?.largeImage}
               alt="Franchise"
-              className={`object-contain ${imageClass}`}
+              className="object-contain w-full"
+              style={{
+                width: isMobile
+                  ? "100%" // ✅ force full width on mobile
+                  : details?.imageConfig?.width || "520px",
+
+                height: details?.imageConfig?.height || "auto",
+
+                marginRight: isMobile
+                  ? "0px"
+                  : details?.imageConfig?.right || "0px",
+
+                transform: `translateY(${isMobile
+                  ? details?.imageConfig?.mobileBottom || "0px"
+                  : details?.imageConfig?.bottom || "0px"
+                  })`,
+              }}
             />
           </div>
 
         </div>
 
-        {/* BENEFITS LIST */}
-
+        {/* BENEFITS GRID */}
         <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-10">
           {details?.benefits?.list?.map((item, i) => (
             <div
@@ -124,7 +172,7 @@ function FranchisesDetails() {
   /* ---------------- NORMAL PAGE ---------------- */
 
   return (
-    <div className="lg:w-[99vw] w-screen">
+    <div className="lg:w-[99vw] w-screen pt-16">
 
       <Breadcrumbs
         titleMap={{
@@ -139,7 +187,38 @@ function FranchisesDetails() {
 
       <Hero details={details} slug={slug} />
 
-      <Desc details={details} slug={slug} />
+      {slug == "qsr-restaurant-franchise" && (
+        <QsrShowcase />
+      )}
+
+
+
+      {slug == "internet-restaurants-franchise" && (
+        <CloudKitchenIntro />
+      )}
+
+      {slug == "food-trolley-franchise" && (
+        <FoodTrolleyIntro />
+      )}
+
+
+      {slug == "food-tempo-franchise" && (
+        <FoodTempoIntro />
+      )}
+
+      {slug == "chatori-gali" && (
+        <FoodCourtIntro />
+      )}
+
+
+
+      {!["qsr-restaurant-franchise", "internet-restaurants-franchise", "food-tempo-franchise", "chatori-gali", "food-trolley-franchise"].includes(slug) && (
+        <Desc details={details} slug={slug} />
+      )}
+
+      {slug == "food-tempo-franchise" && (
+        <TempoAdvantages />
+      )}
 
       <div className="bg-black">
         <Container className="px-4">
@@ -168,7 +247,7 @@ function FranchisesDetails() {
                   key={i}
                 >
 
-                  <h1 className="font-bricolageRegular text-green-400 text-md text-center mb-1">
+                  <h1 className="font-bricolageRegular text-[#60D186] text-md text-center mb-1">
                     {item?.label}
                   </h1>
 
@@ -194,7 +273,7 @@ function FranchisesDetails() {
 
                 <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
 
-                  <p className="font-bricolageRegular text-green-400 mb-3">
+                  <p className="font-bricolageRegular text-[#60D186] mb-3">
                     Franchise Fee
                   </p>
 
@@ -229,11 +308,32 @@ function FranchisesDetails() {
 
                 </div>
 
+                {/* PLUS ICON */}
+                {/* <div className="flex lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:translate-y-1/2 justify-center -my-4 lg:my-0 z-20">
+
+                  <div className="bg-yellow-500 w-12 h-12 lg:w-14 lg:h-14 rounded-full grid place-items-center shadow-lg">
+
+                    <svg
+                      width="24"
+                      height="24"
+                      className="lg:w-[28px] lg:h-[28px]"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="black"
+                      strokeWidth="3.5"
+                    >
+                      <path d="M12 5v14M5 12h14" />
+                    </svg>
+
+                  </div>
+
+                </div> */}
+
                 {/* RIGHT CARD */}
 
                 <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
 
-                  <p className="font-bricolageRegular text-green-400 mb-3">
+                  <p className="font-bricolageRegular text-[#60D186] mb-3">
                     Franchise Fee
                   </p>
 
@@ -285,69 +385,102 @@ function FranchisesDetails() {
         </Container>
       </div>
 
+      {slug == "food-tempo-franchise" && (
+        <WhyFoodTempo />
+      )}
+      {slug == "food-tempo-franchise" && (
+        <FocoEarningSectionTempo />
+      )}
+      {slug == "qsr-restaurant-franchise" && (
+        <BenefitsSectionqsr />
+      )}
+
+      {slug == "chatori-gali" && (
+        <FoodCourtBenefits />
+      )}
+
+       {slug == "chatori-gali" && (
+        <FoodCourtInfo />
+      )}
+
+      {slug == "food-trolley-franchise" && (
+        <FoodTrolleySection />
+      )}
+
+      {slug == "food-trolley-franchise" && (
+        <FocoAdvantages />
+      )}
+
+      {slug == "internet-restaurants-franchise" && (
+        <InternetRestaurantBenefits />
+      )}
+
+      {slug == "internet-restaurants-franchise" && (
+        <FranchiseModelsInternet />
+      )}
+
+      {slug == "qsr-restaurant-franchise" && (
+        <RevenueOpportunitiesqsr />
+      )}
       {/* FRANCHISE MODELS */}
 
       <div className="py-8 bg-black">
 
-        <div className="text-center pb-6 px-3">
-          <h1 className="font-bricolageSemiBold text-white text-3xl md:text-4xl">
-            Franchise Models
-          </h1>
-        </div>
 
-        <Container>
 
-          {showAllFormats ? (
+        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali"].includes(slug) && (
+          <Container>
+            {showAllFormats ? (
+              <>
+                <div className="text-center pb-6 px-3">
+                  <h1 className="font-bricolageSemiBold text-white text-3xl md:text-4xl">
+                    Franchise Models
+                  </h1>
+                </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      White Label
+                    </H3>
+                    <p className="text-gray-400">
+                      Operate under your brand name with full support.
+                    </p>
+                  </div>
 
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  White Label
-                </H3>
-                <p className="text-gray-400">
-                  Operate under your brand name with full support.
-                </p>
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      FOFO
+                    </H3>
+                    <p className="text-gray-400">
+                      Franchise Owned, Franchise Operated model.
+                    </p>
+                  </div>
+
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                      FOCO
+                    </H3>
+                    <p className="text-gray-400">
+                      Franchise Owned, Company Operated model.
+                    </p>
+                  </div>
+                </div>
+              </>
+            ) : (
+              <div className="max-w-md mx-auto">
+                <div className="bg-[#2a2a2a] rounded-3xl p-8">
+                  <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                    FOCO
+                  </H3>
+                  <p className="text-gray-400">
+                    Franchise Owned, Company Operated model for ease.
+                  </p>
+                </div>
               </div>
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOFO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Franchise Operated model.
-                </p>
-              </div>
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOCO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Company Operated model.
-                </p>
-              </div>
-
-            </div>
-
-          ) : (
-
-            <div className="max-w-md mx-auto">
-
-              <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                  FOCO
-                </H3>
-                <p className="text-gray-400">
-                  Franchise Owned, Company Operated model for ease.
-                </p>
-              </div>
-
-            </div>
-
-          )}
-
-        </Container>
+            )}
+          </Container>
+        )}
 
         <Container className="mx-auto flex justify-center">
           <FranchiseCTA1 />

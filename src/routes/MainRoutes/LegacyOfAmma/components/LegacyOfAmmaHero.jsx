@@ -2,7 +2,7 @@ import React from "react";
 
 export default function LegacyOfAmmaHero() {
   return (
-    <section className="bg-black py-16 px-4 flex justify-center">
+    <section className="bg-black pt-24 lg:pt-24 py-16 px-4 flex justify-center">
       <div className="max-w-5xl w-full text-center">
         {/* Main Heading */}
         <h2 className="text-white text-4xl font-bricolageBold md:text-5xl leading-tight mb-6">

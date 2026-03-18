@@ -765,7 +765,7 @@ export const franchise = [
     sub_title: "QSR Restaurant",
     franchiseType: "qsr",
     slug: "qsr-restaurant-franchise",
-    info: "The Quick Service Restaurant, Where great taste meets quick service",
+    // info: "The Quick Service Restaurant, Where great taste meets quick service",
     largeImage: qsrFranchise,
     desc: "QSR stands for Quick Service Restaurant. It's a type of eatery known for fast service and convenience, with a limited menu and quick food preparation.",
     icon: qsrFranchise,
@@ -861,11 +861,19 @@ export const franchise = [
     sub_title: "Internet Restaurants",
     franchiseType: "internet",
     slug: "internet-restaurants-franchise",
-    info: "Join the Jagdai Foods internet franchise and unlock tasty profits with no location limits! Choose between FOCO, with a minimum earning potential of 15% of total billing, or FOFO, offering up to 35% of total billing.",
+    // info: "Join the Jagdai Foods internet franchise and unlock tasty profits with no location limits! Choose between FOCO, with a minimum earning potential of 15% of total billing, or FOFO, offering up to 35% of total billing.",
     largeImage: internet,
     desc: "An internet restaurant is a food establishment that operates primarily online, offering delivery or pickup services through websites or mobile apps, without a physical dining space",
     icon: internet,
     image: iff,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees ",
       fees: "₹3,00,000",
@@ -938,11 +946,19 @@ export const franchise = [
     sub_title: "Food Tempo",
     franchiseType: "tempo",
     slug: "food-tempo-franchise",
-    info: "Ride, serve, and earn with Jagdai’s powerful Food Tempo franchise!",
+    // info: "Ride, serve, and earn with Jagdai’s powerful Food Tempo franchise!",
     largeImage: trolleyFranchise,
     desc: "Jagdai Foods introduces an exciting opportunity with its Food Trolley Franchise! It's compact, cost-effective, and versatile, a stylish, mobile eatery designed for parks, offices, and events. Serve delicious food on the go with Jagdai Foods' trusted brand support",
     icon: trolleyFranchise,
     image: ftf,
+     imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹5,40,000",
@@ -950,16 +966,16 @@ export const franchise = [
       total: "/- +GST",
       price: "₹540000",
       note: "NON-VEG Option also available for all brands",
-      list: [
-        { subTitle: "Food Tempo", icon: bikecart1 },
-        {
-          subTitle: "Food Supply from Central Kitchen",
-          icon: bikecart1,
-        },
-        { subTitle: "No Location Constraint", icon: bikecart1 },
-        { subTitle: "In-Built Freezer", icon: bikecart1 },
-        { subTitle: "Ultra Modern Design", icon: bikecart1 },
-      ],
+      // list: [
+      //   { subTitle: "Food Tempo", icon: bikecart1 },
+      //   {
+      //     subTitle: "Food Supply from Central Kitchen",
+      //     icon: bikecart1,
+      //   },
+      //   { subTitle: "No Location Constraint", icon: bikecart1 },
+      //   { subTitle: "In-Built Freezer", icon: bikecart1 },
+      //   { subTitle: "Ultra Modern Design", icon: bikecart1 },
+      // ],
       details: [
         {
           label:
@@ -978,36 +994,36 @@ export const franchise = [
       ],
       statsImg: foodStats,
     },
-    benefits: {
-      list: [
-        { label: "Compact and Mobile Setup" },
-        { label: "Food Supply from Central Kitchen" },
-        { label: "No Location Constraint" },
-        { label: "In-Built Freezer" },
-        { label: "Ultra Modern Design" },
-      ],
-      details: [
-        {
-          label:
-            "Operate from a food tempo that requires limited space, making it ideal for high-traffic areas and events..",
-        },
-        {
-          label:
-            "Fresh, consistent, and hassle-free food supply straight from our central kitchen!",
-        },
-        {
-          label:
-            "Expand anywhere effortlessly, our business thrives with no location constraints!",
-        },
-        {
-          label: "Keep it fresh and ready, powered by an in-built freezer!",
-        },
-        {
-          label:
-            "Experience elegance and efficiency with our ultra-modern design!",
-        },
-      ],
-    },
+    // benefits: {
+    //   list: [
+    //     { label: "Compact and Mobile Setup" },
+    //     { label: "Food Supply from Central Kitchen" },
+    //     { label: "No Location Constraint" },
+    //     { label: "In-Built Freezer" },
+    //     { label: "Ultra Modern Design" },
+    //   ],
+    //   details: [
+    //     {
+    //       label:
+    //         "Operate from a food tempo that requires limited space, making it ideal for high-traffic areas and events..",
+    //     },
+    //     {
+    //       label:
+    //         "Fresh, consistent, and hassle-free food supply straight from our central kitchen!",
+    //     },
+    //     {
+    //       label:
+    //         "Expand anywhere effortlessly, our business thrives with no location constraints!",
+    //     },
+    //     {
+    //       label: "Keep it fresh and ready, powered by an in-built freezer!",
+    //     },
+    //     {
+    //       label:
+    //         "Experience elegance and efficiency with our ultra-modern design!",
+    //     },
+    //   ],
+    // },
     // stats: {
     //   title:
     //     "Food Trolley market in India is experiencing robust growth. Here are some key figures",
@@ -1045,6 +1061,14 @@ export const franchise = [
     desc: "Chatori Gali is a dynamic food court that features a wide range of food stalls, offering both vegetarian and non-vegetarian options.",
     icon: trolleyFranchise,
     image: cgf,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "0px",          // gap from right
+      bottom: "-100px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "600px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹20,00,000",
@@ -1150,11 +1174,19 @@ export const franchise = [
     sub_title: "Food Trolley",
     franchiseType: "trolley",
     slug: "food-trolley-franchise",
-    info: "Ride, serve, and earn with Jagdai’s powerful Bike Kart franchise!",
+    // info: "Ride, serve, and earn with Jagdai’s powerful Bike Kart franchise!",
     largeImage: bikecart1,
     desc: "A Bike Kart Trolley is a compact and stylish mobile food unit, thoughtfully designed for easy mobility and convenience. It allows vendors to serve fresh and delicious food directly to customers wherever they are — whether on busy streets, at events, or in local neighborhoods. With its sleek design and functional setup, the Bike Kart Trolley combines efficiency, flexibility, and style, making it a modern solution for food businesses that want to reach people on the go.",
     icon: trolleyFranchise,
     image: ftf,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "400px",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹2,70,000",
@@ -1189,33 +1221,33 @@ export const franchise = [
       ],
       statsImg: foodStats,
     },
-    benefits: {
-      list: [
-        { label: "Compact and Mobile Setup" },
-        { label: "Food Supply from Central Kitchen" },
-        { label: "No Location Constraint" },
-        { label: "Ultra Modern Design" },
-        { label: "In-built Freezer/hotpot" },
-      ],
-      details: [
-        {
-          label:
-            "Take your business anywhere with ease! Perfect for busy streets, campuses, offices, and events.",
-        },
-        {
-          label:
-            "Enjoy fresh, high-quality meals directly from our central kitchen, no cooking required on-site!",
-        },
-        {
-          label:
-            "Go where the crowd is. Your bike goes with you, unlocking earning potential across multiple locations.",
-        },
-        {
-          label:
-            "Ride in style with a modern, eye-catching setup built for both performance and profit.",
-        },
-      ],
-    },
+    // benefits: {
+    //   list: [
+    //     { label: "Compact and Mobile Setup" },
+    //     { label: "Food Supply from Central Kitchen" },
+    //     { label: "No Location Constraint" },
+    //     { label: "Ultra Modern Design" },
+    //     { label: "In-built Freezer/hotpot" },
+    //   ],
+    //   details: [
+    //     {
+    //       label:
+    //         "Take your business anywhere with ease! Perfect for busy streets, campuses, offices, and events.",
+    //     },
+    //     {
+    //       label:
+    //         "Enjoy fresh, high-quality meals directly from our central kitchen, no cooking required on-site!",
+    //     },
+    //     {
+    //       label:
+    //         "Go where the crowd is. Your bike goes with you, unlocking earning potential across multiple locations.",
+    //     },
+    //     {
+    //       label:
+    //         "Ride in style with a modern, eye-catching setup built for both performance and profit.",
+    //     },
+    //   ],
+    // },
     // stats: {
     //   title:
     //     "Bike Food Carts Are Redefining India’s Street Food Scene",
