@@ -52,17 +52,20 @@ export default function Home() {
     <div className="">
       <HeroSection />
       {/* <MyJagdaiFoods /> */}
-      <WhyJagdai />
+      <FranchiseModels />
+      <AdditionalFranchiseModels />
       <HowYouEarn />
       <CapitalGuarantee />
       <BrandsCarousel />
       <SystemDriven />
-      <FranchiseModels />
-      <AdditionalFranchiseModels />
-      <WhyMultiFormatModel />
-      <FranchiseCTA />
-      <FAQAccordion/>
+      <WhyJagdai />
+
+
+      {/* <WhyMultiFormatModel /> */}
       <JagodsAppSection />
+      
+      <FranchiseCTA />
+      {/* <FAQAccordion/> */}
 
       {/* {scrollPercentage > 0 && (
         <div

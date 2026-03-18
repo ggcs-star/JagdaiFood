@@ -34,7 +34,7 @@ export default function CapitalGuarantee() {
     ];
 
     return (
-        <section className="bg-black py-8">
+        <section className="bg-black pt-4 pb-8">
             <Container>
 
                 {/* Main Card */}
@@ -53,19 +53,19 @@ export default function CapitalGuarantee() {
                             <img
                                 src={bag}
                                 alt="capital"
-                                className="hidden lg:flex absolute -bottom-8 left-16 w-[260px] md:w-[420px] object-cover h-[400px]"
+                                className="hidden lg:flex absolute -bottom-8 left-16 w-[260px] md:w-[420px] object-contain h-[300px]"
                             />
 
                             </div>
 
 
                         {/* RIGHT SIDE FEATURES */}
-                        <div className="space-y-5 p-4 md:p-8">
+                        <div className="space-y-3 p-2 md:p-4">
 
                                 {features.map((item, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-4 shadow-sm"
+                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-2 shadow-sm"
                                     >
 
                                         {/* Icon */}
@@ -74,7 +74,7 @@ export default function CapitalGuarantee() {
                                             <img
                                                 src={item.icon}
                                                 alt="icon"
-                                                className="w-8 h-8 object-contain"
+                                                className="w-6 h-6 object-contain"
                                             />
 
                                         </div>

@@ -57,13 +57,13 @@ export default function FranchiseHero() {
           </p>
 
           <div className="flex gap-4 lg:flex-wrap">
-            <button className="bg-[#f3b24c] text-black px-3 lg:px-6 py-3 rounded-lg hover:bg-[#e0a43f] transition">
+            <button className="text-sm lg:text-lg bg-[#f3b24c] text-black px-2 lg:px-6 py-3 rounded-lg hover:bg-[#e0a43f] transition">
               Apply for Franchise
             </button>
 
             <button
             onClick={()=> navigate("/contact")}
-             className="border border-white/40 px-3 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
+             className="text-sm lg:text-lg border border-white/40 px-2 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
               Schedule Consultation
             </button>
           </div>
