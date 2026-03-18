@@ -1,62 +1,58 @@
 import React, { useEffect, useState } from "react";
 import { Check } from "lucide-react";
 
-/* Rotating stacked badge */
-function StackedBadge({ texts, color }) {
-  const colors = {
-    yellow: {
-      main: "bg-[#f3b24c]",
-      mid: "bg-[#f0b95e]",
-      back: "bg-[#e7c48c]",
-    },
-    green: {
-      main: "bg-green-400",
-      mid: "bg-green-300",
-      back: "bg-green-200",
-    },
-  };
-
-  const [index, setIndex] = useState(0);
+/* 🔥 Rotating Stack Cards with Dynamic Color Depth */
+function StackedCards({ texts, theme = "yellow" }) {
+  const [order, setOrder] = useState([0, 1, 2]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % texts.length);
+      setOrder(([a, b, c]) => [b, c, a]);
     }, 2000);
 
     return () => clearInterval(interval);
-  }, [texts.length]);
+  }, []);
 
-  const layers = [
+  const colorThemes = {
+    yellow: ["#f59e0b", "#fbbf24", "#fde68a"],
+    green: ["#22c55e", "#4ade80", "#bbf7d0"],
+  };
+
+  const styles = [
     {
-      style: "w-[320px] h-[52px] z-30 translate-y-0 scale-100",
-      color: colors[color].main,
+      z: "z-30",
+      transform: "translateX(-50%) scale(1.15)",
+      shadow: "0 20px 40px rgba(0,0,0,0.4)",
     },
     {
-      style: "w-[280px] h-[48px] z-20 translate-y-4 scale-95",
-      color: colors[color].mid,
+      z: "z-20",
+      transform: "translateX(-50%) translateY(28px) scale(1)",
+      shadow: "0 10px 25px rgba(0,0,0,0.25)",
     },
     {
-      style: "w-[240px] h-[44px] z-10 translate-y-8 scale-90",
-      color: colors[color].back,
+      z: "z-10",
+      transform: "translateX(-50%) translateY(52px) scale(0.9)",
+      shadow: "0 5px 15px rgba(0,0,0,0.15)",
     },
   ];
 
   return (
-    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 w-full flex justify-center z-20">
-      <div className="relative w-[340px] h-[90px] flex justify-center">
-
-        {layers.map((layer, i) => (
+    <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-full flex justify-center">
+      <div className="relative w-[320px] h-[140px]">
+        {order.map((itemIndex, position) => (
           <div
-            key={i}
-            className={`absolute rounded-xl flex items-center justify-center
-            text-black font-semibold text-[15px] shadow-xl
-            transition-all duration-700 ease-in-out
-            ${layer.style} ${layer.color}`}
+            key={itemIndex}
+            className={`text-xl absolute left-1/2 w-[280px] h-[70px] rounded-xl flex items-center justify-center text-black ${styles[position].z}`}
+            style={{
+              transform: styles[position].transform,
+              transition: "all 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
+              background: colorThemes[theme][position],
+              boxShadow: styles[position].shadow,
+            }}
           >
-            {texts[(index + i) % texts.length]}
+            {texts[itemIndex]}
           </div>
         ))}
-
       </div>
     </div>
   );
@@ -80,21 +76,17 @@ export default function HowYouEarn() {
   ];
 
   return (
-    <section className="bg-black text-white py-10 lg:py-16 px-3 lg:px-4">
+    <section className="bg-black text-white py-10 lg:pt-8 lg:pb-4 px-3 lg:px-4">
       <div className="max-w-7xl mx-auto">
-
         {/* Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-bricolageBold mb-16">
+        <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
           How You Earn?
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
-
           {/* FOFO CARD */}
-          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[480px] shadow-lg overflow-hidden">
-
+          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[530px] shadow-lg overflow-hidden">
             <div className="relative z-30">
-
               <h3 className="text-xl font-semibold mb-1">FOFO Model</h3>
 
               <p className="text-md font-medium text-yellow-400 mb-6 italic">
@@ -111,29 +103,35 @@ export default function HowYouEarn() {
                   </li>
                 ))}
               </ul>
-
             </div>
 
             {/* Glow */}
-            <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none z-10
-            bg-[radial-gradient(circle_at_bottom,rgba(34,197,94,0.35),transparent_70%)]" />
+            <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none z-0
+            bg-[radial-gradient(circle_at_bottom,rgba(0,255,94,0.35),transparent_70%)]" />
 
-            <StackedBadge
+            {/* 🔥 Stack */}
+            <StackedCards
               texts={[
-                "300 Daily Orders @ ₹150",
-                "400 Daily Orders @ ₹150",
-                "500 Daily Orders @ ₹150",
+                <>
+                  <span className="font-bold mr-1">300 Daily Orders </span>
+                  <span className="font-normal">{" "} @ ₹150</span>
+                </>,
+                <>
+                  <span className="font-bold mr-1">400 Daily Orders</span>
+                  <span className="font-normal">{" "} @ ₹150</span>
+                </>,
+                <>
+                  <span className="font-bold mr-1">500 Daily Orders</span>
+                  <span className="font-normal">{" "} @ ₹150</span>
+                </>,
               ]}
-              color="yellow"
+              theme="yellow"
             />
-
           </div>
 
           {/* FOCO CARD */}
           <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[480px] shadow-lg overflow-hidden">
-
             <div className="relative z-30">
-
               <h3 className="text-xl font-semibold mb-1">FOCO Model</h3>
 
               <p className="text-md font-medium italic text-green-400 mb-6">
@@ -150,26 +148,32 @@ export default function HowYouEarn() {
                   </li>
                 ))}
               </ul>
-
             </div>
 
             {/* Glow */}
             <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none z-10
             bg-[radial-gradient(circle_at_bottom,rgba(251,191,36,0.35),transparent_70%)]" />
 
-            <StackedBadge
+            {/* 🔥 Stack */}
+            <StackedCards
               texts={[
-                "₹13,50,000 Revenue",
-                "₹18,00,000 Revenue",
-                "₹22,50,000 Revenue",
+                <>
+                  <span className="font-bold">₹13,50,000 </span>
+                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
+                </>,
+                <>
+                  <span className="font-bold">₹18,00,000 </span>
+                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
+                </>,
+                <>
+                  <span className="font-bold">₹22,50,000 </span>
+                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
+                </>,
               ]}
-              color="green"
+              theme="green"
             />
-
           </div>
-
         </div>
-
       </div>
     </section>
   );

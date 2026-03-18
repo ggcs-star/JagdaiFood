@@ -16,7 +16,7 @@ export default function AdditionalFranchises() {
               Food Trolley Franchise
             </h3>
 
-            <p className="font-semibold mb-4">
+            <p className="font-bricolageBold mb-4">
               Franchise Fee: ₹2,70,000 (+ GST)
             </p>
 
@@ -31,7 +31,7 @@ export default function AdditionalFranchises() {
 
             <Link
               to="/franchise-formats/food-trolley-franchise"
-              className="inline-block border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
+              className="inline-block border border-white px-6 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More
             </Link>
@@ -61,7 +61,7 @@ export default function AdditionalFranchises() {
 
             <Link
               to="/franchise-formats/influencer-franchise"
-              className="inline-block border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
+              className="inline-block border border-white px-6 py-2 rounded-lg text-sm hover:bg-white hover:text-black transition"
             >
               Know More
             </Link>

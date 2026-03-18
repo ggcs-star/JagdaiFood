@@ -1,6 +1,6 @@
 import React from "react";
 import check from "../../../../assets/franchisemodels/check.svg";
-import orangeDots from "../../../../assets/franchisemodels/orangeDots.png";
+import orangeDots from "../../../../assets/franchisemodels/round.png";
 
 export default function OriginStory() {
   return (

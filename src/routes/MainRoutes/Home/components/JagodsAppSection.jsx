@@ -29,7 +29,7 @@ export default function JagodsAppSection() {
                 JAGODS app
               </h2>
 
-              <p className="text-gray-400 mb-6">
+              <p className="text-gray-300 mb-6">
                 Every Jagdai franchise is backed by Jagods — our
                 in-house delivery app that enables:
               </p>
@@ -39,7 +39,7 @@ export default function JagodsAppSection() {
                 {features.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
 
-                    <div className="w-7 h-7 rounded-full bg-[#f3b24c] flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-full bg-green-400 flex items-center justify-center">
                       <Check size={16} className="text-black" />
                     </div>
 
@@ -49,22 +49,22 @@ export default function JagodsAppSection() {
                 ))}
               </ul>
 
-              <p className="text-gray-200 italic">
+              <p className="text-gray-200 italic text-xl">
                 Built for scalable, tech-enabled food entrepreneurship.
               </p>
 
             </div>
 
             {/* RIGHT SIDE */}
-      <div className="relative h-[320px] lg:h-[520px] flex items-end justify-center overflow-hidden">
+            <div className="relative h-[320px] lg:h-[520px] flex items-end justify-center overflow-hidden">
 
-  <img
-    src={jagods}
-    alt="jagods"
-    className="absolute bottom-[-110px] lg:bottom-0 h-[520px] lg:h-full w-auto object-contain"
-  />
+              <img
+                src={jagods}
+                alt="jagods"
+                className="absolute bottom-[-110px] lg:bottom-0 h-[520px] lg:h-full w-auto object-contain"
+              />
 
-</div>
+            </div>
 
           </div>
 

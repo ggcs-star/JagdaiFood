@@ -1,6 +1,7 @@
 import React from "react";
 import check from "../../../../assets/franchisemodels/check.svg";
 import girl from "../../../../assets/franchisemodels/whiteLabel2.png";
+import dotsRound from "../../../../assets/franchisemodels/round.png"; // ✅ added
 
 export default function WhiteLabelCard() {
   return (
@@ -56,9 +57,9 @@ export default function WhiteLabelCard() {
         </p>
       </div>
 
-      
+      {/* Glow */}
       <div
-        className="absolute right-0 bottom-0 w-[240px] md:w-[520px] h-[240px] md:h-[520px] z-0"
+        className="absolute right-0 lg:top-[50px] bottom-0 w-[240px] md:w-[520px] h-[240px] md:h-[520px] z-0"
         style={{
           background:
             "radial-gradient(circle at center, rgba(253,189,91,0.55) 0%, rgba(253,189,91,0.30) 35%, rgba(253,189,91,0.12) 60%, transparent 75%)",
@@ -66,21 +67,24 @@ export default function WhiteLabelCard() {
         }}
       />
 
-      
-      <div
-        className="absolute right-[10px] bottom-[20px] w-[200px] md:w-[460px] h-[200px] md:h-[460px] z-0"
-        style={{
-          background:
-            "radial-gradient(circle, rgba(253,189,91,0.9) 2px, transparent 2px)",
-          backgroundSize: "20px 20px",
-          maskImage:
-            "radial-gradient(circle at center, black 65%, transparent 85%)",
-          WebkitMaskImage:
-            "radial-gradient(circle at center, black 65%, transparent 85%)",
-        }}
+      {/* ✅ FIXED: Dots Image */}
+      <img
+        src={dotsRound}
+        alt="dots pattern"
+        className="
+          absolute
+          right-[10px]
+          -bottom-20
+          lg:top-[0px]
+          w-[400px] md:w-[560px]
+          h-[400px] md:h-[460px]
+          object-contain
+          z-0
+          opacity-90
+        "
       />
 
-      
+      {/* Girl Image */}
       <img
         src={girl}
         alt="girl"
@@ -91,7 +95,7 @@ export default function WhiteLabelCard() {
         -translate-x-1/2
         md:left-auto md:right-[20px]
         md:translate-x-0
-        h-[240px] sm:h-[280px] md:h-[440px]
+        h-[240px] sm:h-[280px] md:h-[400px]
         object-contain
         z-10
         "

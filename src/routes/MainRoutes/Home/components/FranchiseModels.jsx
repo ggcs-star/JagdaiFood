@@ -40,11 +40,11 @@ export default function FranchiseModels() {
 
         {/* Ecosystem Card */}
         <div className="bg-[#2a2a2a] rounded-2xl p-4 lg:p-6 text-center mx-auto mb-12">
-          <h3 className="text-3xl font-bricolageBold mb-4">
+          <h3 className="text-3xl text-[#F3B24C] font-bricolageBold mb-4">
             Multiple Formats. One Powerful Ecosystem.
           </h3>
 
-          <p className="text-gray-200 text-sm leading-relaxed">
+          <p className="text-gray-200 max-w-[800px] flex mx-auto text-sm leading-relaxed">
             Jagdai Foods offers scalable, multi-format franchise opportunities
             designed for structured growth, centralized efficiency, and
             predictable revenue — all powered by our 24+ in-house food brands
@@ -61,28 +61,28 @@ export default function FranchiseModels() {
         <div className="grid lg:grid-cols-[60%_40%] gap-8">
 
           {/* QSR Card */}
-          <div className="bg-[#1f1f1f] rounded-2xl flex flex-col justify-between">
+          <div className=" bg-[#F3B24C] rounded-2xl flex flex-col justify-between">
 
             <div className="p-4 lg:p-6">
 
-              <h3 className="text-3xl font-bricolageBold text-white mb-4">
+              <h3 className="text-3xl font-bricolageBold text-black mb-4">
                 Multi-Brand QSR Franchise
               </h3>
 
-              <p className="font-bricolageBold text-yellow-400 mb-3">
+              <p className="font-bricolageBold text-black mb-3">
                 High-Volume. High-Potential. High-Control.
               </p>
 
-              <p className="font-semibold text-md text-white mb-6">
+              <p className="font-semibold text-md text-black mb-6">
                 Operate a full-scale Quick Service Restaurant powered by centralized production and standardized systems.
               </p>
 
-              <ul className="space-y-3 text-sm text-gray-300">
+              <ul className="space-y-3 text-sm text-black">
                 {qsrPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
 
-                    <span className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
-                      <Check size={14} className="text-black" />
+                    <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
+                      <Check size={14} className="text-white" />
                     </span>
 
                     {item}
@@ -91,13 +91,13 @@ export default function FranchiseModels() {
                 ))}
               </ul>
 
-              <p className="text-yellow-400 text-sm mt-5">
+              <p className="text-black text-sm mt-5">
                 Ideal for entrepreneurs seeking long-term scale and control.
               </p>
 
               <Link
-                to="/franchise-formats?type=qsr-restaurant-franchise"
-                className="inline-block mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-medium"
+                to="/franchise-formats/qsr-restaurant-franchise"
+                className="inline-block mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Apply for QSR Franchise
               </Link>
@@ -116,7 +116,7 @@ export default function FranchiseModels() {
 
 
           {/* Trolley Card */}
-          <div className="bg-[#F3B24C] rounded-2xl text-black flex flex-col justify-between">
+          <div className="bg-[#1f1f1f] rounded-2xl text-white flex flex-col justify-between">
 
             <div className="p-4 lg:p-6">
 
@@ -124,11 +124,11 @@ export default function FranchiseModels() {
                 Food Trolley / Bike-Cart Franchise
               </h3>
 
-              <p className="font-bricolageBold mb-3">
+              <p className="font-bricolageBold mb-3 text-yellow-400">
                 Low Investment. Fast Setup. High Mobility.
               </p>
 
-              <p className="font-semibold text-md mb-6">
+              <p className=" text-md mb-6">
                 A plug-and-operate format designed for high-footfall zones with simplified operations.
               </p>
 
@@ -136,8 +136,8 @@ export default function FranchiseModels() {
                 {trolleyPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
 
-                    <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
-                      <Check size={14} className="text-white" />
+                    <span className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
+                      <Check size={14} className="text-black" />
                     </span>
 
                     {item}
@@ -146,13 +146,13 @@ export default function FranchiseModels() {
                 ))}
               </ul>
 
-              <p className="text-sm mt-5 font-medium">
+              <p className="text-sm mt-5 font-semibold">
                 Perfect for first-time entrepreneurs and micro-investors.
               </p>
 
               <Link
-                to="/franchise-formats?type=food-trolley-franchise"
-                className="inline-block mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-medium"
+                to="/franchise-formats/food-trolley-franchise"
+                className="inline-block mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Explore Trolley Model
               </Link>
