@@ -5,6 +5,7 @@ import FranchiseModels from './components/FranchiseModels'
 import AdditionalFranchises from './components/AdditionalFranchises'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
 import FranchiseCTA from './components/FranchiseCTA'
+import MasterFranchise from './components/MasterFranchise'
 
 const FranchiseFormats = () => {
   return (
@@ -13,6 +14,7 @@ const FranchiseFormats = () => {
         <FranchiseInvestment/>
         <FranchiseModels/>
         <AdditionalFranchises/>
+        <MasterFranchise/>
         <FranchiseCTA/>
     </div>
   )
