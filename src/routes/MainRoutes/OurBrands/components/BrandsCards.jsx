@@ -6,57 +6,59 @@ import { getPopularRestaurants } from "../../../../api/restaurantApi";
 const SampleCard = ({ item, handler }) => {
   return (
     <div>
-      <div className="group relative flex flex-col bg-[#262626] rounded-[20px] w-full h-[460px] text-gray-300 overflow-hidden transition-all duration-500">
-
+      <div className="group relative flex flex-col justify-between bg-[#262626] rounded-[20px] w-full h-[460px] text-gray-300 overflow-hidden transition-all duration-500 ">
         {/* Glow Background */}
         <div
           className="absolute bottom-0 h-40 w-full rounded-t-full blur-2xl"
           style={{ background: bgColors[item?.id - 1] }}
         />
 
-        {/* Title + Description */}
+        {/* TOP CONTENT */}
         <div className="pt-6 z-10 text-center px-6">
           <h5 className="font-bricolageBold text-2xl font-bold text-white">
             {item?.label}
           </h5>
 
-          <p className="pt-3">
+          {/* ✅ FIXED DESCRIPTION */}
+          <p className="pt-3 h-[80px] overflow-hidden">
             {item?.desc?.substring(0, 100)}...
           </p>
+
+          {/* ✅ PERFECT BUTTON POSITION */}
+          <div className="mt-10 flex justify-center">
+            <button
+              onClick={handler}
+              className="
+    text-xs py-3 px-6 rounded-lg
+    border-2 border-white
+    font-bold uppercase
+    bg-transparent text-white
+    group-hover:bg-[#f2b44c]
+    group-hover:border-[#f2b44c]
+    group-hover:text-black
+    active:bg-[#f2b44c]
+    active:border-[#f2b44c]
+    active:text-black
+    transition-all duration-200
+  "
+            >
+              View Menu
+            </button>
+          </div>
         </div>
 
-        {/* Logo Area (Flexible Space) */}
-        <div className="flex flex-1 items-center justify-center px-6 z-10">
+        {/* LOGO BOTTOM */}
+        <div className="flex items-center justify-center px-6 pb-6 z-10">
           <img
             src={item?.logo}
             alt={item?.label}
-            className="max-h-[170px] object-contain"
+            className="max-h-[150px] object-contain"
           />
         </div>
-
-        {/* Button Bottom */}
-        <div className="pb-6 z-10 flex justify-center">
-          <button
-            onClick={handler}
-            className="
-            text-xs py-3 px-6 rounded-lg
-            border-2 border-white
-            font-bold uppercase
-            bg-transparent text-white
-            group-hover:bg-[#f2b44c]
-            group-hover:border-[#f2b44c]
-            group-hover:text-black
-            "
-          >
-            View Menu
-          </button>
-        </div>
-
       </div>
     </div>
   );
 };
-
 
 const BrandsCards = () => {
   const navigate = useNavigate();
