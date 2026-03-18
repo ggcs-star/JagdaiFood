@@ -58,7 +58,7 @@ export default function BrandMenu({ item }) {
 
           <a
             href={item.menuDownloadLink}
-            className="border border-yellow-400 text-yellow-400 px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-yellow-400 hover:text-black transition text-sm md:text-base"
+            className="border border-[#FDBD5B] text-[#FDBD5B] px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#FDBD5B] hover:text-black transition text-sm md:text-base"
           >
             <img src={download} alt="Download" className="size-4" />
             Download Menu
@@ -80,12 +80,12 @@ export default function BrandMenu({ item }) {
     inline-flex
     items-center
     gap-2
-    border border-yellow-400
-    text-yellow-400
+    border border-[#FDBD5B]
+    text-[#FDBD5B]
     px-5
     py-2
     rounded-full
-    hover:bg-yellow-400
+    hover:bg-[#FDBD5B]
     hover:text-black
     transition
     text-sm

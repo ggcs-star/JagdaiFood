@@ -10,6 +10,8 @@ import icon6 from "../../../../assets/home/system/icon6.png";
 import icon7 from "../../../../assets/home/system/icon7.png";
 import icon8 from "../../../../assets/home/system/icon8.png";
 import icon9 from "../../../../assets/home/system/icon9.png";
+import icon10 from "../../../../assets/home/system/icon10.png";
+import icon11 from "../../../../assets/home/system/icon11.png";
 
 export default function SystemDriven() {
 
@@ -20,12 +22,12 @@ export default function SystemDriven() {
       desc: "Structured onboarding, SOP training, launch assistance, and continuous performance monitoring.",
     },
     {
-      icon: icon2,
+      icon: icon10,
       title: "Structured FOFO & FOCO Business Models",
       desc: "Flexible and scalable formats designed to suit different investment and operational capabilities",
     },
      {
-      icon: icon2,
+      icon: icon11,
       title: "Capital Guarantee Provisions (as per agreement terms)",
       desc: "Structured safeguards designed to enhance investor confidence and financial security.",
     },
@@ -96,7 +98,7 @@ Why We? Jagdai Advantage
             >
 
               {/* Icon */}
-              <div className="w-10 h-10 rounded-md bg-[#f3b24c] flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-md bg-[#FDBD5B] flex items-center justify-center mb-4">
                 <img
                   src={item.icon}
                   alt="icon"
@@ -122,7 +124,7 @@ Why We? Jagdai Advantage
         {/* Bottom Full Card */}
         {/* <div className="mt-6 bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 flex flex-col lg:flex-row items-start gap-4">
 
-          <div className="w-10 h-10 rounded-md bg-[#f3b24c] flex items-center justify-center">
+          <div className="w-10 h-10 rounded-md bg-[#FDBD5B] flex items-center justify-center">
             <img
               src={icon9}
               alt="icon"

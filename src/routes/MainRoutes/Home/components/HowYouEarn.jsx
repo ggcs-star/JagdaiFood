@@ -42,7 +42,7 @@ function StackedCards({ texts, theme = "yellow" }) {
         {order.map((itemIndex, position) => (
           <div
             key={itemIndex}
-            className={`text-xl absolute left-1/2 w-[280px] h-[70px] rounded-xl flex items-center justify-center text-black ${styles[position].z}`}
+            className={`text-lg p-3 absolute left-1/2 w-[280px] h-[70px] rounded-xl flex items-center justify-center text-black ${styles[position].z}`}
             style={{
               transform: styles[position].transform,
               transition: "all 0.7s cubic-bezier(0.4, 0, 0.2, 1)",
@@ -89,14 +89,14 @@ export default function HowYouEarn() {
             <div className="relative z-30">
               <h3 className="text-xl font-semibold mb-1">FOFO Model</h3>
 
-              <p className="text-md font-medium text-yellow-400 mb-6 italic">
+              <p className="text-md font-medium text-[#FDBD5B] mb-6 italic">
                 Franchise Owned, Franchise Operated
               </p>
 
               <ul className="space-y-4">
                 {fofoFeatures.map((item, i) => (
                   <li key={i} className="flex gap-3 text-gray-300">
-                    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-yellow-400 mt-1">
+                    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#FDBD5B] mt-1">
                       <Check size={14} className="text-black" />
                     </div>
                     {item}
@@ -113,16 +113,17 @@ export default function HowYouEarn() {
             <StackedCards
               texts={[
                 <>
-                  <span className="font-bold mr-1">300 Daily Orders </span>
-                  <span className="font-normal">{" "} @ ₹150</span>
+                  <span className="font-bold">300 Daily Orders @ ₹150</span>
                 </>,
                 <>
-                  <span className="font-bold mr-1">400 Daily Orders</span>
-                  <span className="font-normal">{" "} @ ₹150</span>
+                  <span className="font-bold">₹13,50,000</span>
+                  <span className="ml-2 font-medium">Monthly Revenue</span>
                 </>,
                 <>
-                  <span className="font-bold mr-1">500 Daily Orders</span>
-                  <span className="font-normal">{" "} @ ₹150</span>
+                  <span className="font-bold">Approx ₹5,00,000</span>
+                  <span className="ml-2 font-medium text-sm">
+                    potential monthly profit (including royalties)
+                  </span>
                 </>,
               ]}
               theme="yellow"
@@ -156,22 +157,22 @@ export default function HowYouEarn() {
 
             {/* 🔥 Stack */}
             <StackedCards
-              texts={[
-                <>
-                  <span className="font-bold">₹13,50,000 </span>
-                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
-                </>,
-                <>
-                  <span className="font-bold">₹18,00,000 </span>
-                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
-                </>,
-                <>
-                  <span className="font-bold">₹22,50,000 </span>
-                  <sup className="font-semibold ml-1 pt-2">Revenue</sup>
-                </>,
-              ]}
-              theme="green"
-            />
+  texts={[
+    <>
+      <span className="font-medium mr-2">Approx</span>
+      <span className="font-bold">₹1,35,000 </span>
+      <span className="font-semibold ml-2">Net Profit</span>
+    </>,
+    <>
+      <span className="font-bold">₹13,50,000 </span>
+      <span className="font-semibold ml-2">Revenue</span>
+    </>,
+    <>
+      <span className="font-bold">OR 24% annual ROI</span>
+    </>,
+  ]}
+  theme="green"
+/>
           </div>
         </div>
       </div>

@@ -69,7 +69,7 @@ export default function CapitalGuarantee() {
                                     >
 
                                         {/* Icon */}
-                                        <div className="w-[44px] h-[44px] rounded-xl bg-[#F3B24C] flex items-center justify-center">
+                                        <div className="w-[44px] h-[44px] rounded-xl bg-[#FDBD5B] flex items-center justify-center">
 
                                             <img
                                                 src={item.icon}

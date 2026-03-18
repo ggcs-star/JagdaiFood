@@ -42,7 +42,7 @@ export default function ContactForm() {
                 </p>
 
                 <p className="text-[#FDBD5B] text-[20px] font-bricolageSemiBold">
-                  +91 78629 31074
+                  +91 88663 73077
                 </p>
               </div>
             </div>

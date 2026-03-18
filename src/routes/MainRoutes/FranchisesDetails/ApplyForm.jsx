@@ -243,7 +243,7 @@ function ApplyForm() {
             </div>
             <button
               onClick={() => handleSubmitForm()}
-              className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-yellow-600 bg-green-500 shadow-sm mt-10"
+              className="w-full h-12 text-white text-base font-semibold leading-6 rounded-full transition-all duration-700 hover:bg-yellow-600 bg-[#60D186] shadow-sm mt-10"
             >
               Send
             </button>

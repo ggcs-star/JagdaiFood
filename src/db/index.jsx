@@ -765,7 +765,7 @@ export const franchise = [
     sub_title: "QSR Restaurant",
     franchiseType: "qsr",
     slug: "qsr-restaurant-franchise",
-    info: "The Quick Service Restaurant, Where great taste meets quick service",
+    // info: "The Quick Service Restaurant, Where great taste meets quick service",
     largeImage: qsrFranchise,
     desc: "QSR stands for Quick Service Restaurant. It's a type of eatery known for fast service and convenience, with a limited menu and quick food preparation.",
     icon: qsrFranchise,
@@ -861,11 +861,19 @@ export const franchise = [
     sub_title: "Internet Restaurants",
     franchiseType: "internet",
     slug: "internet-restaurants-franchise",
-    info: "Join the Jagdai Foods internet franchise and unlock tasty profits with no location limits! Choose between FOCO, with a minimum earning potential of 15% of total billing, or FOFO, offering up to 35% of total billing.",
+    // info: "Join the Jagdai Foods internet franchise and unlock tasty profits with no location limits! Choose between FOCO, with a minimum earning potential of 15% of total billing, or FOFO, offering up to 35% of total billing.",
     largeImage: internet,
     desc: "An internet restaurant is a food establishment that operates primarily online, offering delivery or pickup services through websites or mobile apps, without a physical dining space",
     icon: internet,
     image: iff,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees ",
       fees: "₹3,00,000",
@@ -943,6 +951,14 @@ export const franchise = [
     desc: "Jagdai Foods introduces an exciting opportunity with its Food Trolley Franchise! It's compact, cost-effective, and versatile, a stylish, mobile eatery designed for parks, offices, and events. Serve delicious food on the go with Jagdai Foods' trusted brand support",
     icon: trolleyFranchise,
     image: ftf,
+     imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹5,40,000",
@@ -1045,6 +1061,14 @@ export const franchise = [
     desc: "Chatori Gali is a dynamic food court that features a wide range of food stalls, offering both vegetarian and non-vegetarian options.",
     icon: trolleyFranchise,
     image: cgf,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "0px",          // gap from right
+      bottom: "-100px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "600px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹20,00,000",
@@ -1155,6 +1179,14 @@ export const franchise = [
     desc: "A Bike Kart Trolley is a compact and stylish mobile food unit, thoughtfully designed for easy mobility and convenience. It allows vendors to serve fresh and delicious food directly to customers wherever they are — whether on busy streets, at events, or in local neighborhoods. With its sleek design and functional setup, the Bike Kart Trolley combines efficiency, flexibility, and style, making it a modern solution for food businesses that want to reach people on the go.",
     icon: trolleyFranchise,
     image: ftf,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "400px",        // or "300px"
+      right: "80px",          // gap from right
+      bottom: "-10px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "300px",
+      mobileBottom: "0px"
+    },
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹2,70,000",

@@ -7,7 +7,7 @@ export default function FranchiseModels() {
         <section className="bg-black py-8 px-3 lg:px-0">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-[40%_60%] gap-10 lg:min-h-[870px]">
                 {/* LEFT CARD */}
-                <div className="bg-[#63b885] rounded-3xl p-3 lg:p-6 relative overflow-hidden ">
+                <div className="bg-[#60D186] rounded-3xl p-3 lg:p-6 relative overflow-hidden ">
 
                     {/* Content */}
                     <div className="max-w-md pb-40">
@@ -78,12 +78,12 @@ export default function FranchiseModels() {
 
                     {/* TOP BOX */}
                     <div className="bg-black rounded-xl p-6 mt-6">
-                        <p className="font-bricolageBold text-green-400 text-sm">Franchise Fee</p>
+                        <p className="font-bricolageBold text-[#60D186] text-sm">Franchise Fee</p>
                         <p className="text-xl font-semibold">
                             ₹20,00,000 (+ GST)
                         </p>
 
-                        <p className="text-green-400 font-bricolageBold text-sm mt-4">
+                        <p className="text-[#60D186] font-bricolageBold text-sm mt-4">
                             Interior & Setup:
                         </p>
                         <p className="text-lg font-semibold">
@@ -94,12 +94,12 @@ export default function FranchiseModels() {
                     {/* GRID */}
                     <div className="grid grid-cols-2 gap-4 mt-6">
                         <div className="bg-black rounded-xl p-5">
-                            <p className="text-green-400 font-bricolageBold text-sm">Breakeven</p>
+                            <p className="text-[#60D186] font-bricolageBold text-sm">Breakeven</p>
                             <p className="font-semibold">12 Months</p>
                         </div>
 
                         <div className="bg-black rounded-xl p-5">
-                            <p className="text-green-400 font-bricolageBold text-sm">Gross Profit</p>
+                            <p className="text-[#60D186] font-bricolageBold text-sm">Gross Profit</p>
                             <p className="font-semibold">Approx. 35%</p>
                         </div>
                     </div>

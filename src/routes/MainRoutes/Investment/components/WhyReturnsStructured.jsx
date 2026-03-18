@@ -41,7 +41,7 @@ export default function WhyReturnsStructured() {
 
             {points.map((item, index) => (
               <div key={index} className="flex items-center gap-3">
-                <div className="bg-yellow-400 rounded-full p-1.5">
+                <div className="bg-[#FDBD5B] rounded-full p-1.5">
                   <Check size={16} className="text-black" />
                 </div>
                 <span className="text-gray-200 text-xl">{item}</span>
@@ -57,7 +57,7 @@ export default function WhyReturnsStructured() {
         </div>
 
         {/* Bottom CTA Card */}
-        <div className="mt-8 lg:mt-20 bg-gradient-to-r from-[#5ac47a] to-[#f0b458] rounded-2xl p-3 lg:p-10 text-center text-black">
+        <div className="mt-8 lg:mt-20 bg-gradient-to-r from-[#5ac47a] to-[#FDBD5B] rounded-2xl p-3 lg:p-10 text-center text-black">
 
           <h3 className="font-bricolageBold text-2xl md:text-3xl font-semibold mb-6">
             Evaluate Your Format
@@ -66,14 +66,14 @@ export default function WhyReturnsStructured() {
           <div className="flex lg:flex-wrap justify-center gap-2 lg:gap-8 mb-8">
 
             <div className="flex items-center gap-2">
-              <div className="bg-yellow-400 rounded-full p-1.5">
+              <div className="bg-[#FDBD5B] rounded-full p-1.5">
                 <Check size={14} />
               </div>
               <span className="font-medium">ROI projection sheet</span>
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="bg-yellow-400 rounded-full p-1.5">
+              <div className="bg-[#FDBD5B] rounded-full p-1.5">
                 <Check size={14} />
               </div>
               <span className="font-medium">Agreement overview</span>

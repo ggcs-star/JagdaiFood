@@ -140,11 +140,11 @@ import uniformTaste from "./images/uniformTaste.jpg";
 import qualityIngredient from "./images/qualityIngredient.jpg";
 
 import qsrFranchise from "./images/qsrFranchise.svg";
-import internet from "./images/internet.jpeg";
-import trolleyFranchise from "./images/trolleyFranchise.png";
-import bikecart1 from "./images/Electric_Food_Trolley.png";
+import internet from "./investment/internet.png";
+import trolleyFranchise from "./investment/stall.png";
+import bikecart1 from "./home/franchise/pizza.png";
 // import bikecart2 from "./images/bike_cart-1.png";
-import chatorigali from "./images/chatorigali.jpg"
+import chatorigali from "./investment/foodcourt.png"
 import chatorigali1 from "./images/chatorigali1.jpg"
 import qsrStats from "./images/qsrStats.png";
 import foodStats from "./images/foodStats.png";

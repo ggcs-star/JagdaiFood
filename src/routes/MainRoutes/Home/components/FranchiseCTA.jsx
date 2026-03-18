@@ -11,10 +11,8 @@ export default function FranchiseCTA() {
         <div className="rounded-[30px] bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] px-2 lg:px-8 py-4 lg:py-8 text-center">
           {/* Heading */}
           <h2 className="font-bricolageBold text-3xl md:text-4xl text-black leading-tight mb-4">
-            Ready to Explore
-            <br />
-            Your Franchise Model?
-          </h2>
+Start Your Food            <br />
+Franchise Journey           </h2>
 
           {/* Description */}
           <p className="text-black/80 font-semibold max-w-md mx-auto mb-8">
@@ -28,10 +26,10 @@ export default function FranchiseCTA() {
               onClick={() => navigate("/contact")}
               className="bg-[#2a2a2a] text-white px-2 lg:px-6 py-3 rounded-lg font-medium hover:opacity-90 transition"
             >
-              Schedule a Franchise Consultation
+              Schedule Consultation
             </button>
             <button className="bg-white text-black px-2 lg:px-6 py-3 rounded-lg font-medium hover:opacity-90 transition">
-              Download Investment Details
+              Download Investment Guide
             </button>
           </div>
         </div>

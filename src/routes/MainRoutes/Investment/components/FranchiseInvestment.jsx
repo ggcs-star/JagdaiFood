@@ -16,12 +16,12 @@ export default function FranchiseInvestment() {
             </h3>
 
             <div className="bg-black rounded-xl p-5 mb-4">
-              <p className="text-green-500 font-bricolageBold text-sm">
+              <p className="text-#60D186 font-bricolageBold text-sm">
                 Franchise Fee
               </p>
               <p className="text-lg font-bold">₹6,00,000 (+ GST)</p>
 
-              <p className="text-green-500 font-bricolageBold mt-3 text-sm">
+              <p className="text-#60D186 font-bricolageBold mt-3 text-sm">
                 Total Investment
               </p>
               <p className="text-lg font-bold">₹16 Lakhs</p>
@@ -33,12 +33,12 @@ export default function FranchiseInvestment() {
 
             <div className="grid grid-cols-2 gap-4 mb-4">
               <div className="bg-black p-4 rounded-lg">
-                <p className="font-bricolageBold text-green-500 text-sm">ROI</p>
+                <p className="font-bricolageBold text-#60D186 text-sm">ROI</p>
                 <p className="font-semibold">12–15 Months</p>
               </div>
 
               <div className="bg-black p-4 rounded-lg">
-                <p className="font-bricolageBold text-green-500 text-sm">
+                <p className="font-bricolageBold text-#60D186 text-sm">
                   Breakeven
                 </p>
                 <p className="font-semibold">Within 6 Months</p>
@@ -46,7 +46,7 @@ export default function FranchiseInvestment() {
             </div>
 
             <div className="bg-black p-4 rounded-lg mb-6">
-              <p className="font-bricolageBold text-green-500 text-sm">
+              <p className="font-bricolageBold text-#60D186 text-sm">
                 Gross Profit
               </p>
               <p className="font-semibold">Approx. 35%</p>
@@ -71,7 +71,7 @@ export default function FranchiseInvestment() {
         </div>
 
         {/* Internet Restaurant Franchise */}
-        <div className="bg-[#f0b458] text-black rounded-2xl p-4 lg:p-6 flex flex-col justify-between">
+        <div className="bg-[#FDBD5B] text-black rounded-2xl p-4 lg:p-6 flex flex-col justify-between">
 
           <div>
             <h3 className="font-bricolageBold text-3xl mb-6">

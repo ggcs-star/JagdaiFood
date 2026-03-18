@@ -2,11 +2,11 @@ import React from "react";
 
 export default function InvestmentROI() {
   return (
-    <section className="bg-black text-white py-8">
+    <section className="bg-black text-white py-8 pt-26">
       <div className="max-w-4xl mx-auto text-center px-3 lg:px-6">
 
         {/* Small Heading */}
-        {/* <p className="text-green-400 font-bricolageBold text-2xl md:text-3xl mb-4">
+        {/* <p className="text-[#60D186] font-bricolageBold text-2xl md:text-3xl mb-4">
         </p> */}
 
         {/* Main Heading */}

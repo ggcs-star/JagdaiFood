@@ -79,7 +79,7 @@ function Hero({ item }) {
       <div className="bg-black-100 text-white-800 p-4 sm:p-6 font-sans">
 
         <header className="text-center py-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-yellow-400">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#FDBD5B]">
             Why <span>{item?.label}</span> Foods Franchise ?
           </h1>
 
@@ -105,7 +105,7 @@ function Hero({ item }) {
 
                   <li key={index} className="flex items-start gap-3 md:gap-4">
 
-                    <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#F4A62A] text-black text-sm font-bold">
+                    <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#FDBD5B] text-black text-sm font-bold">
                       ✓
                     </span>
 
@@ -134,7 +134,7 @@ function Hero({ item }) {
 
                   <li key={index} className="flex items-start gap-3 md:gap-4">
 
-                    <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#F4A62A] text-black text-sm font-bold">
+                    <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#FDBD5B] text-black text-sm font-bold">
                       ✓
                     </span>
 

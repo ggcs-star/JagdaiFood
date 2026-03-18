@@ -40,7 +40,7 @@ export default function FranchiseModels() {
 
         {/* Ecosystem Card */}
         <div className="bg-[#2a2a2a] rounded-2xl p-4 lg:p-6 text-center mx-auto mb-12">
-          <h3 className="text-3xl text-[#F3B24C] font-bricolageBold mb-4">
+          <h3 className="text-3xl text-[#FDBD5B] font-bricolageBold mb-4">
             Multiple Formats. One Powerful Ecosystem.
           </h3>
 
@@ -61,7 +61,7 @@ export default function FranchiseModels() {
         <div className="grid lg:grid-cols-[60%_40%] gap-8">
 
           {/* QSR Card */}
-          <div className=" bg-[#F3B24C] rounded-2xl flex flex-col justify-between">
+          <div className=" bg-[#FDBD5B] rounded-2xl flex flex-col justify-between">
 
             <div className="p-4 lg:p-6">
 
@@ -124,7 +124,7 @@ export default function FranchiseModels() {
                 Food Trolley / Bike-Cart Franchise
               </h3>
 
-              <p className="font-bricolageBold mb-3 text-yellow-400">
+              <p className="font-bricolageBold mb-3 text-[#FDBD5B]">
                 Low Investment. Fast Setup. High Mobility.
               </p>
 
@@ -136,7 +136,7 @@ export default function FranchiseModels() {
                 {trolleyPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
 
-                    <span className="w-6 h-6 rounded-full bg-yellow-400 flex items-center justify-center">
+                    <span className="w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center">
                       <Check size={14} className="text-black" />
                     </span>
 
@@ -152,7 +152,7 @@ export default function FranchiseModels() {
 
               <Link
                 to="/franchise-formats/food-trolley-franchise"
-                className="inline-block mt-5 bg-yellow-400 text-black px-5 py-2 rounded-md text-sm font-semibold"
+                className="inline-block mt-5 bg-[#FDBD5B] text-black px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Explore Trolley Model
               </Link>

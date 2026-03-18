@@ -4,10 +4,10 @@ export default function InvestmentOverview() {
   return (
     <section className="w-full max-w-[1200px] mx-auto pt-[80px] px-[16px] md:px-0">
       <h2 className="text-white text-[32px] md:text-[36px] lg:text-[42px] font-bricolageSemiBold text-center mb-[50px] md:mb-[70px]">
-        Investment Overview
+Comparison FOCO & FOCO Model
       </h2>
 
-      <div className="flex flex-col md:flex-row md:justify-between items-center md:items-stretch gap-[24px]">
+      {/* <div className="flex flex-col md:flex-row md:justify-between items-center md:items-stretch gap-[24px]">
 
         <div
           className="w-full md:w-[380px] max-w-[380px] min-h-[214px] rounded-[24px] p-[24px] md:p-[28px]"
@@ -61,7 +61,7 @@ export default function InvestmentOverview() {
           </p>
         </div>
 
-      </div>
+      </div> */}
     </section>
   );
 }
