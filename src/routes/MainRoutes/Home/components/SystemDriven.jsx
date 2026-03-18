@@ -21,6 +21,16 @@ export default function SystemDriven() {
     },
     {
       icon: icon2,
+      title: "Structured FOFO & FOCO Business Models",
+      desc: "Flexible and scalable formats designed to suit different investment and operational capabilities",
+    },
+     {
+      icon: icon2,
+      title: "Capital Guarantee Provisions (as per agreement terms)",
+      desc: "Structured safeguards designed to enhance investor confidence and financial security.",
+    },
+    {
+      icon: icon2,
       title: "Manpower Recruitment & Management Support",
       desc: "Guidance in hiring, training, and maintaining standardized outlet performance.",
     },
@@ -54,6 +64,11 @@ export default function SystemDriven() {
       title: "Multi-Brand Cross-Selling Engine (24+ Brands)",
       desc: "Higher average order value and diversified revenue streams.",
     },
+     {
+      icon: icon9,
+      title: "Royalty-Based Additional Income Channels",
+      desc: "Trolleys, Internet Kitchens, Tiffin Box & Gravy Mix verticals enhance total earnings.",
+    },
   ];
 
   return (
@@ -63,12 +78,11 @@ export default function SystemDriven() {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="font-bricolageBold text-3xl md:text-4xl mb-4">
-            A System-Driven Food Franchise Framework
+Why We? Jagdai Advantage
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto">
-            Jagdai Foods is built on operational discipline, centralized
-            efficiency, and scalable unit economics.
+          <p className="text-gray-200 max-w-2xl mx-auto">
+            Jagdai Foods is built on operational discipline, centralized efficiency, and scalable unit economics.
           </p>
         </div>
 
@@ -91,7 +105,7 @@ export default function SystemDriven() {
               </div>
 
               {/* Title */}
-              <h3 className="font-bricolageBold text-xl mb-2 leading-snug">
+              <h3 className="font-bricolageMedium text-xl mb-2 leading-snug">
                 {item.title}
               </h3>
 
@@ -106,7 +120,7 @@ export default function SystemDriven() {
         </div>
 
         {/* Bottom Full Card */}
-        <div className="mt-6 bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 flex flex-col lg:flex-row items-start gap-4">
+        {/* <div className="mt-6 bg-[#1f1f1f] rounded-2xl p-3 lg:p-6 flex flex-col lg:flex-row items-start gap-4">
 
           <div className="w-10 h-10 rounded-md bg-[#f3b24c] flex items-center justify-center">
             <img
@@ -127,7 +141,7 @@ export default function SystemDriven() {
             </p>
           </div>
 
-        </div>
+        </div> */}
 
       </Container>
     </section>

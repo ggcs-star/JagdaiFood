@@ -54,16 +54,18 @@ export default function Home() {
       {/* <MyJagdaiFoods /> */}
       <FranchiseModels />
       <AdditionalFranchiseModels />
-      <WhyMultiFormatModel />
-      <WhyJagdai />
       <HowYouEarn />
       <CapitalGuarantee />
       <BrandsCarousel />
       <SystemDriven />
+      <WhyJagdai />
+
+
+      {/* <WhyMultiFormatModel /> */}
+      <JagodsAppSection />
       
       <FranchiseCTA />
       {/* <FAQAccordion/> */}
-      <JagodsAppSection />
 
       {/* {scrollPercentage > 0 && (
         <div

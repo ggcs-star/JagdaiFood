@@ -17,7 +17,7 @@ export default function FranchiseCTA() {
           </h2>
 
           {/* Description */}
-          <p className="text-black/80 font-medium max-w-md mx-auto mb-8">
+          <p className="text-black/80 font-semibold max-w-md mx-auto mb-8">
             Take the first step toward owning a multi-brand food business backed
             by systems and structure.
           </p>

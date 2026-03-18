@@ -19,15 +19,6 @@ export default function NavbarContent() {
       ],
     },
     {
-      name: "Franchise Models",
-      link: "/franchise-models", // ✅ added (choose main page)
-      dropdown: [
-        { name: "FOFO Model", link: "/fofo-model" },
-        { name: "FOCO Model", link: "/foco-model" },
-        { name: "Model Comparison", link: "/model-comparison" },
-      ],
-    },
-    {
       name: "Franchise Formats",
       link: "/franchise-formats", // ✅ added
       dropdown: [
@@ -39,6 +30,16 @@ export default function NavbarContent() {
         { name: "Influencer Franchise", link: "/franchise-formats/influencer-franchise" }
       ]
     },
+    {
+      name: "Franchise Models",
+      link: "/franchise-models", // ✅ added (choose main page)
+      dropdown: [
+        { name: "FOFO Model", link: "/fofo-model" },
+        { name: "FOCO Model", link: "/foco-model" },
+        { name: "Model Comparison", link: "/model-comparison" },
+      ],
+    },
+    
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
     {
