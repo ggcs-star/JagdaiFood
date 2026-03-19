@@ -20,109 +20,136 @@ export default function FranchiseInvestment() {
   ];
 
   return (
-    <section className="bg-black py-10 px-3 lg:px-6">
+    <section className="bg-black px-3 lg:px-6">
       <div className="max-w-7xl mx-auto grid lg:grid-cols-[60%_40%] gap-6">
 
-        {/* QSR CARD */}
-        <div className="bg-[#f1b55b] text-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between min-h-[650px]">
+        {/* ================= QSR CARD ================= */}
+       <div className="relative bg-[#f1b55b] text-black rounded-3xl p-6 lg:p-8 flex flex-col justify-between min-h-[950px] overflow-hidden">
 
-          <div>
-            <h3 className="font-bricolageBold text-3xl mb-3">
-              QSR Restaurant Franchise
-            </h3>
+  {/* CONTENT */}
+  <div className="z-10 max-w-[520px]">
+    <h3 className="font-bricolageBold text-3xl mb-3">
+      QSR Restaurant Franchise
+    </h3>
 
-            <p className="text-sm leading-relaxed mb-6 max-w-[520px]">
-              QSR (Quick Service Restaurant) is a modern food business format
-              built for speed, convenience, and high-volume operations — making
-              it the future of scalable and profitable food ventures.
-            </p>
+    <p className="text-sm leading-relaxed mb-6">
+      QSR (Quick Service Restaurant) is a modern food business format
+      built for speed, convenience, and high-volume operations — making
+      it the future of scalable and profitable food ventures.
+    </p>
 
-            {/* Features */}
-            <div className="space-y-3 mb-6">
-              {qsrFeatures.map((item, index) => (
-                <div key={index} className="flex items-center gap-3 text-sm">
-                  <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black">
-                    <Check className="w-3 h-3 text-white" strokeWidth={3} />
-                  </div>
-                  <span>{item}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Earnings */}
-            <p className="font-bricolageBold text-sm mb-4">
-              Opportunity to earn <br />
-              <span className="text-lg font-bold">
-                up to Rs.5 lac per month
-              </span>
-            </p>
-
-            <Link
-              to="/franchise-formats/qsr-restaurant-franchise"
-              className="inline-block border border-black px-5 py-2 rounded-lg text-sm hover:bg-black hover:text-white transition"
-            >
-              Know More
-            </Link>
+    <div className="space-y-3 mb-6">
+      {qsrFeatures.map((item, index) => (
+        <div key={index} className="flex items-center gap-3 text-sm">
+          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black">
+            <Check className="w-3 h-3 text-white" strokeWidth={3} />
           </div>
-
-          {/* Image FIXED */}
-          <div className="mt-6 flex justify-center lg:justify-end">
-            <img
-              src={qsr}
-              alt="QSR Restaurant"
-              className="w-full max-w-[420px] lg:max-w-[520px] h-auto object-contain"
-            />
-          </div>
+          <span>{item}</span>
         </div>
+      ))}
+    </div>
 
-        {/* INTERNET CARD */}
-        <div className="bg-gradient-to-br from-[#2b2b2b] via-[#252525] to-[#1a1a1a] text-white rounded-3xl p-6 lg:p-8 flex flex-col justify-between min-h-[650px]">
+    <p className="font-bold text-sm mb-4">
+      Opportunity to earn <br />
+      <span className="text-lg">up to Rs.5 lac per month</span>
+    </p>
 
-          <div>
-            <h3 className="font-bricolageBold text-3xl mb-3 leading-snug">
-              Internet Restaurant Franchise
-            </h3>
+    <Link
+      to="/franchise-formats/qsr-restaurant-franchise"
+      className="inline-block border border-black px-5 py-2 rounded-lg text-sm hover:bg-black hover:text-white transition"
+    >
+      Know More
+    </Link>
+  </div>
 
-            <p className="text-sm text-gray-300 leading-relaxed mb-6">
-              An internet restaurant (cloud kitchen) is a delivery-first food
-              business model that operates without a dine-in space, leveraging
-              digital platforms to serve customers efficiently with lower
-              overheads and higher scalability.
-            </p>
-
-            {/* Features */}
-            <div className="space-y-3 mb-6">
-              {["No Rental", "No Salary", "High Margins", "No Expenses"].map(
-                (item, index) => (
-                  <div key={index} className="flex items-center gap-3 text-sm">
-                    <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
-                      <Check className="w-3 h-3 text-black" strokeWidth={3} />
-                    </div>
-                    <span className="text-gray-200">{item}</span>
-                  </div>
-                )
-              )}
-            </div>
-
-            <Link
-              to="/franchise-formats/internet-restaurants-franchise"
-              className="inline-block text-[#FDBD5B] border border-[#FDBD5B] px-5 py-2 rounded-lg text-sm hover:bg-[#FDBD5B] hover:text-black transition"
-            >
-              Know More
-            </Link>
-          </div>
-
-          {/* Image FIXED */}
-          <div className="mt-6 flex justify-center lg:justify-start">
-  <div className="h-[500px] flex items-end">
+  {/* IMAGE — SAME STYLE AS INTERNET CARD */}
+  <div className="absolute bottom-[20px] right-[50px] pointer-events-none">
     <img
-      src={mobile}
-      alt="Internet Restaurant"
-      className="-translate-x-[100px] lg:h-[500px] w-[400px] z-40 object-cover"
+      src={qsr}
+      alt="QSR"
+      className="
+        w-[95%] 
+        lg:w-[110%] 
+        max-w-none 
+        object-contain 
+        translate-y-[20px] 
+        lg:translate-y-[40px] 
+        translate-x-[20px]
+      "
     />
   </div>
+
 </div>
-        </div>
+
+        {/* ================= INTERNET CARD ================= */}
+<div className="relative bg-gradient-to-br from-[#2b2b2b] via-[#252525] to-[#1a1a1a] text-white rounded-3xl p-6 lg:p-8 min-h-[650px] overflow-visible">
+
+  {/* CONTENT */}
+  <div className="max-w-[420px] z-10">
+    <h3 className="font-bricolageBold text-3xl mb-3">
+      Internet Restaurant Franchise
+    </h3>
+
+    <p className="text-sm text-gray-300 mb-6">
+      A cloud kitchen model operating without dine-in space using digital platforms.
+    </p>
+
+    <div className="space-y-3 mb-6">
+      {["No Rental", "No Salary", "High Margins", "No Expenses"].map(
+        (item, index) => (
+          <div key={index} className="flex items-center gap-3 text-sm">
+            <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
+              <Check className="w-3 h-3 text-black" />
+            </div>
+            <span>{item}</span>
+          </div>
+        )
+      )}
+    </div>
+
+    <Link
+      to="/franchise-formats/internet-restaurants-franchise"
+      className="inline-block text-[#FDBD5B] border border-[#FDBD5B] px-5 py-2 rounded-lg text-sm hover:bg-[#FDBD5B] hover:text-black transition"
+    >
+      Know More
+    </Link>
+  </div>
+
+  {/* IMAGE */}
+  {/* <div className="absolute bottom-0 right-0 pointer-events-none">
+    <img
+      src={mobile}
+      alt="Internet"
+      className="
+        w-[150%] 
+        lg:w-[180%] 
+        max-w-none 
+        h-[600px]
+        object-contain 
+        translate-y-[40px] 
+        lg:translate-y-[70px] 
+        translate-x-[30px]
+      "
+    />
+  </div> */}
+
+  <div className="absolute bottom-0 right-0 pr-[150px] w-[150%] pb-[100px] pointer-events-none">
+  <img
+    src={mobile}
+    alt="Internet"
+    className="
+      w-full 
+      h-[400px] 
+      object-cover 
+      scale-[1.4] 
+      translate-x-[10%] 
+      translate-y-[10%]
+      drop-shadow-[0_25px_50px_rgba(0,0,0,0.35)]
+    "
+  />
+</div>
+
+</div>
 
       </div>
     </section>

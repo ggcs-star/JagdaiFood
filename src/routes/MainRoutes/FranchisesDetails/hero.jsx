@@ -4,7 +4,7 @@ import { P } from "../../../components/Typography";
 export default function Hero({ details, slug }) {
 
   const paddingClass =
-    slug === "internet-restaurants-franchise" ? " lg:pt-0" : "pt-14";
+    slug === "internet-restaurants-franchise" ? " lg:pt-14" : "pt-14";
 
   return (
     <div className={`relative bg-black ${paddingClass}`}>

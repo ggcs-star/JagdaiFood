@@ -172,7 +172,7 @@ function FranchisesDetails() {
   /* ---------------- NORMAL PAGE ---------------- */
 
   return (
-    <div className="lg:w-[99vw] w-screen pt-16">
+    <div className="lg:w-[99vw] w-screen pt-20">
 
       <Breadcrumbs
         titleMap={{
@@ -190,8 +190,6 @@ function FranchisesDetails() {
       {slug == "qsr-restaurant-franchise" && (
         <QsrShowcase />
       )}
-
-
 
       {slug == "internet-restaurants-franchise" && (
         <CloudKitchenIntro />
@@ -216,9 +214,9 @@ function FranchisesDetails() {
         <Desc details={details} slug={slug} />
       )}
 
-      {slug == "food-tempo-franchise" && (
+      {/* {slug == "food-tempo-franchise" && (
         <TempoAdvantages />
-      )}
+      )} */}
 
       <div className="bg-black">
         <Container className="px-4">
@@ -265,92 +263,64 @@ function FranchisesDetails() {
 
             {/* ---------- UPOS + TAPRI SECTION ---------- */}
 
-            {slug !== "internet-restaurants-franchise" && (
+            {![
+              "food-trolley-franchise",
+              "chatori-gali",
+              "influencer-franchise",
+              "internet-restaurants-franchise"
+            ].includes(slug) && (
 
-              <div className="relative flex flex-col lg:flex-row items-stretch justify-center mt-12 mx-auto lg:gap-6">
+                <div className="relative flex flex-col lg:flex-row items-stretch justify-center mt-12 mx-auto lg:gap-6">
 
-                {/* LEFT CARD */}
+                  {/* LEFT CARD */}
+                  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
+                    <p className="font-bricolageRegular text-[#60D186] mb-3">
+                      Franchise Fee
+                    </p>
 
-                <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
+                    <h2 className="font-bricolageBold text-white text-2xl">
+                      <a
+                        href="https://www.globalgarner.com/upos"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="hover:underline"
+                      >
+                        UPOS – The Digital Mall
+                      </a>
+                    </h2>
 
-                  <p className="font-bricolageRegular text-[#60D186] mb-3">
-                    Franchise Fee
-                  </p>
+                    <p className="text-gray-300 mt-2 text-sm">
+                      With <span className="text-white font-semibold">20 Crores +</span> Products & Services
+                    </p>
+                  </div>
 
-                  <h2 className="font-bricolageBold text-white text-2xl">
-                    <a
-                      href="https://www.globalgarner.com/upos"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="hover:underline"
-                    >
-                      UPOS – The Digital Mall
-                    </a>
-                  </h2>
+                  {/* PLUS ICON */}
+                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3.5">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </div>
+                  </div>
 
-                  <p className="text-gray-300 mt-2 text-sm">
-                    With <span className="text-white font-semibold">20 Crores +</span> Products & Services
-                  </p>
+                  {/* RIGHT CARD */}
+                  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
+                    <p className="font-bricolageRegular text-[#60D186] mb-3">
+                      Franchise Fee
+                    </p>
 
-                </div>
+                    <h2 className="font-bricolageBold text-white text-2xl">
+                      Tapri Ki Tafri (chai)
+                    </h2>
 
-                {/* PLUS ICON */}
-
-                <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-
-                  <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
-
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3.5">
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-
+                    <p className="text-gray-300 mt-2 text-sm">
+                      with all QSR Franchise Complimentary <br />
+                      at <span className="text-white font-semibold">just 1 Lakh Extra</span> (optional)
+                    </p>
                   </div>
 
                 </div>
-
-                {/* PLUS ICON */}
-                {/* <div className="flex lg:absolute lg:left-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:translate-y-1/2 justify-center -my-4 lg:my-0 z-20">
-
-                  <div className="bg-yellow-500 w-12 h-12 lg:w-14 lg:h-14 rounded-full grid place-items-center shadow-lg">
-
-                    <svg
-                      width="24"
-                      height="24"
-                      className="lg:w-[28px] lg:h-[28px]"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="black"
-                      strokeWidth="3.5"
-                    >
-                      <path d="M12 5v14M5 12h14" />
-                    </svg>
-
-                  </div>
-
-                </div> */}
-
-                {/* RIGHT CARD */}
-
-                <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
-
-                  <p className="font-bricolageRegular text-[#60D186] mb-3">
-                    Franchise Fee
-                  </p>
-
-                  <h2 className="font-bricolageBold text-white text-2xl">
-                    Tapri Ki Tafri (chai)
-                  </h2>
-
-                  <p className="text-gray-300 mt-2 text-sm">
-                    with all QSR Franchise Complimentary <br />
-                    at <span className="text-white font-semibold">just 1 Lakh Extra</span> (optional)
-                  </p>
-
-                </div>
-
-              </div>
-
-            )}
+              )}
 
             {/* ROI BUTTON */}
 
@@ -399,7 +369,7 @@ function FranchisesDetails() {
         <FoodCourtBenefits />
       )}
 
-       {slug == "chatori-gali" && (
+      {slug == "chatori-gali" && (
         <FoodCourtInfo />
       )}
 
@@ -428,7 +398,7 @@ function FranchisesDetails() {
 
 
 
-        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali"].includes(slug) && (
+        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali", "internet-restaurants-franchise"].includes(slug) && (
           <Container>
             {showAllFormats ? (
               <>

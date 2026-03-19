@@ -26,7 +26,7 @@ export default function FranchiseHero() {
 
       {/* Content */}
       <div className="relative z-10 py-8 lg:py-10">
-        <div className="px-3 lg:px-38 max-w-[950px]">
+        <div className="px-3 lg:pl-28 lg:pr-40 max-w-[950px]">
 
           <p className="text-3xl md:text-5xl font-bricolageBold text-[#FDBD5B] mb-4">
             Built on Amma’s Legacy
@@ -41,9 +41,8 @@ export default function FranchiseHero() {
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Jagdai Foods is a 24+ brand, technology-driven food franchise ecosystem
-            inspired by Amma’s love for authentic taste and designed for structured,
-            scalable, and sustainable growth.
+           Jagdai Foods is a {' '}
+           <span className="italic font-semibold">24+ brand, technology-driven food franchise ecosystem </span>inspired by Amma’s love for authentic taste.
           </p>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
@@ -52,7 +51,7 @@ export default function FranchiseHero() {
             food businesses with operational clarity and predictable returns.
           </p>
 
-          <p className="text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
+          <p className="italic text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
             Structured franchise formats. Capital protection framework. Multi-brand scale.
           </p>
 

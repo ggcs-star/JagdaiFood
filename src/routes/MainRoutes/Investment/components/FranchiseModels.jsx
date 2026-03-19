@@ -1,6 +1,7 @@
 import React from "react";
 import { Check } from "lucide-react";
 import stall from '../../../../assets/investment/stall.png'
+import foodcourt from '../../../../assets/investment/foodcourt.png'
 
 export default function FranchiseModels() {
     return (
@@ -70,48 +71,59 @@ export default function FranchiseModels() {
                 </div>
 
                 {/* RIGHT CARD */}
-                <div className="bg-[#1c1c1c] rounded-3xl p-3 lg:p-6 text-white">
+                <div className="bg-[#1c1c1c] rounded-3xl text-white">
+                    <div className="p-3 lg:p-6">
 
-                    <h2 className="text-3xl font-bricolageBold mb-4">
-                        Food Court Franchise (Chatori Gali)
-                    </h2>
 
-                    {/* TOP BOX */}
-                    <div className="bg-black rounded-xl p-6 mt-6">
-                        <p className="font-bricolageBold text-[#60D186] text-sm">Franchise Fee</p>
-                        <p className="text-xl font-semibold">
-                            ₹20,00,000 (+ GST)
+                        <h2 className="text-3xl font-bricolageBold mb-4">
+                            Food Court Franchise (Chatori Gali)
+                        </h2>
+
+                        {/* TOP BOX */}
+                        <div className="bg-black rounded-xl p-6 mt-6">
+                            <p className="font-bricolageBold text-[#60D186] text-sm">Franchise Fee</p>
+                            <p className="text-xl font-semibold">
+                                ₹20,00,000 (+ GST)
+                            </p>
+
+                            <p className="text-[#60D186] font-bricolageBold text-sm mt-4">
+                                Interior & Setup:
+                            </p>
+                            <p className="text-lg font-semibold">
+                                Approx. ₹50 Lakhs
+                            </p>
+                        </div>
+
+                        {/* GRID */}
+                        <div className="grid grid-cols-2 gap-4 mt-6">
+                            <div className="bg-black rounded-xl p-5">
+                                <p className="text-[#60D186] font-bricolageBold text-sm">Breakeven</p>
+                                <p className="font-semibold">12 Months</p>
+                            </div>
+
+                            <div className="bg-black rounded-xl p-5">
+                                <p className="text-[#60D186] font-bricolageBold text-sm">Gross Profit</p>
+                                <p className="font-semibold">Approx. 35%</p>
+                            </div>
+                        </div>
+
+                        <p className="text-white text-sm lg:text-lg mt-6">
+                            Includes POS, CCTV, fire system, licensing, branding, and
+                            marketing framework.
                         </p>
 
-                        <p className="text-[#60D186] font-bricolageBold text-sm mt-4">
-                            Interior & Setup:
-                        </p>
-                        <p className="text-lg font-semibold">
-                            Approx. ₹50 Lakhs
+                        <p className="text-white text-sm lg:text-lg mt-2">
+                            Designed for large-format operators.
                         </p>
                     </div>
 
-                    {/* GRID */}
-                    <div className="grid grid-cols-2 gap-4 mt-6">
-                        <div className="bg-black rounded-xl p-5">
-                            <p className="text-[#60D186] font-bricolageBold text-sm">Breakeven</p>
-                            <p className="font-semibold">12 Months</p>
-                        </div>
-
-                        <div className="bg-black rounded-xl p-5">
-                            <p className="text-[#60D186] font-bricolageBold text-sm">Gross Profit</p>
-                            <p className="font-semibold">Approx. 35%</p>
-                        </div>
+                    <div className="w-full mt-[20px] flex justify-center items-end">
+                        <img
+                            src={foodcourt}
+                            alt="Food Court"
+                            className="w-full max-h-[420px] object-cover rounded-b-[24px]"
+                        />
                     </div>
-
-                    <p className="text-white text-sm lg:text-lg mt-6">
-                        Includes POS, CCTV, fire system, licensing, branding, and
-                        marketing framework.
-                    </p>
-
-                    <p className="text-white text-sm lg:text-lg mt-2">
-                        Designed for large-format operators.
-                    </p>
                 </div>
 
             </div>

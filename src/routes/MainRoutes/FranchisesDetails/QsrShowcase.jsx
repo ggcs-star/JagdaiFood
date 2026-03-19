@@ -1,8 +1,8 @@
 import React from "react";
-import dilli from "../../../assets/qsr/dilli.png";
-import mexico from "../../../assets/qsr/mexico.png";
-import mumbai from "../../../assets/qsr/aamchi.png";
-import chinese from "../../../assets/qsr/chinese.png";
+import dilli from "../../../assets/qsr/dilli.svg";
+import mexico from "../../../assets/qsr/mexico.svg";
+import mumbai from "../../../assets/qsr/aamchi.svg";
+import chinese from "../../../assets/qsr/chinese.svg";
 
 export default function QsrShowcase() {
   const brands = [
@@ -14,39 +14,47 @@ export default function QsrShowcase() {
 
   return (
     <section className="bg-black px-4 lg:px-8">
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="max-w-7xl mx-auto text-center">
 
-        {/* TOP TEXT */}
-        <p className="text-gray-300 text-sm lg:text-base leading-relaxed max-w-4xl mx-auto mb-4">
-          QSR (Quick Service Restaurant) is a modern food business format built
-          for speed, convenience, and high-volume operations — making it the
-          future of scalable and profitable food ventures.
+        {/* TEXT */}
+        <p className="text-gray-300 text-sm lg:text-base max-w-4xl mx-auto mb-4">
+         QSR (Quick Service Restaurant) is a modern food business format built for speed, convenience, and high-volume operations — making it the future of scalable and profitable food ventures.
         </p>
 
-        <p className="text-gray-400 text-sm lg:text-base leading-relaxed max-w-4xl mx-auto mb-10">
-          At Jagdai Foods, we elevate this model by combining centralized
-          kitchens, multi-brand offerings, and technology-driven delivery —
-          creating a system that delivers faster service, stronger margins, and
-          multiple revenue streams from a single outlet.
+        <p className="text-gray-300 text-sm lg:text-base max-w-4xl mx-auto mb-10">
+           At Jagdai Foods, we elevate this model by combining centralized kitchens, multi-brand offerings, and technology-driven delivery — creating a system that delivers faster service, stronger margins, and multiple revenue streams from a single outlet.
+
         </p>
+
 
         {/* BRAND CARDS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:-gap-28 justify-items-center">
+        <div className="flex flex-wrap justify-center gap-3 md:gap-5">
 
           {brands.map((item, index) => (
             <div
               key={index}
-              className="bg-transparent max-w-[180px] shadow-md hover:scale-105 transition duration-300"
+              className="
+                bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a]
+                border border-gray-600
+                rounded-2xl
+                p-3
+                w-[160px] h-[160px]
+                flex items-center justify-center
+                shadow-lg
+                hover:scale-105
+                transition duration-300
+              "
             >
-                <img
-                  src={item.img}
-                  alt={item.name}
-                  className="object-contain h-fit"
-                />
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-full h-full object-contain"
+              />
             </div>
           ))}
 
         </div>
+
       </div>
     </section>
   );

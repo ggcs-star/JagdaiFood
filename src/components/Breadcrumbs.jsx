@@ -10,7 +10,7 @@ export default function Breadcrumbs({ titleMap = {} }) {
   const type = searchParams.get("type");
 
   return (
-    <div className="w-full bg-black py-3 px-3 lg:px-40">
+    <div className="w-full bg-black py-3 px-3 lg:px-28">
       <Container className="max-w-7xl mx-auto text-sm text-white flex items-center flex-wrap">
 
         {/* Home */}

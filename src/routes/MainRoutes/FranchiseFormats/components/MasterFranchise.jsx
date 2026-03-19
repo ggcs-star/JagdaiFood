@@ -7,7 +7,7 @@ export default function MasterFranchise() {
   const navigate = useNavigate();
 
   return (
-    <section className="bg-black py-12">
+    <section className="bg-black py-2">
 
       <Container>
         {/* MAIN CARD */}

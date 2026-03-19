@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 export default function FranchiseCTA() {
   const navigate = useNavigate();
   return (
-    <section className="bg-black py-4 lg:py-8">
+    <section className="bg-black py-4 lg:py-6">
       <Container>
         {/* CTA Card */}
         <div className="rounded-[30px] bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] px-2 lg:px-8 py-4 lg:py-8 text-center">

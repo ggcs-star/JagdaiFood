@@ -36,13 +36,13 @@ const bottomData = {
 
 const Card = ({ title, points }) => (
   <div className="bg-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-lg">
-    <h3 className="text-white text-xl md:text-2xl font-semibold mb-4">
+    <h3 className="text-white text-2xl md:text-3xl font-bricolageBold mb-2">
       {title}
     </h3>
     <ul className="space-y-3">
       {points.map((point, index) => (
         <li key={index} className="flex items-start gap-3 text-gray-300">
-          <CheckCircle className="text-yellow-400 w-5 h-5 mt-1" />
+          <CheckCircle className="text-[#FDBD5B] w-5 h-5 mt-1" />
           <span>{point}</span>
         </li>
       ))}
@@ -52,9 +52,9 @@ const Card = ({ title, points }) => (
 
 const FoodCourtInfo = () => {
   return (
-    <section className="bg-black py-10">
+    <section className="bg-black ">
       {/* Container */}
-      <div className="max-w-6xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto">
         
         {/* Top Grid */}
         <div className="grid md:grid-cols-2 gap-6">
@@ -65,7 +65,7 @@ const FoodCourtInfo = () => {
 
         {/* Bottom Full Card */}
         <div className="mt-6 bg-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-lg">
-          <h3 className="text-white text-xl md:text-2xl font-semibold mb-2">
+          <h3 className="text-white text-2xl md:text-3xl font-bricolageBold mb-2">
             {bottomData.title}
           </h3>
           <p className="text-gray-400 mb-4 text-sm md:text-base">
@@ -75,7 +75,7 @@ const FoodCourtInfo = () => {
           <ul className="space-y-3">
             {bottomData.points.map((point, index) => (
               <li key={index} className="flex items-start gap-3 text-gray-300">
-                <CheckCircle className="text-yellow-400 w-5 h-5 mt-1" />
+                <CheckCircle className="text-[#FDBD5B] w-5 h-5 mt-1" />
                 <span>{point}</span>
               </li>
             ))}

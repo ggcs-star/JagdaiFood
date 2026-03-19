@@ -84,8 +84,27 @@ export default function BrandMenu({ item }) {
   const restCards = filtered.slice(6);
 
   return (
-    <section className="max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-14 text-white">
-    
+    <section className="max-w-7xl mx-auto sm:px-6 py-10 md:py-14 text-white">
+      {/* HEADER */}
+      {/* <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
+
+        <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">
+          Menu
+        </h2>
+
+        {item?.menuDownloadLink && (
+
+          <a
+            href={item.menuDownloadLink}
+            className="border border-[#FDBD5B] text-[#FDBD5B] px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#FDBD5B] hover:text-black transition text-sm md:text-base"
+          >
+            <img src={download} alt="Download" className="size-4" />
+            Download Menu
+          </a>
+
+        )}
+
+      </div> */}
 
       <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">Menu</h2>
