@@ -4,10 +4,17 @@ import FranchiseInvestment from './components/FranchiseInvestment'
 import FranchiseModels from './components/FranchiseModels'
 import AdditionalFranchises from './components/AdditionalFranchises'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
+import Breadcrumbs from '../../../components/Breadcrumbs'
 
 const Investment = () => {
   return (
     <div>
+       <Breadcrumbs
+                    titleMap={{
+                      "/investment": "Investment & ROI",
+                    }}
+                    className='pt-28 bg-black text-white'
+                  />   
         <InvestmentROI/>
         <FranchiseInvestment/>
         <FranchiseModels/>

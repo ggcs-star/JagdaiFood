@@ -160,6 +160,8 @@ function FranchisesDetails() {
             "/franchise-formats": "Franchise Formats",
             "/franchise-formats/influencer-franchise": "Influencer Franchise",
           }}
+                  className="pt-28 bg-black"
+
         />
 
         <Hero details={details} slug={slug} />
@@ -183,6 +185,7 @@ function FranchisesDetails() {
           "/franchise-formats/food-tempo-franchise": "Food Tempo Franchise",
           "/franchise-formats/chatori-gali": "Food Court Franchise",
         }}
+        className="pt-10 bg-black"
       />
 
       <Hero details={details} slug={slug} />

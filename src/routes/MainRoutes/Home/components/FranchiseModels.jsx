@@ -39,7 +39,7 @@ export default function FranchiseModels() {
         </div>
 
         {/* Ecosystem Card */}
-        <div className="bg-[#2a2a2a] rounded-2xl p-4 lg:p-6 text-center mx-auto mb-12">
+        <div className="bg-[#2a2a2a] rounded-2xl p-4 lg:p-8 text-center mx-auto mb-12">
           <h3 className="text-3xl text-[#FDBD5B] font-bricolageBold mb-4">
             Multiple Formats. One Powerful Ecosystem.
           </h3>
@@ -63,7 +63,7 @@ export default function FranchiseModels() {
           {/* QSR Card */}
           <div className=" bg-[#FDBD5B] rounded-2xl flex flex-col justify-between">
 
-            <div className="p-4 lg:p-6">
+            <div className="p-4 lg:p-8">
 
               <h3 className="text-3xl font-bricolageBold text-black mb-4">
                 Multi-Brand QSR Franchise
@@ -118,7 +118,7 @@ export default function FranchiseModels() {
           {/* Trolley Card */}
           <div className="bg-[#1f1f1f] rounded-2xl text-white flex flex-col justify-between">
 
-            <div className="p-4 lg:p-6">
+            <div className="p-4 lg:p-8">
 
               <h3 className="text-3xl font-bricolageBold mb-4">
                 Food Trolley / Bike-Cart Franchise

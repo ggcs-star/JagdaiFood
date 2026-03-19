@@ -39,7 +39,7 @@ export default function NavbarContent() {
         { name: "Model Comparison", link: "/model-comparison" },
       ],
     },
-    
+
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
     {
@@ -54,7 +54,7 @@ export default function NavbarContent() {
   ];
 
   return (
-<header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
+    <header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
       <div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between">
 
         {/* Logo */}
@@ -72,10 +72,9 @@ export default function NavbarContent() {
                 <NavLink
                   to={item.link}
                   className={({ isActive }) =>
-                    `flex items-center gap-1 ${
-                      isActive
-                        ? "text-[#FDBD5B]"
-                        : "hover:text-[#FDBD5B] transition"
+                    `flex items-center gap-1 ${isActive
+                      ? "text-[#FDBD5B]"
+                      : "hover:text-[#FDBD5B] transition"
                     }`
                   }
                 >
@@ -123,10 +122,12 @@ export default function NavbarContent() {
 
             <div>
               <p className="text-xs text-gray-300">For Franchise</p>
-              <p className="font-semibold text-[#FDBD5B]">
-                +91 88663 73077
 
-              </p>
+              <a href="tel:+918866373077">
+                <p className="font-semibold text-[#FDBD5B] cursor-pointer">
+                  +91 88663 73077
+                </p>
+              </a>
             </div>
           </div>
         </div>

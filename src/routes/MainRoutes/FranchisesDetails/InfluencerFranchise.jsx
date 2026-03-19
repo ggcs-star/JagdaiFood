@@ -36,7 +36,7 @@ const InfluencerFranchise = () => {
     <section className="bg-black py-8 lg:py-16 px-4 flex flex-col items-center">
 
       {/* PLAN CARDS */}
-      <div className="grid md:grid-cols-2 gap-8 max-w-6xl w-full">
+      <div className="grid md:grid-cols-2 gap-8 max-w-7xl w-full">
 
         {plans.map((plan) => (
           <div
@@ -90,7 +90,7 @@ const InfluencerFranchise = () => {
       </div>
 
       {/* HIGHLIGHTS */}
-      <div className="grid md:grid-cols-2 gap-6 max-w-6xl w-full mt-10">
+      <div className="grid md:grid-cols-2 gap-6 max-w-7xl w-full mt-10">
 
         <div className="bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] text-white rounded-xl py-6 text-center font-semibold text-lg">
           {highlights[0]}
@@ -102,7 +102,7 @@ const InfluencerFranchise = () => {
 
       </div>
 
-      <div className="max-w-6xl w-full mt-6">
+      <div className="max-w-7xl w-full mt-6">
         <div className="bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] text-white rounded-xl py-6 text-center font-semibold text-lg px-6">
           {highlights[2]}
         </div>

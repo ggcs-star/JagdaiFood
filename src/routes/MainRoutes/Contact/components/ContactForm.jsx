@@ -36,15 +36,17 @@ export default function ContactForm() {
                 <FaPhoneAlt className="text-black text-[16px]" />
               </div>
 
-              <div className="ml-[16px]">
-                <p className="text-[#AFAFAF] text-[14px] font-inter mb-[6px]">
-                  For Franchise
-                </p>
+             <div className="ml-[16px]">
+  <p className="text-[#AFAFAF] text-[14px] font-inter mb-[6px]">
+    For Franchise
+  </p>
 
-                <p className="text-[#FDBD5B] text-[20px] font-bricolageSemiBold">
-                  +91 88663 73077
-                </p>
-              </div>
+  <a href="tel:+918866373077">
+    <p className="text-[#FDBD5B] text-[20px] font-bricolageSemiBold cursor-pointer">
+      +91 88663 73077
+    </p>
+  </a>
+</div>
             </div>
           </div>
 

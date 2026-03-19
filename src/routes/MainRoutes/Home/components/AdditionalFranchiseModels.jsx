@@ -33,7 +33,7 @@ export default function AdditionalFranchiseModels() {
           {/* Cloud Kitchen Card */}
           <div className="rounded-[26px] flex flex-col justify-between bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f] ">
 
-            <div className="p-4 lg:p-6">
+            <div className="p-4 lg:p-8">
 
               <h3 className="text-3xl font-bricolageBold text-white mb-4">
                 Cloud Kitchen Franchise
@@ -86,7 +86,7 @@ export default function AdditionalFranchiseModels() {
           {/* Territory Card */}
           <div className=" bg-[#60D186] relative rounded-[26px] flex flex-col justify-between">
 
-            <div className="p-4 lg:p-6">
+            <div className="p-4 lg:p-8">
 
               <h3 className="text-3xl font-bricolageBold text-black mb-4">
                 Master Franchise / Territory Model

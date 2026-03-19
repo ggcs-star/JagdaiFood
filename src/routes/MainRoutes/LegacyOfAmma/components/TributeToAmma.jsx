@@ -4,7 +4,7 @@ import amma from "../../../../assets/legacyofamma/amma.svg";
 export default function TributeToAmma() {
   return (
     <section className="bg-black flex justify-center px-4 lg:px-0">
-      <div className="relative bg-[#36332f] max-w-6xl w-full rounded-3xl overflow-hidden">
+      <div className="relative bg-[#36332f] max-w-7xl w-full rounded-3xl overflow-hidden">
 
         <div className="flex flex-col lg:block">
 
