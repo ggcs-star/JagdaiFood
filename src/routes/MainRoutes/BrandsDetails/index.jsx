@@ -7,7 +7,7 @@ import { brands } from "../../../db";
 
 /* mobile card images */
 import jagodsLogo from "../../../assets/brands/jagodsLogo.svg";
-import scanner from "../../../assets/brands/scanner.png";
+import scanner from "../../../assets/brands/qrcode.png";
 import playstoreimage from "../../../assets/brands/playstoreimage.png";
 import appstoreimage from "../../../assets/brands/appstoreimage.png";
 
