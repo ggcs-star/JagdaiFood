@@ -41,9 +41,8 @@ export default function FranchiseHero() {
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Jagdai Foods is a 24+ brand, technology-driven food franchise ecosystem
-            inspired by Amma’s love for authentic taste and designed for structured,
-            scalable, and sustainable growth.
+           Jagdai Foods is a {' '}
+           <span className="italic font-semibold">24+ brand, technology-driven food franchise ecosystem </span>inspired by Amma’s love for authentic taste.
           </p>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
@@ -52,7 +51,7 @@ export default function FranchiseHero() {
             food businesses with operational clarity and predictable returns.
           </p>
 
-          <p className="text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
+          <p className="italic text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
             Structured franchise formats. Capital protection framework. Multi-brand scale.
           </p>
 
