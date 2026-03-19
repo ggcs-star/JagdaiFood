@@ -192,7 +192,7 @@ export default function BrandMenu({ item }) {
               className="w-42 sm:w-46 md:w-50 mb-4"
             />
 
-            <p className="text-sm text-gray-300 mb-5">Scan to download</p>
+            {/* <p className="text-sm text-gray-300 mb-5">Scan to download</p> */}
 
             {item.mobileApp?.playStore && (
               <a
