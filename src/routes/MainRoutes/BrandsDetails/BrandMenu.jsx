@@ -5,6 +5,7 @@ import { getRestaurantDetails } from "../../../api/restaurantApi";
 export default function BrandMenu({ item }) {
   const [menuItems, setMenuItems] = useState([]);
   const [active, setActive] = useState("");
+  const [menuImage, setMenuImage] = useState("");
 
   useEffect(() => {
     fetchMenu();
@@ -16,7 +17,13 @@ export default function BrandMenu({ item }) {
     try {
       const res = await getRestaurantDetails(item.id);
 
+      console.log("API RESPONSE:", res);
+
+      
       const apiItems = res?.data?.menuItems || [];
+      const menuImg = res?.data?.restaurant?.menu_image;
+
+      setMenuImage(menuImg);
 
       const formatted = apiItems.map((food) => ({
         title: food.name,
@@ -36,6 +43,37 @@ export default function BrandMenu({ item }) {
   };
 
   const categories = [...new Set(menuItems.map((i) => i.category))];
+
+  const handleMenuDownload = async () => {
+    if (!menuImage) {
+      alert("Menu not available");
+      return;
+    }
+
+    try {
+      const response = await fetch(menuImage, {
+        mode: "cors", 
+      });
+
+      const blob = await response.blob();
+
+      const blobUrl = window.URL.createObjectURL(blob);
+
+      const link = document.createElement("a");
+      window.open(menuImage, "_blank");
+      link.href = blobUrl;
+      link.download = "menu.png"; 
+      document.body.appendChild(link);
+      link.click();
+
+      document.body.removeChild(link);
+      window.URL.revokeObjectURL(blobUrl);
+    } catch (error) {
+      console.error("Download failed:", error);
+
+    
+    }
+  };
 
   const filtered =
     active === "All"
@@ -68,15 +106,13 @@ export default function BrandMenu({ item }) {
 
       </div> */}
 
-     <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+      <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
+        <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">Menu</h2>
 
-  <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">
-    Menu
-  </h2>
-
-  <a
-    href={item?.menuDownloadLink || "#"}
-    className="
+        <button
+          onClick={handleMenuDownload}
+          className="
+    group
     inline-flex
     items-center
     gap-2
@@ -87,17 +123,21 @@ export default function BrandMenu({ item }) {
     rounded-full
     hover:bg-[#FDBD5B]
     hover:text-black
+    cursor-pointer
     transition
     text-sm
     md:text-base
     whitespace-nowrap
-    "
-  >
-    <img src={download} alt="Download" className="w-4 h-4" />
-    Download Menu
-  </a>
-
-</div>
+  "
+        >
+          <img
+            src={download}
+            alt="Download"
+            className="w-4 h-4 transition duration-200  group-hover:invert"
+          />
+          Download Menu
+        </button>
+      </div>
 
       {/* CATEGORY PILLS */}
       {/* <div className="flex flex-wrap gap-3 mb-10">
@@ -186,7 +226,6 @@ export default function BrandMenu({ item }) {
         )}
       </div>
 
-      
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {restCards.map((food, i) => (
           <div key={i}>
