@@ -46,8 +46,8 @@ export const ApplyButton = ({ children, onClick }) => {
             className="group relative py-3 px-4 overflow-hidden rounded-xl cursor-pointer text-lg shadow border-2 border-[#FDBD5B] hover:border-[#FDBD5B]"
             onClick={onClick}
         >
-            <div className="absolute inset-0 w-0 bg-[#FDBD5B] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span className="relative text-[#FDBD5B] group-hover:text-white font-semibold px-3">
+            <div className="absolute inset-0 w-0 bg-[#FDBD5B] hover:bg-[#FDBD5B] transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+            <span className="relative text-[#FDBD5B] group-hover:text-black font-semibold px-3">
                 {children ?? "Franchises"}
             </span>
         </button>

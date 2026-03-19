@@ -13,7 +13,7 @@ export default function CloudKitchenIntro() {
         </p>
 
         {/* Paragraph 2 */}
-        <p className="text-gray-400 text-sm md:text-base leading-relaxed">
+        <p className="text-gray-300 text-sm md:text-base leading-relaxed">
           An internet restaurant, also known as a cloud kitchen, is a delivery-focused 
           food business that operates entirely online—reducing costs, increasing margins, 
           and enabling faster scalability without the need for a physical dine-in setup.

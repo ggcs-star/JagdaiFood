@@ -26,15 +26,15 @@ export default function BenefitsSectionqsr() {
 
   return (
     <section className="bg-black py-10 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
         
         {/* CARD */}
         <div className="bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-3xl p-6 md:p-10">
 
           {/* TITLE */}
-          <h2 className="text-white text-2xl md:text-3xl font-semibold mb-8">
+          <h2 className="text-white text-2xl md:text-3xl font-bricolageBold mb-8">
             Benefits of joining our{" "}
-            <span className="underline">QSR Franchise Business</span>
+            <span className="">QSR Franchise Business</span>
           </h2>
 
           {/* CONTENT */}
@@ -45,7 +45,7 @@ export default function BenefitsSectionqsr() {
               {leftPoints.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
                   
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center mt-0.5">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center mt-0.5">
                     <Check size={12} className="text-black" />
                   </span>
 
@@ -59,7 +59,7 @@ export default function BenefitsSectionqsr() {
               {rightPoints.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
                   
-                  <span className="flex-shrink-0 w-5 h-5 rounded-full bg-yellow-400 flex items-center justify-center mt-0.5">
+                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center mt-0.5">
                     <Check size={12} className="text-black" />
                   </span>
 

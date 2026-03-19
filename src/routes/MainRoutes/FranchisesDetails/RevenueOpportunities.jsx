@@ -11,28 +11,40 @@ const RevenueOpportunitiesqsr = () => {
   ];
 
   return (
-    <section className="w-full bg-black text-white py-16 px-4">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="w-full bg-black text-white pb-4 px-4">
+      <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
-        <h2 className="text-xl md:text-2xl font-medium leading-relaxed mb-12">
+       <div className="max-w-7xl mx-auto">
+         <h2 className="font-bricolageSemiBold text-white text-3xl md:text-4xl leading-relaxed mb-12">
           Additionally, the unique selling proposition (USP) of our franchise
           offers the following revenue opportunities
         </h2>
+       </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {data.map((item, index) => (
-            <div
-              key={index}
-              className="bg-[#1f1f1f] rounded-2xl px-6 py-8 text-center 
-                         shadow-md hover:shadow-lg transition-all duration-300"
-            >
-              <p className="text-sm md:text-base font-medium leading-relaxed">
-                {item}
-              </p>
-            </div>
-          ))}
-        </div>
+        <div className=" flex items-center justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {data.map((item, index) => (
+     <div
+  key={index}
+  className="
+    bg-[#1f1f1f] 
+    rounded-2xl 
+    px-6 py-8 
+    text-center
+    flex items-center justify-center
+    shadow-md 
+    hover:shadow-lg 
+    transition-all duration-300
+  "
+>
+  <p className="text-sm md:text-lg font-bricolageMedium leading-relaxed">
+    {item}
+  </p>
+</div>
+    ))}
+  </div>
+</div>
       </div>
     </section>
   );

@@ -6,13 +6,13 @@ import foodcourt from "../../../../assets/investment/foodcourt1.png";
 export default function AdditionalFranchises() {
   return (
     <section className="bg-black ">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 pb-6">
+      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6 pb-6">
 
   {/* Food Court Franchise (UPDATED BIG VERSION) */}
-<div className="bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-[24px] px-[32px] pt-[32px] pb-0 text-white flex flex-col justify-between overflow-hidden h-[740px]">
+<div className="bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-[24px]  pt-[32px] pb-0 text-white flex flex-col justify-between overflow-hidden h-[740px]">
 
   {/* TOP CONTENT */}
-  <div className="max-w-[420px]">
+  <div className="max-w-[420px] px-[32px]">
 
     {/* TITLE */}
     <h3 className="font-bricolageBold text-[28px] leading-[36px] mb-[12px]">
@@ -40,7 +40,7 @@ export default function AdditionalFranchises() {
   <img
     src={foodcourt}
     alt="Food Court"
-    className="w-full max-h-[420px] object-contain rounded-b-[24px]"
+    className="w-full max-h-[420px] object-cover rounded-b-[24px]"
   />
 </div>
 

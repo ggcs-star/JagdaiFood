@@ -26,7 +26,7 @@ export default function FranchiseHero() {
 
       {/* Content */}
       <div className="relative z-10 py-8 lg:py-10">
-        <div className="px-3 lg:px-38 max-w-[950px]">
+        <div className="px-3 lg:pl-28 lg:pr-40 max-w-[950px]">
 
           <p className="text-3xl md:text-5xl font-bricolageBold text-[#FDBD5B] mb-4">
             Built on Amma’s Legacy

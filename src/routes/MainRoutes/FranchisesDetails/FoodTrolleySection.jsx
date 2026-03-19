@@ -12,8 +12,8 @@ export default function FoodTrolleySection() {
   ];
 
   return (
-    <section className="bg-black py-10 px-4">
-      <div className="max-w-6xl mx-auto rounded-3xl overflow-hidden 
+    <section className="bg-black px-4">
+      <div className="max-w-7xl mx-auto rounded-3xl overflow-hidden 
                       bg-gradient-to-r from-[#2b2b2b] via-[#2a2a2a] to-[#caa46a]">
 
         <div className="grid md:grid-cols-2 items-center">

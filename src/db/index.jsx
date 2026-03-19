@@ -773,14 +773,14 @@ export const franchise = [
     extraDetails: {
       label: "Franchise Fees ",
       fees: "₹6,00,000",
-      percent: "6% Royalty to Jagdai Foods On Total Sale Amount",
+      percent: "Opportunity to earn up to Rs.5 lac per month",
       total: "/- +GST",
       price: "16,00,000",
       // note: "NON-VEG Option also available for all brands",
       list: [
         {
           label: "Investment",
-          desc: `₹6 lac (Franchise Fees), ₹10 lac (10 Lac or actual whichever is higher)`,
+          desc: `₹6 lac (Franchise Fees) + ₹10 lac setup cost (10 Lac or actual whichever is higher)`,
           subTitle: "₹16 Lac",
         },
         { label: "ROI", desc: "", subTitle: "12 to 15 months" },
@@ -791,7 +791,7 @@ export const franchise = [
         },
         {
           label: "Gross Profit",
-          desc: "",
+          desc: "Approx",
           subTitle: "35%",
         },
       ],
@@ -880,7 +880,7 @@ export const franchise = [
       //percent: "3L (+GST) + 30K (for 3 Months)",
       total: "/- +GST",
       price: "3,00,000",
-      note: "Franchise pays 50,000 as a marketing fund for the 1st Year of marketing. It is an essential part to get the visibility of the new restaurant as this fund will be used for Zomato, Swiggy and Social Media Promotions.",
+      // note: "Franchise pays 50,000 as a marketing fund for the 1st Year of marketing. It is an essential part to get the visibility of the new restaurant as this fund will be used for Zomato, Swiggy and Social Media Promotions.",
       list: [
         {
           label: "Investment",
@@ -1072,18 +1072,20 @@ export const franchise = [
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹20,00,000",
-      percent: "6% Royalty from the Trolley",
+      // percent: "6% Royalty from the Trolley",
       total: "/- +GST",
       price: "20,00,000",
-      note: "NON-VEG Option also available",
+      // note: "NON-VEG Option also available",
       list: [
         {
-          label: "Fees",
+          label: "Franchise Fee",
           subTitle: "₹20 lac + GST",
         },
         {
           label: "Other Interior",
-          subTitle: "₹50 lac (approx) (Food court setup)",
+          subTitle: "₹50 lac (approx)",
+                    desc: " (Food court setup)",
+
         },
         {
           label: "Breakeven",

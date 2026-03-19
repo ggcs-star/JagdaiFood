@@ -5,7 +5,7 @@ import { Container } from "../../../components/Layout";
 export default function FranchiseCTA() {
   const navigate = useNavigate();
   return (
-    <section className="max-w-6xl w-full bg-black py-4 lg:py-8">
+    <section className="max-w-7xl w-full bg-black py-4 lg:py-8">
       <div>
         {/* CTA Card */}
         <div className="rounded-[30px] bg-gradient-to-r from-[#6BC07F] to-[#F2B44F] px-2 lg:px-8 py-4 lg:py-8 text-center">

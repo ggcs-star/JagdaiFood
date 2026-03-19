@@ -15,8 +15,8 @@ export default function FocoEarningSectionTempo() {
   ];
 
   return (
-    <section className="bg-black py-10 px-4">
-      <div className="max-w-6xl mx-auto space-y-6">
+    <section className="bg-black px-4">
+      <div className="max-w-7xl mx-auto space-y-6">
 
         {/* TOP GRID */}
         <div className="grid md:grid-cols-2 gap-6">
@@ -31,7 +31,7 @@ export default function FocoEarningSectionTempo() {
               {focoPoints.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
                   
-                  <span className="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
+                  <span className="w-5 h-5 bg-[#FDBD5B] rounded-full flex items-center justify-center mt-1">
                     <Check size={12} className="text-black" />
                   </span>
 
@@ -55,7 +55,7 @@ export default function FocoEarningSectionTempo() {
               {earningPoints.map((item, i) => (
                 <li key={i} className="flex items-start gap-3 text-gray-300 text-sm md:text-base">
                   
-                  <span className="w-5 h-5 bg-yellow-400 rounded-full flex items-center justify-center mt-1">
+                  <span className="w-5 h-5 bg-[#FDBD5B] rounded-full flex items-center justify-center mt-1">
                     <Check size={12} className="text-black" />
                   </span>
 
@@ -69,7 +69,7 @@ export default function FocoEarningSectionTempo() {
 
         {/* BOTTOM BAR */}
         <div className="bg-[#2b2b2b] rounded-2xl py-5 px-6 text-center">
-          <span className="text-gray-300 font-medium text-sm md:text-base">
+          <span className="text-white font-bricolageMedium text-sm md:text-base">
             More capacity. More reach. More earnings.
           </span>
         </div>

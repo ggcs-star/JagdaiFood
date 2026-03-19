@@ -13,7 +13,7 @@ export default function FoundersSection() {
                 Founder's Of Jagdai Foods
             </h2>
 
-            <div className="relative max-w-6xl mx-auto min-h-[520px]">
+            <div className="relative max-w-7xl mx-auto min-h-[520px]">
 
                 {/* Green Background */}
                 <img
