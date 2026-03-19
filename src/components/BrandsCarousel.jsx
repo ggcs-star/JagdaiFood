@@ -767,11 +767,11 @@ export default function BrandsCarousel() {
   variableWidth: false,
 
   /* ✅ IMPORTANT FOR MANUAL SLIDE */
-  draggable: true,        // mouse drag
-  swipe: true,            // touch swipe
-  swipeToSlide: true,     // smooth swipe
-  touchMove: true,        // mobile touch
-  accessibility: true,    // keyboard arrows bhi kaam karega
+  draggable: true,        
+  swipe: true,           
+  swipeToSlide: true,     
+  touchMove: true,        
+  accessibility: true,    
 
   responsive: [
     { breakpoint: 1024, settings: { slidesToShow: 2 } },
