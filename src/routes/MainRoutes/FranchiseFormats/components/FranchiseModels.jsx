@@ -122,6 +122,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import stall from "../../../../assets/investment/stall.png";
+import foodcourt from "../../../../assets/investment/foodcourt.png"; // add this
 import trolly from "../../../../assets/investment/trolly.png";
 
 export default function FranchiseModels() {

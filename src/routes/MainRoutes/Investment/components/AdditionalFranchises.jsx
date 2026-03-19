@@ -14,7 +14,7 @@ export default function AdditionalFranchises() {
 
           <p className="text-sm text-gray-300 mb-3">
             Franchise Fee:{" "}
-            <span className="text-green-400 font-semibold">
+            <span className="text-[#60D186] font-semibold">
               ₹2,70,000 (+ GST)
             </span>
           </p>
@@ -31,7 +31,7 @@ export default function AdditionalFranchises() {
               "Scalable street model",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3">
-                <div className="bg-green-500 rounded-full p-1">
+                <div className="bg-#60D186 rounded-full p-1">
                   <Check size={14} className="text-black" />
                 </div>
                 <span className="text-gray-200">{item}</span>
@@ -57,7 +57,7 @@ export default function AdditionalFranchises() {
               "Revenue-share structure based on digital performance.",
             ].map((item, index) => (
               <div key={index} className="flex items-center gap-3">
-                <div className="bg-green-500 rounded-full p-1">
+                <div className="bg-#60D186 rounded-full p-1">
                   <Check size={14} className="text-black" />
                 </div>
                 <span className="text-gray-200">{item}</span>

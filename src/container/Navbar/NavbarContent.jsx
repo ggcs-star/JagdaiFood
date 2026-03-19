@@ -54,8 +54,7 @@ export default function NavbarContent() {
   ];
 
   return (
-    <header className="w-full bg-black text-white sticky top-0 z-[999]">
-
+<header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
       <div className="max-w-[1200px] mx-auto px-3 lg:px-0 flex items-center justify-between">
 
         {/* Logo */}
@@ -75,8 +74,8 @@ export default function NavbarContent() {
                   className={({ isActive }) =>
                     `flex items-center gap-1 ${
                       isActive
-                        ? "text-[#f2b44c]"
-                        : "hover:text-[#f2b44c] transition"
+                        ? "text-[#FDBD5B]"
+                        : "hover:text-[#FDBD5B] transition"
                     }`
                   }
                 >
@@ -118,14 +117,15 @@ export default function NavbarContent() {
           <div className="h-10 w-[1px] bg-gray-600"></div>
 
           <div className="flex items-center gap-3">
-            <div className="bg-[#F4A62A] p-2 rounded-full text-black">
+            <div className="bg-[#FDBD5B] p-2 rounded-full text-black">
               <FaPhoneAlt size={14} />
             </div>
 
             <div>
               <p className="text-xs text-gray-300">For Franchise</p>
-              <p className="font-semibold text-[#F4A62A]">
-                +91 78629 31074
+              <p className="font-semibold text-[#FDBD5B]">
+                +91 88663 73077
+
               </p>
             </div>
           </div>

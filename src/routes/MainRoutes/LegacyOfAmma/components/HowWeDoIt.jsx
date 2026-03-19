@@ -57,7 +57,7 @@ const cards = [
             >
 
               {/* Icon */}
-              <div className="w-10 h-10 rounded-md bg-[#f3b24c] flex items-center justify-center mb-4">
+              <div className="w-10 h-10 rounded-md bg-[#FDBD5B] flex items-center justify-center mb-4">
                 <img
                   src={item.icon}
                   alt="icon"

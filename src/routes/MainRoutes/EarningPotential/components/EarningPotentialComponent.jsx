@@ -481,7 +481,7 @@ export default function EarningPotentialComponent(props) {
                                 )}
 
                             {franchiseType !== "internet" ? (
-                                <h1 className="text-center text-2xl font-bricolageBold mb-5 text-green-500 pt-12">
+                                <h1 className="text-center text-2xl font-bricolageBold mb-5 text-#60D186 pt-12">
                                     The net profit from the{" "}
                                     {operationCost[franchiseType]?.title} operation alone
                                     is: ₹{netProfit}
@@ -516,13 +516,13 @@ export default function EarningPotentialComponent(props) {
         <h4 className={`py-4 px-2 pl-2 lg:px-4
             ${i === 15 || i === 16 ? 'bg-red-500 text-white' : ''} 
             ${i < 3 ? 'text-red-500 py-2' : 'text-white'}  
-            ${isRoyaltyText ? 'text-green-500' : ''} 
+            ${isRoyaltyText ? 'text-#60D186' : ''} 
             ${i === 15 || i === 16 ? 'py-2' : ''}`}
         >
             {isRoyaltyText ? (
                 <>
                     <span className="pt-4">10% Royalty from </span>
-                    <span className="text-green-500">{royaltyPart}</span>
+                    <span className="text-#60D186">{royaltyPart}</span>
                     <span> on Actual Sales </span>
                 </>
             ) : (
@@ -582,7 +582,7 @@ export default function EarningPotentialComponent(props) {
                     />
                 </div>
                 {franchiseType !== "internet" && franchiseType !== "trolley" ? (
-                    <h1 className="text-center text-3xl font-bricolageBold pb-5 text-green-500">
+                    <h1 className="text-center text-3xl font-bricolageBold pb-5 text-#60D186">
                         The net profit from the {" "}
                         {operationCost[franchiseType]?.title1} operation alone
                         is: ₹{netProfit1}
@@ -591,7 +591,7 @@ export default function EarningPotentialComponent(props) {
 
 
                 {/* {franchiseType !== "internet" && "trolley" ? (
-                    <h1 className="text-center text-3xl font-semibold underline mb-5 text-green-500">
+                    <h1 className="text-center text-3xl font-semibold underline mb-5 text-#60D186">
                         The Net Profit from the Extra Potential Earning of QSR operation
                         is: ₹{netProfit1}
                     </h1>

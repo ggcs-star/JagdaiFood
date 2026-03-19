@@ -5,6 +5,8 @@ import EcosystemBenefitsCard from './components/EcosystemBenefitsCard'
 import ModelFitSection from './components/ModelFitSection'
 import ExploreFranchiseSection from '../FranchiseModels/components/ExploreFranchiseSection'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import ComparisonTable from './components/ComparisonTable'
+import FranchiseCTA from './components/FranchiseCTA'
 
 const ModelComparison = () => {
   return (
@@ -15,11 +17,13 @@ const ModelComparison = () => {
         }}
       />
       <InvestmentOverview />
-      <CapitalProtectionFramework />
+      <ComparisonTable/>
+      <FranchiseCTA/>
+      {/* <CapitalProtectionFramework />
       <EcosystemBenefitsCard />
       <ModelFitSection />
 
-      <ExploreFranchiseSection />
+      <ExploreFranchiseSection /> */}
     </div>
   )
 }

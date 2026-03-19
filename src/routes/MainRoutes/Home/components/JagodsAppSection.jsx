@@ -39,7 +39,7 @@ export default function JagodsAppSection() {
                 {features.map((item, index) => (
                   <li key={index} className="flex items-center gap-3">
 
-                    <div className="w-7 h-7 rounded-full bg-green-400 flex items-center justify-center">
+                    <div className="w-7 h-7 rounded-full bg-[#60D186] flex items-center justify-center">
                       <Check size={16} className="text-black" />
                     </div>
 

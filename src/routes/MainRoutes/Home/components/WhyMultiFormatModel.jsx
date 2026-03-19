@@ -54,7 +54,7 @@ export default function WhyMultiFormatModel() {
                 <li key={index} className="flex items-start gap-4">
 
                   {/* Icon */}
-                  <div className="min-w-[30px] h-[30px] rounded-full bg-[#f3b24c] flex items-center justify-center">
+                  <div className="min-w-[30px] h-[30px] rounded-full bg-[#FDBD5B] flex items-center justify-center">
                     <Check size={16} className="text-black" />
                   </div>
 
