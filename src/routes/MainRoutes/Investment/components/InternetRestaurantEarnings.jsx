@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { ApplyButton } from "../../../../components/Button";
 
 export default function InternetRestaurantEarnings() {
     return (
@@ -136,6 +137,19 @@ export default function InternetRestaurantEarnings() {
 
                     </div>
                 </div>
+<div className="my-8 mx-auto flex justify-center">
+  <ApplyButton
+    onClick={() =>
+      navigate("/roi-calculator", {
+        state: {
+          franchiseType: details?.franchiseType,
+        },
+      })
+    }
+  >
+    Calculate Your Monthly Earning Potential
+  </ApplyButton>
+</div>
             </div>
         </section>
     );

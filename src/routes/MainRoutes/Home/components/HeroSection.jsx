@@ -26,8 +26,8 @@ export default function FranchiseHero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 py-8 lg:py-10">
-        <div className="px-3 lg:pl-28 lg:pr-40 max-w-[950px]">
+      <div className="max-w-7xl mx-auto relative z-10 py-8 lg:py-10">
+        <div className="max-w-[650px]">
 
           <p className="text-3xl md:text-5xl font-bricolageBold text-[#FDBD5B] mb-4">
             Built on Amma’s Legacy
@@ -40,7 +40,7 @@ export default function FranchiseHero() {
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Jagdai Foods is a {" "}
+            Jagdai Foods is a{" "}
             <span className="italic font-semibold">
               24+ brand, technology-driven food franchise ecosystem
             </span>{" "}

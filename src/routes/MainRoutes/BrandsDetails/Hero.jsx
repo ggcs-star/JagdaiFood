@@ -3,6 +3,7 @@ import { P } from "../../../components/Typography";
 import { Container } from "../../../components/Layout";
 import BrandMenu from "./BrandMenu";
 import Breadcrumbs from "../../../components/Breadcrumbs";
+import { useNavigate } from "react-router-dom";
 
 const features = [
   "Highly Trained Staff with 5-star Master Chef",
@@ -19,6 +20,9 @@ const franchiseBenefits = [
 ];
 
 function Hero({ item }) {
+
+    const navigate = useNavigate(); // ✅ ADD THIS
+
   return (
     <div className="pb-14">
 
@@ -177,8 +181,8 @@ function Hero({ item }) {
     </div>
 
     <button
-      onClick={() => navigate("/white-label")}
-      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+      // onClick={() => navigate("/white-label")}
+      className="z-50 cursor-pointer mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
     >
       Know More <span>›</span>
     </button>
@@ -197,7 +201,7 @@ function Hero({ item }) {
 
     <button
       onClick={() => navigate("/fofo-model")}
-      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+      className="z-50 cursor-pointer mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
     >
       Know More <span>›</span>
     </button>
@@ -216,7 +220,7 @@ function Hero({ item }) {
 
     <button
       onClick={() => navigate("/foco-model")}
-      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+      className="z-50 cursor-pointer mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
     >
       Know More <span>›</span>
     </button>

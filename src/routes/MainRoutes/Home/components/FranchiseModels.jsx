@@ -148,7 +148,7 @@ export default function FranchiseModels() {
               <Link
                 to="/franchise-formats/food-trolley-franchise"
                 className="z-50 relative inline-block mt-5 px-5 py-2 rounded-md text-sm font-semibold text-[#FDBD5B] border border-[#FDBD5B] hover:bg-[#FDBD5B] hover:text-black overflow-hidden"
-              
+
               >
                 <span className="relative z-10">Explore Trolley Model</span>
 
@@ -156,7 +156,7 @@ export default function FranchiseModels() {
 
             </div>
 
-            <div className="mt-4 h-96 relative flex items-end justify-center">
+            <div className=" h-96 pb-8 relative flex items-end justify-center">
 
               <img
                 src={trolleyImage}
@@ -165,33 +165,36 @@ export default function FranchiseModels() {
               />
 
               {/* ✅ OVERLAY STRIP BUTTON */}
-           <Link
-  to="/trolly"
-  className="absolute bottom-4 w-[85%] max-w-md h-12 rounded-xl  overflow-hidden flex items-center justify-center backdrop-blur-md shadow-[0_0_25px_rgba(253,189,91,0.25)]"
->
+              <Link
+                to="/trolly"
+                className="mt-4 absolute bottom-4 w-[94%] h-12 flex items-center justify-center "
+              >
 
-  {/* ✅ FULL BACKGROUND IMAGE */}
-  <div
-    className="absolute inset-0"
-    style={{
-      backgroundImage: `url(${trolleyBg})`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  />
+                  <div className="absolute inset-0 rounded-xl bg-[#FDBD5B] opacity-40 blur-xl" />
 
-  {/* ✅ dark overlay for readability */}
 
-  {/* ✅ content */}
-  <div className="relative z-10 flex items-center gap-3 text-sm font-semibold">
-    <span className="text-[#FDBD5B]">Trolley on Rent</span>
-    <span className="text-gray-400">|</span>
-    <span className="text-white hover:text-[#FDBD5B] transition">
-      Know More
-    </span>
-  </div>
+                {/* ✅ FULL BACKGROUND IMAGE */}
+                <div
+                  className="bg-black absolute inset-0"
+                  style={{
+                    backgroundImage: `url(${trolleyBg})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
+                />
 
-</Link>
+                {/* ✅ dark overlay for readability */}
+
+                {/* ✅ content */}
+                <div className="relative z-10 flex items-center gap-3 text-lg font-bricolageBold">
+                  <span className="text-[#FDBD5B]">Trolley on Rent</span>
+                  <span className="text-gray-400">|</span>
+                  <span className="text-white hover:text-[#FDBD5B] transition">
+                    Know More
+                  </span>
+                </div>
+
+              </Link>
 
             </div>
           </div>
