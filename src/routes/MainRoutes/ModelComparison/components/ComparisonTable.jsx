@@ -37,7 +37,7 @@ const tableData = [
   {
     aspect: "Franchise earning",
     fofo: [
-      "Full sales revenue belongs to franchise",
+      "Full Sales revenue (billing) is with the franchise and only 6% royalty has to be given to Jagdai foods on total sales revenue from day one",
       "Only 6% royalty to Jagdai Foods",
       "10% royalty from trolley sales",
       "10% royalty from internet kitchens",
@@ -54,7 +54,7 @@ const tableData = [
   },
   {
     aspect: "Margin on food",
-    fofo: "55% margin on selling price",
+    fofo: "50% margin on selling price",
     foco: "As above",
   },
   {

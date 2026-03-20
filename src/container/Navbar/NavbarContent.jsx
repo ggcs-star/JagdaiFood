@@ -8,10 +8,13 @@ export default function NavbarContent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  // ✅ Helper to detect external links
+  const isExternal = (url) => url?.startsWith("http");
+
   const navLinks = [
     {
       name: "About Us",
-      link: "/about", // ✅ added
+      link: "/about",
       dropdown: [
         { name: "Vision & Mission", link: "/about" },
         { name: "Who We Are", link: "/who-we-are" },
@@ -20,7 +23,7 @@ export default function NavbarContent() {
     },
     {
       name: "Franchise Formats",
-      link: "/franchise-formats", // ✅ added
+      link: "/franchise-formats",
       dropdown: [
         { name: "QSR Franchise", link: "/franchise-formats/qsr-restaurant-franchise" },
         { name: "Cloud Kitchen", link: "/franchise-formats/internet-restaurants-franchise" },
@@ -30,16 +33,6 @@ export default function NavbarContent() {
         { name: "Influencer Franchise", link: "/franchise-formats/influencer-franchise" }
       ]
     },
-    {
-      name: "Franchise Models",
-      link: "/franchise-models", // ✅ added (choose main page)
-      dropdown: [
-        { name: "FOFO Model", link: "/fofo-model" },
-        { name: "FOCO Model", link: "/foco-model" },
-        { name: "Model Comparison", link: "/model-comparison" },
-      ],
-    },
-    
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
     {
@@ -51,10 +44,11 @@ export default function NavbarContent() {
         { name: "Contact", link: "/contact" },
       ],
     },
+    { name: "Jagdai Caterers", link: "https://catering.jagdaifoods.com/" },
   ];
 
   return (
-<header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
+    <header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
       <div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between">
 
         {/* Logo */}
@@ -69,21 +63,31 @@ export default function NavbarContent() {
 
               {/* Parent Menu */}
               {item.link ? (
-                <NavLink
-                  to={item.link}
-                  className={({ isActive }) =>
-                    `flex items-center gap-1 ${
-                      isActive
-                        ? "text-[#FDBD5B]"
-                        : "hover:text-[#FDBD5B] transition"
-                    }`
-                  }
-                >
-                  {item.name}
-                  {item.dropdown && (
-                    <FaChevronDown className="text-[10px]" />
-                  )}
-                </NavLink>
+                isExternal(item.link) ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 hover:text-[#FDBD5B] transition"
+                  >
+                    {item.name}
+                    {item.dropdown && <FaChevronDown className="text-[10px]" />}
+                  </a>
+                ) : (
+                  <NavLink
+                    to={item.link}
+                    className={({ isActive }) =>
+                      `flex items-center gap-1 ${
+                        isActive
+                          ? "text-[#FDBD5B]"
+                          : "hover:text-[#FDBD5B] transition"
+                      }`
+                    }
+                  >
+                    {item.name}
+                    {item.dropdown && <FaChevronDown className="text-[10px]" />}
+                  </NavLink>
+                )
               ) : (
                 <button className="flex items-center gap-1 cursor-default">
                   {item.name}
@@ -123,10 +127,11 @@ export default function NavbarContent() {
 
             <div>
               <p className="text-xs text-gray-300">For Franchise</p>
-              <p className="font-semibold text-[#FDBD5B]">
-                +91 88663 73077
-
-              </p>
+              <a href="tel:+918866373077">
+                <p className="font-semibold text-[#FDBD5B] cursor-pointer">
+                  +91 88663 73077
+                </p>
+              </a>
             </div>
           </div>
         </div>
@@ -167,12 +172,23 @@ export default function NavbarContent() {
                   <div className="flex items-center justify-between">
 
                     {item.link ? (
-                      <NavLink
-                        to={item.link}
-                        onClick={() => setMenuOpen(false)}
-                      >
-                        {item.name}
-                      </NavLink>
+                      isExternal(item.link) ? (
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item.name}
+                        </a>
+                      ) : (
+                        <NavLink
+                          to={item.link}
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item.name}
+                        </NavLink>
+                      )
                     ) : (
                       <span>{item.name}</span>
                     )}

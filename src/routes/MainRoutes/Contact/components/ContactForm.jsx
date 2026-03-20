@@ -26,7 +26,7 @@ export default function ContactForm() {
         </h2>
       </div>
       
-      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-[40px]">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-[40px]">
        
         <div className="w-full lg:w-[360px] flex flex-col gap-[24px] items-center lg:items-start">
          
@@ -36,15 +36,17 @@ export default function ContactForm() {
                 <FaPhoneAlt className="text-black text-[16px]" />
               </div>
 
-              <div className="ml-[16px]">
-                <p className="text-[#AFAFAF] text-[14px] font-inter mb-[6px]">
-                  For Franchise
-                </p>
+             <div className="ml-[16px]">
+  <p className="text-[#AFAFAF] text-[14px] font-inter mb-[6px]">
+    For Franchise
+  </p>
 
-                <p className="text-[#FDBD5B] text-[20px] font-bricolageSemiBold">
-                  +91 88663 73077
-                </p>
-              </div>
+  <a href="tel:+918866373077">
+    <p className="text-[#FDBD5B] text-[20px] font-bricolageSemiBold cursor-pointer">
+      +91 88663 73077
+    </p>
+  </a>
+</div>
             </div>
           </div>
 

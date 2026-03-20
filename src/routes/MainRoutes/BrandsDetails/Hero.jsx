@@ -1,7 +1,8 @@
 import React from "react";
-import { H3, P } from "../../../components/Typography";
+import { P } from "../../../components/Typography";
 import { Container } from "../../../components/Layout";
 import BrandMenu from "./BrandMenu";
+import Breadcrumbs from "../../../components/Breadcrumbs";
 
 const features = [
   "Highly Trained Staff with 5-star Master Chef",
@@ -20,11 +21,13 @@ const franchiseBenefits = [
 function Hero({ item }) {
   return (
     <div className="pb-14">
+
       <div className="w-full">
 
         {/* Banner */}
         <div className="relative h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px] w-full">
 
+          {/* Background Image */}
           <img
             src={item?.backgroundImg}
             alt="banner"
@@ -40,16 +43,25 @@ function Hero({ item }) {
             }}
           />
 
+          {/* ✅ Breadcrumbs FIXED */}
+          {/* <div className="absolute top-20 left-4 z-50">
+  <Breadcrumbs
+    titleMap={{
+      "/franchise-models": "Franchise Models",
+    }}
+    className="bg-transparent p-0"
+  />
+</div> */}
+
           {/* Circle Logo */}
           <div className="absolute -bottom-16 sm:-bottom-20 md:-bottom-24 lg:-bottom-28 left-1/2 transform -translate-x-1/2">
-
             <img
               src={item?.image}
               alt="brand logo"
               className="w-[140px] sm:w-[180px] md:w-[220px] lg:w-[260px] xl:w-[300px] object-contain"
             />
-
           </div>
+
         </div>
 
         {/* Content */}
@@ -102,19 +114,14 @@ function Hero({ item }) {
               <ul className="space-y-4 md:space-y-5">
 
                 {features.map((feature, index) => (
-
                   <li key={index} className="flex items-start gap-3 md:gap-4">
-
                     <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#FDBD5B] text-black text-sm font-bold">
                       ✓
                     </span>
-
                     <span className="text-gray-300 text-sm md:text-base leading-relaxed">
                       {feature}
                     </span>
-
                   </li>
-
                 ))}
 
               </ul>
@@ -131,19 +138,14 @@ function Hero({ item }) {
               <ul className="space-y-4 md:space-y-5">
 
                 {franchiseBenefits.map((benefit, index) => (
-
                   <li key={index} className="flex items-start gap-3 md:gap-4">
-
                     <span className="w-6 h-6 md:w-7 md:h-7 flex items-center justify-center rounded-full bg-[#FDBD5B] text-black text-sm font-bold">
                       ✓
                     </span>
-
                     <span className="text-gray-300 text-sm md:text-base leading-relaxed">
                       {benefit}
                     </span>
-
                   </li>
-
                 ))}
 
               </ul>
@@ -163,34 +165,64 @@ function Hero({ item }) {
 
           <Container className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mx-auto">
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                White Label
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Operate under your brand name with full support.
-              </p>
-            </div>
+  {/* White Label */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        White Label
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Operate under your brand name with full support.
+      </p>
+    </div>
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                FOFO
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Franchise Owned, Franchise Operated model for independence.
-              </p>
-            </div>
+    <button
+      onClick={() => navigate("/white-label")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                FOCO
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Franchise Owned, Company Operated model for ease.
-              </p>
-            </div>
+  {/* FOFO */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        FOFO
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Franchise Owned, Franchise Operated model for independence.
+      </p>
+    </div>
 
-          </Container>
+    <button
+      onClick={() => navigate("/fofo-model")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+  {/* FOCO */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        FOCO
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Franchise Owned, Company Operated model for ease.
+      </p>
+    </div>
+
+    <button
+      onClick={() => navigate("/foco-model")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+</Container>
 
         </section>
 

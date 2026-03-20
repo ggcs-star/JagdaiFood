@@ -70,9 +70,7 @@ export default function StructuredFranchiseModels() {
           bg-[#3A3A3A]
           rounded-[16px]
 
-          px-[20px]
-          sm:px-[22px]
-          md:px-[24px]
+       
 
           py-[18px]
           md:py-[20px]
@@ -132,9 +130,7 @@ export default function StructuredFranchiseModels() {
           bg-[#3A3A3A]
           rounded-[16px]
 
-          px-[20px]
-          sm:px-[22px]
-          md:px-[24px]
+        
 
           py-[18px]
           md:py-[20px]

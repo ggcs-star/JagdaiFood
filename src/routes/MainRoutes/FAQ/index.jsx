@@ -9,6 +9,7 @@ export default function FAQ() {
         titleMap={{
           "/faq": "FAQs",
         }}
+         className='pt-28 bg-black text-white'
       />  
           <FAQAccordion />
     </div>

@@ -23,7 +23,7 @@ const AboutUs = () => {
 
       <div
         className="
-        max-w-[1200px]
+        max-w-7xl
         mx-auto
         grid
         grid-cols-1
@@ -41,7 +41,7 @@ const AboutUs = () => {
 
       <div
         className="
-        max-w-[1200px]
+        max-w-7xl
         mx-auto
         grid
         grid-cols-1
@@ -56,7 +56,7 @@ const AboutUs = () => {
         <StructuredFranchiseModels />
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-[20px] lg:px-0">
+      <div className="max-w-7xl mx-auto px-[20px] lg:px-0">
         <FranchiseFormats />
       </div>
 

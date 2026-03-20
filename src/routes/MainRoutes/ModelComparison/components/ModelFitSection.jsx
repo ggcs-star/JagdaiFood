@@ -3,7 +3,7 @@ import React from "react";
 export default function ModelFitSection() {
   return (
     <section className="w-full flex justify-center mt-[80px] px-[16px] md:px-[20px]">
-      <div className="w-full max-w-[1200px] flex flex-col items-center">
+      <div className="w-full max-w-7xl flex flex-col items-center">
 
        
         <button className="w-full max-w-[315px] h-[48px] bg-[#FDBD5B] rounded-[8px] text-[16px] font-inter font-semibold text-black">

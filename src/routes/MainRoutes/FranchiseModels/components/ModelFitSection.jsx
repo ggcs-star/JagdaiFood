@@ -4,7 +4,7 @@
 //   return (
 //     <section className="w-full flex justify-center mt-[80px] px-[16px]">
 
-//       <div className="w-full max-w-[1200px] flex flex-col items-center">
+//       <div className="w-full max-w-7xl flex flex-col items-center">
 
 //         {/* BUTTON */}
 //         <button className="w-[315px] h-[48px] bg-[#FDBD5B] rounded-[8px] text-[16px] font-semibold text-black">
@@ -57,7 +57,7 @@ import ExploreFranchiseSection from "./ExploreFranchiseSection";
 export default function ModelFitSection() {
   return (
     <section className="w-full flex justify-center mt-[60px] md:mt-[80px] px-[16px]">
-      <div className="w-full max-w-[1200px] flex flex-col items-center mb-[60px] md:mb-[100px]">
+      <div className="w-full max-w-7xl flex flex-col items-center mb-[60px] md:mb-[100px]">
         {/* BUTTON */}
         <button className="w-full sm:w-[315px] h-[48px] bg-[#FDBD5B] rounded-[8px] text-[14px] md:text-[16px] font-semibold text-black">
           View FOCO/ FOCO Difference Chart
