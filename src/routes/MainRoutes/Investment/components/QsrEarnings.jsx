@@ -13,7 +13,7 @@ export default function QsrEarnings() {
       <div className="max-w-7xl mx-auto">
 
         {/* Title */}
-        <h2 className="text-center text-xl lg:text-2xl mb-8">
+        <h2 className="text-center text-xl font-bricolageBold lg:text-2xl mb-8">
           Monthly Earning Potential of{" "}
           <span className="text-[#60D186] font-bricolageBold">QSR</span>
         </h2>
