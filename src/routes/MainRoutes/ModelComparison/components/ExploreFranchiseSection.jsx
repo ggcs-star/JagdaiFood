@@ -12,7 +12,7 @@ export default function ExploreFranchiseSection() {
     <section className="w-full bg-black flex justify-center mt-[40px] pb-[120px] px-[16px] md:px-[20px]">
 
       <div
-        className="w-full max-w-[1200px] min-h-[475px] rounded-[24px] flex flex-col items-center text-center pt-[60px] md:pt-[90px] pb-[40px] px-[20px] md:px-[20px]"
+        className="w-full max-w-7xl min-h-[475px] rounded-[24px] flex flex-col items-center text-center pt-[60px] md:pt-[90px] pb-[40px] px-[20px] md:px-[20px]"
         style={{
           background: "linear-gradient(96deg,#60D186 0%,#FDBD5B 100%)",
         }}

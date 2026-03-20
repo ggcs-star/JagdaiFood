@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function FranchiseHero() {
   const navigate = useNavigate();
+
   return (
-    <section className="relative w-screen min-h-[85vh] text-white overflow-hidden pt-18 lg:pt-32">
+    <section className="relative w-screen top-8 min-h-[100vh] text-white overflow-hidden pt-16 lg:pt-24">
 
       {/* Gradient Background (always visible) */}
       <div
@@ -34,15 +35,16 @@ export default function FranchiseHero() {
 
           <h1 className="text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
             Engineered for Scalable
-            {/* <br className="hidden lg:block" />
-            {' '}   */}
-            <br className="hidden lg:block" />
-            {' '} Food Entrepreneurship
+            <br className="hidden lg:block" />{" "}
+            Food Entrepreneurship
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-           Jagdai Foods is a {' '}
-           <span className="italic font-semibold">24+ brand, technology-driven food franchise ecosystem </span>inspired by Amma’s love for authentic taste.
+            Jagdai Foods is a{" "}
+            <span className="italic font-semibold">
+              24+ brand, technology-driven food franchise ecosystem
+            </span>{" "}
+            inspired by Amma’s love for authentic taste.
           </p>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
@@ -61,8 +63,9 @@ export default function FranchiseHero() {
             </button>
 
             <button
-            onClick={()=> navigate("/contact")}
-             className="text-sm lg:text-lg border border-white/40 px-2 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition">
+              onClick={() => navigate("/contact")}
+              className="text-sm lg:text-lg border border-white/40 px-2 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition"
+            >
               Schedule Consultation
             </button>
           </div>

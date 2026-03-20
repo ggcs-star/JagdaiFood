@@ -50,6 +50,7 @@ export default function FranchiseModels() {
                     titleMap={{
                       "/franchise-models": "Franchise Models",
                     }}
+                    className="pt-28 bg-black text-white"
                   />  
       <HeroFranchiseModel />
       <FofoModelSection />

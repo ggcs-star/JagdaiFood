@@ -44,35 +44,20 @@ export default function BrandMenu({ item }) {
 
   const categories = [...new Set(menuItems.map((i) => i.category))];
 
-  const handleMenuDownload = async () => {
+   const handleMenuDownload = () => {
     if (!menuImage) {
       alert("Menu not available");
       return;
     }
 
-    try {
-      const response = await fetch(menuImage, {
-        mode: "cors", 
-      });
+    const link = document.createElement("a");
+    link.href = menuImage;
+    link.download = `${item?.name || "menu"}.pdf`;
+    link.target = "_blank"; // optional
 
-      const blob = await response.blob();
-
-      const blobUrl = window.URL.createObjectURL(blob);
-
-      const link = document.createElement("a");
-      window.open(menuImage, "_blank");
-      link.href = blobUrl;
-      link.download = "menu.png"; 
-      document.body.appendChild(link);
-      link.click();
-
-      document.body.removeChild(link);
-      window.URL.revokeObjectURL(blobUrl);
-    } catch (error) {
-      console.error("Download failed:", error);
-
-    
-    }
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   const filtered =

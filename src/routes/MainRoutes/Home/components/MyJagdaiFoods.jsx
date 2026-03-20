@@ -65,7 +65,7 @@ export default function CapitalGuarantee() {
                                 {features.map((item, index) => (
                                     <div
                                         key={index}
-                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl px-2 py-2 shadow-sm"
+                                        className="flex items-center gap-4 bg-[#F7E3A5] rounded-xl mr-20 px-2 py-2 shadow-sm"
                                     >
 
                                         {/* Icon */}

@@ -10,7 +10,7 @@ export default function CapitalProtectionFramework() {
   ];
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto mt-[60px] md:mt-[40px] px-[16px] md:px-0">
+    <section className="w-full max-w-7xl mx-auto mt-[60px] md:mt-[40px] px-[16px] md:px-0">
       <div className="relative rounded-[32px] overflow-hidden bg-gradient-to-r from-[#63C07A] via-[#A9C27B] to-[#F2B44F] ">
 
 <div className="grid grid-cols-1 md:grid-cols-[40%_60%] gap-[20px] md:gap-[80px] items-stretch">

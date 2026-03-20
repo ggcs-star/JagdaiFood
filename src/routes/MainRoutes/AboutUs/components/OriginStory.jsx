@@ -7,7 +7,7 @@ export default function OriginStory() {
     <section className="w-full bg-black flex justify-center mt-[20px] px-[20px]">
       <div
         className="
-        relative w-full max-w-[1200px] rounded-[24px] overflow-hidden
+        relative w-full max-w-7xl rounded-[24px] overflow-hidden
         bg-gradient-to-r from-[#2a2a2a] via-[#2a2a2a] to-[#1f1f1f]
 
         px-[24px] py-[32px]

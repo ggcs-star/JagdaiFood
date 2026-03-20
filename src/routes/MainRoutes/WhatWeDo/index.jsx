@@ -8,11 +8,12 @@ import Breadcrumbs from '../../../components/Breadcrumbs'
 
 const WhatWeDo = () => {
   return (
-    <div>
+    <div className=''>
  <Breadcrumbs
               titleMap={{
                 "/what-we-do": "What We Do",
               }}
+              className='pt-28 bg-black text-white'
             />    
                 <WhatWeDoHero />
       <WhyWeExist />

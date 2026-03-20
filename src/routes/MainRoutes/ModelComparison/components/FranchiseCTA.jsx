@@ -9,7 +9,7 @@ export default function FranchiseCTA() {
       <div
         className="
         w-full
-        max-w-[1200px]
+        max-w-7xl
 
         min-h-[399px]
         lg:h-[399px]
