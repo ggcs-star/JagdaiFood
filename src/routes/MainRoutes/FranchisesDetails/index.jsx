@@ -412,33 +412,65 @@ function FranchisesDetails() {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">
-                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                      White Label
-                    </H3>
-                    <p className="text-gray-400">
-                      Operate under your brand name with full support.
-                    </p>
-                  </div>
 
-                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                      FOFO
-                    </H3>
-                    <p className="text-gray-400">
-                      Franchise Owned, Franchise Operated model.
-                    </p>
-                  </div>
+  {/* White Label */}
+  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+    <div>
+      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+        White Label
+      </H3>
+      <p className="text-gray-400">
+        Operate under your brand name with full support.
+      </p>
+    </div>
 
-                  <div className="bg-[#2a2a2a] rounded-3xl p-8">
-                    <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                      FOCO
-                    </H3>
-                    <p className="text-gray-400">
-                      Franchise Owned, Company Operated model.
-                    </p>
-                  </div>
-                </div>
+    <button
+      // onClick={() => navigate("/white-label")}
+      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+  {/* FOFO */}
+  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+    <div>
+      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+        FOFO
+      </H3>
+      <p className="text-gray-400">
+        Franchise Owned, Franchise Operated model.
+      </p>
+    </div>
+
+    <button
+      onClick={() => navigate("/fofo-model")}
+      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+  {/* FOCO */}
+  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+    <div>
+      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+        FOCO
+      </H3>
+      <p className="text-gray-400">
+        Franchise Owned, Company Operated model.
+      </p>
+    </div>
+
+    <button
+      onClick={() => navigate("/foco-model")}
+      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+</div>
               </>
             ) : (
               <div className="max-w-md mx-auto">

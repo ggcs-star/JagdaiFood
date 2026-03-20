@@ -4,7 +4,7 @@ import whyExistImg from "../../../../assets/whatwedo/why-exist.png";
 export default function WhyWeExist() {
   return (
     <section className="bg-black text-white py-8 px-3 lg:px-6">
-      <div className="max-w-[1200px] mx-auto grid lg:grid-cols-2 gap-14 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
 
         {/* Left Image Card */}
         <div className="w-full rounded-[28px]">

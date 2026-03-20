@@ -106,10 +106,10 @@ const quickLinks = [
     <p className="text-xs text-gray-400 uppercase">Phone</p>
 
     <a
-      href="tel:+916352305842"
-      className="text-white hover:underline"
+      href="tel:+918866373077"
+      className="text-white"
     >
-      +91 6352305842
+      +91 8866373077
     </a>
   </div>
 </div>

@@ -16,7 +16,7 @@ export default function EcosystemBenefitsCard() {
   ];
 
   return (
-    <section className="w-full max-w-[1200px] mx-auto mt-[40px] px-[16px] md:px-0">
+    <section className="w-full max-w-7xl mx-auto mt-[40px] px-[16px] md:px-0">
 
       <div className="w-full min-h-[434px] rounded-[24px] bg-[#262626] pt-[40px] md:pt-[50px] px-[24px] sm:px-[40px] md:px-[96px]">
 

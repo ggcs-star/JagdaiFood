@@ -5,6 +5,7 @@ import FranchiseModels from './components/FranchiseModels'
 import AdditionalFranchises from './components/AdditionalFranchises'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import QsrEarnings from './components/QsrEarnings'
 
 const Investment = () => {
   return (
@@ -16,6 +17,7 @@ const Investment = () => {
                     className='pt-28 bg-black text-white'
                   />   
         <InvestmentROI/>
+        <QsrEarnings/>
         <FranchiseInvestment/>
         <FranchiseModels/>
         <AdditionalFranchises/>

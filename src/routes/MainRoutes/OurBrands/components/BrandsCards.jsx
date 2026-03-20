@@ -6,54 +6,65 @@ import { getPopularRestaurants } from "../../../../api/restaurantApi";
 const SampleCard = ({ item, handler }) => {
   return (
     <div>
-      <div className="group relative flex flex-col justify-between bg-[#262626] rounded-[20px] w-full h-[460px] text-gray-300 overflow-hidden transition-all duration-500 ">
+      <div className="group relative flex flex-col justify-between bg-[#262626] rounded-[20px] w-full h-[460px] text-gray-300 overflow-hidden transition-all duration-500">
+
         {/* Glow Background */}
         <div
           className="absolute bottom-0 h-40 w-full rounded-t-full blur-2xl"
           style={{ background: bgColors[item?.id - 1] }}
         />
 
-        {/* TOP CONTENT */}
-        <div className="pt-6 z-10 text-center px-6">
-          <h5 className="font-bricolageBold text-2xl font-bold text-white">
-            {item?.label}
-          </h5>
+        {/* CONTENT */}
+        <div className="flex flex-col justify-between h-full z-10">
 
-          {/* ✅ FIXED DESCRIPTION */}
-          <p className="pt-3 h-[80px] overflow-hidden">
-            {item?.desc?.substring(0, 100)}...
-          </p>
+          {/* TOP */}
+          <div className="pt-6 text-center px-6">
+            <h5 className="font-bricolageBold text-2xl text-white">
+              {item?.label}
+            </h5>
 
-          {/* ✅ PERFECT BUTTON POSITION */}
-          <div className="mt-10 flex justify-center">
-            <button
-              onClick={handler}
-              className="
-    text-xs py-3 px-6 rounded-lg
-    border-2 border-white
-    font-bold uppercase
-    bg-transparent text-white
-    group-hover:bg-[#f2b44c]
-    group-hover:border-[#f2b44c]
-    group-hover:text-black
-    active:bg-[#f2b44c]
-    active:border-[#f2b44c]
-    active:text-black
-    transition-all duration-200
-  "
-            >
-              View Menu
-            </button>
+            <p className="pt-3 h-[80px] overflow-hidden">
+              {item?.desc?.substring(0, 100)}...
+            </p>
+
+            <div className="mt-8 flex justify-center">
+              <button
+                onClick={handler}
+                className="
+                  text-xs py-3 px-6 rounded-lg
+                  border-2 border-white
+                  font-bold uppercase
+                  bg-transparent text-white
+                  group-hover:bg-[#f2b44c]
+                  group-hover:border-[#f2b44c]
+                  group-hover:text-black
+                  transition-all duration-200
+                "
+              >
+                View Menu
+              </button>
+            </div>
           </div>
-        </div>
 
-        {/* LOGO BOTTOM */}
-        <div className="flex items-center justify-center px-6 pb-6 z-10">
-          <img
-            src={item?.logo}
-            alt={item?.label}
-            className="max-h-[150px] object-contain"
-          />
+          {/* BOTTOM */}
+          <div className="flex flex-col items-center justify-center px-6 pb-6">
+
+            {/* LOGO */}
+            <img
+              src={item?.logo}
+              alt={item?.label}
+              className="max-h-[120px] object-contain mb-3"
+            />
+
+            {/* ✅ SINGLE NOTE (VISIBLE ALWAYS) */}
+            {item?.note && (
+              <p className="text-sm text-white text-center font-medium leading-snug">
+                {item.note}
+              </p>
+            )}
+
+          </div>
+
         </div>
       </div>
     </div>
@@ -83,6 +94,7 @@ const BrandsCards = () => {
         desc: item.description,
         logo: item.logo, // ⭐ using API logo
         slug: item.name.toLowerCase().replace(/\s+/g, "-"),
+        note: item.note
       }));
 
       setBrands(formatted);

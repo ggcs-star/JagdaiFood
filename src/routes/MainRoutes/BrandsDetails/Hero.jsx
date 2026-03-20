@@ -165,34 +165,64 @@ function Hero({ item }) {
 
           <Container className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mx-auto">
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                White Label
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Operate under your brand name with full support.
-              </p>
-            </div>
+  {/* White Label */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        White Label
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Operate under your brand name with full support.
+      </p>
+    </div>
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                FOFO
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Franchise Owned, Franchise Operated model for independence.
-              </p>
-            </div>
+    <button
+      onClick={() => navigate("/white-label")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
 
-            <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg">
-              <h3 className="text-lg md:text-xl font-semibold mb-3">
-                FOCO
-              </h3>
-              <p className="text-gray-300 text-sm md:text-base">
-                Franchise Owned, Company Operated model for ease.
-              </p>
-            </div>
+  {/* FOFO */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        FOFO
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Franchise Owned, Franchise Operated model for independence.
+      </p>
+    </div>
 
-          </Container>
+    <button
+      onClick={() => navigate("/fofo-model")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+  {/* FOCO */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        FOCO
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Franchise Owned, Company Operated model for ease.
+      </p>
+    </div>
+
+    <button
+      onClick={() => navigate("/foco-model")}
+      className="mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
+</Container>
 
         </section>
 

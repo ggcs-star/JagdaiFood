@@ -9,6 +9,7 @@ const Contact = () => {
               titleMap={{
                 "/contact": "Contact Us",
               }}
+               className='pt-28 bg-black text-white'
             />  
         <ContactForm/>
     </div>

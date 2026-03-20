@@ -30,7 +30,7 @@ export default function FranchiseModels() {
       <Container>
 
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-8">
           <h2 className="font-bricolageBold text-3xl md:text-4xl leading-snug">
             Own a Structured Food Franchise
             <br />
@@ -97,7 +97,7 @@ export default function FranchiseModels() {
 
               <Link
                 to="/franchise-formats/qsr-restaurant-franchise"
-                className="inline-block mt-5 bg-white text-black px-5 py-2 rounded-md text-sm font-semibold"
+                className="inline-block mt-5 bg-transparent border-1 border-black text-black hover:bg-black hover:text-white px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Apply for QSR Franchise
               </Link>
@@ -152,7 +152,7 @@ export default function FranchiseModels() {
 
               <Link
                 to="/franchise-formats/food-trolley-franchise"
-                className="inline-block mt-5 bg-[#FDBD5B] text-black px-5 py-2 rounded-md text-sm font-semibold"
+                className="inline-block mt-5 bg-transparent border-1 border-[#FDBD5B] text-[#FDBD5B] hover:bg-[#FDBD5B] hover:text-black px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Explore Trolley Model
               </Link>

@@ -26,7 +26,7 @@ export default function ContactForm() {
         </h2>
       </div>
       
-      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-[40px]">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-[40px]">
        
         <div className="w-full lg:w-[360px] flex flex-col gap-[24px] items-center lg:items-start">
          
