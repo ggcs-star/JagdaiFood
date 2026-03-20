@@ -9,7 +9,7 @@ export default function FoundersSection() {
         <section className="px-3 lg:px-0 bg-black py-8 lg:py-20 relative overflow-hidden">
 
             {/* Title */}
-            <h2 className="text-center text-white text-3xl font-bricolageBold mb-16">
+            <h2 className="text-center text-white text-3xl md:text-4xl font-bricolageBold mb-8">
                 Founder's Of Jagdai Foods
             </h2>
 
@@ -19,7 +19,7 @@ export default function FoundersSection() {
                 <img
                     src={bg}
                     alt=""
-                    className="absolute top-4 left-0 w-full object-contain z-0"
+                    className="absolute top-20 left-0 w-full object-contain z-0"
                 />
 
                 {/* Founders Image */}
@@ -27,7 +27,7 @@ export default function FoundersSection() {
                     <img
                         src={founders}
                         alt="Founders"
-                        className="h-[380px] md:h-[420px] object-contain"
+                        className="h-[380px] md:h-[540px] object-contain"
                     />
                 </div>
 

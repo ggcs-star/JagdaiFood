@@ -40,7 +40,7 @@ export default function FranchiseHero() {
           </h1>
 
           <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Jagdai Foods is a{" "}
+            Jagdai Foods is a {" "}
             <span className="italic font-semibold">
               24+ brand, technology-driven food franchise ecosystem
             </span>{" "}

@@ -27,7 +27,6 @@ export default function WhyReturnsStructured() {
         {/* Main Grid */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
 
-          {/* Left Image */}
           <div className="flex justify-center">
             <img
               src={whyReturns}
@@ -36,7 +35,6 @@ export default function WhyReturnsStructured() {
             />
           </div>
 
-          {/* Right Points */}
           <div className="space-y-4">
 
             {points.map((item, index) => (
@@ -48,7 +46,7 @@ export default function WhyReturnsStructured() {
               </div>
             ))}
 
-            <p className="text-gray-400 text-sm mt-6">
+            <p className="text-gray-400 text-md mt-6">
               This is not conventional franchising. <br />
               It is a systemized food business architecture.
             </p>
