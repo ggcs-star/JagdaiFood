@@ -722,6 +722,12 @@ const SampleCard = ({ item, handler }) => {
         <div className="flex items-center justify-center pb-10 px-6 z-10">
           <img src={item?.image} className="max-h-[220px]" />
         </div>
+
+           {item?.note && (
+              <p className="text-sm pb-8 z-50 text-white text-center font-medium leading-snug">
+                {item.note}
+              </p>
+            )}
       </div>
     </div>
   );
@@ -745,6 +751,8 @@ export default function BrandsCarousel() {
         desc: item.description,
         image: item.logo,
         slug: item.name.toLowerCase().replace(/\s+/g, "-"),
+        note: item.note
+
       }));
 
       setBrands(formatted);
@@ -753,31 +761,31 @@ export default function BrandsCarousel() {
     }
   };
 
- const settings = {
-  infinite: false,
-  speed: 600,
-  slidesToShow: 3,
-  slidesToScroll: 1,
+  const settings = {
+    infinite: false,
+    speed: 600,
+    slidesToShow: 3,
+    slidesToScroll: 1,
 
-  arrows: true,
-  prevArrow: <PrevArrow />,
-  nextArrow: <NextArrow />,
+    arrows: true,
+    prevArrow: <PrevArrow />,
+    nextArrow: <NextArrow />,
 
-  centerMode: false,
-  variableWidth: false,
+    centerMode: false,
+    variableWidth: false,
 
-  /* ✅ IMPORTANT FOR MANUAL SLIDE */
-  draggable: true,        
-  swipe: true,           
-  swipeToSlide: true,     
-  touchMove: true,        
-  accessibility: true,    
+    /* ✅ IMPORTANT FOR MANUAL SLIDE */
+    draggable: true,
+    swipe: true,
+    swipeToSlide: true,
+    touchMove: true,
+    accessibility: true,
 
-  responsive: [
-    { breakpoint: 1024, settings: { slidesToShow: 2 } },
-    { breakpoint: 768, settings: { slidesToShow: 1 } },
-  ],
-};
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 768, settings: { slidesToShow: 1 } },
+    ],
+  };
 
   return (
     <div className="bg-black text-center">
