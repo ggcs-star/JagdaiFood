@@ -1,7 +1,7 @@
 import React from "react";
 import check from "../../../../assets/franchisemodels/check.svg";
 import girl from "../../../../assets/franchisemodels/whiteLabel2.png";
-import dotsRound from "../../../../assets/franchisemodels/round.png"; // ✅ added
+import dotsRound from "../../../../assets/franchisemodels/round.png"; 
 
 export default function WhiteLabelCard() {
   return (

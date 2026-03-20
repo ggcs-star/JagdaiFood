@@ -20,6 +20,7 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import Disclaimer from "./Disclaimer";
 import ModelComparison from "./ModelComparison";
 import FranchisesDetails from "./FranchisesDetails";
+import TrollyonRent from "./TrollyonRent";
 
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
@@ -53,6 +54,7 @@ export default function MainRoutes(props) {
         
         {path: "/privacy", element: <PrivacyPolicy {...props}/>},
         {path: "/disclaimer", element: <Disclaimer {...props}/>},
+        {path:"/trolly",element: <TrollyonRent {...props}/>},
 
         // { path: "/pharmretail", element: <Pharmretail {...props} /> },
         // { path: "/pharmconnect", element: <Pharmconnect {...props} /> },
