@@ -5,6 +5,7 @@ import { Container } from "../../../../components/Layout";
 
 import qsrImage from "../../../../assets/home/franchise/qsr.png";
 import trolleyImage from "../../../../assets/home/franchise/pizza.png";
+import trolleyBg from "../../../../assets/home/herosection/buttonimage.png"; // 👈 add your screenshot here
 
 export default function FranchiseModels() {
 
@@ -61,7 +62,7 @@ export default function FranchiseModels() {
         <div className="grid lg:grid-cols-[60%_40%] gap-8">
 
           {/* QSR Card */}
-          <div className=" bg-[#FDBD5B] rounded-2xl flex flex-col justify-between">
+          <div className="bg-[#FDBD5B] rounded-2xl flex flex-col justify-between">
 
             <div className="p-4 lg:p-8">
 
@@ -80,13 +81,10 @@ export default function FranchiseModels() {
               <ul className="space-y-3 text-sm text-black">
                 {qsrPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-
                     <span className="w-6 h-6 rounded-full bg-black flex items-center justify-center">
                       <Check size={14} className="text-white" />
                     </span>
-
                     {item}
-
                   </li>
                 ))}
               </ul>
@@ -97,7 +95,7 @@ export default function FranchiseModels() {
 
               <Link
                 to="/franchise-formats/qsr-restaurant-franchise"
-                className="inline-block mt-5 bg-transparent border-1 border-black text-black hover:bg-black hover:text-white px-5 py-2 rounded-md text-sm font-semibold"
+                className="inline-block mt-5 border border-black text-black hover:bg-black hover:text-white px-5 py-2 rounded-md text-sm font-semibold"
               >
                 Apply for QSR Franchise
               </Link>
@@ -114,7 +112,6 @@ export default function FranchiseModels() {
 
           </div>
 
-
           {/* Trolley Card */}
           <div className="bg-[#1f1f1f] rounded-2xl text-white flex flex-col justify-between">
 
@@ -128,20 +125,17 @@ export default function FranchiseModels() {
                 Low Investment. Fast Setup. High Mobility.
               </p>
 
-              <p className=" text-md mb-6">
+              <p className="text-md mb-6">
                 A plug-and-operate format designed for high-footfall zones with simplified operations.
               </p>
 
               <ul className="space-y-3 text-sm">
                 {trolleyPoints.map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
-
                     <span className="w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center">
                       <Check size={14} className="text-black" />
                     </span>
-
                     {item}
-
                   </li>
                 ))}
               </ul>
@@ -150,23 +144,56 @@ export default function FranchiseModels() {
                 Perfect for first-time entrepreneurs and micro-investors.
               </p>
 
+              {/* ✅ UPDATED BUTTON WITH BACKGROUND IMAGE */}
               <Link
                 to="/franchise-formats/food-trolley-franchise"
-                className="inline-block mt-5 bg-transparent border-1 border-[#FDBD5B] text-[#FDBD5B] hover:bg-[#FDBD5B] hover:text-black px-5 py-2 rounded-md text-sm font-semibold"
+                className="z-50 relative inline-block mt-5 px-5 py-2 rounded-md text-sm font-semibold text-[#FDBD5B] border border-[#FDBD5B] hover:bg-[#FDBD5B] hover:text-black overflow-hidden"
+              
               >
-                Explore Trolley Model
+                <span className="relative z-10">Explore Trolley Model</span>
+
               </Link>
 
             </div>
 
-            <div className="mt-4 h-96">
+            <div className="mt-4 h-96 relative flex items-end justify-center">
+
               <img
                 src={trolleyImage}
                 alt="Trolley Franchise"
                 className="w-full h-96 object-contain"
               />
-            </div>
 
+              {/* ✅ OVERLAY STRIP BUTTON */}
+           <Link
+  to="/trolly"
+  className="absolute bottom-4 w-[85%] max-w-md h-12 rounded-xl  overflow-hidden flex items-center justify-center backdrop-blur-md shadow-[0_0_25px_rgba(253,189,91,0.25)]"
+>
+
+  {/* ✅ FULL BACKGROUND IMAGE */}
+  <div
+    className="absolute inset-0"
+    style={{
+      backgroundImage: `url(${trolleyBg})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+    }}
+  />
+
+  {/* ✅ dark overlay for readability */}
+
+  {/* ✅ content */}
+  <div className="relative z-10 flex items-center gap-3 text-sm font-semibold">
+    <span className="text-[#FDBD5B]">Trolley on Rent</span>
+    <span className="text-gray-400">|</span>
+    <span className="text-white hover:text-[#FDBD5B] transition">
+      Know More
+    </span>
+  </div>
+
+</Link>
+
+            </div>
           </div>
 
         </div>
