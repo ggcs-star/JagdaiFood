@@ -61,7 +61,7 @@ export default function BrandsDetails() {
 
           playStore: {
             badge: playstoreimage,
-            link: "https://play.google.com/store/apps/details?id=com.jagdai",
+            link: "https://play.google.com/store/apps/details?id=com.jagods.customer",
           },
 
           appStore: {
