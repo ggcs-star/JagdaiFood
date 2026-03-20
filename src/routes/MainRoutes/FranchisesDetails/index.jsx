@@ -9,6 +9,7 @@ import {
   foco,
   whitelisting,
 } from "../../../assets";
+import { Check } from "lucide-react";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { Container } from "../../../components/Layout";
@@ -160,7 +161,7 @@ function FranchisesDetails() {
             "/franchise-formats": "Franchise Formats",
             "/franchise-formats/influencer-franchise": "Influencer Franchise",
           }}
-                  className="pt-28 bg-black"
+          className="pt-28 bg-black"
 
         />
 
@@ -203,6 +204,8 @@ function FranchisesDetails() {
       )}
 
 
+
+
       {slug == "food-tempo-franchise" && (
         <FoodTempoIntro />
       )}
@@ -241,29 +244,46 @@ function FranchisesDetails() {
 
             {/* EXTRA DETAILS GRID */}
 
-            <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-1 gap-5 pb-10">
-              {details?.extraDetails?.list?.map((item, i) => (
-                <div
-                  className="bg-[#2b2b2b] rounded-3xl border-2 px-5 py-5"
-                  key={i}
-                >
+         {details?.extraDetails?.list?.length > 0 && (
+  <div className="pb-10">
 
-                  <h1 className="font-bricolageRegular text-[#60D186] text-md text-center mb-1">
-                    {item?.label}
-                  </h1>
+    {/* Top Row */}
+    <div className="grid md:grid-cols-3 gap-6 mb-6">
+      {details.extraDetails.list.slice(0, 3).map((item, i) => (
+        <div
+          key={i}
+          className="flex items-center justify-center gap-3 px-6 py-5 rounded-2xl bg-[#2a2a2a]"
+        >
+          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#60D186] shrink-0">
+            <Check className="w-4 h-4 text-black" strokeWidth={3} />
+          </div>
 
-                  <h1 className="font-bricolageBold text-2xl text-center text-white mb-1">
-                    {item?.subTitle}
-                  </h1>
+          <p className="text-gray-300 font-bricolageMedium text-sm md:text-base whitespace-nowrap">
+            {item?.label || item?.subTitle}
+          </p>
+        </div>
+      ))}
+    </div>
 
-                  <h1 className="text-sm text-center text-gray-100">
-                    {item?.desc}
-                  </h1>
+    {/* Bottom Center */}
+    {details.extraDetails.list.length > 3 && (
+      <div className="flex justify-center">
+        <div className="flex items-center justify-center gap-3 px-8 py-6 rounded-2xl bg-[#2a2a2a] w-full md:w-[60%]">
+          
+          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#60D186] shrink-0">
+            <Check className="w-4 h-4 text-black" strokeWidth={3} />
+          </div>
 
-                </div>
-              ))}
-            </div>
+          <p className="text-gray-300 font-bricolageMedium text-sm md:text-base">
+            {details.extraDetails.list[3]?.label ||
+              details.extraDetails.list[3]?.subTitle}
+          </p>
+        </div>
+      </div>
+    )}
 
+  </div>
+)}
             {/* ---------- UPOS + TAPRI SECTION ---------- */}
 
             {![
@@ -361,6 +381,7 @@ function FranchisesDetails() {
       {slug == "food-tempo-franchise" && (
         <WhyFoodTempo />
       )}
+
       {slug == "food-tempo-franchise" && (
         <FocoEarningSectionTempo />
       )}
@@ -375,6 +396,7 @@ function FranchisesDetails() {
       {slug == "chatori-gali" && (
         <FoodCourtInfo />
       )}
+
 
       {slug == "food-trolley-franchise" && (
         <FoodTrolleySection />
@@ -413,64 +435,64 @@ function FranchisesDetails() {
 
                 <div className="grid md:grid-cols-3 gap-8">
 
-  {/* White Label */}
-  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
-    <div>
-      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-        White Label
-      </H3>
-      <p className="text-gray-400">
-        Operate under your brand name with full support.
-      </p>
-    </div>
+                  {/* White Label */}
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+                    <div>
+                      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                        White Label
+                      </H3>
+                      <p className="text-gray-400">
+                        Operate under your brand name with full support.
+                      </p>
+                    </div>
 
-    <button
-      // onClick={() => navigate("/white-label")}
-      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
-    >
-      Know More <span>›</span>
-    </button>
-  </div>
+                    <button
+                      // onClick={() => navigate("/white-label")}
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                    >
+                      Know More <span>›</span>
+                    </button>
+                  </div>
 
-  {/* FOFO */}
-  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
-    <div>
-      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-        FOFO
-      </H3>
-      <p className="text-gray-400">
-        Franchise Owned, Franchise Operated model.
-      </p>
-    </div>
+                  {/* FOFO */}
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+                    <div>
+                      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                        FOFO
+                      </H3>
+                      <p className="text-gray-400">
+                        Franchise Owned, Franchise Operated model.
+                      </p>
+                    </div>
 
-    <button
-      onClick={() => navigate("/fofo-model")}
-      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
-    >
-      Know More <span>›</span>
-    </button>
-  </div>
+                    <button
+                      onClick={() => navigate("/fofo-model")}
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                    >
+                      Know More <span>›</span>
+                    </button>
+                  </div>
 
-  {/* FOCO */}
-  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
-    <div>
-      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-        FOCO
-      </H3>
-      <p className="text-gray-400">
-        Franchise Owned, Company Operated model.
-      </p>
-    </div>
+                  {/* FOCO */}
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+                    <div>
+                      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                        FOCO
+                      </H3>
+                      <p className="text-gray-400">
+                        Franchise Owned, Company Operated model.
+                      </p>
+                    </div>
 
-    <button
-      onClick={() => navigate("/foco-model")}
-      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
-    >
-      Know More <span>›</span>
-    </button>
-  </div>
+                    <button
+                      onClick={() => navigate("/foco-model")}
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                    >
+                      Know More <span>›</span>
+                    </button>
+                  </div>
 
-</div>
+                </div>
               </>
             ) : (
               <div className="max-w-md mx-auto">

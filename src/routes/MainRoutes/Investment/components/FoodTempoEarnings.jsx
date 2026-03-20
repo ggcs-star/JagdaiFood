@@ -5,6 +5,7 @@ import React from "react";
 import revenueChart from "../../../../assets/investment/tempo/revenue.png";
 import costChart from "../../../../assets/investment/tempo/cost.png";
 import tempoImg from "../../../../assets/investment/tempo/tempo.png";
+import { Check } from "lucide-react";
 
 export default function FoodTempoEarnings() {
   return (
@@ -106,33 +107,41 @@ export default function FoodTempoEarnings() {
             <div className="grid md:grid-cols-3 gap-6 mb-6">
 
               {/* EXPENSE LIST */}
-              <div className="bg-black rounded-2xl p-6 md:col-span-2">
-                <h3 className="font-bricolageBold mb-5">
-                  Operational Expenses (Approx.)
-                </h3>
+        <div className="bg-black rounded-2xl p-6 md:col-span-2">
+  {/* Title */}
+  <h3 className="font-bricolageBold text-white text-lg mb-6">
+    Operational Expenses (Approx.)
+  </h3>
 
-                <div className="grid grid-cols-2 gap-4 text-sm text-gray-300 mb-6">
-                  {[
-                    "Salaries & Wages",
-                    "Rent / Management Cost",
-                    "Utilities & Operations",
-                    "Packaging & Maintenance",
-                    "Marketing & Royalty",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-center gap-2">
-                      <span className="text-[#FDBD5B]">●</span>
-                      {item}
-                    </div>
-                  ))}
-                </div>
+  {/* Items */}
+  <div className="grid md:grid-cols-3 gap-y-4 gap-x-6 text-sm text-gray-300 mb-6">
+    {[
+      "Salaries & Wages",
+      "Rent / Management Cost",
+      "Utilities & Operations",
+      "Packaging & Maintenance",
+      "Marketing & Royalty",
+    ].map((item, i) => (
+      <div key={i} className="flex items-center gap-2">
+        
+        {/* Yellow circle with tick */}
+        <div className="w-5 h-5 flex items-center justify-center rounded-full bg-[#FDBD5B] shrink-0">
+          <Check className="w-3 h-3 text-black" strokeWidth={3} />
+        </div>
 
-                <div className="bg-[#FDBD5B]/10 border border-[#FDBD5B] rounded-xl py-3 text-center">
-                  <p className="font-bricolageBold text-lg">
-                    ₹78,000 Total Expenses
-                  </p>
-                </div>
-              </div>
+        <span className="whitespace-nowrap">{item}</span>
+      </div>
+    ))}
+  </div>
 
+  {/* Bottom Box */}
+  <div className="rounded-2xl border border-[#FDBD5B] px-6 py-4 text-center bg-[#2a2a2a]">
+    <p className="font-bricolageBold text-lg">
+      <span className="text-[#FDBD5B]">₹78,000</span>{" "}
+      <span className="text-gray-300">Total Expenses</span>
+    </p>
+  </div>
+</div>
               {/* IMAGE */}
               <div className="bg-black rounded-2xl flex items-center justify-center p-4">
                 <img
