@@ -1,4 +1,5 @@
 import React from "react";
+import { Check } from "lucide-react";
 import foodCourtImg from "../../../assets/investment/foodcourt.png";
 
 export default function FoodCourtBenefits() {
@@ -45,7 +46,6 @@ export default function FoodCourtBenefits() {
     <section className="bg-black py-8 px-4">
       <div className="max-w-7xl mx-auto">
 
-        {/* MAIN CARD */}
         <div className="
           rounded-3xl 
           overflow-hidden 
@@ -54,7 +54,7 @@ export default function FoodCourtBenefits() {
           items-center
         ">
 
-          {/* LEFT CONTENT */}
+          {/* LEFT */}
           <div className="p-8 md:p-12">
             <h2 className="text-white text-2xl md:text-3xl font-bricolageBold mb-8">
               Benefits of joining our <br />
@@ -67,9 +67,9 @@ export default function FoodCourtBenefits() {
                   key={i}
                   className="flex items-start gap-4 text-gray-300 text-sm md:text-base leading-relaxed"
                 >
-                  {/* CUSTOM TICK */}
-                  <div className="w-7 h-7 flex items-center justify-center rounded-full bg-[#FDBD5B] mt-1 flex-shrink-0">
-                    <span className="text-black text-xs font-bold">✓</span>
+                  {/* ✅ UPDATED TICK */}
+                  <div className="w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center mt-1 shrink-0">
+                    <Check className="w-3.5 h-3.5 text-black" />
                   </div>
 
                   <span>{item}</span>
@@ -81,7 +81,6 @@ export default function FoodCourtBenefits() {
           {/* RIGHT IMAGE */}
           <div className="relative h-full flex items-end justify-end">
 
-            {/* IMAGE */}
             <img
               src={foodCourtImg}
               alt="Food Court Franchise"
@@ -96,7 +95,6 @@ export default function FoodCourtBenefits() {
               "
             />
 
-            {/* OPTIONAL GLOW (matches screenshot lighting) */}
             <div className="absolute inset-0 bg-gradient-to-l from-[#6a5434]/40 to-transparent pointer-events-none" />
           </div>
 

@@ -69,7 +69,7 @@ export default function BrandMenu({ item }) {
   const restCards = filtered.slice(6);
 
   return (
-    <section className="max-w-7xl mx-auto sm:px-6 py-10 md:py-14 text-white">
+    <section className="max-w-7xl mx-auto py-10 md:py-14 text-white">
       {/* HEADER */}
       {/* <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
 

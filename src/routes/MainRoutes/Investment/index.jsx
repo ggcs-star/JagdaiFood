@@ -6,6 +6,9 @@ import AdditionalFranchises from './components/AdditionalFranchises'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
 import Breadcrumbs from '../../../components/Breadcrumbs'
 import QsrEarnings from './components/QsrEarnings'
+import FoodTrolleyEarnings from './components/FoodTrolleyEarnings'
+import FoodTempoEarnings from './components/FoodTempoEarnings'
+import InternetRestaurantEarnings from './components/InternetRestaurantEarnings'
 
 const Investment = () => {
   return (
@@ -18,9 +21,12 @@ const Investment = () => {
                   />   
         <InvestmentROI/>
         <QsrEarnings/>
-        <FranchiseInvestment/>
+        <FoodTrolleyEarnings/>
+        <FoodTempoEarnings/>
+        <InternetRestaurantEarnings/>
+        {/* <FranchiseInvestment/>
         <FranchiseModels/>
-        <AdditionalFranchises/>
+        <AdditionalFranchises/> */}
         <WhyReturnsStructured/>
     </div>
   )
