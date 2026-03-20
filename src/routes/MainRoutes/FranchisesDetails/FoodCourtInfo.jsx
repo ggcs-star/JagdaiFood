@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckCircle } from "lucide-react";
+import { Check } from "lucide-react";
 
 const data = [
   {
@@ -34,6 +34,13 @@ const bottomData = {
   ],
 };
 
+// ✅ Custom Tick Component
+const Tick = () => (
+  <div className="w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center mt-1 shrink-0">
+    <Check className="w-3.5 h-3.5 text-black" />
+  </div>
+);
+
 const Card = ({ title, points }) => (
   <div className="bg-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-lg">
     <h3 className="text-white text-2xl md:text-3xl font-bricolageBold mb-2">
@@ -42,7 +49,7 @@ const Card = ({ title, points }) => (
     <ul className="space-y-3">
       {points.map((point, index) => (
         <li key={index} className="flex items-start gap-3 text-gray-300">
-          <CheckCircle className="text-[#FDBD5B] w-5 h-5 mt-1" />
+          <Tick />
           <span>{point}</span>
         </li>
       ))}
@@ -52,10 +59,9 @@ const Card = ({ title, points }) => (
 
 const FoodCourtInfo = () => {
   return (
-    <section className="bg-black ">
-      {/* Container */}
+    <section className="bg-black">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Top Grid */}
         <div className="grid md:grid-cols-2 gap-6">
           {data.map((item, index) => (
@@ -63,11 +69,12 @@ const FoodCourtInfo = () => {
           ))}
         </div>
 
-        {/* Bottom Full Card */}
+        {/* Bottom Card */}
         <div className="mt-6 bg-[#2a2a2a] rounded-3xl p-6 md:p-8 shadow-lg">
           <h3 className="text-white text-2xl md:text-3xl font-bricolageBold mb-2">
             {bottomData.title}
           </h3>
+
           <p className="text-gray-400 mb-4 text-sm md:text-base">
             {bottomData.description}
           </p>
@@ -75,7 +82,7 @@ const FoodCourtInfo = () => {
           <ul className="space-y-3">
             {bottomData.points.map((point, index) => (
               <li key={index} className="flex items-start gap-3 text-gray-300">
-                <CheckCircle className="text-[#FDBD5B] w-5 h-5 mt-1" />
+                <Tick />
                 <span>{point}</span>
               </li>
             ))}
