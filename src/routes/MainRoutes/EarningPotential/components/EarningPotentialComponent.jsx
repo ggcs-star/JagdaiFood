@@ -11,14 +11,15 @@ import { ApplyButton } from "../../../../components/Button";
 const operationCost = {
     trolley: {
         title: "trolley",
-        total: "78000",
+        // total: "78000",
+        total: "60000",
         breakdown: [
             { label: "Salaries & Wages", value: "₹20000" },
             { label: "Management/Office Expense", value: "₹5000" },
             { label: "Energy & Utilities/Wood", value: "₹10,000" },
             { label: "Operating Cost/Packaging etc", value: "₹10,000" },
             { label: "Finance Cost/Maintenance", value: "₹12,000" },
-            { label: "Royalty@ 6%", value: "₹18,000" },
+            // { label: "Royalty@ 6%", value: "₹18,000" },
             {
                 label: "Marketing Expenses (1% of billing amount)",
                 value: "₹3000",
@@ -28,9 +29,10 @@ const operationCost = {
     qsr: {
         title: "QSR",
         title1: "Extra Potential Earning",
-        total: "304500",
+        // total: "304500",
+        total: "223500",
         total1: "804500",
-        total2: "109000",
+        total2: "28000",
         breakdown: [
             { label: "Salaries & Wages", value: "₹60,000" },
             { label: "Rent / Management/Office Expense", value: "₹25,000" },
@@ -40,7 +42,7 @@ const operationCost = {
                 label: "Marketing cost/Finance Cost/Maintenance",
                 value: "₹50,000",
             },
-            { label: "Royalty@ 6%", value: "₹81,000" },
+            // { label: "Royalty@ 6%", value: "₹81,000" },
             {
                 label: "Marketing Expenses (1% of billing amount)",
                 value: "₹13,500",
@@ -164,7 +166,7 @@ export default function EarningPotentialComponent(props) {
     const calculateHandler = () => {
         let ordersPerMonth = orders * 30,
             orderAmountPerMonth = ordersPerMonth * orderAmount,
-            monthlyGrossProfit = (orderAmountPerMonth * 55) / 100;
+            monthlyGrossProfit = (orderAmountPerMonth * 50) / 100;
 
         let calculatedValue = [
             { label: "Orders Per month", value: ordersPerMonth },
@@ -209,7 +211,7 @@ export default function EarningPotentialComponent(props) {
                 ],
             });
         } else if (franchiseType === "qsr") {
-            calculatedValue.push({ label: "Food Margin (%)", value: "55%" });
+            calculatedValue.push({ label: "Food Margin (%)", value: "50%" });
 
             calculatedValue.push({
                 label: "Monthly Food Cost Expense",
@@ -234,14 +236,14 @@ export default function EarningPotentialComponent(props) {
                 series: [
                     ordersPerMonth,
                     orderAmountPerMonth,
-                    55,
+                    50,
                     monthlyGrossProfit,
                     orderAmountPerMonth - monthlyGrossProfit,
                     netProfit1,
                 ],
             });
         } else if (franchiseType === "trolley") {
-            calculatedValue.push({ label: "Food Margin (%)", value: "55%" });
+            calculatedValue.push({ label: "Food Margin (%)", value: "50%" });
 
             calculatedValue.push({
                 label: "Monthly Food Cost Expense",
@@ -266,14 +268,14 @@ export default function EarningPotentialComponent(props) {
                 series: [
                     ordersPerMonth,
                     orderAmountPerMonth,
-                    55,
+                    50,
                     monthlyGrossProfit,
                     orderAmountPerMonth - monthlyGrossProfit,
                     netProfit,
                 ],
             });
         } else {
-            calculatedValue.push({ label: "Food Margin (%)", value: "55%" });
+            calculatedValue.push({ label: "Food Margin (%)", value: "50%" });
 
             calculatedValue.push({
                 label: "Monthly Food Cost Expense",
@@ -298,7 +300,7 @@ export default function EarningPotentialComponent(props) {
                 series: [
                     ordersPerMonth,
                     orderAmountPerMonth,
-                    55,
+                    50,
                     monthlyGrossProfit,
                     orderAmountPerMonth - monthlyGrossProfit,
                     netProfit1,

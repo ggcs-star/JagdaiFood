@@ -148,6 +148,8 @@ function FranchisesDetails() {
     setDetails(data || {});
   }, [slug]);
 
+
+
   const showAllFormats =
     slug === "qsr-restaurant-franchise" ||
     slug === "internet-restaurants-franchise";
@@ -222,9 +224,9 @@ function FranchisesDetails() {
         <Desc details={details} slug={slug} />
       )}
 
-      {/* {slug == "food-tempo-franchise" && (
+      {slug == "food-tempo-franchise" && (
         <TempoAdvantages />
-      )} */}
+      )}
 
       <div className="bg-black">
         <Container className="px-4">
@@ -233,7 +235,15 @@ function FranchisesDetails() {
 
             {/* PRICE SECTION */}
 
-
+            <div className="text-center text-white pb-10">
+              <p className="text-2xl mb-3">
+                {details?.extraDetails?.label}
+              </p>
+              <H5 className="!text-4xl md:!text-5xl mb-5 text-[#FDBD5B]">
+                {details?.extraDetails?.fees}
+                <span className="text-3xl">/- (+ GST)</span>
+              </H5>
+            </div>
             {/* EXTRA DETAILS GRID */}
 
 
@@ -280,6 +290,7 @@ function FranchisesDetails() {
               "food-trolley-franchise",
               "chatori-gali",
               "influencer-franchise",
+              "food-tempo-franchise",
               "internet-restaurants-franchise"
             ].includes(slug) && (
 
@@ -483,13 +494,13 @@ function FranchisesDetails() {
                     </button>
                   </div>
                 </div>
-               
-<Link
-  to="/model-comparison"
-  className="mt-6 w-48 mx-auto flex items-center justify-center bg-[#FDBD5B] text-black text-sm font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#f5b94a] transition duration-300"
->
-  For Detail Explanation
-</Link>
+
+                <Link
+                  to="/model-comparison"
+                  className="mt-6 w-48 mx-auto flex items-center justify-center bg-[#FDBD5B] text-black text-sm font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#f5b94a] transition duration-300"
+                >
+                  For Detail Explanation
+                </Link>
               </>
             ) : (
               <div className="max-w-md mx-auto">
