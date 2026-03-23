@@ -19,12 +19,21 @@ export default function FoodTempoEarnings() {
           </span>
         </h2> */}
 
-         <h2 className="text-center text-2xl lg:text-4xl mb-2 font-bricolageMedium">
-                    Monthly Earning Potential of{" "}
-                    <span className="text-[#FDBD5B] font-bricolageMedium">                       Food Tempo (FOFO Model)
 
-</span>
-                </h2>
+        <div className="flex justify-center mb-8">
+          <div
+            className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
+            style={{
+              background:
+                "linear-gradient(91deg, #203027 0%, #322F20 100%)",
+            }}
+          >
+            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+              Monthly Earning Potential of{" "}
+              <span className="text-[#FDBD5B]"> Food Tempo (FOFO Model)</span>
+            </h2>
+          </div>
+        </div>
 
         <p className="text-center text-[#60D186] mb-10 font-semibold">
           Strong Daily Sales = Predictable Monthly Income
@@ -83,7 +92,7 @@ export default function FoodTempoEarnings() {
                 <div className="relative flex justify-center mb-4">
                   <img src={costChart} className="w-60" />
 
-             
+
                 </div>
 
                 <p className="text-gray-400 text-sm">
@@ -107,41 +116,41 @@ export default function FoodTempoEarnings() {
             <div className="grid md:grid-cols-3 gap-6 mb-6">
 
               {/* EXPENSE LIST */}
-        <div className="bg-black rounded-2xl p-6 md:col-span-2">
-  {/* Title */}
-  <h3 className="font-bricolageBold text-white text-lg mb-6">
-    Operational Expenses (Approx.)
-  </h3>
+              <div className="bg-black rounded-2xl p-6 md:col-span-2">
+                {/* Title */}
+                <h3 className="font-bricolageBold text-white text-lg mb-6">
+                  Operational Expenses (Approx.)
+                </h3>
 
-  {/* Items */}
-  <div className="grid md:grid-cols-3 gap-y-4 gap-x-6 text-sm text-gray-300 mb-6">
-    {[
-      "Salaries & Wages",
-      "Rent / Management Cost",
-      "Utilities & Operations",
-      "Packaging & Maintenance",
-      "Marketing & Royalty",
-    ].map((item, i) => (
-      <div key={i} className="flex items-center gap-2">
-        
-        {/* Yellow circle with tick */}
-        <div className="w-5 h-5 flex items-center justify-center rounded-full bg-[#FDBD5B] shrink-0">
-          <Check className="w-3 h-3 text-black" strokeWidth={3} />
-        </div>
+                {/* Items */}
+                <div className="grid md:grid-cols-3 gap-y-4 gap-x-6 text-sm text-gray-300 mb-6">
+                  {[
+                    "Salaries & Wages",
+                    "Rent / Management Cost",
+                    "Utilities & Operations",
+                    "Packaging & Maintenance",
+                    "Marketing & Royalty",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-center gap-2">
 
-        <span className="whitespace-nowrap">{item}</span>
-      </div>
-    ))}
-  </div>
+                      {/* Yellow circle with tick */}
+                      <div className="w-5 h-5 flex items-center justify-center rounded-full bg-[#FDBD5B] shrink-0">
+                        <Check className="w-3 h-3 text-black" strokeWidth={3} />
+                      </div>
 
-  {/* Bottom Box */}
-  <div className="rounded-2xl border border-[#FDBD5B] px-6 py-4 text-center bg-[#2a2a2a]">
-    <p className="font-bricolageBold text-lg">
-      <span className="text-[#FDBD5B]">₹78,000</span>{" "}
-      <span className="text-gray-300">Total Expenses</span>
-    </p>
-  </div>
-</div>
+                      <span className="whitespace-nowrap">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Bottom Box */}
+                <div className="rounded-2xl border border-[#FDBD5B] px-6 py-4 text-center bg-[#2a2a2a]">
+                  <p className="font-bricolageBold text-lg">
+                    <span className="text-[#FDBD5B]">₹78,000</span>{" "}
+                    <span className="text-gray-300">Total Expenses</span>
+                  </p>
+                </div>
+              </div>
               {/* IMAGE */}
               <div className="bg-black rounded-2xl flex items-center justify-center p-4">
                 <img
@@ -163,37 +172,37 @@ export default function FoodTempoEarnings() {
 
             {/* ================= FLOW BAR ================= */}
             {/* <div className="p-[1px] rounded-2xl bg-gradient-to-r from-[#FDBD5B] to-[#60D186]"> */}
-              <div className="bg-black border-1 border-[#FDBD5B] rounded-2xl py-4 px-4 flex flex-wrap justify-center items-center gap-6 text-sm md:text-4xl">
+            <div className="bg-black border-1 border-[#FDBD5B] rounded-2xl py-4 px-4 flex flex-wrap justify-center items-center gap-6 text-sm md:text-4xl">
 
-                <div className="text-center">
-                  <p className="font-bricolageMedium">₹3 Lac</p>
-                  <p className="text-gray-400 text-sm">Revenue</p>
-                </div>
-
-                <span>→</span>
-
-                <div className="text-center">
-                  <p className="font-bricolageMedium">₹1.65 Lac</p>
-                  <p className="text-gray-400 text-sm">Gross</p>
-                </div>
-
-                <span>→</span>
-
-                <div className="text-center">
-                  <p className="font-bricolageMedium">₹78k</p>
-                  <p className="text-gray-400 text-sm">Expenses</p>
-                </div>
-
-                <span>→</span>
-
-                <div className="text-center">
-                  <p className="font-bricolageMedium text-[#60D186]">
-                    ₹85k - 90k
-                  </p>
-                  <p className="text-gray-400 text-sm">Profit</p>
-                </div>
-
+              <div className="text-center">
+                <p className="font-bricolageMedium">₹3 Lac</p>
+                <p className="text-gray-400 text-sm">Revenue</p>
               </div>
+
+              <span>→</span>
+
+              <div className="text-center">
+                <p className="font-bricolageMedium">₹1.65 Lac</p>
+                <p className="text-gray-400 text-sm">Gross</p>
+              </div>
+
+              <span>→</span>
+
+              <div className="text-center">
+                <p className="font-bricolageMedium">₹78k</p>
+                <p className="text-gray-400 text-sm">Expenses</p>
+              </div>
+
+              <span>→</span>
+
+              <div className="text-center">
+                <p className="font-bricolageMedium text-[#60D186]">
+                  ₹85k - 90k
+                </p>
+                <p className="text-gray-400 text-sm">Profit</p>
+              </div>
+
+            </div>
             {/* </div> */}
 
             {/* FOOTNOTE */}
@@ -205,6 +214,9 @@ export default function FoodTempoEarnings() {
           </div>
         </div>
       </div>
+       <div className="w-full flex justify-center">
+          <div className="w-[90%] h-[1px] bg-white opacity-50 mt-20"></div>
+        </div>
     </section>
   );
 }

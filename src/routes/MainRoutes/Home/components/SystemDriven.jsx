@@ -27,7 +27,7 @@ export default function SystemDriven() {
       title: "Structured FOFO & FOCO Business Models",
       desc: "Flexible and scalable formats designed to suit different investment and operational capabilities",
     },
-     {
+    {
       icon: icon11,
       title: "Capital Guarantee Provisions (as per agreement terms)",
       desc: "Structured safeguards designed to enhance investor confidence and financial security.",
@@ -67,10 +67,15 @@ export default function SystemDriven() {
       title: "Multi-Brand Cross-Selling Engine (24+ Brands)",
       desc: "Higher average order value and diversified revenue streams.",
     },
-     {
+    {
       icon: icon9,
       title: "Royalty-Based Additional Income Channels",
       desc: "Trolleys, Internet Kitchens, Tiffin Box & Gravy Mix verticals enhance total earnings.",
+    },
+    {
+      icon: icon12,
+      title: "Consistent Taste Across All Outlets",
+      desc: "Standardized recipes and centralized preparation ensure uniform quality every time.",
     },
   ];
 
@@ -81,7 +86,7 @@ export default function SystemDriven() {
         {/* Heading */}
         <div className="text-center mb-16">
           <h2 className="font-bricolageBold text-3xl md:text-4xl mb-4">
-Why We? Jagdai Advantage
+            Why We? Jagdai Advantage
           </h2>
 
           <p className="text-gray-200 max-w-2xl mx-auto">

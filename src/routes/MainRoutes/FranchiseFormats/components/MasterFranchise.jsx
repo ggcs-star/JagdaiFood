@@ -28,13 +28,16 @@ export default function MasterFranchise() {
               Own and manage franchise expansion within a defined geography.
             </p>
 
+            {/* ✅ UPDATED FEATURES */}
             <div className="space-y-[14px] mb-[20px]">
               {[
-                "Centralized Food Supply",
-                "Uniform Taste Across All Units",
-                "Reduced Wastage & Skill Dependency",
-                "Structured Earning Framework",
-                "Backend Operational Support",
+                "High-Ticket Franchise Model",
+                "70% Revenue on Direct franchise sales",
+                "30% Revenue on Company Sales",
+                "7% Ongoing Billing Income",
+                "Long-Term Passive Income",
+                "Own & Operate 24+ Brands",
+                "360° Operational Support",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-[10px]">
 
@@ -57,10 +60,7 @@ export default function MasterFranchise() {
               ))}
             </div>
 
-            <p className="text-[14px] text-black mb-[20px]">
-              Perfect for first-time entrepreneurs and micro-investors.
-            </p>
-
+            {/* CTA */}
             <button
               onClick={() => navigate("/contact")}
               className="bg-white text-black px-[18px] py-[10px] rounded-[8px] text-[14px] font-medium"
@@ -78,6 +78,13 @@ export default function MasterFranchise() {
           />
 
         </div>
+
+        {/* ✅ DISCLAIMER */}
+        <p className="text-center max-w-2xl text-center mx-auto text-md text-gray-400 mt-4 mb-20">
+          All figures shown (*) are for illustrative purposes only and do not guarantee actual returns.
+          Results may vary depending on location, operations, and market conditions.
+        </p>
+
       </Container>
 
     </section>

@@ -11,11 +11,20 @@ export default function QsrEarnings() {
         <section className="bg-black text-white py-12 px-4 lg:px-10">
             <div className="max-w-7xl mx-auto">
 
-                {/* TITLE */}
-                <h2 className="text-center text-2xl lg:text-4xl mb-8 font-bricolageMedium">
-                    Monthly Earning Potential of{" "}
-                    <span className="text-[#FDBD5B] font-bricolageMedium">QSR</span>
-                </h2>
+                <div className="flex justify-center mb-8">
+                    <div
+                        className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
+                        style={{
+                            background:
+                                "linear-gradient(91deg, #203027 0%, #322F20 100%)",
+                        }}
+                    >
+                        <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+                            Monthly Earning Potential of{" "}
+                            <span className="text-[#FDBD5B]">QSR</span>
+                        </h2>
+                    </div>
+                </div>
 
                 {/* MAIN WRAPPER */}
                 <div className="relative rounded-3xl overflow-hidden">
@@ -83,14 +92,14 @@ export default function QsrEarnings() {
                             <div className="bg-black rounded-3xl p-7">
                                 <p className="text-sm text-[#FDBD5B] mb-2">Franchise Fee</p>
                                 <p className="font-bricolageBold text-3xl mb-6">
-₹6,00,000 (+ GST)                                </p>
+                                    ₹6,00,000 (+ GST)                                </p>
 
                                 <p className="text-sm text-[#FDBD5B] mb-1">Total Investment</p>
                                 <p className="font-bricolageBold text-3xl">
-₹16 Lakhs                                </p>
+                                    ₹16 Lakhs                                </p>
 
                                 <p className="text-sm text-gray-400 mt-2">
-(₹6L Franchise + ₹10L Setup or actual, whichever higher)                                </p>
+                                    (₹6L Franchise + ₹10L Setup or actual, whichever higher)                                </p>
                             </div>
 
                             {/* RIGHT SIDE */}
@@ -102,13 +111,13 @@ export default function QsrEarnings() {
                                     <div className="bg-black rounded-3xl p-6">
                                         <p className="text-sm text-[#FDBD5B] mb-1">ROI</p>
                                         <p className="font-bricolageBold text-xl">
-12–15 Months                                        </p>
+                                            12–15 Months                                        </p>
                                     </div>
 
                                     <div className="bg-black rounded-3xl p-6">
                                         <p className="text-sm text-[#FDBD5B] mb-1">Breakeven</p>
                                         <p className="font-bricolageBold text-xl">
-Within 6 Months                                        </p>
+                                            Within 6 Months                                        </p>
                                     </div>
 
                                 </div>
@@ -116,9 +125,9 @@ Within 6 Months                                        </p>
                                 {/* PROFIT STRUCTURE FULL WIDTH */}
                                 <div className="bg-black rounded-3xl p-6">
                                     <p className="text-sm text-[#FDBD5B] mb-1">
-Gross Profit                                    </p>
+                                        Gross Profit                                    </p>
                                     <p className="font-bricolageBold text-xl">
-Approx. 35%                                    </p>
+                                        Approx. 35%                                    </p>
                                 </div>
 
                             </div>
@@ -304,6 +313,10 @@ Approx. 35%                                    </p>
                 {/* FOOTER */}
 
 
+            </div>
+
+            <div className="w-full flex justify-center">
+                <div className="w-[90%] h-[1px] bg-white opacity-50 mt-20"></div>
             </div>
         </section>
     );

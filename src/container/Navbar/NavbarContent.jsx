@@ -12,15 +12,7 @@ export default function NavbarContent() {
   const isExternal = (url) => url?.startsWith("http");
 
   const navLinks = [
-    {
-      name: "About Us",
-      link: "/about",
-      dropdown: [
-        { name: "Vision & Mission", link: "/about" },
-        { name: "Who We Are", link: "/who-we-are" },
-        { name: "What We Do", link: "/what-we-do" },
-      ],
-    },
+   
     {
       name: "Franchise Formats",
       link: "/franchise-formats",
@@ -42,6 +34,15 @@ export default function NavbarContent() {
         { name: "Download Brochure", link: "/" },
         { name: "FAQs", link: "/faq" },
         { name: "Contact", link: "/contact" },
+      ],
+    },
+     {
+      name: "About Us",
+      link: "/about",
+      dropdown: [
+        { name: "Vision & Mission", link: "/about" },
+        { name: "Who We Are", link: "/who-we-are" },
+        { name: "What We Do", link: "/what-we-do" },
       ],
     },
     { name: "Jagdai Caterers", link: "https://catering.jagdaifoods.com/" },

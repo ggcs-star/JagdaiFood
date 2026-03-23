@@ -5,16 +5,31 @@ import { ApplyButton } from "../../../../components/Button";
 
 export default function InternetRestaurantEarnings() {
     return (
-        <section className="bg-black text-white py-12 px-4 lg:px-10">
+        <section className="bg-black text-white pt-8 pb-12 px-4 lg:px-10">
             <div className="max-w-7xl mx-auto">
 
-
+{/* 
                 <h2 className="text-center text-2xl lg:text-4xl mb-2 font-bricolageMedium">
                     Monthly Earning Potential of{" "}
                     <span className="text-[#FDBD5B] font-bricolageMedium">
-                        Internet Restaurant
                     </span>
-                </h2>
+                </h2> */}
+
+                <div className="flex justify-center mb-2">
+          <div
+            className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
+            style={{
+              background:
+                "linear-gradient(91deg, #203027 0%, #322F20 100%)",
+            }}
+          >
+            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+              Monthly Earning Potential of{" "}
+              <span className="text-[#FDBD5B]">Internet Restaurant
+</span>
+            </h2>
+          </div>
+        </div>
 
                 <p className="text-center text-[#60D186] mb-10 font-semibold">
                     Run Digitally | Earn Passively | Scale Without Operations

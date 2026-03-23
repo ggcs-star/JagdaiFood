@@ -93,6 +93,22 @@ html {
     overflow-x: hidden;
 }
 
+@keyframes arrowFloat {
+  0% {
+    transform: translate(-50%, 0px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, 8px) rotate(3deg);
+  }
+  100% {
+    transform: translate(-50%, 0px) rotate(0deg);
+  }
+}
+
+.animate-arrowFloat {
+  animation: arrowFloat 2s ease-in-out infinite;
+}
+
 /* .button-container {
     position: relative;
 }

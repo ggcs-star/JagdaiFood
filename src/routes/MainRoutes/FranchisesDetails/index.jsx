@@ -10,6 +10,7 @@ import {
   whitelisting,
 } from "../../../assets";
 import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import { useNavigate, useParams } from "react-router-dom";
 import { Container } from "../../../components/Layout";
@@ -216,6 +217,7 @@ function FranchisesDetails() {
 
 
 
+
       {!["qsr-restaurant-franchise", "internet-restaurants-franchise", "food-tempo-franchise", "chatori-gali", "food-trolley-franchise"].includes(slug) && (
         <Desc details={details} slug={slug} />
       )}
@@ -231,59 +233,47 @@ function FranchisesDetails() {
 
             {/* PRICE SECTION */}
 
-            <div className="text-center pb-10">
-              <p className="font-bricolageRegular text-2xl mb-3 text-white">
-                {details?.extraDetails?.label}
-              </p>
-
-              <H5 className="font-bricolageRegular !text-3xl md:!text-4xl mb-5 text-yellow-500">
-                {details?.extraDetails?.fees}
-                <span className="text-3xl">/- (+ GST)</span>
-              </H5>
-            </div>
 
             {/* EXTRA DETAILS GRID */}
 
-         {details?.extraDetails?.list?.length > 0 && (
-  <div className="pb-10">
 
-    {/* Top Row */}
-    <div className="grid md:grid-cols-3 gap-6 mb-6">
-      {details.extraDetails.list.slice(0, 3).map((item, i) => (
-        <div
-          key={i}
-          className="flex items-center justify-center gap-3 px-6 py-5 rounded-2xl bg-[#2a2a2a]"
-        >
-          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#60D186] shrink-0">
-            <Check className="w-4 h-4 text-black" strokeWidth={3} />
-          </div>
 
-          <p className="text-gray-300 font-bricolageMedium text-sm md:text-base whitespace-nowrap">
-            {item?.label || item?.subTitle}
-          </p>
-        </div>
-      ))}
-    </div>
+            {details?.extraDetails?.list?.length > 0 && (
+              <Container className="px-4">
+                <section className="py-8">
 
-    {/* Bottom Center */}
-    {details.extraDetails.list.length > 3 && (
-      <div className="flex justify-center">
-        <div className="flex items-center justify-center gap-3 px-8 py-6 rounded-2xl bg-[#2a2a2a] w-full md:w-[60%]">
-          
-          <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#60D186] shrink-0">
-            <Check className="w-4 h-4 text-black" strokeWidth={3} />
-          </div>
 
-          <p className="text-gray-300 font-bricolageMedium text-sm md:text-base">
-            {details.extraDetails.list[3]?.label ||
-              details.extraDetails.list[3]?.subTitle}
-          </p>
-        </div>
-      </div>
-    )}
 
-  </div>
-)}
+                  {/* Cards Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
+                    {details?.extraDetails?.list?.map((item, i) => (
+                      <div
+                        key={i}
+                        className="bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl border px-5 py-5 text-center"
+                      >
+                        <h3 className="font-bricolageRegular text-[#60D186] mb-3">
+                          {item?.label}
+                        </h3>
+
+                        <h3 className="font-bricolageBold text-white text-2xl">
+                          {item?.subTitle}
+                        </h3>
+
+                        <p className="text-gray-300 mt-2 text-sm">
+                          {item?.desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+
+
+
+
+
+
+                </section>
+              </Container>
+            )}
             {/* ---------- UPOS + TAPRI SECTION ---------- */}
 
             {![
@@ -293,7 +283,7 @@ function FranchisesDetails() {
               "internet-restaurants-franchise"
             ].includes(slug) && (
 
-                <div className="relative flex flex-col lg:flex-row items-stretch justify-center mt-12 mx-auto lg:gap-6">
+                <div className="relative flex flex-col lg:flex-row items-stretch justify-center mx-auto lg:gap-6">
 
                   {/* LEFT CARD */}
                   <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
@@ -378,6 +368,8 @@ function FranchisesDetails() {
         </Container>
       </div>
 
+
+
       {slug == "food-tempo-franchise" && (
         <WhyFoodTempo />
       )}
@@ -420,9 +412,6 @@ function FranchisesDetails() {
       {/* FRANCHISE MODELS */}
 
       <div className="py-8 bg-black">
-
-
-
         {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali", "internet-restaurants-franchise"].includes(slug) && (
           <Container>
             {showAllFormats ? (
@@ -435,24 +424,7 @@ function FranchisesDetails() {
 
                 <div className="grid md:grid-cols-3 gap-8">
 
-                  {/* White Label */}
-                  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
-                    <div>
-                      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
-                        White Label
-                      </H3>
-                      <p className="text-gray-400">
-                        Operate under your brand name with full support.
-                      </p>
-                    </div>
 
-                    <button
-                      // onClick={() => navigate("/white-label")}
-                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
-                    >
-                      Know More <span>›</span>
-                    </button>
-                  </div>
 
                   {/* FOFO */}
                   <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
@@ -492,7 +464,32 @@ function FranchisesDetails() {
                     </button>
                   </div>
 
+                  {/* White Label */}
+                  <div className="bg-[#2a2a2a] rounded-3xl p-8 flex flex-col justify-between min-h-[180px]">
+                    <div>
+                      <H3 className="font-bricolageSemiBold text-white text-xl mb-3">
+                        White Label
+                      </H3>
+                      <p className="text-gray-400">
+                        Operate under your brand name with full support.
+                      </p>
+                    </div>
+
+                    <button
+                      // onClick={() => navigate("/white-label")}
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                    >
+                      Know More <span>›</span>
+                    </button>
+                  </div>
                 </div>
+               
+<Link
+  to="/model-comparison"
+  className="mt-6 w-48 mx-auto flex items-center justify-center bg-[#FDBD5B] text-black text-sm font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#f5b94a] transition duration-300"
+>
+  For Detail Explanation
+</Link>
               </>
             ) : (
               <div className="max-w-md mx-auto">

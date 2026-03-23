@@ -49,9 +49,9 @@ export default function FranchiseInvestment() {
       ))}
     </div>
 
-    <p className="font-bold text-sm mb-4">
+    <p className="font-bricolageBold text-md mb-4">
       Opportunity to earn <br />
-      <span className="text-lg">up to Rs.5 lac per month</span>
+      <span className="text-xl">up to Rs.5 lac per month*</span>
     </p>
 
     <Link
@@ -94,18 +94,23 @@ export default function FranchiseInvestment() {
       A cloud kitchen model operating without dine-in space using digital platforms.
     </p>
 
-    <div className="space-y-3 mb-6">
-      {["No Rental", "No Salary", "High Margins", "No Expenses"].map(
-        (item, index) => (
-          <div key={index} className="flex items-center gap-3 text-sm">
-            <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
-              <Check className="w-3 h-3 text-black" />
-            </div>
-            <span>{item}</span>
-          </div>
-        )
-      )}
-    </div>
+    <div className="grid grid-cols-2 gap-3 mb-6">
+  {["No Rental", "No Salary", "High Margins", "No Expenses"].map(
+    (item, index) => (
+      <div key={index} className="flex items-center gap-3 text-sm">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-[#FDBD5B]">
+          <Check className="w-3 h-3 text-black" />
+        </div>
+        <span>{item}</span>
+      </div>
+    )
+  )}
+</div>
+
+    <p className="font-bricolageBold text-md mb-4">
+      Opportunity to earn <br />
+      <span className="text-xl">up to Rs.2 lac per month*</span>
+    </p>
 
     <Link
       to="/franchise-formats/internet-restaurants-franchise"
