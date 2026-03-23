@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import InvestmentOverview from './components/InvestmentOverView'
 import CapitalProtectionFramework from './components/CapitalProtectionFramework'
 import EcosystemBenefitsCard from './components/EcosystemBenefitsCard'
@@ -9,6 +9,15 @@ import ComparisonTable from './components/ComparisonTable'
 import FranchiseCTA from './components/FranchiseCTA'
 
 const ModelComparison = () => {
+
+  // ✅ Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // change to "auto" if you want instant
+    });
+  }, []);
+
   return (
     <div className='bg-black'>
       <Breadcrumbs
@@ -19,6 +28,7 @@ const ModelComparison = () => {
       <InvestmentOverview />
       <ComparisonTable/>
       <FranchiseCTA/>
+
       {/* <CapitalProtectionFramework />
       <EcosystemBenefitsCard />
       <ModelFitSection />

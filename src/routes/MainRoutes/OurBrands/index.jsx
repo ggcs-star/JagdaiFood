@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import BrandsHero from './components/BrandsHero'
 import BrandsCards from './components/BrandsCards'
 import BrandsCTA from './components/BrandsCTA.JSX'
 
 const OurBrands = () => {
+
+  // ✅ Scroll to top on page load
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // use "auto" if you want instant
+    });
+  }, []);
+
   return (
     <div>
         <BrandsHero/>

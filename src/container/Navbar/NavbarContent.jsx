@@ -8,11 +8,11 @@ export default function NavbarContent() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
 
-  // ✅ Helper to detect external links
-  const isExternal = (url) => url?.startsWith("http");
+  // ✅ Detect external links
+  const isExternal = (url) =>
+    url?.startsWith("http") || url?.startsWith("https");
 
   const navLinks = [
-   
     {
       name: "Franchise Formats",
       link: "/franchise-formats",
@@ -27,16 +27,21 @@ export default function NavbarContent() {
     },
     { name: "Investment", link: "/investment" },
     { name: "Our Brands", link: "/brands" },
+    { name: "Jagdai Caterers", link: "https://catering.jagdaifoods.com/" },
     {
       name: "Resources",
       dropdown: [
         { name: "ROI Calculator", link: "/roi-calculator" },
-        { name: "Download Brochure", link: "/" },
+        { name: "Communication Hub", link: "https://allinone.jagdaifoods.com/" },
+        {
+          name: "Download PPT",
+          link: "https://docs.google.com/presentation/d/1ZPjTRlHECxbquTQxWZ732k20ZsFYlWao/edit?usp=sharing&ouid=104598933576124029697&rtpof=true&sd=true"
+        },
         { name: "FAQs", link: "/faq" },
         { name: "Contact", link: "/contact" },
       ],
     },
-     {
+    {
       name: "About Us",
       link: "/about",
       dropdown: [
@@ -45,7 +50,6 @@ export default function NavbarContent() {
         { name: "What We Do", link: "/what-we-do" },
       ],
     },
-    { name: "Jagdai Caterers", link: "https://catering.jagdaifoods.com/" },
   ];
 
   return (
@@ -100,19 +104,30 @@ export default function NavbarContent() {
               {item.dropdown && (
                 <div className="absolute left-0 top-full mt-3 w-[220px] bg-[#2c2c2c] rounded-xl border border-gray-600 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
 
-                  {item.dropdown.map((subItem, i) => (
-                    <NavLink
-                      key={i}
-                      to={subItem.link}
-                      className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
-                    >
-                      {subItem.name}
-                    </NavLink>
-                  ))}
+                  {item.dropdown.map((subItem, i) =>
+                    isExternal(subItem.link) ? (
+                      <a
+                        key={i}
+                        href={subItem.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
+                      >
+                        {subItem.name}
+                      </a>
+                    ) : (
+                      <NavLink
+                        key={i}
+                        to={subItem.link}
+                        className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
+                      >
+                        {subItem.name}
+                      </NavLink>
+                    )
+                  )}
 
                 </div>
               )}
-
             </li>
           ))}
         </ul>
@@ -211,20 +226,32 @@ export default function NavbarContent() {
                   {item.dropdown && openDropdown === index && (
                     <ul className="ml-4 mt-3 flex flex-col gap-3 text-gray-300">
 
-                      {item.dropdown.map((subItem, i) => (
-                        <li key={i}>
-                          <NavLink
-                            to={subItem.link}
-                            onClick={() => setMenuOpen(false)}
-                          >
-                            {subItem.name}
-                          </NavLink>
-                        </li>
-                      ))}
+                      {item.dropdown.map((subItem, i) =>
+                        isExternal(subItem.link) ? (
+                          <li key={i}>
+                            <a
+                              href={subItem.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </a>
+                          </li>
+                        ) : (
+                          <li key={i}>
+                            <NavLink
+                              to={subItem.link}
+                              onClick={() => setMenuOpen(false)}
+                            >
+                              {subItem.name}
+                            </NavLink>
+                          </li>
+                        )
+                      )}
 
                     </ul>
                   )}
-
                 </li>
               ))}
 

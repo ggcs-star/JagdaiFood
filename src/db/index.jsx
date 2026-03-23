@@ -961,10 +961,10 @@ export const franchise = [
     extraDetails: {
       label: "Franchise Fees",
       fees: "₹5,40,000",
-      percent: "6% ROYALTY FROM THE TEMPO",
+      // percent: "6% ROYALTY FROM THE TEMPO",
       total: "/- +GST",
       price: "₹540000",
-      note: "NON-VEG Option also available for all brands",
+      // note: "NON-VEG Option also available for all brands",
       // list: [
       //   { subTitle: "Food Tempo", icon: bikecart1 },
       //   {
