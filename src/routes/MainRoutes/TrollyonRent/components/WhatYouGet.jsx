@@ -44,8 +44,8 @@ const WhatYouGet = () => {
             {/* RIGHT */}
             <div className="space-y-[20px] md:space-y-[30px] lg:space-y-[40px]">
               <Item icon={menu} text="Multi-brand, high-demand menu" />
-              <Item icon={sop} text="SOPs & training" />
-              <Item icon={training} text="No cooking required SOPs & training — just sell & earn" />
+              <Item icon={training} text="SOPs & training" />
+              <Item icon={sop} text="No cooking required SOPs & training — just sell & earn" />
               <Item icon={order} text="Online order readiness (Zomato / Swiggy / Jagods)" />
             </div>
 

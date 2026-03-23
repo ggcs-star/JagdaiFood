@@ -37,7 +37,7 @@ const WhyRevolutionary = () => {
 
             {/* LEFT */}
             <div className="space-y-[14px] md:space-y-[18px] lg:space-y-[22px]">
-              <Item icon={capex} text="Zero CAPEX" />
+              <Item icon={profit} text="Zero CAPEX" />
               <Item icon={fee} text="Fixed monthly fee" />
               <Item icon={staff} text="No kitchen or staff needed" />
               <Item icon={revenue} text="Unlimited earning potential" />
@@ -47,7 +47,7 @@ const WhyRevolutionary = () => {
             {/* RIGHT */}
             <div className="space-y-[14px] md:space-y-[18px] lg:space-y-[22px]">
               <Item icon={opex} text="Zero OPEX" />
-              <Item icon={profit} text="No profit sharing" />
+              <Item icon={capex} text="No profit sharing" />
               <Item icon={sell} text="Sell offline and online" />
               <Item icon={cart} text="Multiple food cart options" />
               <Item icon={scale} text="Scale easily by taking more trolleys" />
