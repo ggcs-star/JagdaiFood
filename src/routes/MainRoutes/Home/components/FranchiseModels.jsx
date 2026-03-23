@@ -89,7 +89,7 @@ export default function FranchiseModels() {
                 ))}
               </ul>
 
-              <p className="text-black text-sm mt-5">
+              <p className="text-black text-sm mt-5 font-semibold">
                 Ideal for entrepreneurs seeking long-term scale and control.
               </p>
 
