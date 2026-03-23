@@ -48,7 +48,7 @@ const WhoCanStart = () => {
         </div>
 
         {/* BOTTOM TEXT */}
-        <p className="text-center text-[#FFFFFF] text-[13px] md:text-[14px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
+        <p className="text-center text-[#FFFFFF] text-[20px] md:text-[18px] mt-[40px] md:mt-[60px] lg:mt-[80px]">
           No experience needed.
         </p>
       </div>
