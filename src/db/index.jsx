@@ -776,7 +776,6 @@ export const franchise = [
       percent: "Opportunity to earn up to Rs.5 lac per month",
       total: "/- +GST",
       price: "16,00,000",
-      // note: "NON-VEG Option also available for all brands",
       list: [
         {
           label: "Investment",

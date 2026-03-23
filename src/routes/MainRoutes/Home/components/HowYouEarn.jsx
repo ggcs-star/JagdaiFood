@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import stall1 from "../../../../assets/home/franchise/stall1.png";
+import stall2 from "../../../../assets/home/franchise/stall2.png";
+import stall3 from "../../../../assets/home/franchise/stall3.png";
+import stall4 from "../../../../assets/home/franchise/stall4.png";
+// import stall4 from "../../../../assets/home/franchise/stall4.svg";
+import arrowSvg from "../../../../assets/home/franchise/arrow.svg";
 
 /* 🔥 Rotating Stack Cards with Dynamic Color Depth */
 function StackedCards({ texts, theme = "yellow" }) {
@@ -82,103 +88,184 @@ export default function HowYouEarn() {
     <section className="bg-black text-white py-10 lg:pt-8 lg:pb-4 px-3 lg:px-4">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-bricolageBold mb-2">
-          Own Your QSR. Choose How You Want to Earn.
+        {/* <h2 className="text-center text-3xl md:text-4xl font-bricolageBold mb-2">
         </h2>
 <p className="text-center text-md md:text-lg max-w-3xl mx-auto mb-16">
-  You don't have just invest in a QSR. You don’t just invest in a QSR. You choose how you want to run it. You choose how you want to run it.
-</p>
+</p> */}
+
+        <h2 className="font-bricolageBold text-center text-3xl md:text-4xl mb-4">
+          Own Your QSR. Choose How You Want to Earn
+        </h2>
+
+        <p className="text-center text-gray-200 max-w-2xl mx-auto mb-16">
+          You don't have just invest in a QSR. You don’t just invest in a QSR. You choose how you want to run it
+        </p>
         <div className="grid md:grid-cols-2 gap-10">
 
           {/* FOFO CARD */}
-          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[570px] shadow-lg overflow-hidden">
-            <div className="relative z-30">
-              <h3 className="text-xl font-semibold mb-1">FOFO Model</h3>
+          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-40 min-h-[820px] shadow-lg overflow-hidden">
 
-              <p className="text-md font-medium text-[#FDBD5B] mb-6 italic">
+            <div className="relative z-20">
+
+              {/* Heading */}
+              <h3 className="text-2xl md:text-3xl font-bricolageBold text-white mb-1">
+                FOFO MODEL (Active Ownership)
+              </h3>
+
+              <p className="text-[#FDBD5B] font-medium italic mb-6">
                 Franchise Owned, Franchise Operated
               </p>
 
-              <ul className="space-y-4">
-                {fofoFeatures.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-gray-300">
-                    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-[#FDBD5B] mt-1">
-                      <Check size={14} className="text-black" />
+              {/* Features */}
+              <ul className="space-y-3 text-sm md:text-base">
+                {[
+                  "Low upfront investment",
+                  "Full revenue control",
+                  "No sharing on billing",
+                  "No royalty on total sales",
+                  "50%+ food margins",
+                  "Higher profit potential (~₹4–5L/month*)",
+                  "Multiple income streams (trolley, tiffin, kitchen, products)",
+                  "Own brand / white-label option",
+                  "Full operational control",
+                  "Centralized kitchen + support system",
+                  "Scalable multi-outlet model",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-300">
+                    <div className="w-5 h-5 mt-1 rounded-full bg-[#FDBD5B] flex items-center justify-center shrink-0">
+                      <Check size={12} className="text-black" />
                     </div>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              {/* ✅ Know More Button */}
-              <div className="mt-6">
-                <button
-                  onClick={() => navigate("/franchise-models")}
-                  className="border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-[#FDBD5B] hover:text-black transition-all duration-300"
-                >
-                  Know More
-                </button>
-              </div>
+              {/* Ideal */}
+              <p className="text-sm text-gray-400 mt-5">
+                <span className="text-white font-semibold">Ideal for:</span> Active operators seeking high income
+              </p>
+
+              {/* CTA */}
+              <button
+                onClick={() => navigate("/franchise-models")}
+                className="mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-white hover:text-black transition"
+              >
+                Know More
+              </button>
+
             </div>
 
-            {/* Glow */}
-            <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none z-0
-            bg-[radial-gradient(circle_at_bottom,rgba(0,255,94,0.35),transparent_70%)]" />
+            {/* 🔥 Bottom Visual Section */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-end gap-6 z-20">
 
-            <StackedCards
-              texts={[
-                <>300 Daily Orders @ ₹150</>,
-                <>₹13,50,000 Monthly Revenue</>,
-                <>Approx ₹5,00,000 Monthly Profit</>,
-              ]}
-              theme="yellow"
-              className='mt-20'
+              {/* Stall 1 */}
+              <img
+                src={stall1} // 👈 import your first stall image
+                alt="stall1"
+                className="w-[120px] md:w-[150px] object-contain"
+              />
+
+              {/* Stall 2 */}
+              <img
+                src={stall2} // 👈 import second stall image
+                alt="stall2"
+                className="w-[120px] md:w-[150px] object-contain"
+              />
+
+            </div>
+
+            {/* 🔥 Arrow SVG */}
+            <img
+              src={arrowSvg}
+              alt="arrow"
+              className="absolute bottom-48 left-[60%] -translate-x-1/2 w-16 md:w-20 object-contain z-20 animate-arrowFloat"
             />
+            {/* 🔥 Spotlight Glow */}
+            <div className="absolute bottom-0 left-0 w-full h-56 z-0
+              bg-[radial-gradient(circle_at_bottom,rgba(255,255,255,0.25),transparent_70%)]" />
           </div>
 
           {/* FOCO CARD */}
-          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[480px] shadow-lg overflow-hidden">
-            <div className="relative z-30">
-              <h3 className="text-xl font-semibold mb-1">FOCO Model</h3>
+          <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-40 min-h-[620px] shadow-lg overflow-hidden">
 
-              <p className="text-md font-medium italic text-green-400 mb-6">
+            <div className="relative z-20">
+
+              {/* Heading */}
+              <h3 className="text-2xl md:text-3xl font-bricolageBold text-white mb-1">
+                FOCO MODEL (Passive Ownership)
+              </h3>
+
+              <p className="text-green-400 font-medium italic mb-6">
                 Franchise Owned, Company Operated
               </p>
 
-              <ul className="space-y-4">
-                {focoFeatures.map((item, i) => (
-                  <li key={i} className="flex gap-3 text-gray-300">
-                    <div className="flex items-center justify-center w-5 h-5 rounded-full bg-green-400 mt-1">
-                      <Check size={14} className="text-black" />
+              {/* Features */}
+              <ul className="space-y-3 text-sm md:text-base">
+                {[
+                  "High upfront investment",
+                  "Company manages complete operations",
+                  "Zero daily involvement required",
+                  "Fixed income @10% on billing",
+                  "Comparatively lower earning potential",
+                  "No additional income streams",
+                  "Structured working capital model",
+                  "Centralized kitchen & execution handled",
+                  "No manpower or operational hassle",
+                  "Predictable and consistent income",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-gray-300">
+                    <div className="w-5 h-5 mt-1 rounded-full bg-green-400 flex items-center justify-center shrink-0">
+                      <Check size={12} className="text-black" />
                     </div>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              {/* ✅ Know More Button */}
-              <div className="mt-6">
-                <button
-                  onClick={() => navigate("/franchise-models")}
-                  className="border border-gray-500 px-5 py-2 rounded-lg text-sm hover:bg-green-400 hover:text-black transition-all duration-300"
-                >
-                  Know More
-                </button>
-              </div>
+              {/* Ideal */}
+              <p className="text-sm text-gray-400 mt-5">
+                <span className="text-white font-semibold">Ideal for:</span> Investors seeking stable, passive income
+              </p>
+
+              {/* CTA */}
+              <button
+                onClick={() => navigate("/franchise-models")}
+                className="mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-green-400 hover:text-black transition"
+              >
+                Know More
+              </button>
+
             </div>
 
-            {/* Glow */}
-            <div className="absolute bottom-0 left-0 w-full h-48 pointer-events-none z-10
-            bg-[radial-gradient(circle_at_bottom,rgba(251,191,36,0.35),transparent_70%)]" />
+            {/* 🔥 Bottom Visual (Stalls) */}
+            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-end gap-6 z-20">
 
-            <StackedCards
-              texts={[
-                <>Approx ₹1,35,000 Net Profit</>,
-                <>₹13,50,000 Revenue</>,
-                <>OR 24% annual ROI</>,
-              ]}
-              theme="green"
+              {/* Stall 1 */}
+              <img
+                src={stall3} // 👈 import image
+                alt="stall"
+                className="w-[120px] md:w-[150px] object-contain"
+              />
+
+              {/* Stall 2 */}
+              <img
+                src={stall4} // 👈 import image
+                alt="stall"
+                className="w-[120px] md:w-[150px] object-cover"
+              />
+
+            </div>
+
+            {/* 🔥 Arrow SVG */}
+           <img
+              src={arrowSvg}
+              alt="arrow"
+              className="absolute bottom-48 left-[60%] -translate-x-1/2 w-16 md:w-20 object-contain z-20 animate-arrowFloat"
             />
+
+           <div className="absolute bottom-0 left-0 w-full h-56 z-0
+              bg-[radial-gradient(circle_at_bottom,rgba(255,255,255,0.25),transparent_70%)]" />
+
           </div>
 
         </div>

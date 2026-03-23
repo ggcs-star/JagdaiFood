@@ -5,16 +5,31 @@ import trolleyImg from "../../../../assets/investment/trolley/trolley.png";
 
 export default function FoodTrolleyEarnings() {
   return (
-    <section className="bg-black text-white py-12 px-4 lg:px-10">
+    <section className="bg-black text-white pb-12 px-4 lg:px-10">
       <div className="max-w-7xl mx-auto">
 
-    
 
-         <h2 className="text-center text-2xl lg:text-4xl mb-8 font-bricolageMedium">
-                    Monthly Earning Potential of{" "}
-                    <span className="text-[#FDBD5B] font-bricolageMedium">            Food Trolley
-</span>
-                </h2>
+
+        {/* <h2 className="text-center text-2xl lg:text-4xl mb-8 font-bricolageMedium">
+          Monthly Earning Potential of{" "}
+          <span className="text-[#FDBD5B] font-bricolageMedium">            
+          </span>
+        </h2> */}
+
+        <div className="flex justify-center mb-8">
+          <div
+            className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
+            style={{
+              background:
+                "linear-gradient(91deg, #203027 0%, #322F20 100%)",
+            }}
+          >
+            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+              Monthly Earning Potential of{" "}
+              <span className="text-[#FDBD5B]">Food Trolley</span>
+            </h2>
+          </div>
+        </div>
 
         {/* MAIN WRAPPER */}
         <div className="relative rounded-3xl overflow-hidden">
@@ -25,61 +40,61 @@ export default function FoodTrolleyEarnings() {
           <div className="relative bg-[#1a1a1a] rounded-3xl p-6 border border-[#2a2a2a]">
 
             {/* ================= TOP GRID ================= */}
-          {/* TOP SECTION */}
-<div className="mb-6 grid md:grid-cols-[60%_40%] gap-5">
+            {/* TOP SECTION */}
+            <div className="mb-6 grid md:grid-cols-[60%_40%] gap-5">
 
-  {/* LEFT BIG CARD */}
-  <div className="bg-black rounded-3xl p-7">
-    <p className="text-sm text-[#FDBD5B] mb-2">Franchise Fee</p>
-    <p className="font-bricolageBold text-3xl mb-6">
-      ₹3,00,000 (+ GST)
-    </p>
+              {/* LEFT BIG CARD */}
+              <div className="bg-black rounded-3xl p-7">
+                <p className="text-sm text-[#FDBD5B] mb-2">Franchise Fee</p>
+                <p className="font-bricolageBold text-3xl mb-6">
+                  ₹3,00,000 (+ GST)
+                </p>
 
-    <p className="text-sm text-[#FDBD5B] mb-1">Total Investment</p>
-    <p className="font-bricolageBold text-3xl">
-      ₹3 Lakhs
-    </p>
+                <p className="text-sm text-[#FDBD5B] mb-1">Total Investment</p>
+                <p className="font-bricolageBold text-3xl">
+                  ₹3 Lakhs
+                </p>
 
-    <p className="text-sm text-gray-400 mt-2">
-      (All Setup Included)
-    </p>
-  </div>
+                <p className="text-sm text-gray-400 mt-2">
+                  (All Setup Included)
+                </p>
+              </div>
 
-  {/* RIGHT SIDE */}
-  <div className="flex flex-col gap-5">
+              {/* RIGHT SIDE */}
+              <div className="flex flex-col gap-5">
 
-    {/* TOP TWO CARDS */}
-    <div className="grid grid-cols-2 gap-5">
+                {/* TOP TWO CARDS */}
+                <div className="grid grid-cols-2 gap-5">
 
-      <div className="bg-black rounded-3xl p-6">
-        <p className="text-sm text-[#FDBD5B] mb-1">ROI</p>
-        <p className="font-bricolageBold text-xl">
-          6–9 Months
-        </p>
-      </div>
+                  <div className="bg-black rounded-3xl p-6">
+                    <p className="text-sm text-[#FDBD5B] mb-1">ROI</p>
+                    <p className="font-bricolageBold text-xl">
+                      6–9 Months
+                    </p>
+                  </div>
 
-      <div className="bg-black rounded-3xl p-6">
-        <p className="text-sm text-[#FDBD5B] mb-1">Breakeven</p>
-        <p className="font-bricolageBold text-xl">
-          6 Months
-        </p>
-      </div>
+                  <div className="bg-black rounded-3xl p-6">
+                    <p className="text-sm text-[#FDBD5B] mb-1">Breakeven</p>
+                    <p className="font-bricolageBold text-xl">
+                      6 Months
+                    </p>
+                  </div>
 
-    </div>
+                </div>
 
-    {/* PROFIT STRUCTURE FULL WIDTH */}
-    <div className="bg-black rounded-3xl p-6">
-      <p className="text-sm text-[#FDBD5B] mb-1">
-        Profit Structure
-      </p>
-      <p className="font-bricolageBold text-xl">
-        FOFO – 35% &nbsp; | &nbsp; FOCO – 15%
-      </p>
-    </div>
+                {/* PROFIT STRUCTURE FULL WIDTH */}
+                <div className="bg-black rounded-3xl p-6">
+                  <p className="text-sm text-[#FDBD5B] mb-1">
+                    Profit Structure
+                  </p>
+                  <p className="font-bricolageBold text-xl">
+                    FOFO – 35% &nbsp; | &nbsp; FOCO – 15%
+                  </p>
+                </div>
 
-  </div>
-</div>
-          
+              </div>
+            </div>
+
 
             {/* ================= SECOND ROW ================= */}
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -193,7 +208,12 @@ export default function FoodTrolleyEarnings() {
           </div>
         </div>
 
+       
+
       </div>
+       <div className="w-full flex justify-center">
+          <div className="w-[90%] h-[1px] bg-white opacity-50 mt-20"></div>
+        </div>
     </section>
   );
 }

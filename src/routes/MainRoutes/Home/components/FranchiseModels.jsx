@@ -188,8 +188,7 @@ export default function FranchiseModels() {
                 {/* ✅ content */}
                 <div className="relative z-10 flex items-center gap-3 text-lg font-bricolageBold">
                   <span className="text-[#FDBD5B]">Trolley on Rent</span>
-                  <span className="text-gray-400">|</span>
-                  <span className="text-white hover:text-[#FDBD5B] transition">
+                  <span className="text-white underline hover:text-[#FDBD5B] transition">
                     Know More
                   </span>
                 </div>
