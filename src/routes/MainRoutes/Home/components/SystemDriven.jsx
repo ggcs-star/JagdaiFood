@@ -12,6 +12,7 @@ import icon8 from "../../../../assets/home/system/icon8.png";
 import icon9 from "../../../../assets/home/system/icon9.png";
 import icon10 from "../../../../assets/home/system/icon10.png";
 import icon11 from "../../../../assets/home/system/icon11.png";
+import icon12 from "../../../../assets/home/system/icon12.png";
 
 export default function SystemDriven() {
 

@@ -82,12 +82,14 @@ export default function HowYouEarn() {
     <section className="bg-black text-white py-10 lg:pt-8 lg:pb-4 px-3 lg:px-4">
       <div className="max-w-7xl mx-auto">
         {/* Title */}
-        <h2 className="text-center text-3xl md:text-4xl font-bold mb-16">
-          How You Earn?
+        <h2 className="text-center text-3xl md:text-4xl font-bricolageBold mb-2">
+          Own Your QSR. Choose How You Want to Earn.
         </h2>
-
+<p className="text-center text-md md:text-lg max-w-3xl mx-auto mb-16">
+  You don't have just invest in a QSR. You don’t just invest in a QSR. You choose how you want to run it. You choose how you want to run it.
+</p>
         <div className="grid md:grid-cols-2 gap-10">
-          
+
           {/* FOFO CARD */}
           <div className="relative bg-[#161616] rounded-2xl p-6 lg:p-8 pb-36 min-h-[570px] shadow-lg overflow-hidden">
             <div className="relative z-30">

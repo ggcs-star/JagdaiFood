@@ -59,7 +59,7 @@ export default function AdditionalFranchiseModels() {
                 ))}
               </ul>
 
-              <p className="text-white font-medium mb-6">
+              <p className="text-white text-sm mb-6 font-semibold">
                 Built for digital-first food business operators.
               </p>
 
@@ -112,7 +112,7 @@ export default function AdditionalFranchiseModels() {
       ))}
     </ul>
 
-    <p className="text-black font-medium mb-6">
+    <p className="text-black text-sm font-semibold mb-6">
       Perfect for first-time entrepreneurs and micro-investors.
     </p>
 
