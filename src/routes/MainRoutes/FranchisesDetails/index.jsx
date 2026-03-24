@@ -448,11 +448,16 @@ function FranchisesDetails() {
                       </p>
                     </div>
 
+
+
                     <button
                       onClick={() => navigate("/fofo-model")}
-                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center justify-start gap-2 hover:gap-3 transition-all"
                     >
-                      Know More <span>›</span>
+                      <span className="leading-none">Know More</span>
+                      <span className="text-3xl leading-none inline-flex items-center relative -top-[2px]">
+                        ›
+                      </span>
                     </button>
                   </div>
 
@@ -467,11 +472,16 @@ function FranchisesDetails() {
                       </p>
                     </div>
 
+
+
                     <button
                       onClick={() => navigate("/foco-model")}
-                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center justify-start gap-2 hover:gap-3 transition-all"
                     >
-                      Know More <span>›</span>
+                      <span className="leading-none">Know More</span>
+                      <span className="text-3xl leading-none inline-flex items-center relative -top-[2px]">
+                        ›
+                      </span>
                     </button>
                   </div>
 
@@ -488,16 +498,19 @@ function FranchisesDetails() {
 
                     <button
                       // onClick={() => navigate("/white-label")}
-                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+                      className="mt-5 text-[#FDBD5B] text-sm font-medium flex items-center justify-start gap-2 hover:gap-3 transition-all"
                     >
-                      Know More <span>›</span>
+                      <span className="leading-none">Know More</span>
+                      <span className="text-3xl leading-none inline-flex items-center relative -top-[2px]">
+                        ›
+                      </span>
                     </button>
                   </div>
                 </div>
 
                 <Link
                   to="/model-comparison"
-                  className="mt-6 w-48 mx-auto flex items-center justify-center bg-[#FDBD5B] text-black text-sm font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#f5b94a] transition duration-300"
+                  className="mt-6 w-60 mx-auto flex items-center justify-center bg-[#FDBD5B] text-black text-lg font-medium px-5 py-2 rounded-md shadow-sm hover:bg-[#f5b94a] transition duration-300"
                 >
                   For Detail Explanation
                 </Link>

@@ -148,7 +148,7 @@ export default function HowYouEarn() {
               {/* CTA */}
               <button
                 onClick={() => navigate("/franchise-models")}
-                className="mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-white hover:text-black transition"
+                className="cursor-pointer mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-white hover:text-black transition"
               >
                 Know More
               </button>
@@ -156,20 +156,20 @@ export default function HowYouEarn() {
             </div>
 
             {/* 🔥 Bottom Visual Section */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-end gap-6 z-20">
+            <div className="absolute -bottom-4 left-[45%] -translate-x-1/2 flex items-end gap-6 z-20">
 
               {/* Stall 1 */}
               <img
                 src={stall1} // 👈 import your first stall image
                 alt="stall1"
-                className="w-[120px] md:w-[150px] object-contain"
+                className="w-[120px] md:w-[200px] object-contain"
               />
 
               {/* Stall 2 */}
               <img
                 src={stall2} // 👈 import second stall image
                 alt="stall2"
-                className="w-[120px] md:w-[150px] object-contain"
+                className="w-[120px] md:w-[200px] object-contain"
               />
 
             </div>
@@ -230,7 +230,7 @@ export default function HowYouEarn() {
               {/* CTA */}
               <button
                 onClick={() => navigate("/franchise-models")}
-                className="mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-green-400 hover:text-black transition"
+                className="cursor-pointer mt-5 border border-gray-500 px-4 py-2 rounded-md text-sm hover:bg-white hover:text-black transition"
               >
                 Know More
               </button>
@@ -238,20 +238,20 @@ export default function HowYouEarn() {
             </div>
 
             {/* 🔥 Bottom Visual (Stalls) */}
-            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 flex items-end gap-6 z-20">
+            <div className="absolute -bottom-6 left-[45%] -translate-x-1/2 flex items-end gap-6 z-20">
 
               {/* Stall 1 */}
               <img
                 src={stall3} // 👈 import image
                 alt="stall"
-                className="w-[120px] md:w-[150px] object-contain"
+                className="w-[120px] md:w-[200px] object-contain"
               />
 
               {/* Stall 2 */}
               <img
                 src={stall4} // 👈 import image
                 alt="stall"
-                className="w-[120px] md:w-[150px] object-cover"
+                className="w-[120px] md:w-[200px] object-contain"
               />
 
             </div>
