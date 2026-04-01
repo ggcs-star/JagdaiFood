@@ -1,76 +1,54 @@
-import React from "react";
-import heroImage from "../../../../assets/home/herosection/herosection.png";
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+
+import banner1 from "../../../../assets/home/herosection/banner-1.png";
+import banner2 from "../../../../assets/home/herosection/banner-2.png";
+import banner3 from "../../../../assets/home/herosection/banner-3.png";
+import banner4 from "../../../../assets/home/herosection/banner-4.png";
 
 export default function FranchiseHero() {
-  const navigate = useNavigate();
+  const banners = [banner1, banner2, banner3, banner4];
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % banners.length);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [banners.length]);
 
   return (
-    <section className="relative w-screen top-8 min-h-[100vh] text-white overflow-hidden pt-16 lg:pt-24">
-
-      {/* Gradient Background (always visible) */}
+    <section className="w-full h-[300px] lg:h-[650px] overflow-hidden relative">
+      
       <div
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(circle at 80% 40%, rgba(47,210,155,0.2), transparent 40%),
-            linear-gradient(135deg,#0c3d2e,#0e6b4d,#1aa370)
-          `
-        }}
-      />
-
-      {/* Hero Image (hidden on mobile) */}
-      <div
-        className="absolute inset-0 hidden md:block bg-center bg-cover bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
-      />
-
-      {/* Content */}
-      <div className="max-w-7xl mx-auto relative z-10 py-8 lg:py-10">
-        <div className="max-w-[650px]">
-
-          <p className="text-3xl md:text-5xl font-bricolageBold text-[#FDBD5B] mb-4">
-            Built on Amma’s Legacy
-          </p>
-
-          <h1 className="text-3xl md:text-5xl font-bricolageSemiBold leading-tight mb-6">
-            Engineered for Scalable
-            <br className="hidden lg:block" />{" "}
-            Food Entrepreneurship
-          </h1>
-
-          <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Jagdai Foods is a{" "}
-            <span className="italic font-semibold">
-              24+ brand, technology-driven food franchise ecosystem
-            </span>{" "}
-            inspired by Amma’s love for authentic taste.
-          </p>
-
-          <p className="text-sm lg:text-lg text-gray-200 mb-4 lg:mb-6 leading-relaxed">
-            Through centralized operations, standardized systems, and clearly defined
-            FOFO & FOCO franchise models, we enable entrepreneurs to build profitable
-            food businesses with operational clarity and predictable returns.
-          </p>
-
-          <p className="italic text-sm lg:text-lg text-[#FDBD5B] mb-4 lg:mb-6 leading-relaxed">
-            Structured franchise formats. Capital protection framework. Multi-brand scale.
-          </p>
-
-          <div className="flex gap-4 lg:flex-wrap">
-            <button className="text-sm lg:text-lg bg-[#FDBD5B] text-black px-2 lg:px-6 py-3 rounded-lg hover:bg-[#e0a43f] transition">
-              Apply for Franchise
-            </button>
-
-            <button
-              onClick={() => navigate("/contact")}
-              className="text-sm lg:text-lg border border-white/40 px-2 lg:px-6 py-3 rounded-lg hover:bg-white/10 transition"
-            >
-              Schedule Consultation
-            </button>
+        className="flex transition-transform duration-700 ease-in-out h-full"
+        style={{ transform: `translateX(-${current * 100}%)` }}
+      >
+        {banners.map((banner, index) => (
+          <div
+            key={index}
+            className="w-full lg:h-full flex-shrink-0 flex justify-center"
+          >
+            <img
+              src={banner}
+              alt={`Banner ${index + 1}`}
+              className="w-full max-w-[1600px] lg:h-[730px] lg:object-contain object-center"
+            />
           </div>
+        ))}
+      </div>
 
-        </div>
+      {/* Dots */}
+      <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 z-10">
+        {banners.map((_, i) => (
+          <div
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`h-2 w-2 rounded-full cursor-pointer transition ${
+              current === i ? "bg-white scale-110" : "bg-white/50"
+            }`}
+          />
+        ))}
       </div>
 
     </section>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import HeroSection from "./components/HeroSection";
 import MyJagdaiFoods from "./components/MyJagdaiFoods";
 import HowYouEarn from "./components/HowYouEarn";
@@ -12,17 +12,35 @@ import BrandsCarousel from "../../../components/BrandsCarousel";
 import WhyJagdai from "./components/WhyJagdai";
 import CapitalGuarantee from "./components/MyJagdaiFoods";
 import FAQAccordion from "./components/FAQAccordion";
-
-
+import CoreHooks from "./components/CoreHooks";
+import PanoramaSlider from "./components/PanormaSlider";
+import FranchiseCards from "./components/FranchiseCards";
+import BrandsPower from "./components/BrandsPower";
+import FoodBusinessModal from "./components/FoodBusinessModal";
+import QSRFranchiseSection from "./components/QSRFranchiseSection";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
+  const [showFoodModal, setShowFoodModal] = useState(false); // ✅ FIXED
+  const heroRef = useRef(null); // ✅ NEW
 
   const handleScroll = () => {
     const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const docHeight =
+      document.documentElement.scrollHeight - window.innerHeight;
     const scrolled = (scrollTop / docHeight) * 100;
     setScrollPercentage(scrolled);
+
+    // ✅ SHOW MODAL AFTER HERO SECTION
+    if (heroRef.current) {
+      const heroHeight = heroRef.current.offsetHeight;
+
+      if (scrollTop > heroHeight - 100) {
+        setShowFoodModal(true);
+      } else {
+        setShowFoodModal(false);
+      }
+    }
   };
 
   useEffect(() => {
@@ -50,20 +68,38 @@ export default function Home() {
 
   return (
     <div className="">
-      <HeroSection />
+      
+      {/* HERO WITH REF */}
+      <div ref={heroRef}>
+        <HeroSection />
+      </div>
+
+      {/* <CoreHooks/> */}
+
+      {/* ✅ MODAL (SHOWS AFTER HERO) */}
+      {showFoodModal && (
+        <FoodBusinessModal onClose={() => setShowFoodModal(false)} />
+      )}
+
+      <QSRFranchiseSection/>
+
+      {/* <BrandsPower /> */}
+      <FranchiseCards />
+      <CapitalGuarantee />
+
+      <PanoramaSlider />
       {/* <MyJagdaiFoods /> */}
-      <FranchiseModels />
+      {/* <FranchiseModels />
       <AdditionalFranchiseModels />
       <HowYouEarn />
       <CapitalGuarantee />
       <BrandsCarousel />
       <SystemDriven />
-      <WhyJagdai />
-
+      <WhyJagdai /> */}
 
       {/* <WhyMultiFormatModel /> */}
       <JagodsAppSection />
-      
+
       <FranchiseCTA />
       {/* <FAQAccordion/> */}
 
@@ -107,7 +143,8 @@ export default function Home() {
                 strokeWidth: "2",
                 strokeDasharray: `${2 * Math.PI * 24}`,
                 strokeDashoffset: getStrokeDashoffset(),
-                transition: "stroke-dashoffset 0.3s ease, stroke 0.3s ease",
+                transition:
+                  "stroke-dashoffset 0.3s ease, stroke 0.3s ease",
                 transform: "rotate(-90deg)",
                 transformOrigin: "center",
               }}
@@ -125,7 +162,6 @@ export default function Home() {
           </svg>
         </div>
       )} */}
-
     </div>
   );
 }

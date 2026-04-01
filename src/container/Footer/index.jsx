@@ -8,32 +8,32 @@ import logo from "../../assets/footer/logo.webp";
 const Footer = () => {
   const navigate = useNavigate();
 
-const quickLinks = [
-  {
-    label: "QSR Franchise",
-    slug: "/franchise-formats/qsr-restaurant-franchise",
-  },
-  {
-    label: "Cloud Kitchen",
-    slug: "/franchise-formats/internet-restaurants-franchise",
-  },
-  {
-    label: "Food Trolley",
-    slug: "/franchise-formats/food-trolley-franchise",
-  },
-  {
-    label: "Food Tempo",
-    slug: "/franchise-formats/food-tempo-franchise",
-  },
-  {
-    label: "Food Court",
-    slug: "/franchise-formats/chatori-gali",
-  },
-  {
-    label: "Influencer Franchise",
-    slug: "/franchise-formats/influencer-franchise",
-  },
-];
+  const quickLinks = [
+    {
+      label: "QSR Franchise",
+      slug: "/franchise-formats/qsr-restaurant-franchise",
+    },
+    {
+      label: "Cloud Kitchen",
+      slug: "/franchise-formats/internet-restaurants-franchise",
+    },
+    {
+      label: "Food Trolley",
+      slug: "/franchise-formats/food-trolley-franchise",
+    },
+    {
+      label: "Food Tempo",
+      slug: "/franchise-formats/food-tempo-franchise",
+    },
+    {
+      label: "Food Court",
+      slug: "/franchise-formats/chatori-gali",
+    },
+    {
+      label: "Influencer Franchise",
+      slug: "/franchise-formats/influencer-franchise",
+    },
+  ];
 
   const businessModels = [
     { label: "FOFO Model", desc: "(Franchise Owned Franchise Operated)", slug: "/fofo-model" },
@@ -47,14 +47,14 @@ const quickLinks = [
     { label: "Franchise FAQs", slug: "/faq" },
     { label: "Terms & Conditions", slug: "/terms" },
     { label: "Privacy Policy", slug: "/privacy" },
-    {label: "Disclaimer", slug:"/disclaimer"}
+    { label: "Disclaimer", slug: "/disclaimer" }
   ];
 
   const socials = [
-    { icon: <FaFacebookF />, url: "#" },
-    { icon: <FaInstagram />, url: "#" },
-    { icon: <FaLinkedinIn />, url: "#" },
-    { icon: <FaYoutube />, url: "#" },
+    { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1aRjrPt6AL/" },
+    { icon: <FaInstagram />, url: "https://www.instagram.com/jagdai_foods?igsh=MThjcHVkaGk3YWc4MA==" },
+    { icon: <FaLinkedinIn />, url: "https://www.linkedin.com/company/jagdai-foods/" },
+    { icon: <FaYoutube />, url: "https://youtube.com/playlist?list=PLadgeeg-KdFkCvCirTs64WWMRKHBG64wQ&si=wkKDeow8xzo3wcaQ" },
   ];
 
   return (
@@ -97,22 +97,22 @@ const quickLinks = [
                 </div>
               </div>
 
-             <div className="flex items-center gap-4">
-  <div className="bg-gray-700 p-3 rounded-full">
-    <HiOutlinePhone className="text-white" />
-  </div>
+              <div className="flex items-center gap-4">
+                <div className="bg-gray-700 p-3 rounded-full">
+                  <HiOutlinePhone className="text-white" />
+                </div>
 
-  <div>
-    <p className="text-xs text-gray-400 uppercase">Phone</p>
+                <div>
+                  <p className="text-xs text-gray-400 uppercase">Phone</p>
 
-    <a
-      href="tel:+918866373077"
-      className="text-white"
-    >
-      +91 8866373077
-    </a>
-  </div>
-</div>
+                  <a
+                    href="tel:+918866373077"
+                    className="text-white"
+                  >
+                    +91 8866373077
+                  </a>
+                </div>
+              </div>
 
             </div>
           </div>

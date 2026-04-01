@@ -5,7 +5,7 @@ import trolleyImg from "../../../../assets/investment/trolley/trolley.png";
 
 export default function FoodTrolleyEarnings() {
   return (
-    <section className="bg-black text-white pb-12 px-4 lg:px-10">
+    <section className="bg-black text-white pb-12 px-4 lg:px-0">
       <div className="max-w-7xl mx-auto">
 
 
@@ -17,18 +17,18 @@ export default function FoodTrolleyEarnings() {
         </h2> */}
 
         <div className="flex justify-center mb-8">
-          <div
+          {/* <div
             className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
             style={{
               background:
                 "linear-gradient(91deg, #203027 0%, #322F20 100%)",
             }}
-          >
-            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+          > */}
+            <h2 className="text-white text-xl lg:text-5xl font-bricolageMedium">
               Monthly Earning Potential of{" "}
               <span className="text-[#FDBD5B]">Food Trolley</span>
             </h2>
-          </div>
+          {/* </div> */}
         </div>
 
         {/* MAIN WRAPPER */}

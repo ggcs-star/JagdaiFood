@@ -9,7 +9,7 @@ import { Check } from "lucide-react";
 
 export default function FoodTempoEarnings() {
   return (
-    <section className="bg-black text-white py-12 px-4 lg:px-10">
+    <section className="bg-black text-white py-12 px-4 lg:px-0">
       <div className="max-w-7xl mx-auto">
 
         {/* TITLE */}
@@ -20,22 +20,22 @@ export default function FoodTempoEarnings() {
         </h2> */}
 
 
-        <div className="flex justify-center mb-8">
-          <div
+        <div className="flex justify-center mb-4">
+          {/* <div
             className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
             style={{
               background:
                 "linear-gradient(91deg, #203027 0%, #322F20 100%)",
             }}
-          >
-            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+          > */}
+            <h2 className="text-white text-center text-xl lg:text-5xl font-bricolageMedium">
               Monthly Earning Potential of{" "}
               <span className="text-[#FDBD5B]"> Food Tempo (FOFO Model)</span>
             </h2>
-          </div>
+          {/* </div> */}
         </div>
 
-        <p className="text-center text-[#60D186] mb-10 font-semibold">
+                <p className="text-center text-[#60D186] text-2xl mb-10 font-semibold">
           Strong Daily Sales = Predictable Monthly Income
         </p>
 

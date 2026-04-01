@@ -94,16 +94,17 @@ const tableData = [
   {
     aspect: "Capital guarantee provisions (FOCO & FOFO Models)",
     fofo: [
+      "- The Company guarantees the Franchise Fee and the Setup Cost only if the Setup Cost is paid to the Company and the complete setup is executed by the Company. If the Franchisee undertakes any part of the setup independently, only the Franchise Fee shall be guaranteed.",
+      "- The capital guarantee becomes eligible only after nine (9) years and only upon permanent closure of the Unit. No refund shall be made prior to completion of this period.",
+      "- Upon closure, all infrastructure, fixed assets, movable and immovable assets installed by the Company shall be taken over by the Company and shall remain the property of the Company.",
+    ],
+    foco: [
       "- The entire lump-sum Initial Capital Investment paid at the commencement of the Agreement is capital guaranteed.",
       "- Refund of the Initial Capital Investment shall be permitted only after nine (9) years and only upon permanent closure of the Unit.",
       "- During the Unit’s operations, the Franchisee shall receive 24% annual ROI on the Initial Capital Investment or 5% of the total billing, whichever is higher.",
       "- At closure, all infrastructure, fixed assets, movable and immovable assets installed for the Unit shall be taken over by the Company and shall remain the property of the Company. The Company shall thereafter refund the Initial Capital Investment, after adjusting any outstanding dues.",
     ],
-    foco: [
-      "- The Company guarantees the Franchise Fee and the Setup Cost only if the Setup Cost is paid to the Company and the complete setup is executed by the Company. If the Franchisee undertakes any part of the setup independently, only the Franchise Fee shall be guaranteed.",
-      "- The capital guarantee becomes eligible only after nine (9) years and only upon permanent closure of the Unit. No refund shall be made prior to completion of this period.",
-      "- Upon closure, all infrastructure, fixed assets, movable and immovable assets installed by the Company shall be taken over by the Company and shall remain the property of the Company.",
-    ],
+    
   },
 ];
 
