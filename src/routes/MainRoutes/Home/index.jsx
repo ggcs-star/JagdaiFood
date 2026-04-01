@@ -18,6 +18,7 @@ import FranchiseCards from "./components/FranchiseCards";
 import BrandsPower from "./components/BrandsPower";
 import FoodBusinessModal from "./components/FoodBusinessModal";
 import QSRFranchiseSection from "./components/QSRFranchiseSection";
+import FranchiseHeader from "./components/FranchiseHeader";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -72,7 +73,9 @@ export default function Home() {
       {/* HERO WITH REF */}
       <div ref={heroRef}>
         <HeroSection />
+        
       </div>
+    
 
       {/* <CoreHooks/> */}
 

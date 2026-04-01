@@ -32,7 +32,7 @@ export default function FranchiseHero() {
             <img
               src={banner}
               alt={`Banner ${index + 1}`}
-              className="w-full max-w-[1600px] lg:h-[730px] lg:object-contain object-center"
+              className="w-full max-w-[1600px] lg:h-[780px] lg:object-contain object-center"
             />
           </div>
         ))}
