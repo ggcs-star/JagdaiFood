@@ -88,9 +88,67 @@
     font-style: italic;
   }
 
-body,
+/* body,
 html {
     overflow-x: hidden;
+} */
+
+.dm-panorama-swiper {
+  overflow: visible;
+  perspective: 1200px; /* 🔥 depth */
+}
+
+.dm-panorama-swiper-slide {
+  flex-shrink: 0 !important;
+  transition: all 0.4s ease;
+  transform: scale(0.85);
+  /* opacity: 0.5; */
+}
+
+/* Active center */
+.swiper-slide-active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Left side tilt */
+.swiper-slide-prev {
+  transform: rotateY(15deg) scale(0.9);
+}
+
+/* Right side tilt */
+.swiper-slide-next {
+  transform: rotateY(-15deg) scale(0.9);
+}
+
+/* Pagination */
+.dm-panorama-swiper-pagination {
+  width: fit-content !important;
+}
+
+.dm-panorama-bullet {
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 100px;
+  opacity: 0.2;
+}
+
+.dm-panorama-bullet-active {
+  opacity: 1;
+}
+
+/* Mask (optional) */
+.dm-panorama-swiper {
+  mask-image: url("https://dmmotionarts.com/wp-content/uploads/2025/12/Panorama-Shape-StretchingAllowed.svg");
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  mask-position: center;
+
+  -webkit-mask-image: url("https://dmmotionarts.com/wp-content/uploads/2025/12/Panorama-Shape-StretchingAllowed.svg");
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
 
 @keyframes arrowFloat {

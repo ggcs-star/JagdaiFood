@@ -5,7 +5,7 @@ import { ApplyButton } from "../../../../components/Button";
 
 export default function InternetRestaurantEarnings() {
     return (
-        <section className="bg-black text-white pt-8 pb-12 px-4 lg:px-10">
+        <section className="bg-black text-white pt-8 pb-12 px-4 lg:px-0">
             <div className="max-w-7xl mx-auto">
 
 {/* 
@@ -16,22 +16,22 @@ export default function InternetRestaurantEarnings() {
                 </h2> */}
 
                 <div className="flex justify-center mb-2">
-          <div
+          {/* <div
             className="px-6 py-3 lg:px-10 lg:py-4 rounded-xl text-center"
             style={{
               background:
                 "linear-gradient(91deg, #203027 0%, #322F20 100%)",
             }}
-          >
-            <h2 className="text-white text-xl lg:text-3xl font-bricolageMedium">
+          > */}
+            <h2 className="text-white text-xl lg:text-5xl font-bricolageMedium">
               Monthly Earning Potential of{" "}
               <span className="text-[#FDBD5B]">Internet Restaurant
 </span>
             </h2>
-          </div>
+          {/* </div> */}
         </div>
 
-                <p className="text-center text-[#60D186] mb-10 font-semibold">
+                <p className="text-center text-[#60D186] text-2xl mb-10 font-semibold">
                     Run Digitally | Earn Passively | Scale Without Operations
                 </p>
 
@@ -137,7 +137,7 @@ export default function InternetRestaurantEarnings() {
                                     ₹6 Lac Revenue → 15% = ₹90k (FOCO) | 35% = ₹2.1 Lac (FOFO)
                                 </p>
 
-                                <p className="text-lg mt-1 opacity-80">
+                                <p className="text-2xl font-bold mt-1 opacity-100">
                                     Choose model based on involvement vs returns
                                 </p>
 

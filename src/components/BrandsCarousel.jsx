@@ -723,11 +723,11 @@ const SampleCard = ({ item, handler }) => {
           <img src={item?.image} className="max-h-[220px]" />
         </div>
 
-           {item?.note && (
-              <p className="text-sm pb-8 z-50 text-white text-center font-medium leading-snug">
-                {item.note}
-              </p>
-            )}
+        {item?.note && (
+          <p className="text-sm pb-8 z-50 text-white text-center font-medium leading-snug">
+            {item.note}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -788,11 +788,11 @@ export default function BrandsCarousel() {
   };
 
   return (
-    <div className="bg-black text-center">
+    <div className="bg-black text-center overflow-x-hidden">
       <GlobalStyle />
 
       {/* ✅ SAME WIDTH AS SLIDER */}
-      <div className="max-w-7xl mx-auto rounded-xl">
+      <div className="!max-w-7xl mx-auto rounded-xl">
         <HeaderSection>
           <HeaderTitle className="font-bricolageBold">
             24+ Brands Power
