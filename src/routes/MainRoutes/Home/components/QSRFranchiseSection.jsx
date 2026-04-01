@@ -42,7 +42,6 @@ export default function QSRFranchiseSection() {
       <GlobalStyle />
 
       <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl p-8">
-
         {/* HEADER */}
         <div className="text-center mb-14">
           <HeaderTitle className="font-bricolageBold">
@@ -61,57 +60,51 @@ export default function QSRFranchiseSection() {
         </div>
 
         {/* CONTENT */}
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          {/* LEFT SIDE */}
+          <div>
+            <h3 className="text-4xl font-bricolageBold mb-6">Core Power</h3>
 
-  {/* LEFT SIDE */}
-  <div>
-    <h3 className="text-4xl font-bricolageBold mb-6">Core Power</h3>
+            <div className="space-y-5 text-gray-300 text-lg">
+              <div className="flex items-center gap-4">
+                <div className="bg-black p-3 rounded-lg">
+                  <img src={icon1} alt="" className="w-6 h-6 object-contain" />
+                </div>
+                <p>Starting from ₹6,00,000</p>
+              </div>
 
-    <div className="space-y-5 text-gray-300 text-lg">
+              <div className="flex items-center gap-4">
+                <div className="bg-black p-3 rounded-lg">
+                  <img src={icon2} alt="" className="w-6 h-6 object-contain" />
+                </div>
+                <p>1 Franchise = 24+ Food Brands</p>
+              </div>
 
-      <div className="flex items-center gap-4">
-        <div className="bg-black p-3 rounded-lg">
-          <img src={icon1} alt="" className="w-6 h-6 object-contain" />
+              <div className="flex items-center gap-4">
+                <div className="bg-black p-3 rounded-lg">
+                  <img src={icon3} alt="" className="w-6 h-6 object-contain" />
+                </div>
+                <p>Zero Royalty – 100% Your Earnings</p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="bg-black p-3 rounded-lg">
+                  <img src={icon4} alt="" className="w-6 h-6 object-contain" />
+                </div>
+                <p>Ahmedabad’s Biggest Cloud Kitchen Access</p>
+              </div>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE IMAGE */}
+          <div className="relative flex justify-center items-center">
+            <img
+              src={qsr}
+              alt="QSR"
+              className="relative w-[420px] object-cover"
+            />
+          </div>
         </div>
-        <p>Starting from ₹6,00,000</p>
-      </div>
-
-      <div className="flex items-center gap-4">
-        <div className="bg-black p-3 rounded-lg">
-          <img src={icon2} alt="" className="w-6 h-6 object-contain" />
-        </div>
-        <p>1 Franchise = 24+ Food Brands</p>
-      </div>
-
-      <div className="flex items-center gap-4">
-        <div className="bg-black p-3 rounded-lg">
-          <img src={icon3} alt="" className="w-6 h-6 object-contain" />
-        </div>
-        <p>Zero Royalty – 100% Your Earnings</p>
-      </div>
-
-      <div className="flex items-center gap-4">
-        <div className="bg-black p-3 rounded-lg">
-          <img src={icon4} alt="" className="w-6 h-6 object-contain" />
-        </div>
-        <p>Ahmedabad’s Biggest Cloud Kitchen Access</p>
-      </div>
-
-    </div>
-  </div>
-
-  {/* RIGHT SIDE IMAGE */}
-  <div className="relative flex justify-center items-center">
-
-
-    <img
-      src={qsr}
-      alt="QSR"
-      className="relative w-[420px] object-cover"
-    />
-  </div>
-
-</div>
 
         {/* BRANDS */}
         <div className="mt-16">
