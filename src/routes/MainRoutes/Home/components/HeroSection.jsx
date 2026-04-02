@@ -18,7 +18,7 @@ export default function FranchiseHero() {
   }, [banners.length]);
 
   return (
-    <section className="w-full h-[300px] lg:h-[650px] overflow-hidden relative">
+    <section className="w-full  mt-20 h-[150px] md:mt-0 md:h-[700px] lg:mt-0 lg:mb-0 overflow-hidden relative">
       
       <div
         className="flex transition-transform duration-700 ease-in-out h-full"
@@ -32,7 +32,7 @@ export default function FranchiseHero() {
             <img
               src={banner}
               alt={`Banner ${index + 1}`}
-              className="w-full max-w-[1600px] lg:h-[780px] lg:object-contain object-center"
+              className="w-full max-w-[1600px] lg:h-[780px] lg:object-contain  object-center"
             />
           </div>
         ))}
