@@ -1,6 +1,4 @@
-
-
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import BrandsPower from "./BrandsPower";
 import styled, { createGlobalStyle } from "styled-components";
 
@@ -48,6 +46,13 @@ const GlobalStyle = createGlobalStyle`
 export default function QSRFranchiseSection() {
   const [current, setCurrent] = useState(0);
   const [isTransition, setIsTransition] = useState(true);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isDraggingState, setIsDraggingState] = useState(false);
+
+  const sliderRef = useRef(null);
+  const isDragging = useRef(false);
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
 
   const slides = [
     {
@@ -116,13 +121,17 @@ export default function QSRFranchiseSection() {
   ];
 
   const extendedSlides = [...slides, ...slides];
+  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => prev + 1);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
+  if (isPaused || isDraggingState) return; 
+
+  const interval = setInterval(() => {
+    setCurrent((prev) => prev + 1);
+  }, 3000);
+
+  return () => clearInterval(interval);
+}, [isPaused, isDraggingState]);
 
   useEffect(() => {
     if (current === slides.length) {
@@ -133,17 +142,19 @@ export default function QSRFranchiseSection() {
       setTimeout(() => setIsTransition(true), 750);
     }
   }, [current]);
+  window.setCurrent = setCurrent;
+  window.setIsPaused = setIsPaused;
 
   return (
-    <div className="bg-black text-white py-10 md:py-16 px-4">
+    <div className="bg-black text-white py-6 md:py-16 px-4">
       <GlobalStyle />
       <Franchiseheader />
 
-      <div className="max-w-7xl mx-auto bg-[#262626] rounded-3xl p-5 md:p-10">
-        {/* HEADER SAME */}
-        <div className="text-center mb-16 relative">
-          <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[300px] h-[150px] bg-[#262626] opacity-30 blur-[120px] rounded-full"></div>
+      <div className="max-w-7xl mx-auto bg-[#262626] rounded-3xl p-5 md:p-10 relative overflow-hidden">
+        <div className="absolute top-[-80px] left-1/2 -translate-x-1/2 w-[280px] h-[200px] bg-[#FDBD5B] opacity-85 blur-[45px] rounded-full pointer-events-none"></div>
 
+        {/* HEADER SAME */}
+        <div className="text-center  mt-12 relative">
           <h1 className="text-4xl md:text-5xl font-bricolageBold text-white relative z-10">
             QSR Restaurant Franchise
           </h1>
@@ -165,15 +176,79 @@ export default function QSRFranchiseSection() {
           </p>
         </div>
 
-        {/* SLIDER */}
-        <div className="overflow-hidden">
+        
+        <div
+          className="overflow-hidden"
+          onMouseDown={(e) => {
+            isDragging.current = true;
+            startX.current = e.pageX;
+            setIsDraggingState(true);
+            setIsPaused(true);
+            setIsTransition(false);
+          }}
+          onMouseMove={(e) => {
+            if (!isDragging.current) return;
+
+            const diff = e.pageX - startX.current;
+            setDragOffset(diff); 
+          }}
+          onMouseUp={() => {
+            isDragging.current = false;
+             setIsDraggingState(false);
+            setIsPaused(false);
+
+            if (dragOffset > 100) {
+              setCurrent((prev) => prev - 1);
+            } else if (dragOffset < -100) {
+              setCurrent((prev) => prev + 1);
+            }
+
+            setDragOffset(0);
+            setIsTransition(true); 
+          }}
+          onMouseLeave={() => {
+            isDragging.current = false;
+            setIsDraggingState(false); 
+            setIsPaused(false);
+            
+            setDragOffset(0);
+            setIsTransition(true);
+          }}
+          onTouchStart={(e) => {
+            startX.current = e.touches[0].clientX;
+            setIsPaused(true);
+            setIsDraggingState(true);
+             setIsTransition(false);
+          }}
+          onTouchMove={(e) => {
+            const diff = e.touches[0].clientX - startX.current;
+            setDragOffset(diff); 
+            setIsTransition(false);
+          }}
+          onTouchEnd={(e) => {
+            const diff = e.changedTouches[0].clientX - startX.current;
+
+            if (diff > 100) {
+              setCurrent((prev) => prev - 1);
+            } else if (diff < -100) {
+              setCurrent((prev) => prev + 1);
+            }
+
+            setDragOffset(0);
+            setIsPaused(false);
+            setIsDraggingState(false);
+            setIsTransition(true);
+          }}
+        >
           <div
             className={`flex ${
-              isTransition
-                ? "transition-transform duration-700 ease-linear"
-                : ""
+              isTransition ? "transition-transform duration-300 ease-out" : ""
             }`}
-            style={{ transform: `translateX(-${current * 100}%)` }}
+            // style={{ transform: `translateX(-${current * 100}%)` }}
+
+            style={{
+              transform: `translateX(calc(-${current * 100}% + ${dragOffset}px))`,
+            }}
           >
             {extendedSlides.map((slide, index) => (
               <div
@@ -188,7 +263,6 @@ export default function QSRFranchiseSection() {
                   <div className="space-y-5">
                     {slide.points.map((item, i) => (
                       <div key={i} className="flex items-center gap-3 sm:gap-4">
-                        {/* ICON */}
                         <div className="bg-black min-w-[42px] min-h-[42px] sm:min-w-[48px] sm:min-h-[48px] rounded-xl flex items-center justify-center flex-shrink-0">
                           <img
                             src={item.icon}
@@ -197,8 +271,7 @@ export default function QSRFranchiseSection() {
                           />
                         </div>
 
-                        {/* TEXT */}
-                        <p className="text-white font-bricolageSemiBold text-sm sm:text-base md:text-lg leading-[1.4]">
+                        <p className="text-white font-bricolageSemiBold text-sm sm:text-base md:text-lg leading-[1]">
                           {item.text}
                         </p>
                       </div>
@@ -218,7 +291,7 @@ export default function QSRFranchiseSection() {
         </div>
 
         {/* DOTS */}
-        <div className="flex justify-center mt-6 gap-2">
+        <div className="flex justify-center mt-2 gap-2">
           {slides.map((_, i) => (
             <div
               key={i}
@@ -230,7 +303,7 @@ export default function QSRFranchiseSection() {
           ))}
         </div>
 
-        <div className="mt-16">
+        <div className="mt-10">
           <BrandsPower />
         </div>
       </div>
