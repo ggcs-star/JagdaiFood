@@ -2,9 +2,8 @@ import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+// ✅ IMPORTANT: use bundle for production stability
+import "swiper/css/bundle";
 
 import underlineImg from "../../../../assets/underline.png";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -57,6 +56,7 @@ const PanoramaSlider = () => {
 
   return (
     <div className="bg-black py-20 text-white text-center overflow-hidden">
+      
       {/* Header */}
       <div className="flex flex-col items-center mb-6">
         <img
@@ -94,7 +94,6 @@ const PanoramaSlider = () => {
           grabCursor={true}
           initialSlide={2}
 
-          // ✅ AUTOPLAY
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
@@ -102,15 +101,21 @@ const PanoramaSlider = () => {
           }}
           speed={800}
 
-          // ✅ FIXED NAVIGATION INIT
-          onBeforeInit={(swiper) => {
-            swiper.params.navigation.prevEl = prevRef.current;
-            swiper.params.navigation.nextEl = nextRef.current;
-          }}
+          // ✅ FIXED NAVIGATION (SERVER SAFE)
+          onSwiper={(swiper) => {
+            setTimeout(() => {
+              if (
+                swiper.params.navigation &&
+                typeof swiper.params.navigation !== "boolean"
+              ) {
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
 
-          navigation={{
-            prevEl: prevRef.current,
-            nextEl: nextRef.current,
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              }
+            });
           }}
 
           pagination={{
@@ -123,10 +128,7 @@ const PanoramaSlider = () => {
           className="dm-panorama-swiper"
         >
           {images.map((img, index) => (
-            <SwiperSlide
-              key={index}
-              style={{ width: slideWidth }}
-            >
+            <SwiperSlide key={index} style={{ width: slideWidth }}>
               <div className="h-[260px] sm:h-[470px] shadow-2xl">
                 <img
                   src={img}
@@ -140,6 +142,7 @@ const PanoramaSlider = () => {
 
         {/* Navigation */}
         <div className="flex flex-col items-center gap-6 mt-4">
+          
           {/* Arrows */}
           <div className="flex gap-6">
             <button
@@ -161,14 +164,14 @@ const PanoramaSlider = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleExplore}
-              className="px-6 py-3 rounded-md bg-white text-black font-semibold cursor-pointer hover:bg-gray-200 transition"
+              className="px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-200 transition"
             >
               Explore Jagdai Catering
             </button>
 
             <button
               onClick={handleBook}
-              className="px-6 py-3 rounded-md bg-[#FDBD5B] text-black font-semibold cursor-pointer hover:bg-yellow-400 transition"
+              className="px-6 py-3 rounded-md bg-[#FDBD5B] text-black font-semibold hover:bg-yellow-400 transition"
             >
               Book Your Event
             </button>
