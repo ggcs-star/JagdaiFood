@@ -82,7 +82,7 @@ export default function Home() {
       )}
 
       {/* HERO WITH REF */}
-        <HeroSection />
+       
 
       {/* <CoreHooks/> */}
 
