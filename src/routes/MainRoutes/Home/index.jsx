@@ -21,7 +21,7 @@ import QSRFranchiseSection from "./components/QSRFranchiseSection";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const [showFoodModal, setShowFoodModal] = useState(false); // ✅ FIXED
+  const [showFoodModal, setShowFoodModal] = useState(true); // ✅ FIXED
   const heroRef = useRef(null); // ✅ NEW
 
   const handleScroll = () => {
@@ -69,18 +69,17 @@ export default function Home() {
   return (
     <div className="">
       
-      {/* HERO WITH REF */}
-      <div ref={heroRef}>
-        <HeroSection />
-      </div>
 
-      {/* <CoreHooks/> */}
-
-      {/* ✅ MODAL (SHOWS AFTER HERO) */}
       {showFoodModal && (
         <FoodBusinessModal onClose={() => setShowFoodModal(false)} />
       )}
 
+      {/* HERO WITH REF */}
+        <HeroSection />
+
+      {/* <CoreHooks/> */}
+
+    
       <QSRFranchiseSection/>
 
       {/* <BrandsPower /> */}
