@@ -21,7 +21,7 @@ export default function NavbarContent() {
   const navLinks = [
     {
       name: "Franchise Formats",
-      link: "/franchise-formats",
+      // link: "/franchise-formats",
       dropdown: [
         {
           name: "QSR Franchise",
