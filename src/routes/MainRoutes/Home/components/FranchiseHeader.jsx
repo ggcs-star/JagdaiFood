@@ -3,7 +3,7 @@ import React from "react";
 export default function SectionHeader() {
   return (
     <div className="relative flex flex-col items-center justify-center text-center 
-                    py-10 sm:py-12 md:py-16 px-4">
+                    pb-10 sm:pb-12 md:pb-16 px-4">
 
       {/* Glow Background */}
       <div className="

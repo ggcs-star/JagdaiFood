@@ -71,12 +71,8 @@ export default function Home() {
   return (
     <div className="">
       
-      {/* HERO WITH REF */}
-      <div ref={heroRef}>
-        <HeroSection />
-        
-      </div>
-    
+
+    <HeroSection/>
 
       {/* <CoreHooks/> */}
 
