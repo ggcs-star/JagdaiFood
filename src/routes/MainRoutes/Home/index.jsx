@@ -18,11 +18,12 @@ import FranchiseCards from "./components/FranchiseCards";
 import BrandsPower from "./components/BrandsPower";
 import FoodBusinessModal from "./components/FoodBusinessModal";
 import QSRFranchiseSection from "./components/QSRFranchiseSection";
+import FranchiseHeader from "./components/FranchiseHeader";
 import FoodTrolleySection from "./components/FoodTrolleySection";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const [showFoodModal, setShowFoodModal] = useState(false); // ✅ FIXED
+  const [showFoodModal, setShowFoodModal] = useState(true); // ✅ FIXED
   const heroRef = useRef(null); // ✅ NEW
 
   const handleScroll = () => {
@@ -73,7 +74,9 @@ export default function Home() {
       {/* HERO WITH REF */}
       <div ref={heroRef}>
         <HeroSection />
+        
       </div>
+    
 
       {/* <CoreHooks/> */}
 
@@ -82,6 +85,12 @@ export default function Home() {
         <FoodBusinessModal onClose={() => setShowFoodModal(false)} />
       )}
 
+      {/* HERO WITH REF */}
+        <HeroSection />
+
+      {/* <CoreHooks/> */}
+
+    
       <QSRFranchiseSection/>
 
       <FoodTrolleySection/>
