@@ -1,125 +1,3 @@
-// import React from "react";
-// import qsr from "../../../../assets/home/qsrfranchise/qsr.png";
-// import BrandsPower from "./BrandsPower";
-// import styled, { createGlobalStyle } from "styled-components";
-// import { FaRocket, FaUtensils, FaMoneyBillWave, FaStore } from "react-icons/fa";
-// import icon1 from "../../../../assets/home/corepower/icon1.png";
-// import icon2 from "../../../../assets/home/corepower/icon2.png";
-// import icon3 from "../../../../assets/home/corepower/icon3.png";
-// import icon4 from "../../../../assets/home/corepower/icon4.png";
-
-// const GlobalStyle = createGlobalStyle`
-//   * { box-sizing: border-box; }
-//   body { margin: 0; font-family: sans-serif; }
-// `;
-
-// const HeaderTitle = styled.h1`
-//   font-size: 2.8rem;
-//   font-weight: 700;
-//   color: #ffffff;
-
-//   @media (max-width: 768px) {
-//     font-size: 1.8rem;
-//   }
-// `;
-
-// const HeaderSubtitle = styled.p`
-//   margin-top: 8px;
-//   color: #fdbd5b;
-//   font-size: 1.4rem;
-//   font-weight: 600;
-// `;
-
-// const HeaderDescription = styled.p`
-//   margin-top: 10px;
-//   color: #cfcfcf;
-//   font-size: 0.95rem;
-// `;
-
-// export default function QSRFranchiseSection() {
-//   return (
-//     <div className="bg-black text-white py-16 px-4">
-//       <GlobalStyle />
-
-//       <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl p-8">
-
-//         {/* HEADER */}
-//         <div className="text-center mb-14">
-//           <HeaderTitle className="font-bricolageBold">
-//             QSR Restaurant Franchise
-//           </HeaderTitle>
-
-//           <HeaderSubtitle className="font-bricolageBold">
-//             Starting from ₹6 Lakhs + GST
-//           </HeaderSubtitle>
-
-//           <HeaderDescription>
-//             One outlet. Multiple brands. Your own food business.
-//             <br />
-//             Unlimited earning potential.
-//           </HeaderDescription>
-//         </div>
-
-//         {/* CONTENT */}
-//       <div className="grid md:grid-cols-2 gap-10 items-center">
-
-//   {/* LEFT SIDE */}
-//   <div>
-//     <h3 className="text-4xl font-bricolageBold mb-6">Core Power</h3>
-
-//     <div className="space-y-5 text-gray-300 text-lg">
-
-//       <div className="flex items-center gap-4">
-//         <div className="bg-black p-3 rounded-lg">
-//           <img src={icon1} alt="" className="w-6 h-6 object-contain" />
-//         </div>
-//         <p>Starting from ₹6,00,000</p>
-//       </div>
-
-//       <div className="flex items-center gap-4">
-//         <div className="bg-black p-3 rounded-lg">
-//           <img src={icon2} alt="" className="w-6 h-6 object-contain" />
-//         </div>
-//         <p>1 Franchise = 24+ Food Brands</p>
-//       </div>
-
-//       <div className="flex items-center gap-4">
-//         <div className="bg-black p-3 rounded-lg">
-//           <img src={icon3} alt="" className="w-6 h-6 object-contain" />
-//         </div>
-//         <p>Zero Royalty – 100% Your Earnings</p>
-//       </div>
-
-//       <div className="flex items-center gap-4">
-//         <div className="bg-black p-3 rounded-lg">
-//           <img src={icon4} alt="" className="w-6 h-6 object-contain" />
-//         </div>
-//         <p>Ahmedabad’s Biggest Cloud Kitchen Access</p>
-//       </div>
-
-//     </div>
-//   </div>
-
-//   {/* RIGHT SIDE IMAGE */}
-//   <div className="relative flex justify-center items-center">
-
-//     <img
-//       src={qsr}
-//       alt="QSR"
-//       className="relative w-[420px] object-cover"
-//     />
-//   </div>
-
-// </div>
-
-//         {/* BRANDS */}
-//         <div className="mt-16">
-//           <BrandsPower />
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
 
 
 import React, { useEffect, useState } from "react";
@@ -213,7 +91,10 @@ export default function QSRFranchiseSection() {
       title: "Trust & Quality",
       image: qsr4,
       points: [
-        { icon: icon19, text: "Stainless Steel Infrastructure (Hygiene First)" },
+        {
+          icon: icon19,
+          text: "Stainless Steel Infrastructure (Hygiene First)",
+        },
         { icon: icon20, text: "Capital-Secured, Low-Risk Model" },
         { icon: icon21, text: "Bonus Benefits (Free Power)" },
         { icon: upos, text: "Free UPOS – Digital Mall (Worth ₹90,000)" },
@@ -234,42 +115,34 @@ export default function QSRFranchiseSection() {
     },
   ];
 
-  // 🔥 duplicate slides
   const extendedSlides = [...slides, ...slides];
 
-  // 🔁 auto slide
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // 🔥 reset without jump
   useEffect(() => {
     if (current === slides.length) {
       setTimeout(() => {
         setIsTransition(false);
         setCurrent(0);
       }, 700);
-
-      setTimeout(() => {
-        setIsTransition(true);
-      }, 750);
+      setTimeout(() => setIsTransition(true), 750);
     }
   }, [current]);
 
   return (
-    <div className="bg-black text-white py-16 px-4">
+    <div className="bg-black text-white py-10 md:py-16 px-4">
       <GlobalStyle />
       <Franchiseheader />
 
-      <div className="max-w-7xl mx-auto bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl p-10">
-
-        {/* HEADER */}
+      <div className="max-w-7xl mx-auto bg-[#262626] rounded-3xl p-5 md:p-10">
+        {/* HEADER SAME */}
         <div className="text-center mb-16 relative">
-          <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[300px] h-[150px] bg-[#FDBD5B] opacity-30 blur-[120px] rounded-full"></div>
+          <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 w-[300px] h-[150px] bg-[#262626] opacity-30 blur-[120px] rounded-full"></div>
 
           <h1 className="text-4xl md:text-5xl font-bricolageBold text-white relative z-10">
             QSR Restaurant Franchise
@@ -292,7 +165,7 @@ export default function QSRFranchiseSection() {
           </p>
         </div>
 
-        {/* 🔥 SLIDER */}
+        {/* SLIDER */}
         <div className="overflow-hidden">
           <div
             className={`flex ${
@@ -305,26 +178,27 @@ export default function QSRFranchiseSection() {
             {extendedSlides.map((slide, index) => (
               <div
                 key={index}
-                className="min-w-full grid md:grid-cols-2 gap-10 items-center"
+                className="min-w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center"
               >
-                <div>
+                <div className="order-2 md:order-1">
                   <h3 className="text-3xl font-bricolageBold mb-6">
                     {slide.title}
                   </h3>
 
                   <div className="space-y-5">
                     {slide.points.map((item, i) => (
-                      <div key={i} className="flex items-center gap-4">
-                        <div className="bg-black w-12 h-12 rounded-xl flex items-center justify-center">
-                          {item.icon && (
-                            <img
-                              src={item.icon}
-                              className="w-6 h-6 object-contain"
-                            />
-                          )}
+                      <div key={i} className="flex items-center gap-3 sm:gap-4">
+                        {/* ICON */}
+                        <div className="bg-black min-w-[42px] min-h-[42px] sm:min-w-[48px] sm:min-h-[48px] rounded-xl flex items-center justify-center flex-shrink-0">
+                          <img
+                            src={item.icon}
+                            className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                            alt="icon"
+                          />
                         </div>
 
-                        <p className="text-white font-bricolageSemiBold text-lg">
+                        {/* TEXT */}
+                        <p className="text-white font-bricolageSemiBold text-sm sm:text-base md:text-lg leading-[1.4]">
                           {item.text}
                         </p>
                       </div>
@@ -332,15 +206,11 @@ export default function QSRFranchiseSection() {
                   </div>
                 </div>
 
-                <div className="flex justify-center items-center">
-                  {slide.image ? (
-                    <img
-                      src={slide.image}
-                      className="w-[520px] h-[650px] object-contain"
-                    />
-                  ) : (
-                    <div className="w-[520px] h-[650px] bg-black rounded-3xl" />
-                  )}
+                <div className="flex justify-center items-center order-1 md:order-2">
+                  <img
+                    src={slide.image}
+                    className="w-full max-w-[520px] h-auto md:h-[650px] object-contain"
+                  />
                 </div>
               </div>
             ))}
@@ -354,9 +224,7 @@ export default function QSRFranchiseSection() {
               key={i}
               onClick={() => setCurrent(i)}
               className={`w-3 h-3 rounded-full cursor-pointer ${
-                current % slides.length === i
-                  ? "bg-orange-500"
-                  : "bg-gray-500"
+                current % slides.length === i ? "bg-orange-500" : "bg-gray-500"
               }`}
             />
           ))}
