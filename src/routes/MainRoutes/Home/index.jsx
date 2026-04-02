@@ -18,6 +18,7 @@ import FranchiseCards from "./components/FranchiseCards";
 import BrandsPower from "./components/BrandsPower";
 import FoodBusinessModal from "./components/FoodBusinessModal";
 import QSRFranchiseSection from "./components/QSRFranchiseSection";
+import FranchiseHeader from "./components/FranchiseHeader";
 import FoodTrolleySection from "./components/FoodTrolleySection";
 
 export default function Home() {
@@ -73,7 +74,9 @@ export default function Home() {
       {/* HERO WITH REF */}
       <div ref={heroRef}>
         <HeroSection />
+        
       </div>
+    
 
       {/* <CoreHooks/> */}
 
