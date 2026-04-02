@@ -4,30 +4,28 @@ import image1 from "../../../../assets/home/FoodTrolleySection/Food_Tempo2.png";
 
 export default function FoodTrolleyFranchise() {
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center px-4 py-10">
+    <div className="bg-black flex items-center justify-center px-4 py-6">
       {/* MAIN CARD */}
-      <div className="w-full max-w-7xl rounded-3xl bg-gradient-to-br from-[#1c1c1c] to-[#0f0f0f] p-8 md:p-12 border border-gray-800 shadow-[0_0_60px_rgba(0,0,0,0.8)] relative overflow-hidden">
-        
+      <div className="w-full h-[640px]  max-w-7xl rounded-3xl bg-[#262626] p-8 md:p-6 border border-gray-800 shadow-[0_0_60px_rgba(0,0,0,0.8)] relative overflow-hidden">
         <div
           className="absolute top-[-60px] left-1/2 -translate-x-1/2 w-[500px] h-[250px]
           bg-[radial-gradient(circle,rgba(34,197,94,0.25),transparent_70%)]
           blur-2xl"
         ></div>
 
-     
-        <div className="text-center mb-10 relative z-10">
-          <h1 className="text-3xl md:text-4xl font-bold text-white">
+        <div className="text-center mb-4 relative z-10">
+          <h1 className="text-3xl md:text-3xl font-bold text-white">
             Food Trolley/Tempo Franchise
           </h1>
 
-          <p className="text-gray-400 mt-2">
+          <p className="text-gray-400 ">
             A smart, mobile food business — not just a cart.
           </p>
 
-          <p className="relative inline-block text-yellow-400 font-semibold mt-3 mb-3 text-xl">
+          <p className="relative inline-block text-yellow-400 font-semibold mt-1 mb-1 text-lg">
             Starting at ₹2.7 Lakhs + GST
             {/* GREEN UNDERLINE */}
-            <span className="absolute left-40 -translate-x-1/2 bottom-[-6px] w-[40%] h-[3px] bg-green-400 rounded-full"></span>
+            <span className="absolute left-37 -translate-x-1/2 bottom-[-6px] w-[40%] h-[3px] mb-1 bg-green-400 rounded-full"></span>
           </p>
 
           <p className="text-gray-400 text-sm">
@@ -35,28 +33,23 @@ export default function FoodTrolleyFranchise() {
           </p>
         </div>
 
-      
-        <div className="relative flex items-center justify-center">
+        <div className="relative flex items-center justify-center h-[420px]">
+          {" "}
           {/* 🔥 CENTER GLOW (COVERS BOTH IMAGES) */}
           <div
-            className="absolute left-1/2 top-[65%] -translate-x-1/2 -translate-y-1/2 
-            w-[650px] h-[400px]
-            bg-[radial-gradient(circle,rgba(34,197,94,0.5),rgba(34,197,94,0.2)_40%,transparent_75%)]
+            className="absolute left-1/2 top-[100%] -translate-x-1/2 -translate-y-1/2 
+            w-[350px] h-[100px]
+            bg-[radial-gradient(circle,rgba(34,197,94,0.5),rgba(34,197,94,0.2)_40%,transparent_90%)]
             blur-3xl z-0"
           ></div>
-
-          
           <div
-            className="absolute left-1/2 top-[38%] -translate-x-1/2 -translate-y-1/2 
-            w-[450px] h-[250px]
+            className="absolute left-1/2 top-[50%] -translate-x-1/2 -translate-y-1/2 
+            w-[450px] h-[150px]
             bg-green-400/50 blur-[100px] rounded-full z-0"
           ></div>
-
-          
-          <div className="hidden md:flex flex-col gap-5 absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-10">
-            
+          <div className="hidden md:flex flex-col absolute left-0 top-1/2 -translate-y-1/2 z-10 ml-10">
             <div
-              className="relative px-5 py-4 rounded-l-2xl rounded-r-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-l-2xl rounded-r-none text-sm max-w-[300px]
 bg-[linear-gradient(100deg,#505050,rgba(38,38,38,0))]
 backdrop-blur-md left-5
 border-l border-t border-b border-white/10
@@ -69,11 +62,10 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-        
             <div
-              className="relative px-5 py-4 rounded-l-2xl rounded-r-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-l-2xl rounded-r-none text-sm max-w-[300px]
 bg-[linear-gradient(100deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 right-15
+backdrop-blur-md mt-7 right-13 
 border-l border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -83,11 +75,10 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-            
             <div
-              className="relative px-5 py-4 rounded-l-2xl rounded-r-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-l-2xl rounded-r-none text-sm max-w-[300px]
 bg-[linear-gradient(100deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 right-15
+backdrop-blur-md mt-7 right-13
 border-l border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -98,9 +89,9 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             </div>
 
             <div
-              className="relative px-5 py-4 rounded-l-2xl rounded-r-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-l-2xl rounded-r-none text-sm max-w-[300px]
 bg-[linear-gradient(100deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 right-15
+backdrop-blur-md mt-7 right-13
 border-l border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -110,9 +101,8 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-            
             <div
-              className="relative px-5 py-4 rounded-l-2xl rounded-r-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-l-2xl rounded-r-none text-sm max-w-[300px]
 bg-[linear-gradient(100deg,#505050,rgba(38,38,38,0))]
 backdrop-blur-md mt-5 left-5
 border-l border-t border-b border-white/10
@@ -124,37 +114,31 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
           </div>
-
-          <div className="relative z-10 pb-25 flex items-end justify-center me-20">
-            
+          <div className="relative z-10 pb-22 flex items-end justify-center me-15">
             <img
               src={image1}
               alt="trolley box"
-              style={{ height: "500px", paddingTop: "110px" }}
-              className="w-[400px] md:w-[400px] 
+              style={{ height: "360px", paddingTop: "60px" }}
+              className="w-[400px] md:w-[300px] 
                z-20 
                translate-x-[20px]  
                translate-y-[10px]
               drop-shadow-[0_20px_50px_rgba(0,0,0,0.9)]"
             />
 
-      
             <img
               src={image}
               alt="tempo"
-              style={{ height: "500px", paddingTop: "100px" }}
-              className="w-[300px] md:w-[360px] pb-4
+              style={{ height: "340px", paddingTop: "50px" }}
+              className="w-[300px] md:w-[300px] pb-4
                z-10 
                -ml-[80px] 
               drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
             />
           </div>
-
-         
-          <div className="hidden md:flex flex-col gap-5 absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-10">
-           
+          <div className="hidden md:flex flex-col  absolute right-0 top-1/2 -translate-y-1/2 z-10 mr-10">
             <div
-              className="relative px-5 py-4 rounded-r-2xl rounded-l-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-r-2xl rounded-l-none text-sm max-w-[300px]
   bg-gradient-to-l from-[#3a3a3a] to-transparent backdrop-blur-md right-2
   border-r border-t border-b border-gray-500/20 right-5
   shadow-[0_10px_30px_rgba(0,0,0,0.6)]"
@@ -165,11 +149,10 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-            
             <div
-              className="relative px-5 py-4 rounded-r-2xl rounded-l-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-r-2xl rounded-l-none text-sm max-w-[300px]
 bg-[linear-gradient(283deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 left-15
+backdrop-blur-md mt-7 left-13
 border-r border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -179,11 +162,10 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-          
             <div
-              className="relative px-5 py-4 rounded-r-2xl rounded-l-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-r-2xl rounded-l-none text-sm max-w-[300px]
 bg-[linear-gradient(283deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 left-15
+backdrop-blur-md mt-7 left-13
 border-r border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -193,11 +175,10 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-          
             <div
-              className="relative px-5 py-4 rounded-r-2xl rounded-l-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-r-2xl rounded-l-none text-sm max-w-[300px]
 bg-[linear-gradient(283deg,#505050,rgba(38,38,38,0))]
-backdrop-blur-md mt-7 left-15
+backdrop-blur-md mt-7 left-13
 border-r border-t border-b border-white/10
 shadow-[0_0_30px_rgba(255,255,255,0.08)]"
             >
@@ -207,9 +188,8 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               </p>
             </div>
 
-          
             <div
-              className="relative px-5 py-4 rounded-r-2xl rounded-l-none text-sm max-w-[300px]
+              className="relative px-5 h-[60px] flex items-center rounded-r-2xl rounded-l-none text-sm max-w-[300px]
 bg-[linear-gradient(283deg,#505050,rgba(38,38,38,0))]
 backdrop-blur-md mt-7  right-5
 border-r border-t border-b border-white/10
@@ -224,10 +204,9 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
           </div>
         </div>
 
-      
-        <div className="flex justify-center mt-12 relative z-10">
-          <div
-            className="relative px-10 py-6 rounded-xl
+        <div className="flex justify-center relative z-10">
+          <di
+            className="relative px-8 py-4 rounded-xl
     bg-[linear-gradient(180deg,#505050,rgba(38,38,38,0))]
     backdrop-blur-md
     border border-white/10
@@ -240,7 +219,7 @@ shadow-[0_0_30px_rgba(255,255,255,0.08)]"
               Estimated ROI:{" "}
               <span className="text-yellow-400 font-medium">30%+ annually</span>
             </p>
-          </div>
+          </di>
         </div>
       </div>
     </div>
