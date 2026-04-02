@@ -135,7 +135,7 @@ export default function QSRFranchiseSection() {
   }, [current]);
 
   return (
-    <div className="bg-black text-white py-10 md:py-16 px-4">
+    <div className="bg-black text-white px-4">
       <GlobalStyle />
       <Franchiseheader />
 

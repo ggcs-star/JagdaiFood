@@ -26,11 +26,10 @@ export default function FranchiseHero() {
     const interval = setInterval(() => {
       setCurrent((prev) => prev + 1);
     }, 3000);
-
     return () => clearInterval(interval);
   }, []);
 
-  // INFINITE LOOP HANDLER
+  // INFINITE LOOP
   useEffect(() => {
     if (current === banners.length - 1) {
       setTimeout(() => {
@@ -55,7 +54,7 @@ export default function FranchiseHero() {
     }
   }, [isTransitioning]);
 
-  // SWIPE LOGIC
+  // SWIPE
   const handleStart = (x) => {
     startX.current = x;
     isDragging.current = true;
@@ -71,28 +70,18 @@ export default function FranchiseHero() {
 
     const diff = startX.current - endX.current;
 
-    // threshold (adjust if needed)
-    if (diff > 50) {
-      // swipe left → next
-      setCurrent((prev) => prev + 1);
-    } else if (diff < -50) {
-      // swipe right → prev
-      setCurrent((prev) => prev - 1);
-    }
+    if (diff > 50) setCurrent((prev) => prev + 1);
+    else if (diff < -50) setCurrent((prev) => prev - 1);
 
     isDragging.current = false;
   };
 
   return (
     <section
-      className="w-full h-[300px] lg:h-[650px] overflow-hidden relative"
-      
-      // TOUCH EVENTS
+      className="w-full h-[300px] lg:h-[80vh] overflow-hidden relative bg-black"
       onTouchStart={(e) => handleStart(e.touches[0].clientX)}
       onTouchMove={(e) => handleMove(e.touches[0].clientX)}
       onTouchEnd={handleEnd}
-
-      // MOUSE EVENTS
       onMouseDown={(e) => handleStart(e.clientX)}
       onMouseMove={(e) => handleMove(e.clientX)}
       onMouseUp={handleEnd}
@@ -105,21 +94,19 @@ export default function FranchiseHero() {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {banners.map((banner, index) => (
-          <div
-            key={index}
-            className="w-full flex-shrink-0 flex justify-center select-none"
-          >
+          <div key={index} className="w-full h-full flex-shrink-0">
             <img
               src={banner}
               alt={`Banner ${index}`}
-              className="w-full max-w-[1600px] lg:h-[780px] lg:object-contain object-center pointer-events-none"
+              className="w-full h-full object-contain select-none pointer-events-none"
+              draggable="false"
             />
           </div>
         ))}
       </div>
 
       {/* DOTS */}
-      <div className="absolute bottom-4 left-0 w-full flex justify-center gap-2 z-10">
+      <div className="absolute bottom-20 left-0 w-full flex justify-center gap-2 z-10">
         {originalBanners.map((_, i) => (
           <div
             key={i}
