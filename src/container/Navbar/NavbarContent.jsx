@@ -74,9 +74,8 @@ export default function NavbarContent() {
   ];
 
   return (
-    <header className="w-full bg-black text-white fixed top-0 left-0 z-[9999]">
-      <div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between">
-        {/* Logo */}
+    <header className="h-[100px] w-full bg-black text-white fixed  top-0 left-0 z-[9999]">
+<div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between h-full">        {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Jagdai Foods" className="h-20 object-contain" />
         </Link>

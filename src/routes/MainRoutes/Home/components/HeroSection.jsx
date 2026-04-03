@@ -16,6 +16,7 @@ export default function FranchiseHero() {
 
   const [current, setCurrent] = useState(1);
   const [isTransitioning, setIsTransitioning] = useState(true);
+  const autoSlideRef = useRef(null);
 
   const startX = useRef(0);
   const endX = useRef(0);
@@ -23,27 +24,43 @@ export default function FranchiseHero() {
 
   // AUTO SLIDE
   useEffect(() => {
-    const interval = setInterval(() => {
+    autoSlideRef.current = setInterval(() => {
       setCurrent((prev) => prev + 1);
     }, 3000);
-    return () => clearInterval(interval);
+    return () => clearInterval(autoSlideRef.current);
   }, []);
+
+  // Reset auto slide timer on manual interaction
+  const resetAutoSlide = () => {
+    if (autoSlideRef.current) {
+      clearInterval(autoSlideRef.current);
+      autoSlideRef.current = setInterval(() => {
+        setCurrent((prev) => prev + 1);
+      }, 3000);
+    }
+  };
 
   // INFINITE LOOP
   useEffect(() => {
+    let timeoutId;
+    
     if (current === banners.length - 1) {
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIsTransitioning(false);
         setCurrent(1);
       }, 700);
     }
 
     if (current === 0) {
-      setTimeout(() => {
+      timeoutId = setTimeout(() => {
         setIsTransitioning(false);
         setCurrent(banners.length - 2);
       }, 700);
     }
+
+    return () => {
+      if (timeoutId) clearTimeout(timeoutId);
+    };
   }, [current, banners.length]);
 
   useEffect(() => {
@@ -58,6 +75,7 @@ export default function FranchiseHero() {
   const handleStart = (x) => {
     startX.current = x;
     isDragging.current = true;
+    resetAutoSlide();
   };
 
   const handleMove = (x) => {
@@ -70,22 +88,26 @@ export default function FranchiseHero() {
 
     const diff = startX.current - endX.current;
 
-    if (diff > 50) setCurrent((prev) => prev + 1);
-    else if (diff < -50) setCurrent((prev) => prev - 1);
+    if (diff > 50) {
+      setCurrent((prev) => prev + 1);
+      resetAutoSlide();
+    } else if (diff < -50) {
+      setCurrent((prev) => prev - 1);
+      resetAutoSlide();
+    }
 
     isDragging.current = false;
   };
 
+  const handleDotClick = (index) => {
+    setCurrent(index + 1);
+    resetAutoSlide();
+  };
+
   return (
     <section
-      className="w-full h-[300px] lg:h-[80vh] overflow-hidden relative bg-black"
-      onTouchStart={(e) => handleStart(e.touches[0].clientX)}
-      onTouchMove={(e) => handleMove(e.touches[0].clientX)}
-      onTouchEnd={handleEnd}
-      onMouseDown={(e) => handleStart(e.clientX)}
-      onMouseMove={(e) => handleMove(e.clientX)}
-      onMouseUp={handleEnd}
-      onMouseLeave={handleEnd}
+      className="w-full overflow-hidden relative bg-black -mt-[1px] lg:-mt-0"
+      style={{ marginTop: 0, paddingTop: 0 }}
     >
       <div
         className={`flex h-full ${
@@ -94,26 +116,34 @@ export default function FranchiseHero() {
         style={{ transform: `translateX(-${current * 100}%)` }}
       >
         {banners.map((banner, index) => (
-          <div key={index} className="w-full h-full flex-shrink-0">
-            <img
-              src={banner}
-              alt={`Banner ${index}`}
-              className="w-full h-full object-contain select-none pointer-events-none"
-              draggable="false"
-            />
+          <div
+            key={index}
+            className="w-full flex-shrink-0 flex items-center justify-center bg-black"
+          >
+            <div className="w-full h-[200px] sm:h-[280px] md:h-[400px] lg:h-[600px] ">
+              <img
+                src={banner}
+                alt={`Banner ${index}`}
+                className="w-full h-full object-contain select-none pointer-events-none"
+                draggable="false"
+              />
+            </div>
           </div>
         ))}
       </div>
 
       {/* DOTS */}
-      <div className="absolute bottom-20 left-0 w-full flex justify-center gap-2 z-10">
+      <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 lg:bottom-8 left-0 w-full flex justify-center gap-2 md:gap-3 z-10">
         {originalBanners.map((_, i) => (
-          <div
+          <button
             key={i}
-            onClick={() => setCurrent(i + 1)}
-            className={`h-2 w-2 rounded-full cursor-pointer transition ${
-              current === i + 1 ? "bg-white scale-110" : "bg-white/50"
+            onClick={() => handleDotClick(i)}
+            className={`h-1.5 w-1.5 sm:h-2 sm:w-2 md:h-2.5 md:w-2.5 rounded-full cursor-pointer transition-all duration-300 ${
+              current === i + 1 
+                ? "bg-white scale-110 md:scale-125" 
+                : "bg-white/50 hover:bg-white/70"
             }`}
+            aria-label={`Go to slide ${i + 1}`}
           />
         ))}
       </div>

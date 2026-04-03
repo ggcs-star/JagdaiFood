@@ -2,8 +2,10 @@ import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// ✅ IMPORTANT: use bundle for production stability
-import "swiper/css/bundle";
+// ✅ Multiple CSS imports for better production compatibility
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 import underlineImg from "../../../../assets/underline.png";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
@@ -35,7 +37,6 @@ const PanoramaSlider = () => {
     window.open("https://catering.jagdaifoods.com/", "_blank");
   };
 
-  // responsive width
   const [slideWidth, setSlideWidth] = useState("calc((100% - 80px) / 5)");
 
   useEffect(() => {
@@ -57,7 +58,6 @@ const PanoramaSlider = () => {
   return (
     <div className="bg-black py-20 text-white text-center overflow-hidden">
       
-      {/* Header */}
       <div className="flex flex-col items-center mb-6">
         <img
           src={cateringlogo}
@@ -83,7 +83,6 @@ const PanoramaSlider = () => {
         high-quality food experiences with unmatched consistency and taste.
       </p>
 
-      {/* Swiper */}
       <div className="relative mx-auto">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
@@ -93,38 +92,29 @@ const PanoramaSlider = () => {
           spaceBetween={20}
           grabCursor={true}
           initialSlide={2}
-
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
           speed={800}
-
-          // ✅ FIXED NAVIGATION (SERVER SAFE)
           onSwiper={(swiper) => {
             setTimeout(() => {
-              if (
-                swiper.params.navigation &&
-                typeof swiper.params.navigation !== "boolean"
-              ) {
+              if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
-
                 swiper.navigation.destroy();
                 swiper.navigation.init();
                 swiper.navigation.update();
               }
             });
           }}
-
           pagination={{
             el: ".dm-panorama-swiper-pagination",
             clickable: true,
             bulletClass: "dm-panorama-bullet",
             bulletActiveClass: "dm-panorama-bullet-active",
           }}
-
           className="dm-panorama-swiper"
         >
           {images.map((img, index) => (
@@ -132,7 +122,7 @@ const PanoramaSlider = () => {
               <div className="h-[260px] sm:h-[470px] shadow-2xl">
                 <img
                   src={img}
-                  alt=""
+                  alt={`Slide ${index + 1}`}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -140,14 +130,12 @@ const PanoramaSlider = () => {
           ))}
         </Swiper>
 
-        {/* Navigation */}
         <div className="flex flex-col items-center gap-6 mt-4">
-          
-          {/* Arrows */}
           <div className="flex gap-6">
             <button
               ref={prevRef}
               className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
+              aria-label="Previous slide"
             >
               <FiChevronLeft size={32} />
             </button>
@@ -155,12 +143,12 @@ const PanoramaSlider = () => {
             <button
               ref={nextRef}
               className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
+              aria-label="Next slide"
             >
               <FiChevronRight size={32} />
             </button>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleExplore}
@@ -178,7 +166,6 @@ const PanoramaSlider = () => {
           </div>
         </div>
 
-        {/* Pagination */}
         <div className="dm-panorama-swiper-pagination mt-6 flex justify-center"></div>
       </div>
     </div>

@@ -54,6 +54,33 @@
   color: #ffffff !important;
 }
 
+/* Custom Pagination Styles */
+.dm-panorama-swiper-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.dm-panorama-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dm-panorama-bullet-active {
+  background-color: #FDBD5B;
+  width: 24px;
+  border-radius: 5px;
+}
+
+.dm-panorama-bullet:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
 @keyframes stackReveal {
   0% {
     transform: translateY(40px);
