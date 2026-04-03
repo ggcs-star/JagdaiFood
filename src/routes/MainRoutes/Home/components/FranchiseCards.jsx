@@ -1,7 +1,7 @@
 import React from "react";
-import cloudkitchen from "../../../../assets/investment/internet.png";
+import cloudkitchen from "../../../../assets/investment/internet1.png";
 import { Check } from "lucide-react";
-import influencerImage from "../../../../assets/franchiseformats/influencer.png";
+import influencerImage from "../../../../assets/franchiseformats/influencer1.png";
 import { Link } from "react-router-dom";
 
 export default function FranchiseCards() {
