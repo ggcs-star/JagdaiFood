@@ -212,6 +212,10 @@
 //   );
 // }
 
+
+
+
+
 import React, { useEffect, useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { useNavigate } from "react-router-dom";
@@ -295,11 +299,11 @@ export default function BrandsPower() {
 
         {/* GRID */}
         <div className="pb-16">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-5">
+          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-5">
             {brandImages.map((img, index) => {
               const brand = brands[index];
 
-              console.log(brand);
+              
 
               return (
                 <div
