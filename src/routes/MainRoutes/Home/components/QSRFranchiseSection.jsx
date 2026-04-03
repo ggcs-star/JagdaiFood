@@ -124,14 +124,14 @@ export default function QSRFranchiseSection() {
   const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
-  if (isPaused || isDraggingState) return; 
+    if (isPaused || isDraggingState) return;
 
-  const interval = setInterval(() => {
-    setCurrent((prev) => prev + 1);
-  }, 3000);
+    const interval = setInterval(() => {
+      setCurrent((prev) => prev + 1);
+    }, 3000);
 
-  return () => clearInterval(interval);
-}, [isPaused, isDraggingState]);
+    return () => clearInterval(interval);
+  }, [isPaused, isDraggingState]);
 
   useEffect(() => {
     if (current === slides.length) {
@@ -176,9 +176,10 @@ export default function QSRFranchiseSection() {
           </p>
         </div>
 
-        
         <div
-          className="overflow-hidden"
+          className="relative cursor-grab group"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
           onMouseDown={(e) => {
             isDragging.current = true;
             startX.current = e.pageX;
@@ -190,12 +191,12 @@ export default function QSRFranchiseSection() {
             if (!isDragging.current) return;
 
             const diff = e.pageX - startX.current;
-            setDragOffset(diff); 
+            setDragOffset(diff);
           }}
           onMouseUp={() => {
             isDragging.current = false;
-             setIsDraggingState(false);
-            setIsPaused(false);
+            setIsDraggingState(false);
+            // setIsPaused(false);
 
             if (dragOffset > 100) {
               setCurrent((prev) => prev - 1);
@@ -204,25 +205,25 @@ export default function QSRFranchiseSection() {
             }
 
             setDragOffset(0);
-            setIsTransition(true); 
-          }}
-          onMouseLeave={() => {
-            isDragging.current = false;
-            setIsDraggingState(false); 
-            setIsPaused(false);
-            
-            setDragOffset(0);
             setIsTransition(true);
           }}
+          // onMouseLeave={() => {
+          //   isDragging.current = false;
+          //   setIsDraggingState(false);
+          //   setIsPaused(false);
+
+          //   setDragOffset(0);
+          //   setIsTransition(true);
+          // }}
           onTouchStart={(e) => {
             startX.current = e.touches[0].clientX;
             setIsPaused(true);
             setIsDraggingState(true);
-             setIsTransition(false);
+            setIsTransition(false);
           }}
           onTouchMove={(e) => {
             const diff = e.touches[0].clientX - startX.current;
-            setDragOffset(diff); 
+            setDragOffset(diff);
             setIsTransition(false);
           }}
           onTouchEnd={(e) => {
@@ -240,53 +241,60 @@ export default function QSRFranchiseSection() {
             setIsTransition(true);
           }}
         >
-          <div
-            className={`flex ${
-              isTransition ? "transition-transform duration-300 ease-out" : ""
-            }`}
-            // style={{ transform: `translateX(-${current * 100}%)` }}
+          
 
-            style={{
-              transform: `translateX(calc(-${current * 100}% + ${dragOffset}px))`,
-            }}
-          >
-            {extendedSlides.map((slide, index) => (
-              <div
-                key={index}
-                className="min-w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center"
-              >
-                <div className="order-2 md:order-1">
-                  <h3 className="text-3xl font-bricolageBold mb-6">
-                    {slide.title}
-                  </h3>
+          <div className="overflow-hidden">
+            <div
+              className={`flex ${
+                isTransition ? "transition-transform duration-300 ease-out" : ""
+              }`}
+              // style={{ transform: `translateX(-${current * 100}%)` }}
 
-                  <div className="space-y-5">
-                    {slide.points.map((item, i) => (
-                      <div key={i} className="flex items-center gap-3 sm:gap-4">
-                        <div className="bg-black min-w-[42px] min-h-[42px] sm:min-w-[48px] sm:min-h-[48px] rounded-xl flex items-center justify-center flex-shrink-0">
-                          <img
-                            src={item.icon}
-                            className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
-                            alt="icon"
-                          />
+              style={{
+                transform: `translateX(calc(-${current * 100}% + ${dragOffset}px))`,
+              }}
+            >
+              {extendedSlides.map((slide, index) => (
+                <div
+                  key={index}
+                  className="min-w-full grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 items-center"
+                >
+                  <div className="order-2 md:order-1">
+                    <h3 className="text-3xl font-bricolageBold mb-6">
+                      {slide.title}
+                    </h3>
+
+                    <div className="space-y-5">
+                      {slide.points.map((item, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-3 sm:gap-4"
+                        >
+                          <div className="bg-black min-w-[42px] min-h-[42px] sm:min-w-[48px] sm:min-h-[48px] rounded-xl flex items-center justify-center flex-shrink-0">
+                            <img
+                              src={item.icon}
+                              className="w-5 h-5 sm:w-6 sm:h-6 object-contain"
+                              alt="icon"
+                            />
+                          </div>
+
+                          <p className="text-white font-bricolageSemiBold text-sm sm:text-base md:text-lg leading-[1]">
+                            {item.text}
+                          </p>
                         </div>
+                      ))}
+                    </div>
+                  </div>
 
-                        <p className="text-white font-bricolageSemiBold text-sm sm:text-base md:text-lg leading-[1]">
-                          {item.text}
-                        </p>
-                      </div>
-                    ))}
+                  <div className="flex justify-center items-center order-1 md:order-2">
+                    <img
+                      src={slide.image}
+                      className="w-full max-w-[520px] h-auto md:h-[650px] object-contain"
+                    />
                   </div>
                 </div>
-
-                <div className="flex justify-center items-center order-1 md:order-2">
-                  <img
-                    src={slide.image}
-                    className="w-full max-w-[520px] h-auto md:h-[650px] object-contain"
-                  />
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
