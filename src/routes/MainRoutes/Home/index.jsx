@@ -20,6 +20,7 @@ import FoodBusinessModal from "./components/FoodBusinessModal";
 import QSRFranchiseSection from "./components/QSRFranchiseSection";
 import FranchiseHeader from "./components/FranchiseHeader";
 import FoodTrolleySection from "./components/FoodTrolleySection";
+import FiveFranchise from "./components/FiveFranchise";
 
 export default function Home() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
@@ -93,6 +94,7 @@ export default function Home() {
       {/* <BrandsPower /> */}
       <FranchiseCards />
       <CapitalGuarantee />
+      <FiveFranchise/>
 
       <PanoramaSlider />
       {/* <MyJagdaiFoods /> */}

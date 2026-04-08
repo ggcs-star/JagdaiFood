@@ -4,12 +4,14 @@ import { Container } from "../../../components/Layout";
 import BrandMenu from "./BrandMenu";
 import Breadcrumbs from "../../../components/Breadcrumbs";
 import { useNavigate } from "react-router-dom";
+import BrandAdvantages from "./BrandAdvantages";
 
 const features = [
-  "Highly Trained Staff with 5-star Master Chef",
-  "Only franchise that lets you start your own brand",
-  "Take orders for other 24+ brands via Zomato, Swiggy, and Bulk Orders",
-  "Stainless steel equipment ensuring premium food quality",
+  "Additional Revenue by managing Food Supply for Food Trolley and Internet Restaurant Franchise",
+  "10% royalty on Billing of trolleys, 10% royalty on Billing of Internet Restaurant",
+  "10% royalty on Tiffin service bookings",
+  "10% royalty on selling of Spices and gravy base",
+  "Free CashAquawater bottle SIS franchise",
 ];
 
 const franchiseBenefits = [
@@ -19,7 +21,7 @@ const franchiseBenefits = [
   "Free CashAqua water bottle SIS franchise",
 ];
 
-function Hero({ item }) {
+function Hero({ item, routeKey }) {
 
     const navigate = useNavigate(); // ✅ ADD THIS
 
@@ -92,10 +94,11 @@ function Hero({ item }) {
       <BrandMenu item={item} id={item?.id} />
 
       {/* Franchise Section */}
-      <div className="bg-black-100 text-white-800 p-4 sm:p-6 font-sans">
+      {routeKey !== "amma-ka-tiffin" && (
+        <div className="bg-black-100 text-white-800 p-4 sm:p-6 font-sans">
 
         <header className="text-center py-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-[#FDBD5B]">
+          <h1 className="font-bricolageBold text-2xl md:text-3xl font-bold text-[#FDBD5B]">
             Why <span>{item?.label}</span> Foods Franchise ?
           </h1>
 
@@ -112,7 +115,7 @@ function Hero({ item }) {
             <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 lg:p-10 rounded-3xl shadow-lg">
 
               <h3 className="text-xl md:text-2xl font-semibold mb-6 md:mb-8">
-                Key Features
+USP of our Franchise
               </h3>
 
               <ul className="space-y-4 md:space-y-5">
@@ -159,34 +162,18 @@ function Hero({ item }) {
           </Container>
 
         </section>
+        <BrandAdvantages/>
 
         {/* Franchise Formats */}
         <section className="mt-14 md:mt-20 text-white">
 
-          <h2 className="text-2xl md:text-3xl font-semibold text-center mb-10 md:mb-12">
+          <h2 className="font-bricolageBold text-2xl md:text-3xl font-semibold text-center mb-10 md:mb-12">
             Franchise Formats
           </h2>
 
           <Container className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mx-auto">
 
-  {/* White Label */}
-  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
-    <div>
-      <h3 className="text-lg md:text-xl font-semibold mb-3">
-        White Label
-      </h3>
-      <p className="text-gray-300 text-sm md:text-base">
-        Operate under your brand name with full support.
-      </p>
-    </div>
 
-    <button
-      // onClick={() => navigate("/white-label")}
-      className="z-50 cursor-pointer mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
-    >
-      Know More <span>›</span>
-    </button>
-  </div>
 
   {/* FOFO */}
   <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
@@ -226,11 +213,33 @@ function Hero({ item }) {
     </button>
   </div>
 
+    {/* White Label */}
+  <div className="bg-gradient-to-r from-[#2c2c2c] to-[#3a3a3a] p-6 md:p-8 rounded-3xl shadow-lg flex flex-col justify-between min-h-[180px]">
+    <div>
+      <h3 className="text-lg md:text-xl font-semibold mb-3">
+        White Label
+      </h3>
+      <p className="text-gray-300 text-sm md:text-base">
+        Operate under your brand name with full support.
+      </p>
+    </div>
+
+    <button
+      // onClick={() => navigate("/white-label")}
+      className="z-50 cursor-pointer mt-4 text-[#FDBD5B] text-sm font-medium flex items-center gap-2 hover:gap-3 transition-all"
+    >
+      Know More <span>›</span>
+    </button>
+  </div>
+
 </Container>
 
         </section>
+        
 
-      </div>
+      </div>)}
+
+      
     </div>
   );
 }

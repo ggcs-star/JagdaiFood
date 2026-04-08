@@ -37,6 +37,7 @@ import FocoEarningSectionTempo from "./FocoEarningSectionTempo";
 import FoodCourtIntro from "./FoodCourtIntro";
 import FoodCourtBenefits from "./FoodCourtBenefits";
 import FoodCourtInfo from "./FoodCourtInfo";
+import QsrBanner from "./QsrBanner";
 
 /* ---------------- DESC COMPONENT ---------------- */
 
@@ -191,6 +192,9 @@ function FranchisesDetails() {
         }}
         className="pt-10 bg-black"
       />
+      {slug == "qsr-restaurant-franchise" && (
+        <QsrBanner />
+      )}
 
       <Hero details={details} slug={slug} />
 

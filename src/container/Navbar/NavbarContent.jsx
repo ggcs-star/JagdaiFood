@@ -149,105 +149,98 @@ export default function NavbarContent() {
         </ul>
 
         {/* Desktop Phone */}
-        <div className="hidden lg:flex items-center gap-6">
-          <div className="hidden lg:flex items-center">
-            <div
-              className="relative"
-              onMouseEnter={() => !isClicked && setShowQR(true)}
-              onMouseLeave={() => !isClicked && setShowQR(false)}
-            >
-              {/* DOWNLOAD ICON */}
-              <img
-                src={downloadIcon}
-                alt="download"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  setIsClicked((prev) => !prev);
-                  setShowQR(true);
-                }}
-                className="w-5 h-5 object-contain cursor-pointer hover:scale-110 transition"
-              />
+      <div className="hidden lg:flex items-center gap-6">
+  <div className="hidden lg:flex items-center">
+    <div
+      className="relative"
+      onMouseEnter={() => setShowQR(true)}
+      onMouseLeave={() => setShowQR(false)}
+    >
+      {/* DOWNLOAD ICON */}
+      <img
+        src={downloadIcon}
+        alt="download"
+        className="w-5 h-5 object-contain cursor-pointer hover:scale-110 transition"
+      />
 
-              {/* QR POPUP */}
-              {showQR && (
-                <div
-                  className="
-                        absolute right-0 top-[40px]
-                        w-[260px] bg-[#f1f1f1]
-                        rounded-[12px] shadow-xl p-4
-                        z-[9999]
-                      "
+      {/* HOVER SAFE AREA (IMPORTANT FIX) */}
+      <div className="absolute -right-8 top-full pt-2">
+        {showQR && (
+          <div
+            className="
+              w-[260px] bg-[#f1f1f1]
+              rounded-[12px] shadow-xl p-4
+              z-[9999]
+            "
+          >
+            {/* ARROW */}
+            {/* <div className="absolute -top-1 right-4 w-3 h-3 bg-[#f1f1f1] rotate-45"></div> */}
+
+            <div className="flex justify-between items-center gap-3">
+              {/* LEFT */}
+              <div className="flex flex-col gap-6 text-black text-sm font-medium">
+                <a
+                  href="https://play.google.com/store/apps/details?id=com.jagods.customer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 hover:opacity-70"
                 >
-                  {/* ARROW */}
-                  <div className="absolute top-[-6px] right-4 w-3 h-3 bg-[#f1f1f1] rotate-45"></div>
+                  <FaGooglePlay className="text-black text-[20px]" />
+                  <span className="text-[15px] font-medium">
+                    Play Store
+                  </span>
+                </a>
 
-                  <div className="flex justify-between items-center gap-3">
-                    {/* LEFT */}
-                    <div className="flex flex-col gap-6 text-black text-sm font-medium">
-                      <a
-                        href="https://play.google.com/store/apps/details?id=com.jagods.customer"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2 hover:opacity-70"
-                      >
-                        {/* <IoPlay className="text-black text-[20px] " /> */}
-                        <FaGooglePlay className="text-black text-[20px]" />
-                        <span className="text-[15px]  font-medium">
-                          Play Store
-                        </span>
-                      </a>
+                {/* APP STORE */}
+                <div className="flex items-start gap-2">
+                  <FaApple className="text-black text-[25px] mt-[2px]" />
 
-                      {/* APP STORE */}
-                      <div className="flex items-start gap-2 ">
-                        <FaApple className="text-black text-[25px] mt-[2px]" />
-
-                        <div className="flex flex-col leading-tight">
-                          <span className="text-[15px]  font-medium">
-                            App Store
-                          </span>
-
-                          <span className="text-[10px] font-bricolageSemiBold text-gray-500">
-                            Coming Soon
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* QR */}
-                    <div className="flex flex-col items-center">
-                      <img
-                        src={qrImg}
-                        alt="QR"
-                        className="w-[95px] h-[95px] object-contain"
-                      />
-                      <p className="text-[12px] font-bricolageSemiBold text-gray-800 mt-1 text-center">
-                        Visit Our 
-                        Website
-                      </p>
-                    </div>
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-[15px] font-medium">
+                      App Store
+                    </span>
+                    <span className="text-[10px] text-gray-500">
+                      Coming Soon
+                    </span>
                   </div>
                 </div>
-              )}
-            </div>
-          </div>
+              </div>
 
-          <div className="h-10 w-[1px] bg-gray-600"></div>
-
-          <div className="flex items-center gap-3">
-            <div className="bg-[#FDBD5B] p-2 rounded-full text-black">
-              <FaPhoneAlt size={14} />
-            </div>
-
-            <div>
-              <p className="text-xs text-gray-300">For Franchise</p>
-              <a href="tel:+918866373077">
-                <p className="font-semibold text-[#FDBD5B] cursor-pointer">
-                  +91 88663 73077
+              {/* QR */}
+              <div className="flex flex-col items-center">
+                <img
+                  src={qrImg}
+                  alt="QR"
+                  className="w-[95px] h-[95px] object-contain"
+                />
+                <p className="text-[12px] text-gray-800 mt-1 text-center">
+                  Visit Our Website
                 </p>
-              </a>
+              </div>
             </div>
           </div>
-        </div>
+        )}
+      </div>
+    </div>
+  </div>
+
+  <div className="h-10 w-[1px] bg-gray-600"></div>
+
+  <div className="flex items-center gap-3">
+    <div className="bg-[#FDBD5B] p-2 rounded-full text-black">
+      <FaPhoneAlt size={14} />
+    </div>
+
+    <div>
+      <p className="text-xs text-gray-300">For Franchise</p>
+      <a href="tel:+918866373077">
+        <p className="font-semibold text-[#FDBD5B] cursor-pointer">
+          +91 88663 73077
+        </p>
+      </a>
+    </div>
+  </div>
+</div>
 
         {/* Mobile Menu Button */}
         <div
