@@ -2,7 +2,7 @@ import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-// ✅ Multiple CSS imports for better production compatibility
+// ✅ Import globally (IMPORTANT for production)
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -29,6 +29,15 @@ const PanoramaSlider = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
+  const [isMounted, setIsMounted] = useState(false);
+
+  // ✅ Prevent SSR issues (important for production)
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
   const handleExplore = () => {
     window.open("https://catering.jagdaifoods.com/", "_blank");
   };
@@ -37,27 +46,10 @@ const PanoramaSlider = () => {
     window.open("https://catering.jagdaifoods.com/", "_blank");
   };
 
-  const [slideWidth, setSlideWidth] = useState("calc((100% - 80px) / 5)");
-
-  useEffect(() => {
-    const updateWidth = () => {
-      if (window.innerWidth < 767) {
-        setSlideWidth("calc((100% - 0px) / 1)");
-      } else if (window.innerWidth < 1024) {
-        setSlideWidth("calc((100% - 40px) / 3)");
-      } else {
-        setSlideWidth("calc((100% - 80px) / 5)");
-      }
-    };
-
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, []);
-
   return (
     <div className="bg-black py-20 text-white text-center overflow-hidden">
       
+      {/* HEADER */}
       <div className="flex flex-col items-center mb-6">
         <img
           src={cateringlogo}
@@ -84,53 +76,65 @@ const PanoramaSlider = () => {
       </p>
 
       <div className="relative mx-auto">
+
+        {/* SWIPER */}
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           loop={true}
           centeredSlides={true}
-          slidesPerView={"auto"}
           spaceBetween={20}
           grabCursor={true}
-          initialSlide={2}
+          speed={800}
+
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-          speed={800}
-          onSwiper={(swiper) => {
-            setTimeout(() => {
-              if (swiper.params.navigation && typeof swiper.params.navigation !== "boolean") {
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              }
-            });
+
+          // ✅ Navigation FIX (production-safe)
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
           }}
+          onBeforeInit={(swiper) => {
+            if (typeof swiper.params.navigation !== "boolean") {
+              swiper.params.navigation.prevEl = prevRef.current;
+              swiper.params.navigation.nextEl = nextRef.current;
+            }
+          }}
+
+          // ✅ Pagination
           pagination={{
             el: ".dm-panorama-swiper-pagination",
             clickable: true,
-            bulletClass: "dm-panorama-bullet",
-            bulletActiveClass: "dm-panorama-bullet-active",
           }}
+
+          // ✅ Responsive breakpoints (REPLACES slidesPerView: "auto")
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 3 },
+            1024: { slidesPerView: 5 },
+          }}
+
           className="dm-panorama-swiper"
         >
           {images.map((img, index) => (
-            <SwiperSlide key={index} style={{ width: slideWidth }}>
-              <div className="h-[260px] sm:h-[470px] shadow-2xl">
+            <SwiperSlide key={index}>
+              <div className="h-[260px] sm:h-[470px] shadow-2xl rounded-xl overflow-hidden">
                 <img
                   src={img}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover z-50"
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        <div className="flex flex-col items-center gap-6 mt-4">
+        {/* NAVIGATION BUTTONS */}
+        <div className="flex flex-col items-center gap-6 mt-6">
           <div className="flex gap-6">
             <button
               ref={prevRef}
@@ -149,6 +153,7 @@ const PanoramaSlider = () => {
             </button>
           </div>
 
+          {/* CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row gap-4">
             <button
               onClick={handleExplore}
@@ -166,7 +171,8 @@ const PanoramaSlider = () => {
           </div>
         </div>
 
-        <div className="dm-panorama-swiper-pagination mt-6 flex justify-center"></div>
+        {/* PAGINATION */}
+        {/* <div className="dm-panorama-swiper-pagination mt-6 flex justify-center"></div> */}
       </div>
     </div>
   );
