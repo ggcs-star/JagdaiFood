@@ -7,8 +7,18 @@ import WhoCanStart from './components/WhoCanStart'
 import WhyRevolutionary from './components/WhyRevolutionary'
 import StartSteps from './components/StartSteps'
 import CTASection from './components/CTASection'
+import { useEffect } from 'react'
 
 const TrollyonRent = () => {
+
+    // ✅ Scroll to top on page load
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+
   return (
     <div >
       <HeroSection/>

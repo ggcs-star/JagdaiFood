@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 
 export default function FranchiseCards() {
   return (
-    <div className="bg-black py-12 px-4">
+    <div className="bg-black pb-6 px-4">
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
         {/* LEFT CARD */}
         {/* Cloud Kitchen Card */}
-        <div className="rounded-[26px] flex flex-col justify-between bg-gradient-to-br from-[#2b2b2b] to-[#1f1f1f]">
+        <div className="relative h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
           <div className="p-4 lg:p-8">
             {/* Title */}
             <h3 className="text-2xl lg:text-3xl font-bricolageBold text-white mb-2">
@@ -81,13 +81,13 @@ export default function FranchiseCards() {
             <img
               src={cloudkitchen}
               alt="cloud kitchen"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain -translate-y-6 md:-translate-y-48"
             />
           </div>
         </div>
 
         {/* RIGHT CARD */}
-        <div className="relative  bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
+        <div className="relative h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
           {/* CONTENT */}
           <div className="z-10 p-6 lg:p-8">
             {/* Title */}
@@ -152,51 +152,55 @@ export default function FranchiseCards() {
             <img
               src={influencerImage}
               alt="Influencer Franchise"
-              className="w-full object-contain"
+              className="w-full object-contain -translate-y-6 md:-translate-y-48"
             />
           </div>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-14 w-full">
-        {/* BUTTON 1 */}
-        <Link
-          to="/franchise-formats/chatori-gali"
-          className="
-    w-full md:w-auto
-    text-center
-    bg-[#60D186]
-    text-black
-    px-6 py-3
-    rounded-lg
-    font-semibold
-    cursor-pointer
-    transition-all duration-300
-    shadow-md
-    hover:scale-105
-  "
-        >
-          Food Court Franchise (Chatori Gali)
-        </Link>
+     <div className="max-w-7xl mx-auto mt-8 px-4">
+  <div className="grid md:grid-cols-2 gap-6 items-center">
 
-        {/* BUTTON 2 */}
-        <button
-          className="
-    w-full md:w-auto
-    text-center
-    bg-[#FDBD5B]
-    text-black
-    px-6 py-3
-    rounded-lg
-    font-semibold
-    cursor-pointer
-    transition-all duration-300
-    shadow-md
-    hover:scale-105
-  "
-        >
-          Master Franchise / Territory Model
-        </button>
-      </div>
+    {/* BUTTON 1 - LEFT */}
+    <Link
+      to="/franchise-formats/chatori-gali"
+      className="
+        w-full max-w-md
+        justify-self-end
+        text-center
+        bg-[#60D186]
+        text-black
+        px-6 py-3
+        rounded-lg
+        font-semibold
+        transition-all duration-300
+        shadow-md
+        hover:scale-105
+      "
+    >
+      Food Court Franchise (Chatori Gali)
+    </Link>
+
+    {/* BUTTON 2 - RIGHT */}
+    <button
+      className="
+        w-full max-w-md
+        justify-self-start
+        text-center
+        bg-[#FDBD5B]
+        text-black
+        px-6 py-3
+        rounded-lg
+        font-semibold
+        transition-all duration-300
+        shadow-md
+        hover:scale-105
+      "
+    >
+      Master Franchise / Territory Model
+    </button>
+
+  </div>
+</div>
     </div>
   );
 }

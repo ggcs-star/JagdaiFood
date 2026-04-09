@@ -298,13 +298,10 @@ export default function BrandsPower() {
         </HeaderSection>
 
         {/* GRID */}
-        <div className="pb-16">
+        <div className="">
           <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-5">
             {brandImages.map((img, index) => {
               const brand = brands[index];
-
-              
-
               return (
                 <div
                   key={index}

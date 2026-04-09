@@ -324,7 +324,7 @@ export default function EarningPotentialComponent(props) {
     return (
         <div className="bg-black py-6">
             <Container >
-               <div>
+               <div className="pt-20">
                  <h2 className="text-white text-center text-4xl font-bricolageBold md:text-5xl leading-tight mb-6">
                     Calculate Your Monthly Earning Potential
                 </h2>

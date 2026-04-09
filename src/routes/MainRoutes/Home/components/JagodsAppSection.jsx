@@ -93,7 +93,7 @@ export default function JagodsAppSection() {
   ];
 
   return (
-    <section className="bg-black py-8 sm:py-10 md:py-12 text-white">
+    <section className="bg-black py-4 sm:py-6 lg:py-8 text-white">
       <Container>
         <div className="relative rounded-[20px] sm:rounded-[30px] bg-gradient-to-r from-[#2d2d2d] to-[#1f1f1f] pt-6 px-4 sm:px-6 lg:p-0 overflow-hidden">
 

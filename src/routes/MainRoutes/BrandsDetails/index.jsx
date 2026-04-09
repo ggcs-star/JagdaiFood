@@ -86,7 +86,7 @@ export default function BrandsDetails() {
 
   return (
 
-    <div className="bg-black min-h-screen w-full">
+    <div className="bg-black min-h-screen overflow-hidden w-full">
 
       <div className="w-full">
 
@@ -98,8 +98,7 @@ export default function BrandsDetails() {
 
         ) : (
 
-          <Hero item={state.data} />
-
+          <Hero item={state.data} routeKey={key} />
         )}
 
       </div>

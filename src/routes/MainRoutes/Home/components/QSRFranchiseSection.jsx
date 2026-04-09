@@ -28,6 +28,11 @@ import icon23 from "../../../../assets/home/corepower/icon23.png";
 import icon26 from "../../../../assets/home/corepower/icon1.png";
 import icon27 from "../../../../assets/home/corepower/icon2.png";
 
+import icon28 from "../../../../assets/home/corepower/icon26.png";
+import icon29 from "../../../../assets/home/corepower/icon27.png";
+import icon30 from "../../../../assets/home/corepower/icon28.png";
+
+
 import free from "../../../../assets/home/corepower/free.png";
 import upos from "../../../../assets/home/corepower/upos.png";
 
@@ -63,6 +68,9 @@ export default function QSRFranchiseSection() {
         { icon: icon2, text: "1 Franchise = 24+ Food Brands" },
         { icon: icon3, text: "Zero Royalty – 100% Your Earnings" },
         { icon: icon4, text: "Ahmedabad’s Biggest Cloud Kitchen Access" },
+        { icon: icon28, text: "Full Pricing Freedom" },
+        { icon: icon29, text: "Location-Based Pricing" },
+        { icon: icon30, text: "Decide Your Margins" },
       ],
     },
     {
@@ -146,7 +154,7 @@ export default function QSRFranchiseSection() {
   window.setIsPaused = setIsPaused;
 
   return (
-    <div className="bg-black text-white py-6 md:py-16 px-4">
+    <div className="bg-black text-white py-6 md:pb-6 px-4">
       <GlobalStyle />
       <Franchiseheader />
 
