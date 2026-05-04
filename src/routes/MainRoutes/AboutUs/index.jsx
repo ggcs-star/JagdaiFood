@@ -8,8 +8,17 @@ import StructuredFranchiseModels from "./components/StructuredFranchiseModels";
 import FranchiseFormats from "./components/FranchiseFormats";
 import FranchiseCTA from "./components/FranchiseCta";
 import Breadcrumbs from "../../../components/Breadcrumbs";
+import { useEffect } from "react";
 
 const AboutUs = () => {
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+
   return (
     <div className="bg-black">
       <Breadcrumbs
@@ -27,11 +36,13 @@ const AboutUs = () => {
         mx-auto
         grid
         grid-cols-1
-        lg:grid-cols-[650px_520px]
-        gap-[30px]
+        lg:grid-cols-[680px_560px]
+
+          items-stretch
+
+        gap-8
         mt-[30px]
-        px-[20px]
-        justify-center
+        justify-center px-4 lg:px-0
         "
       >
         <MultiBrandEcosystem />
@@ -45,11 +56,11 @@ const AboutUs = () => {
         mx-auto
         grid
         grid-cols-1
-        lg:grid-cols-[520px_650px]
-        gap-[30px]
+        lg:grid-cols-[560px_680px]
+          items-stretch
+                  gap-8
         mt-[30px]
-        px-[20px]
-        justify-center
+        justify-center px-4 lg:px-0
         "
       >
         <TechnologyGrowth />

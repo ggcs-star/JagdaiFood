@@ -9,6 +9,7 @@ import "swiper/css/pagination";
 
 import underlineImg from "../../../../assets/underline.png";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import { FaWhatsapp } from "react-icons/fa";
 
 // images
 import img1 from "../../../../assets/panormaslider/image1.png";
@@ -23,7 +24,18 @@ import img9 from "../../../../assets/panormaslider/image9.png";
 
 import cateringlogo from "../../../../assets/cateringlogo.webp";
 
-const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9];
+// ✅ UPDATED: image + text mapping
+const slides = [
+  { img: img1, text: "Anniversary Celebration" },
+  { img: img2, text: "Reception" },
+  { img: img3, text: "Birthday Parties" },
+  { img: img4, text: "House Parties" },
+  { img: img5, text: "Corporate Events" },
+  { img: img6, text: "Engagement Function" },
+  { img: img7, text: "House Warming Ceremony" },
+  { img: img8, text: "Sangeet Ceremony" },
+  { img: img9, text: "Wedding Functions" },
+];
 
 const PanoramaSlider = () => {
   const prevRef = useRef(null);
@@ -31,7 +43,6 @@ const PanoramaSlider = () => {
 
   const [isMounted, setIsMounted] = useState(false);
 
-  // ✅ Prevent SSR issues (important for production)
   useEffect(() => {
     setIsMounted(true);
   }, []);
@@ -43,12 +54,19 @@ const PanoramaSlider = () => {
   };
 
   const handleBook = () => {
-    window.open("https://catering.jagdaifoods.com/", "_blank");
+    const message = encodeURIComponent(
+      "Hi, I want to book catering services for my event."
+    );
+
+    window.open(
+      `https://api.whatsapp.com/send?phone=918866373077&text=${message}`,
+      "_blank"
+    );
   };
 
   return (
-    <div className="bg-black py-20 text-white text-center overflow-hidden">
-      
+    <div className="bg-black py-8 text-white text-center overflow-hidden">
+
       {/* HEADER */}
       <div className="flex flex-col items-center mb-6">
         <img
@@ -85,14 +103,11 @@ const PanoramaSlider = () => {
           spaceBetween={20}
           grabCursor={true}
           speed={800}
-
           autoplay={{
             delay: 2500,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-
-          // ✅ Navigation FIX (production-safe)
           navigation={{
             prevEl: prevRef.current,
             nextEl: nextRef.current,
@@ -103,76 +118,76 @@ const PanoramaSlider = () => {
               swiper.params.navigation.nextEl = nextRef.current;
             }
           }}
-
-          // ✅ Pagination
           pagination={{
             el: ".dm-panorama-swiper-pagination",
             clickable: true,
           }}
-
-          // ✅ Responsive breakpoints (REPLACES slidesPerView: "auto")
           breakpoints={{
             0: { slidesPerView: 1 },
             640: { slidesPerView: 1 },
             768: { slidesPerView: 3 },
             1024: { slidesPerView: 5 },
           }}
-
           className="dm-panorama-swiper"
         >
-          {images.map((img, index) => (
+          {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="h-[260px] sm:h-[470px] shadow-2xl rounded-xl overflow-hidden">
+              <div className="group relative h-[480px] sm:h-[470px] shadow-2xl rounded-xl overflow-hidden">
+
+                {/* IMAGE */}
                 <img
-                  src={img}
+                  src={slide.img}
                   alt={`Slide ${index + 1}`}
-                  className="w-full h-full object-cover z-50"
+                  className="w-full h-full object-cover transition duration-500"
                 />
+
+                {/* OVERLAY */}
+                <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                  <p className="text-white text-2xl font-bricolageBold text-center px-4">
+                    {slide.text}
+                  </p>
+                </div>
+
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
         {/* NAVIGATION BUTTONS */}
-        <div className="flex flex-col items-center gap-6 mt-6">
+        <div className="flex flex-col items-center gap-6">
           <div className="flex gap-6">
             <button
               ref={prevRef}
-              className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
-              aria-label="Previous slide"
+              className="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
             >
               <FiChevronLeft size={32} />
             </button>
 
             <button
               ref={nextRef}
-              className="w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
-              aria-label="Next slide"
+              className="cursor-pointer w-14 h-14 flex items-center justify-center rounded-full bg-white/10 backdrop-blur-md border border-white text-white hover:bg-white hover:text-black transition duration-300"
             >
               <FiChevronRight size={32} />
             </button>
           </div>
 
           {/* CTA BUTTONS */}
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-row gap-2 lg:gap-4 px-2 lg:px-0">
             <button
               onClick={handleExplore}
-              className="px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-200 transition"
+              className="text-sm lg:text-lg px-2 lg:px-6 py-3 rounded-md bg-white text-black font-semibold hover:bg-gray-200 transition"
             >
               Explore Jagdai Catering
             </button>
-
             <button
               onClick={handleBook}
-              className="px-6 py-3 rounded-md bg-[#FDBD5B] text-black font-semibold hover:bg-yellow-400 transition"
+              className="text-sm lg:text-lg px-2 lg:px-6 py-3 rounded-md bg-[#FDBD5B] text-black font-semibold hover:bg-yellow-400 transition flex items-center gap-2 justify-center"
             >
+              <FaWhatsapp size={20} />
               Book Your Event
             </button>
           </div>
         </div>
-
-        {/* PAGINATION */}
-        {/* <div className="dm-panorama-swiper-pagination mt-6 flex justify-center"></div> */}
       </div>
     </div>
   );

@@ -38,6 +38,11 @@ import FoodCourtIntro from "./FoodCourtIntro";
 import FoodCourtBenefits from "./FoodCourtBenefits";
 import FoodCourtInfo from "./FoodCourtInfo";
 import QsrBanner from "./QsrBanner";
+import FranchiseCTA from "../Home/components/FranchiseCTA";
+import MasterFranchiseIntro from "./MasterFranchiseIntro";
+import WhyThisModelWorks from "./WhyThisModelWorks";
+import MasterFranchiseCards from "./MasterFranchiseCards";
+import PositioningClosingSection from "./PositioningClosingSection";
 
 /* ---------------- DESC COMPONENT ---------------- */
 
@@ -55,6 +60,13 @@ const Desc = ({ details, slug }) => {
     window.addEventListener("resize", checkScreen);
 
     return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // change to "auto" if you want instant
+    });
   }, []);
 
   return (
@@ -185,6 +197,7 @@ function FranchisesDetails() {
         titleMap={{
           "/franchise-formats": "Franchise Formats",
           "/franchise-formats/qsr-restaurant-franchise": "QSR Franchise",
+          "/franchise-formats/master-franchise": "Master Franchise / Territory Model",
           "/franchise-formats/internet-restaurants-franchise": "Internet Restaurant Franchise",
           "/franchise-formats/food-trolley-franchise": "Food Trolley Franchise",
           "/franchise-formats/food-tempo-franchise": "Food Tempo Franchise",
@@ -202,6 +215,10 @@ function FranchisesDetails() {
         <QsrShowcase />
       )}
 
+      {slug == "master-franchise" && (
+        <MasterFranchiseIntro />
+      )}
+
       {slug == "internet-restaurants-franchise" && (
         <CloudKitchenIntro />
       )}
@@ -209,8 +226,6 @@ function FranchisesDetails() {
       {slug == "food-trolley-franchise" && (
         <FoodTrolleyIntro />
       )}
-
-
 
 
       {slug == "food-tempo-franchise" && (
@@ -224,7 +239,7 @@ function FranchisesDetails() {
 
 
 
-      {!["qsr-restaurant-franchise", "internet-restaurants-franchise", "food-tempo-franchise", "chatori-gali", "food-trolley-franchise"].includes(slug) && (
+      {!["qsr-restaurant-franchise", "internet-restaurants-franchise", "food-tempo-franchise", "chatori-gali", "food-trolley-franchise", "master-franchise"].includes(slug) && (
         <Desc details={details} slug={slug} />
       )}
 
@@ -253,7 +268,7 @@ function FranchisesDetails() {
 
 
             {details?.extraDetails?.list?.length > 0 && (
-              <Container className="px-4">
+              <div className="max-w-7xl mx-auto">
                 <section className="py-8">
 
 
@@ -286,7 +301,7 @@ function FranchisesDetails() {
 
 
                 </section>
-              </Container>
+              </div>
             )}
             {/* ---------- UPOS + TAPRI SECTION ---------- */}
 
@@ -295,18 +310,20 @@ function FranchisesDetails() {
               "chatori-gali",
               "influencer-franchise",
               "food-tempo-franchise",
-              "internet-restaurants-franchise"
+              "internet-restaurants-franchise",
+              "master-franchise"
             ].includes(slug) && (
 
-                <div className="relative flex flex-col lg:flex-row items-stretch justify-center mx-auto lg:gap-6">
+                <div className="relative flex flex-col lg:flex-row items-center justify-center mx-auto gap-5 lg:gap-6">
 
                   {/* LEFT CARD */}
-                  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
-                    <p className="font-bricolageRegular text-[#60D186] mb-3">
+                  <div className="w-full lg:flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-6 sm:px-8 lg:px-10 py-8 lg:py-10 text-center flex flex-col justify-center min-h-[140px] lg:min-h-[160px]">
+
+                    <p className="font-bricolageRegular text-[#60D186] mb-2 lg:mb-3 text-sm sm:text-base">
                       Franchise Fee
                     </p>
 
-                    <h2 className="font-bricolageBold text-white text-2xl">
+                    <h2 className="font-bricolageBold text-white text-lg sm:text-xl lg:text-2xl">
                       <a
                         href="https://www.globalgarner.com/upos"
                         target="_blank"
@@ -317,34 +334,58 @@ function FranchisesDetails() {
                       </a>
                     </h2>
 
-                    <p className="text-gray-300 mt-2 text-sm">
+                    <p className="text-gray-300 mt-2 text-xs sm:text-sm">
                       With <span className="text-white font-semibold">20 Crores +</span> Products & Services
                     </p>
                   </div>
 
-                  {/* PLUS ICON */}
-                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
-                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="black" strokeWidth="3.5">
+                  {/* ✅ PLUS FOR MOBILE */}
+                  <div className="flex lg:hidden justify-center items-center">
+                    <div className="bg-yellow-500 w-10 h-10 rounded-full grid place-items-center shadow-md">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="3"
+                      >
                         <path d="M12 5v14M5 12h14" />
                       </svg>
                     </div>
                   </div>
 
                   {/* RIGHT CARD */}
-                  <div className="flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-10 py-10 text-center flex flex-col justify-center min-h-[160px]">
-                    <p className="font-bricolageRegular text-[#60D186] mb-3">
+                  <div className="w-full lg:flex-1 bg-gradient-to-r from-[#2b2b2b] to-[#1f1f1f] rounded-2xl px-6 sm:px-8 lg:px-10 py-8 lg:py-10 text-center flex flex-col justify-center min-h-[140px] lg:min-h-[160px]">
+
+                    <p className="font-bricolageRegular text-[#60D186] mb-2 lg:mb-3 text-sm sm:text-base">
                       Franchise Fee
                     </p>
 
-                    <h2 className="font-bricolageBold text-white text-2xl">
+                    <h2 className="font-bricolageBold text-white text-lg sm:text-xl lg:text-2xl">
                       Tapri Ki Tafri (chai)
                     </h2>
 
-                    <p className="text-gray-300 mt-2 text-sm">
+                    <p className="text-gray-300 mt-2 text-xs sm:text-sm">
                       with all QSR Franchise Complimentary <br />
                       at <span className="text-white font-semibold">just 1 Lakh Extra</span> (optional)
                     </p>
+                  </div>
+
+                  {/* ✅ PLUS FOR DESKTOP */}
+                  <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+                    <div className="bg-yellow-500 w-14 h-14 rounded-full grid place-items-center shadow-lg">
+                      <svg
+                        width="28"
+                        height="28"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="black"
+                        strokeWidth="3.5"
+                      >
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </div>
                   </div>
 
                 </div>
@@ -426,8 +467,20 @@ function FranchisesDetails() {
       )}
       {/* FRANCHISE MODELS */}
 
+      {slug == "master-franchise" && (
+        <WhyThisModelWorks />
+      )}
+
+       {slug == "master-franchise" && (
+        <MasterFranchiseCards />
+      )}
+
+           {slug == "master-franchise" && (
+        <PositioningClosingSection />
+      )}
+
       <div className="py-8 bg-black">
-        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali", "internet-restaurants-franchise"].includes(slug) && (
+        {!["food-trolley-franchise", "food-tempo-franchise", "chatori-gali", "internet-restaurants-franchise", "master-franchise"].includes(slug) && (
           <Container>
             {showAllFormats ? (
               <>
@@ -534,8 +587,8 @@ function FranchisesDetails() {
           </Container>
         )}
 
-        <Container className="mx-auto flex justify-center">
-          <FranchiseCTA1 />
+        <Container className="">
+          <FranchiseCTA />
         </Container>
 
       </div>

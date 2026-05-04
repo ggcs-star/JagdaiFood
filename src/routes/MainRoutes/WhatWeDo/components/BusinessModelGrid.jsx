@@ -27,7 +27,7 @@ export default function BusinessModelGrid() {
             <ul className="space-y-3 text-gray-200">
               {[
                 "QSR Restaurants",
-                "Internet / Cloud Kitchens",
+                "Internet / Cloud Kitchen",
                 "Food Trolleys & Tempos",
                 "Food Courts",
               ].map((item, index) => (

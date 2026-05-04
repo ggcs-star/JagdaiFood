@@ -6,7 +6,7 @@ export default function CentralizedOperations() {
     <div
       className="
       w-full
-      lg:w-[520px]
+      lg:w-[560px]
 
       h-full
       min-h-[800px]

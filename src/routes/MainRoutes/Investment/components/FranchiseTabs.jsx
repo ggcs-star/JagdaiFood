@@ -12,7 +12,6 @@ const tabs = [
 ];
 
 const FranchiseTabs = () => {
-  // ✅ Initialize from localStorage (NO flicker)
   const [activeTab, setActiveTab] = useState(() => {
     const saved = localStorage.getItem("activeFranchiseTab");
     return tabs.some((t) => t.id === saved) ? saved : "qsr";
@@ -22,12 +21,11 @@ const FranchiseTabs = () => {
   const containerRef = useRef(null);
   const tabRefs = useRef([]);
 
-  // ✅ Save active tab
   useEffect(() => {
     localStorage.setItem("activeFranchiseTab", activeTab);
   }, [activeTab]);
 
-  // ✅ Move sliding indicator
+  // ✅ Indicator + auto scroll (mobile)
   useEffect(() => {
     const index = tabs.findIndex((t) => t.id === activeTab);
     const currentTab = tabRefs.current[index];
@@ -38,6 +36,13 @@ const FranchiseTabs = () => {
       setIndicatorStyle({
         transform: `translateX(${offsetLeft}px)`,
         width: `${offsetWidth}px`,
+      });
+
+      // ✅ only useful for mobile scroll
+      currentTab.scrollIntoView({
+        behavior: "smooth",
+        inline: "center",
+        block: "nearest",
       });
     }
   }, [activeTab]);
@@ -61,14 +66,14 @@ const FranchiseTabs = () => {
     <div className="bg-black text-white">
 
       {/* ✅ Sticky Tabs */}
-      <div className="sticky top-16 z-50 py-4">
+      <div className="sticky top-24 z-50 py-4">
         <div className="max-w-7xl mx-auto px-4">
 
           <div
             ref={containerRef}
-            className="relative flex w-full bg-[#111] border border-gray-700 rounded-xl overflow-hidden"
+            className="relative flex w-full overflow-x-auto lg:overflow-visible bg-[#111] border border-gray-700 rounded-xl"
           >
-            {/* ✅ Animated Sliding Background */}
+            {/* ✅ Sliding Indicator */}
             <div
               className="absolute top-0 left-0 h-full bg-[#f4b860] rounded-xl transition-all duration-300 ease-in-out"
               style={indicatorStyle}
@@ -79,7 +84,10 @@ const FranchiseTabs = () => {
                 key={tab.id}
                 ref={(el) => (tabRefs.current[index] = el)}
                 onClick={() => setActiveTab(tab.id)}
-                className={`relative z-10 flex-1 text-center px-6 py-2 text-sm md:text-base transition-all duration-300 whitespace-nowrap font-bricolageBold
+                className={`relative z-10 
+                  flex-shrink-0 lg:flex-1 
+                  text-center px-6 py-2 text-sm md:text-base 
+                  whitespace-nowrap font-bricolageBold transition-all duration-300
                   ${
                     activeTab === tab.id
                       ? "text-black font-extrabold"

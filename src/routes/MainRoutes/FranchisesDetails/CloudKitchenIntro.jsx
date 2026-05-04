@@ -28,7 +28,7 @@ export default function CloudKitchenIntro() {
         </p>
 
         {/* WATCH VIDEO */}
-        <div
+        {/* <div
           onClick={() => setIsOpen(true)}
           className="flex items-center justify-center gap-2 pb-4 cursor-pointer group"
         >
@@ -39,7 +39,7 @@ export default function CloudKitchenIntro() {
           <p className="text-[#FDBD5B] text-sm md:text-base font-semibold group-hover:underline">
             Watch Video
           </p>
-        </div>
+        </div> */}
       </div>
 
       {/* VIDEO MODAL */}

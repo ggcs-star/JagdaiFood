@@ -131,7 +131,12 @@ html {
   transform: scale(0.85);
 }
 
-.swiper-slide-active {
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+/* .swiper-slide-active {
   transform: scale(1);
   opacity: 1;
 }
@@ -142,7 +147,7 @@ html {
 
 .swiper-slide-next {
   transform: rotateY(-15deg) scale(0.9);
-}
+} */
 
 .dm-panorama-swiper-pagination {
   width: fit-content !important;
@@ -186,6 +191,11 @@ html {
 
 .animate-arrowFloat {
   animation: arrowFloat 2s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
 }
 
 /* .button-container {

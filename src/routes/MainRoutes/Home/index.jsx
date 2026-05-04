@@ -65,6 +65,13 @@ export default function Home() {
     });
   };
 
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+
   const getStrokeColor = () => {
     return scrollPercentage > 0 ? "#22d1b6" : "gray";
   };

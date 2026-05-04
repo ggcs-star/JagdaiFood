@@ -411,7 +411,7 @@ export default function EarningPotentialComponent(props) {
                         </ApplyButton>
                     </div>
                 </div>
-           <div className="flex justify-center items-start sticky top-24 z-10">
+           <div className="flex justify-center items-start lg:sticky lg:top-24 z-10">
   <ReactApexChart
     options={pieData}
     series={pieData.series}

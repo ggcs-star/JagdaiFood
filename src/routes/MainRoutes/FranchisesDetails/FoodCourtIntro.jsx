@@ -56,7 +56,7 @@ export default function FoodCourtIntro() {
             {/* YOUTUBE IFRAME */}
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/G6fWrRyl4Ak?autoplay=1"
+              src="https://www.youtube.com/embed/_TtMSlEmUME?autoplay=1"
               title="Food Court Video"
               allow="autoplay; encrypted-media"
               allowFullScreen

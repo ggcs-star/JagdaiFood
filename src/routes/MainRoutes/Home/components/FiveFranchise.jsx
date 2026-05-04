@@ -14,9 +14,9 @@ export default function FiveFranchise() {
                     <div className="grid lg:grid-cols-2 gap-8 md:gap-10 lg:gap-12 items-center">
 
                         {/* ===== LEFT CONTENT (UPDATED) ===== */}
-                        <div className="px-2 sm:px-4 md:px-8 lg:p-14">
+                        <div className="px-0 md:px-8 lg:p-14">
 
-                            <h2 className="font-bricolageBold text-2xl sm:text-3xl md:text-4xl leading-snug mb-4 md:mb-6">
+                            <h2 className="font-bricolageBold text-3xl md:text-4xl lg:mb-6 leading-snug mb-4 md:mb-6">
                                 Jagdai Foods All Franchise <br />
                                 in 5 Minutes
                             </h2>
@@ -39,7 +39,7 @@ export default function FiveFranchise() {
                       {/* ===== RIGHT SIDE (VIDEO CENTERED) ===== */}
 <div className="relative h-[260px] sm:h-[320px] md:h-[400px] lg:h-full flex items-center py-8 justify-center">
 
-    <div className="w-[90%] h-[180px] sm:h-[220px] md:h-[260px] lg:h-[400px] rounded-[16px] overflow-hidden z-10 cursor-pointer">
+    <div className="w-[100%] lg:w-[90%] h-[240px] lg:h-[400px] rounded-[16px] overflow-hidden z-10 cursor-pointer">
 
         {!playVideo ? (
             <>
@@ -59,14 +59,14 @@ export default function FiveFranchise() {
                 </div>
             </>
         ) : (
-            <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/G6fWrRyl4Ak?autoplay=1"
-                title="Jagdai Foods Franchise Video"
-                frameBorder="0"
-                allow="autoplay; encrypted-media"
-                allowFullScreen
-            ></iframe>
+          <iframe
+  className="w-full h-full"
+  src="https://www.youtube.com/embed/_TtMSlEmUME?autoplay=1"
+  title="YouTube video"
+  frameBorder="0"
+  allow="autoplay; encrypted-media"
+  allowFullScreen
+></iframe>
         )}
     </div>
 </div>

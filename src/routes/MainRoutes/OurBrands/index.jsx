@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import BrandsHero from './components/BrandsHero'
 import BrandsCards from './components/BrandsCards'
 import BrandsCTA from './components/BrandsCTA.JSX'
+import FranchiseCTA from '../Home/components/FranchiseCTA'
 
 const OurBrands = () => {
 
@@ -17,7 +18,7 @@ const OurBrands = () => {
     <div>
         <BrandsHero/>
         <BrandsCards/>
-        <BrandsCTA/>
+        <FranchiseCTA/>
     </div>
   )
 }

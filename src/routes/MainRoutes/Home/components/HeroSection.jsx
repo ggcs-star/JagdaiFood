@@ -9,6 +9,7 @@ import mobilebanner1 from "../../../../assets/home/herosection/mobile-banner-1.p
 import mobilebanner2 from "../../../../assets/home/herosection/mobile-banner-2.png";
 import mobilebanner3 from "../../../../assets/home/herosection/mobile-banner-3.png";
 import mobilebanner4 from "../../../../assets/home/herosection/mobile-banner-4.png";
+
 export default function FranchiseHero() {
   const originalBanners = [banner1, banner2, banner3, banner4];
 
@@ -112,7 +113,6 @@ export default function FranchiseHero() {
   };
 
   return (
-    // ✅ ONLY MOBILE FIX (no lg impact)
     <section className="w-full overflow-hidden relative bg-black pt-[70px] sm:pt-[80px] md:pt-0 lg:pt-0">
       <div
         className={`flex ${
@@ -140,13 +140,17 @@ export default function FranchiseHero() {
               key={index}
               className="w-full flex-shrink-0 flex items-center justify-center bg-black"
             >
-              <div className="w-full mt-10 lg:mt-0 h-[250px] sm:h-[280px] md:h-[400px] lg:h-[600px]">
+              {/* ✅ FIXED CONTAINER */}
+              <div className="w-full mt-0 lg:mt-28 
+                h-[250px] sm:h-[280px] md:h-[400px] 
+                lg:h-[600px] 2xl:h-auto 
+                flex items-center justify-center">
 
                 {/* Desktop */}
                 <img
                   src={banner}
                   alt={`Banner ${index}`}
-                  className="w-full h-full object-contain hidden sm:block select-none pointer-events-none"
+                  className="w-full h-full 2xl:h-auto object-contain hidden sm:block select-none pointer-events-none"
                   draggable="false"
                 />
 
@@ -154,10 +158,9 @@ export default function FranchiseHero() {
                 <img
                   src={mobileBanners[realIndex]}
                   alt={`Mobile Banner ${index}`}
-                  className="w-full h-full object-cover block sm:hidden select-none pointer-events-none"
+                  className="w-full h-full object-contain block sm:hidden select-none pointer-events-none"
                   draggable="false"
                 />
-
               </div>
             </div>
           );

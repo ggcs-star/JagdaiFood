@@ -45,9 +45,9 @@ export default function TermsAndConditions() {
   ];
 
   return (
-    <div className="w-full bg-black min-h-screen pt-[80px] sm:pt-[90px] md:pt-[100px] pb-[80px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[24px] md:px-[30px]">
+    <div className="w-full bg-black min-h-screen pt-[96px] md:pt-[100px] pb-[80px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[24px] md:px-[30px]">
       <div className="max-w-[1000px] mx-auto text-center mb-[40px] sm:mb-[50px] md:mb-[60px]">
-        <h1 className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[48px] font-bricolageSemiBold text-[#34D399] leading-tight">
+        <h1 className="text-[30px] sm:text-[36px] md:text-[44px] lg:text-[48px] font-bricolageSemiBold text-[#60D186] leading-tight">
           Terms & Conditions
         </h1>
 

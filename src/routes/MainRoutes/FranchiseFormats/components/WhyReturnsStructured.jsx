@@ -1,6 +1,7 @@
 import React from "react";
 import { Check } from "lucide-react";
 import whyReturns from '../../../../assets/investment/whyreturns.png'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhyReturnsStructured() {
   const points = [
@@ -44,9 +45,15 @@ Start Your Food Franchise Journey          </h3>
 
           </div>
 
-          <button className="bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition">
-            Schedule a Franchise Consultation
-          </button>
+          <button
+  onClick={() =>
+    window.open("https://wa.me/918866373077", "_blank")
+  }
+  className="flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition"
+>
+  <FaWhatsapp size={20} />
+  <span>Schedule a Franchise Consultation</span>
+</button>
 
         </div>
 

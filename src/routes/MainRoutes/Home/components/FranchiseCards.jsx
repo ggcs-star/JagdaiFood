@@ -10,27 +10,19 @@ export default function FranchiseCards() {
       <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-6">
         {/* LEFT CARD */}
         {/* Cloud Kitchen Card */}
-        <div className="relative h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
-          <div className="p-4 lg:p-8">
+        <div className="relative h-auto md:h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
+          <div className="p-4 lg:p-8 z-50">
             {/* Title */}
-            <h3 className="text-2xl lg:text-3xl font-bricolageBold text-white mb-2">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bricolageBold text-white mb-2">
               Internet Restaurant Franchise
             </h3>
 
-            <h3 className="text-2xl lg:text-3xl font-bricolageBold text-white mb-2">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bricolageBold text-white mb-2">
               (Cloud Kitchen Model)
             </h3>
 
             {/* Price */}
-            {/* <p className="font-bricolageBold text-[#60D186] text-2xl font-semibold mb-2">
-                            Starting at just{" "}
-                                    <span className="absolute left-0 bottom-[-4px] w-full h-[5px] bg-[#f2b44c] rounded-full">
-
-                            </span>{" "}
-                            + GST
-                        </p> */}
-
-            <p className="font-bricolageBold text-[#60D186] text-2xl font-semibold mb-2">
+            <p className="font-bricolageBold text-[#60D186] text-xl sm:text-2xl font-semibold mb-2">
               Starting at just{" "}
               <span className="relative inline-block">
                 ₹3 Lakhs
@@ -39,12 +31,12 @@ export default function FranchiseCards() {
               + GST
             </p>
 
-            <p className="text-gray-300 text-md mb-6">
+            <p className="text-gray-300 text-sm sm:text-md mb-6">
               Not a restaurant—just a food business built for scale.
             </p>
 
             {/* Points */}
-            <ul className="space-y-3 mb-6 text-md">
+            <ul className="space-y-3 mb-6 text-sm sm:text-md">
               {[
                 "Fully online food business",
                 "Low investment with minimal overhead",
@@ -57,49 +49,45 @@ export default function FranchiseCards() {
                 "Built for high-demand online delivery market",
                 "Opportunity to earn up to ₹1 lakh per month",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-white  ">
-                  <span className="w-5 h-5 rounded-full bg-[#60D186] flex items-center justify-center mt-0.5">
+                <li key={i} className="flex items-start gap-3 text-white">
+                  <span className="w-5 h-5 rounded-full bg-[#60D186] flex items-center justify-center mt-0.5 shrink-0">
                     <Check size={12} className="text-black" />
                   </span>
-                  {item}
+                  <span className="text-sm sm:text-base">{item}</span>
                 </li>
               ))}
             </ul>
 
-
             {/* CTA */}
             <Link
               to="/franchise-formats/internet-restaurants-franchise"
-              className="inline-block bg-transparent border border-white text-black px-5 py-2 rounded-md text-md text-white hover:bg-white hover:text-black font-medium hover:bg-gray-200"
+              className="z-50 inline-block bg-transparent border border-white text-black px-4 sm:px-5 py-2 rounded-md text-sm sm:text-md text-white hover:bg-white hover:text-black font-medium hover:bg-gray-200"
             >
               Know More
             </Link>
           </div>
 
           {/* Image */}
-          <div className="mt-1 md:mt-0">
+          <div className="mt-4 md:mt-0">
             <img
               src={cloudkitchen}
               alt="cloud kitchen"
-              className="w-full h-full object-contain -translate-y-6 md:-translate-y-48"
+              className="w-full h-full object-contain md:-translate-y-48 -z-20"
             />
           </div>
         </div>
 
         {/* RIGHT CARD */}
-        <div className="relative h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
+        <div className="relative h-auto md:h-[905px] bg-gradient-to-br from-[#2b2b2b] to-[#1a1a1a] rounded-3xl text-white flex flex-col justify-between overflow-hidden">
           {/* CONTENT */}
-          <div className="z-10 p-6 lg:p-8">
+          <div className="z-10 p-4 lg:p-8">
             {/* Title */}
-            <h3 className="font-bricolageBold text-2xl lg:text-3xl mb-2">
+            <h3 className="font-bricolageBold text-xl sm:text-2xl lg:text-3xl mb-2">
               Influencer Franchise (Digital Earning Model)
             </h3>
 
-            {/* <h3 className="font-bricolageBold text-2xl lg:text-3xl mb-2">
-                        </h3> */}
-
             {/* Price */}
-            <p className="font-bricolageBold text-[#FDBD5B] text-2xl font-semibold mb-2">
+            <p className="font-bricolageBold text-[#FDBD5B] text-xl sm:text-2xl font-semibold mb-2">
               Starting at just{" "}
               <span className="relative inline-block">
                 ₹2,000
@@ -108,12 +96,12 @@ export default function FranchiseCards() {
               + GST
             </p>
 
-            <p className="text-gray-300 text-md mb-6">
+            <p className="text-gray-300 text-sm sm:text-md mb-6">
               No kitchen, no setup — pure digital business.
             </p>
 
             {/* FEATURES */}
-            <div className="space-y-3 mb-6 text-md">
+            <div className="space-y-3 mb-6 text-sm sm:text-md">
               {[
                 "No kitchen, no setup — pure digital business",
                 "Earn by building and expanding your network",
@@ -133,7 +121,7 @@ export default function FranchiseCards() {
                   <div className="w-5 h-5 flex items-center justify-center rounded-full bg-[#FDBD5B] mt-1 shrink-0">
                     <Check className="w-3 h-3 text-black" />
                   </div>
-                  <span>{item}</span>
+                  <span className="text-sm sm:text-base">{item}</span>
                 </div>
               ))}
             </div>
@@ -141,32 +129,33 @@ export default function FranchiseCards() {
             {/* CTA */}
             <Link
               to="/franchise-formats/influencer-franchise"
-              className="inline-block bg-transparent border border-white text-black px-5 py-2 rounded-md text-md text-white hover:bg-white hover:text-black font-medium hover:bg-gray-200"
+              className="inline-block bg-transparent border border-white text-black px-4 sm:px-5 py-2 rounded-md text-sm sm:text-md text-white hover:bg-white hover:text-black font-medium hover:bg-gray-200"
             >
               Know More
             </Link>
           </div>
 
           {/* IMAGE */}
-          <div className="mt-1 md:mt-0">
+          <div className="mt-4 md:mt-0">
             <img
               src={influencerImage}
               alt="Influencer Franchise"
-              className="w-full object-contain -translate-y-6 md:-translate-y-48"
+              className="w-full object-contain md:-translate-y-48"
             />
           </div>
         </div>
       </div>
-     <div className="max-w-7xl mx-auto mt-8 px-4">
-  <div className="grid md:grid-cols-2 gap-6 items-center">
 
-    {/* BUTTON 1 - LEFT */}
-    <Link
-      to="/franchise-formats/chatori-gali"
-      className="
-        w-full max-w-md
-        justify-self-end
+      <div className="max-w-7xl mx-auto mt-6 md:mt-8 px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center">
+
+          {/* BUTTON 1 - RIGHT */}
+          <Link
+            to="/franchise-formats/chatori-gali"
+            className="
+        lg:w-96
         text-center
+        md:justify-self-end
         bg-[#60D186]
         text-black
         px-6 py-3
@@ -175,17 +164,19 @@ export default function FranchiseCards() {
         transition-all duration-300
         shadow-md
         hover:scale-105
+        text-sm sm:text-base
       "
-    >
-      Food Court Franchise (Chatori Gali)
-    </Link>
+          >
+            Food Court Franchise (Chatori Gali)
+          </Link>
 
-    {/* BUTTON 2 - RIGHT */}
-    <button
-      className="
-        w-full max-w-md
-        justify-self-start
+          {/* BUTTON 2 - LEFT */}
+          <Link
+            to="/franchise-formats/master-franchise"   // 👈 update route if different
+            className="
+        lg:w-96
         text-center
+        md:justify-self-start
         bg-[#FDBD5B]
         text-black
         px-6 py-3
@@ -194,13 +185,14 @@ export default function FranchiseCards() {
         transition-all duration-300
         shadow-md
         hover:scale-105
+        text-sm sm:text-base
       "
-    >
-      Master Franchise / Territory Model
-    </button>
+          >
+            Master Franchise / Territory Model
+          </Link>
 
-  </div>
-</div>
+        </div>
+      </div>
     </div>
   );
 }

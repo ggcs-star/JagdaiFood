@@ -6,7 +6,7 @@ export default function TechnologyGrowth() {
     <div
       className="
       w-full
-      lg:w-[520px]
+      lg:w-[560px]
 
       min-h-[688px]
 

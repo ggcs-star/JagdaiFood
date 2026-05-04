@@ -3,7 +3,7 @@ import { Check } from "lucide-react";
 
 export default function BrandAdvantages() {
     return (
-        <section className="bg-black text-white pt-8 px-4">
+        <section className="bg-black text-white pt-8">
             <div className="max-w-7xl mx-auto">
 
                 {/* TITLE */}
@@ -15,8 +15,8 @@ export default function BrandAdvantages() {
                 <div className="grid md:grid-cols-2 gap-6 mb-6 ">
 
                     {/* CARD 1 */}
-                    <div className="bg-[#2b2b2b] rounded-2xl py-5 px-6 flex items-center gap-3 justify-center md:justify-start">
-                        <span className="w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center">
+                    <div className="bg-[#2b2b2b] rounded-2xl py-5 px-4 flex items-center gap-3 justify-center md:justify-start">
+                        <span className="flex-shrink-0 w-6 h-6 rounded-full bg-[#FDBD5B] flex items-center justify-center">
                             <Check size={14} className="text-black" />
                         </span>
                         <span className="text-gray-300 font-bricolageMedium text-sm md:text-base">

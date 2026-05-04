@@ -20,6 +20,13 @@ export default function FranchiseModels() {
     setScrollPercentage(scrolled);
   };
 
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
 

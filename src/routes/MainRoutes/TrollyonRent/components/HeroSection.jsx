@@ -10,7 +10,7 @@ const HeroSection = () => {
       <div className="max-w-[1440px] mx-auto px-[20px] md:px-[60px] lg:px-[120px]">
 
         {/* ===== TOP SECTION ===== */}
-        <div className="pt-[80px] md:pt-[100px] lg:pt-[120px] pb-[60px] md:pb-[70px] lg:pb-[80px] text-center">
+        <div className="pt-[100px] md:pt-[100px] lg:pt-[120px] pb-[60px] md:pb-[70px] lg:pb-[80px] text-center">
           <h1 className="text-[28px] md:text-[36px] lg:text-[48px] leading-[36px] md:leading-[44px] lg:leading-[56px] font-bricolageSemiBold">
             Trolley on Rent
           </h1>

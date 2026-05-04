@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function FranchiseCTA() {
   const navigate = useNavigate();
@@ -33,7 +34,7 @@ export default function FranchiseCTA() {
         }}
       >
 
-        
+
         <h2
           className="
           text-black
@@ -50,11 +51,11 @@ export default function FranchiseCTA() {
           mb-[14px]
           "
         >
-          Start Your Food 
+          Start Your Food
           <br className="hidden sm:block" />
-Franchise Journey        </h2>
+          Franchise Journey        </h2>
 
-        
+
         <p
           className="
           text-black
@@ -78,7 +79,7 @@ Franchise Journey        </h2>
           business backed by systems and structure.
         </p>
 
-        
+
         <div
           className="
           flex
@@ -89,16 +90,28 @@ Franchise Journey        </h2>
           "
         >
 
-          
-          <button onClick={()=> navigate("/contact")}
-           className="bg-[#262626] text-white text-[15px] sm:text-[16px] font-inter px-[24px] py-[12px] rounded-[10px] hover:opacity-90 transition">
-            Schedule Consultation
-          </button>
 
-          
-          <button className="bg-white text-black text-[15px] sm:text-[16px] font-inter font-semibold px-[24px] py-[12px] rounded-[10px] hover:opacity-90 transition">
-Download Investment Guide
-          </button>
+         <button
+  onClick={() =>
+        window.open("https://wa.me/918866373077", "_blank")
+
+  }
+  className="flex items-center justify-center gap-2 cursor-pointer bg-[#262626] text-white text-[15px] sm:text-[16px] font-inter px-[24px] py-[12px] rounded-[10px] hover:opacity-90 transition"
+>
+  <FaWhatsapp size={20} />
+  <span>Schedule Consultation</span>
+</button>
+
+
+          <a
+            href="https://docs.google.com/presentation/d/1ZPjTRlHECxbquTQxWZ732k20ZsFYlWao/edit?usp=sharing&ouid=104598933576124029697&rtpof=true&sd=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto bg-white text-black px-4 sm:px-5 lg:px-6 py-3 rounded-lg font-medium hover:opacity-90 transition text-center"
+          >
+            Download PPT
+          </a>
+
 
         </div>
 

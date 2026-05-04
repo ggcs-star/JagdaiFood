@@ -47,7 +47,7 @@ export default function FocoModelSection() {
         />
 
         <div>
-          <h3 className="text-[#34D399] text-[20px] md:text-[22px] text-center font-bricolageSemiBold mb-[30px]">
+          <h3 className="text-[#60D186] text-[20px] md:text-[22px] text-center font-bricolageSemiBold mb-[30px]">
             Ownership & Control
           </h3>
 
@@ -67,13 +67,13 @@ export default function FocoModelSection() {
         </div>
 
         <div>
-          <h3 className="text-[#34D399] text-[20px] md:text-[22px] text-center font-bricolageSemiBold mb-[30px]">
+          <h3 className="text-[#60D186] text-[20px] md:text-[22px] text-center font-bricolageSemiBold mb-[30px]">
             Return Structure
           </h3>
 
           <div className="space-y-[18px]">
             <div className="bg-[#5A5A5A] rounded-[24px] py-[12px] px-[20px] md:px-[30px] text-white font-bricolageSemiBold text-center leading-[22px]">
-              <p className="text-[#34D399] text-[13px] leading-[16px]">
+              <p className="text-[#60D186] text-[13px] leading-[16px]">
                 Franchisee receives
               </p>
 
@@ -84,7 +84,7 @@ export default function FocoModelSection() {
 
             <div className="flex items-center justify-center gap-[10px]">
               <div className="w-[60px] h-[1px] bg-[#666]" />
-              <span className="text-[#34D399] font-bricolageSemiBold text-[14px]">
+              <span className="text-[#60D186] font-bricolageSemiBold text-[14px]">
                 OR
               </span>
               <div className="w-[60px] h-[1px] bg-[#666]" />

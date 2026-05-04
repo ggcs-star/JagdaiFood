@@ -3,7 +3,7 @@ import React from "react";
 export default function SectionHeader() {
   return (
     <div className="relative flex flex-col items-center justify-center text-center 
-                    pb-10 sm:pb-12 md:pb-16 px-4">
+                    py-10 lg:px-4">
 
       {/* Glow Background */}
       <div className="
@@ -18,22 +18,17 @@ export default function SectionHeader() {
 
       {/* Heading */}
       <h2 className="
-        text-[22px] 
-        sm:text-[26px] 
-        md:text-4xl 
-        lg:text-5xl 
+       text-4xl md:text-5xl
         font-bricolageBold 
         text-white 
         relative z-10
       ">
-        Multiple Franchise Options!
+        Multiple Franchise Options !
       </h2>
 
       {/* Sub Heading */}
       <p className="
-        text-[14px] 
-        sm:text-[16px] 
-        md:text-xl 
+        text-[18px]
         lg:text-2xl 
         text-white 
         mt-2 

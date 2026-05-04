@@ -1,4 +1,5 @@
 import React from "react";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function ExploreFranchiseSection() {
   const items = [
@@ -64,9 +65,15 @@ export default function ExploreFranchiseSection() {
         </div>
 
        
-        <button className="mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold">
-          Schedule a Franchise Consultation
-        </button>
+       <button
+  onClick={() =>
+    window.open("https://wa.me/918866373077", "_blank")
+  }
+  className="flex items-center justify-center gap-2 mt-[40px] w-full max-w-[308px] h-[48px] bg-[#252525] rounded-[8px] text-white font-inter text-[16px] font-semibold hover:opacity-90 transition"
+>
+  <FaWhatsapp size={20} />
+  <span>Schedule a Franchise Consultation</span>
+</button>
 
       </div>
     </section>
