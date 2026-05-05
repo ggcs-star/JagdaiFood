@@ -17,9 +17,6 @@ export default function BrandMenu({ item }) {
     try {
       const res = await getRestaurantDetails(item.id);
 
-      console.log("API RESPONSE:", res);
-
-      
       const apiItems = res?.data?.menuItems || [];
       const menuImg = res?.data?.restaurant?.menu_image;
 
@@ -44,7 +41,7 @@ export default function BrandMenu({ item }) {
 
   const categories = [...new Set(menuItems.map((i) => i.category))];
 
-   const handleMenuDownload = () => {
+  const handleMenuDownload = () => {
     if (!menuImage) {
       alert("Menu not available");
       return;
@@ -53,7 +50,7 @@ export default function BrandMenu({ item }) {
     const link = document.createElement("a");
     link.href = menuImage;
     link.download = `${item?.name || "menu"}.pdf`;
-    link.target = "_blank"; // optional
+    link.target = "_blank";
 
     document.body.appendChild(link);
     link.click();
@@ -69,80 +66,28 @@ export default function BrandMenu({ item }) {
   const restCards = filtered.slice(6);
 
   return (
-    <section className="max-w-7xl mx-auto py-10 md:py-14 text-white">
+    <section className="max-w-7xl mx-auto py-10 md:py-14 text-white px-4 lg:px-0">
       {/* HEADER */}
-      {/* <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-8">
-
-        <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">
-          Menu
-        </h2>
-
-        {item?.menuDownloadLink && (
-
-          <a
-            href={item.menuDownloadLink}
-            className="border border-[#FDBD5B] text-[#FDBD5B] px-4 md:px-5 py-2 rounded-full flex items-center gap-2 hover:bg-[#FDBD5B] hover:text-black transition text-sm md:text-base"
-          >
-            <img src={download} alt="Download" className="size-4" />
-            Download Menu
-          </a>
-
-        )}
-
-      </div> */}
-
       <div className="flex items-center justify-between mb-8 flex-wrap gap-4">
         <h2 className="text-2xl md:text-3xl font-bricolageSemiBold">Menu</h2>
 
         <button
           onClick={handleMenuDownload}
-          className="
-    group
-    inline-flex
-    items-center
-    gap-2
-    border border-[#FDBD5B]
-    text-[#FDBD5B]
-    px-5
-    py-2
-    rounded-full
-    hover:bg-[#FDBD5B]
-    hover:text-black
-    cursor-pointer
-    transition
-    text-sm
-    md:text-base
-    whitespace-nowrap
-  "
+          className="group inline-flex items-center gap-2 border border-[#FDBD5B] text-[#FDBD5B] px-5 py-2 rounded-full hover:bg-[#FDBD5B] hover:text-black cursor-pointer transition text-sm md:text-base whitespace-nowrap"
         >
           <img
             src={download}
             alt="Download"
-            className="w-4 h-4 transition duration-200  group-hover:invert"
+            className="w-4 h-4 transition duration-200 group-hover:invert"
           />
           Download Menu
         </button>
       </div>
 
-      {/* CATEGORY PILLS */}
-      {/* <div className="flex flex-wrap gap-3 mb-10">
-        {categories.map((cat, i) => (
-          <button
-            key={i}
-            onClick={() => setActive(cat)}
-            className={`px-5 py-2 rounded-full text-sm transition
-            ${
-              active === cat
-                ? "bg-white text-black"
-                : "bg-[#262626] text-gray-300"
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div> */}
-
+      {/* TOP GRID */}
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 md:gap-8 mb-10 md:mb-12">
+        
+        {/* FOOD ITEMS */}
         <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {firstSix.map((food, i) => (
             <div key={i}>
@@ -156,13 +101,26 @@ export default function BrandMenu({ item }) {
                 {food.title}
               </h3>
 
-              <p className="text-gray-400 text-sm line-clamp-2">{food.desc}</p>
+              <p className="text-gray-400 text-sm line-clamp-2">
+                {food.desc}
+              </p>
             </div>
           ))}
         </div>
 
+        {/* MOBILE APP CARD - Desktop only */}
         {item?.mobileApp && (
-          <div className="bg-[#2a2a2a] rounded-2xl px-6 py-8 flex flex-col items-center text-center w-full max-w-[340px] mx-auto lg:mx-0">
+          <div
+            className="
+              hidden lg:flex
+              bg-[#2a2a2a]
+              rounded-2xl
+              px-6 py-8
+              flex-col items-center text-center
+              w-full max-w-[340px]
+              mx-auto lg:mx-0
+            "
+          >
             {item.mobileApp?.logo && (
               <img
                 src={item.mobileApp.logo}
@@ -176,8 +134,6 @@ export default function BrandMenu({ item }) {
               alt="QR"
               className="w-42 sm:w-46 md:w-50 mb-4"
             />
-
-            {/* <p className="text-sm text-gray-300 mb-5">Scan to download</p> */}
 
             {item.mobileApp?.playStore && (
               <a
@@ -211,6 +167,7 @@ export default function BrandMenu({ item }) {
         )}
       </div>
 
+      {/* REMAINING ITEMS */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6">
         {restCards.map((food, i) => (
           <div key={i}>
@@ -228,6 +185,65 @@ export default function BrandMenu({ item }) {
           </div>
         ))}
       </div>
+
+      {/* MOBILE APP CARD - Mobile only (shown after remaining items) */}
+      {item?.mobileApp && (
+        <div
+          className="
+            lg:hidden
+            mt-10
+            bg-[#2a2a2a]
+            rounded-2xl
+            px-6 py-8
+            flex flex-col items-center text-center
+            w-full lg:max-w-[340px]
+            mx-auto
+          "
+        >
+          {item.mobileApp?.logo && (
+            <img
+              src={item.mobileApp.logo}
+              alt="logo"
+              className="w-48 sm:w-30 md:w-34 mb-5"
+            />
+          )}
+
+          <img
+            src={item.mobileApp?.qrCode}
+            alt="QR"
+            className="w-48 sm:w-46 md:w-50 mb-4"
+          />
+
+          {item.mobileApp?.playStore && (
+            <a
+              href={item.mobileApp.playStore.link}
+              target="_blank"
+              rel="noreferrer"
+              className="mb-3"
+            >
+              <img
+                src={item.mobileApp.playStore.badge}
+                alt="Google Play"
+                className="w-48 sm:w-46 md:w-50"
+              />
+            </a>
+          )}
+
+          {item.mobileApp?.appStore && (
+            <a
+              href={item.mobileApp.appStore.link}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={item.mobileApp.appStore.badge}
+                alt="App Store"
+                className="w-48 sm:w-46 md:w-50"
+              />
+            </a>
+          )}
+        </div>
+      )}
     </section>
   );
 }

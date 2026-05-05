@@ -11,7 +11,7 @@ export default function FoodBusinessModal({ onClose }) {
   const images = [img1, img2, img3, img4];
 
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-6 left-6 z-60">
 
       {/* GLASS CARD */}
       <div
@@ -43,7 +43,7 @@ export default function FoodBusinessModal({ onClose }) {
               absolute -top-3 -right-3 
               bg-[#FDBD5B] text-black 
               rounded-full p-1.5 text-sm 
-              shadow-md z-50
+              shadow-md z-60
             "
           >
             <IoClose />

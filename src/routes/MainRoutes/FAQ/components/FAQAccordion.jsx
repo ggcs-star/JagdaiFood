@@ -33,7 +33,7 @@ export default function FAQAccordion() {
   };
 
   return (
-    <div className="bg-black w-full min-h-screen py-[100px] px-[20px]">
+    <div className="bg-black w-full py-8 lg:py-[20px] px-[20px]">
 
       
       <div className="max-w-[1100px] mx-auto">
@@ -53,14 +53,14 @@ export default function FAQAccordion() {
           md:leading-[56px]
 
           font-bricolageSemiBold
-          mb-[100px]
+          mb-[20px]
         "
         >
           Frequently asked questions
         </h2>
 
         
-        <div className="flex flex-col gap-[16px] max-w-[900px] mx-auto px-[20px] sm:px-0">
+        <div className="flex flex-col gap-[16px] max-w-[900px] mx-auto px-[0px] sm:px-0">
           {faqs.map((faq, index) => (
             <div
               key={index}

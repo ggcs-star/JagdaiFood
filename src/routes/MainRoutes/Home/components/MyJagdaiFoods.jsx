@@ -34,7 +34,7 @@ export default function CapitalGuarantee() {
   ];
 
   return (
-    <section className="bg-black pt-4 pb-8">
+    <section className="bg-black pt-0 lg:pt-2 pb-8">
       <Container>
         {/* Main Card */}
         <div className="relative rounded-[28px] overflow-hidden bg-gradient-to-r from-[#6BC07F] to-[#F2B44F]">

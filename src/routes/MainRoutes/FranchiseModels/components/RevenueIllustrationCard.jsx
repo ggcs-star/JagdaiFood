@@ -18,7 +18,7 @@ export default function RevenueIllustrationCard() {
           Revenue Illustration
         </h3>
 
-        <p className="text-[#34D399] font-bricolageSemiBold text-[15px] mb-[12px]">
+        <p className="text-[#60D186] font-bricolageSemiBold text-[15px] mb-[12px]">
           Assuming:
         </p>
 
@@ -29,7 +29,7 @@ export default function RevenueIllustrationCard() {
           </span>
         </div>
 
-        <p className="text-[#34D399] font-bricolageSemiBold text-[15px] mb-[12px]">
+        <p className="text-[#60D186] font-bricolageSemiBold text-[15px] mb-[12px]">
           Approximate return:
         </p>
 
@@ -42,7 +42,7 @@ export default function RevenueIllustrationCard() {
 
         <div className="flex items-center gap-[12px] mb-[12px]">
           <div className="w-[60px] sm:w-[70px] h-[1px] bg-[#7a7a7a]" />
-          <span className="text-[#34D399] text-[14px] font-semibold">OR</span>
+          <span className="text-[#60D186] text-[14px] font-semibold">OR</span>
           <div className="w-[60px] sm:w-[70px] h-[1px] bg-[#7a7a7a]" />
         </div>
 

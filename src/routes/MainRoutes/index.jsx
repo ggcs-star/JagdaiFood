@@ -21,6 +21,7 @@ import Disclaimer from "./Disclaimer";
 import ModelComparison from "./ModelComparison";
 import FranchisesDetails from "./FranchisesDetails";
 import TrollyonRent from "./TrollyonRent";
+import MarketingSupport from "./MarketingSupport";
 
 // import Pharmretail from "./Pharmretail";
 // import Pharmconnect from "./Pharmconnect";
@@ -49,8 +50,9 @@ export default function MainRoutes(props) {
         { path: "/roi-calculator", element: <EarningPotential {...props} /> },
         { path: "franchise-formats/:slug", element: <FranchisesDetails {...props} /> },
         { path: "/faq", element: <FAQ {...props} /> },
-        { path: "/contact", element: <Contact {...props} /> },
+        // { path: "/contact", element: <Contact {...props} /> },
         { path: "/terms", element: <TermsConditions {...props} /> },
+        { path: "/marketing-support", element: <MarketingSupport {...props} /> },
 
         { path: "/privacy", element: <PrivacyPolicy {...props} /> },
         { path: "/disclaimer", element: <Disclaimer {...props} /> },

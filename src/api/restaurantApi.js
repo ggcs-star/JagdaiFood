@@ -25,3 +25,37 @@ export const getRestaurantDetails = async (id) => {
     return null;
   }
 };
+
+export const getRestaurantFeatures = async (id) => {
+  try {
+    const res = await axios.get(`${BASE_URL}/restaurant/${id}`);
+
+    // ✅ Correct path (FIXED)
+    const features =
+      res?.data?.data?.data?.restaurant?.keyFeatures || [];
+
+    console.log("API FEATURES:", features);
+
+    return features;
+  } catch (error) {
+    console.error("Error fetching features:", error);
+    return [];
+  }
+};
+
+export const getRestaurantRevenue = async (id) => {
+  try {
+    const res = await axios.get(`${BASE_URL}/restaurant/${id}`);
+
+    // ✅ Correct path (FIXED)
+    const revenue =
+      res?.data?.data?.data?.restaurant?.uniqueRevenue || [];
+
+    console.log("API REVENUE:", revenue);
+
+    return revenue;
+  } catch (error) {
+    console.error("Error fetching revenue:", error);
+    return [];
+  }
+};

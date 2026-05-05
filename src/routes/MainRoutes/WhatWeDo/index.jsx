@@ -5,8 +5,16 @@ import BusinessModelGrid from './components/BusinessModelGrid'
 import ServiceGrid from './components/ServiceGrid'
 import WhatWeDoCTA from './components/WhatWeDoCTA'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import { useEffect } from 'react'
 
 const WhatWeDo = () => {
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+
   return (
     <div className=''>
  <Breadcrumbs

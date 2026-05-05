@@ -146,7 +146,7 @@ export default function MultiBrandEcosystem() {
     <div
       className="
       w-full
-      lg:w-[650px]
+      lg:w-[680px]
       min-h-[800px]
       bg-[#262626]
       rounded-[24px]

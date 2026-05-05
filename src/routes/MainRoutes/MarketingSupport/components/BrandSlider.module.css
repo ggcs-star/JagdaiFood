@@ -1,0 +1,116 @@
+.brandSlider {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.brandSliderContainer {
+    width: 200px;
+    position: absolute;
+    top: 3px;
+    height: 500px;
+}
+
+.brandSliderSlide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+    
+}
+
+.brandSliderSlide img {
+    display: block;
+    width: 100%;
+}
+
+.brandSliderPhoneImg {
+    position: fixed;
+    top: 80px;
+    left: 50px;
+    width: 100px;
+    height: auto;
+}
+
+.brandSliderImgTop {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+}
+
+.brandSliderSlideShadowRight,
+.brandSliderSlideShadowCoverflow,
+.brandSliderSlideShadowLeft,
+.brandSliderSlideShadowTop,
+.brandSliderSlideShadowBottom {
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.brandSliderNavigationPrev,
+.brandSliderNavigationNext {
+    display: none;
+}
+
+.brandSliderPhoneFrame {
+    position: relative;
+    width: 300px;
+    height: 500px;
+}
+
+@media (min-width: 1024px) {
+    .brandSliderNavigationPrev,
+    .brandSliderNavigationNext {
+        display: block;
+        position: absolute;
+        top: 40%;
+        transform: translateY(-50%);
+        z-index: 1000;
+        border: 1px solid green;
+        border-radius: 10%;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .brandSliderPhoneFrame {
+        position: relative;
+        width: 300px;
+        height: 600px;
+        margin: auto;
+    }
+
+    .brandSliderContainer {
+        width: 200px;
+        position: absolute;
+        top: -80px;
+        height: 800px;
+    }
+
+    .brandSliderPhoneImg {
+        position: fixed;
+        top: 50px;
+        left: 50px;
+        width: 100px;
+        height: auto;
+    }
+}
+
+.brandSliderNavigationPrev {
+    left: -40px;
+    height: 65px;
+    width: 60px;
+}
+
+.brandSliderNavigationNext {
+    right: -40px;
+    height: 65px;
+    width: 60px;
+}
+
+.brandSliderNavigationPrev:hover,
+.brandSliderNavigationNext:hover {
+    background-color: theme('colors.primary');
+    color: white;
+} 

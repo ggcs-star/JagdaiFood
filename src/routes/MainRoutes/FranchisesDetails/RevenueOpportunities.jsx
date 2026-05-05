@@ -15,7 +15,7 @@ const RevenueOpportunitiesqsr = () => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
        <div className="max-w-7xl mx-auto">
-         <h2 className="font-bricolageSemiBold text-white text-3xl md:text-4xl leading-relaxed mb-12">
+         <h2 className="font-bricolageSemiBold text-white text-xl md:text-4xl lg:leading-relaxed mb-12">
           Additionally, the unique selling proposition (USP) of our franchise
           offers the following revenue opportunities
         </h2>

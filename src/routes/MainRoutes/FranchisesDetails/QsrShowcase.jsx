@@ -58,7 +58,18 @@ export default function QsrShowcase() {
           {brands.map((item, index) => (
             <div
               key={index}
-              className="bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a] border border-gray-600 rounded-2xl p-3 w-[160px] h-[160px] flex items-center justify-center shadow-lg hover:scale-105 transition duration-300"
+              className="
+        bg-gradient-to-b from-[#2a2a2a] to-[#1a1a1a]
+        border border-gray-600 
+        rounded-2xl 
+        p-3 
+        w-[48%] sm:w-[160px]   /* 🔥 FIX */
+        aspect-square
+        flex items-center justify-center 
+        shadow-lg 
+        hover:scale-105 
+        transition duration-300
+      "
             >
               <img
                 src={item.img}

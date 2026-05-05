@@ -54,20 +54,20 @@ export default function FranchiseInvestment() {
           </div>
 
           {/* Bottom Row */}
-       <div className="relative mt-4">
+          <div className="relative mt-4">
 
-  <img
-    src={qsr}
-    alt="restaurant"
-    className="lg:w-[460px] object-contain ml-8 lg:ml-auto"
-  />
+            <img
+              src={qsr}
+              alt="restaurant"
+              className="lg:w-[460px] object-contain ml-8 lg:ml-auto"
+            />
 
-  <p className="absolute top-6 left-0 text-gray-400 max-w-[55%]">
-    A full-scale multi-brand QSR backed by centralized production,
-    SOP-driven execution, and structured FOFO / FOCO models.
-  </p>
+            <p className="absolute top-6 left-0 text-gray-400 max-w-[55%]">
+              A full-scale multi-brand QSR backed by centralized production,
+              SOP-driven execution, and structured FOFO / FOCO models.
+            </p>
 
-</div>
+          </div>
         </div>
 
         {/* Internet Restaurant Franchise */}
@@ -115,19 +115,19 @@ export default function FranchiseInvestment() {
           </div>
 
           {/* Bottom Row */}
-      <div className="relative mt-4 h-[220px]">
+          <div className="relative mt-4 h-[220px]">
 
-  <p className="absolute lg:-top-20 left-0 w-[40%] lg:max-w-[55%] leading-relaxed">
-    A delivery-first, low-capex, high-velocity model built for digital growth.
-  </p>
+            <p className="absolute lg:-top-20 left-0 w-[40%] lg:max-w-[55%] leading-relaxed">
+              A delivery-first, low-capex, high-velocity model built for digital growth.
+            </p>
 
-  <img
-    src={mobile}
-    alt="delivery"
-    className="absolute right-0 lg:-top-20 w-[450px] object-contain"
-  />
+            <img
+              src={mobile}
+              alt="delivery"
+              className="absolute right-0 lg:-top-20 w-[450px] object-contain"
+            />
 
-</div>
+          </div>
         </div>
 
       </div>

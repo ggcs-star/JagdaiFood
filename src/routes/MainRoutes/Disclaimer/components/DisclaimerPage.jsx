@@ -40,10 +40,10 @@ export default function DisclaimerPage() {
   ];
 
   return (
-    <div className="w-full bg-black min-h-screen pt-[70px] sm:pt-[90px] md:pt-[100px] pb-[70px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[20px] md:px-[30px]">
+    <div className="w-full bg-black pt-[96px] md:pt-[100px] pb-[70px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[20px] md:px-[30px]">
       
       <div className="max-w-[1000px] mx-auto text-center mb-[35px] sm:mb-[50px] md:mb-[60px]">
-        <h1 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[48px] font-bricolageSemiBold text-[#34D399] leading-tight">
+        <h1 className="text-[26px] sm:text-[34px] md:text-[42px] lg:text-[48px] font-bricolageSemiBold text-[#60D186] leading-tight">
           Disclaimer
         </h1>
 

@@ -12,6 +12,12 @@ import playstoreimage from "../../../assets/brands/playstoreimage.png";
 import appstoreimage from "../../../assets/brands/appstoreimage.png";
 
 export default function BrandsDetails() {
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
 
   const { key } = useParams();
 

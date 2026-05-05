@@ -11,7 +11,7 @@ export default function Breadcrumbs({ titleMap = {}, className = "" }) {
 
   return (
     <div className={`w-full py-3 px-3 lg:px-28 ${className}`}>
-      <Container className="max-w-7xl mx-auto text-sm text-white flex items-center flex-wrap">
+      <Container className="max-w-7xl mx-auto text-xs sm:text-sm text-white flex items-center flex-wrap">
 
         {/* Home */}
         <Link to="/" className="hover:text-gray-300">

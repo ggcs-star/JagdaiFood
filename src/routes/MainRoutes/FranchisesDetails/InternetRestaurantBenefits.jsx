@@ -47,21 +47,25 @@ export default function InternetRestaurantBenefits() {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="relative flex items-end justify-center md:justify-end h-full pr-4 md:pr-8 overflow-visible">
-            <img
-              src={bannerImg}
-              alt="Internet Restaurant"
-              className="
-                w-[80%] 
-                md:w-[140%] 
-                h-[400px]
-                max-w-none 
-                object-contain 
-                translate-y-[20px] 
-                md:-translate-y-[20px]
-              "
-            />
-          </div>
+<div className="relative flex items-center justify-end h-full">
+  <img
+    src={bannerImg}
+    alt="Internet Restaurant"
+    className="
+      w-full
+      h-[300px]
+      object-contain
+
+      -translate-x-[40px]
+
+      md:translate-x-0
+      md:w-[140%]
+      lg:w-[80%]
+
+      md:-translate-y-[20px]
+    "
+  />
+</div>
 
         </div>
 

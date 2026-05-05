@@ -3,7 +3,7 @@ import LegacyOfAmmaHero from './components/LegacyOfAmmaHero'
 import TributeToAmma from './components/TributeToAmma'
 import FoundersSection from './components/FoundersSection'
 import HowWeDoIt from './components/HowWeDoIT'
-import FranchiseCTA from './components/FranchiseCTA'
+import FranchiseCTA from '../Home/components/FranchiseCTA'
 
 const LegacyOfAmma = () => {
 

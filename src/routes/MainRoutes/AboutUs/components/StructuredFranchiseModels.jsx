@@ -5,7 +5,7 @@ export default function StructuredFranchiseModels() {
     <div
       className="
       w-full
-      lg:w-[650px]
+      lg:w-[680px]
 
       min-h-[688px]
 
@@ -69,9 +69,7 @@ export default function StructuredFranchiseModels() {
 
           bg-[#3A3A3A]
           rounded-[16px]
-
-       
-
+          px-4
           py-[18px]
           md:py-[20px]
 
@@ -129,6 +127,7 @@ export default function StructuredFranchiseModels() {
 
           bg-[#3A3A3A]
           rounded-[16px]
+          px-4
 
         
 

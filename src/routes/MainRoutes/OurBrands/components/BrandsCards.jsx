@@ -104,7 +104,7 @@ const BrandsCards = () => {
   };
 
   return (
-    <div className="bg-black py-4 lg:py-16 px-4">
+    <div className="bg-black py-4 lg:py-8 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {brands?.map((item, i) => (

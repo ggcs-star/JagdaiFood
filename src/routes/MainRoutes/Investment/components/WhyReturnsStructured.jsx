@@ -2,6 +2,7 @@ import React from "react";
 import { Check } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import whyReturns from '../../../../assets/investment/whyreturns.png'
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function WhyReturnsStructured() {
   const navigate = useNavigate();
@@ -61,29 +62,33 @@ export default function WhyReturnsStructured() {
             Evaluate Your Format
           </h3>
 
-          <div className="flex lg:flex-wrap justify-center gap-2 lg:gap-8 mb-8">
+       <div className="flex flex-col lg:flex-row lg:flex-wrap justify-center gap-3 lg:gap-8 mb-8">
 
-            <div className="flex items-center gap-2">
-              <div className="bg-[#FDBD5B] rounded-full p-1.5">
-                <Check size={14} />
-              </div>
-              <span className="font-medium">ROI projection sheet</span>
-            </div>
+  <div className="flex justify-center items-center gap-2">
+    <div className="bg-[#FDBD5B] rounded-full p-1.5">
+      <Check size={14} />
+    </div>
+    <span className="font-medium">ROI projection sheet</span>
+  </div>
 
-            <div className="flex items-center gap-2">
-              <div className="bg-[#FDBD5B] rounded-full p-1.5">
-                <Check size={14} />
-              </div>
-              <span className="font-medium">Agreement overview</span>
-            </div>
+  <div className="flex justify-center items-center gap-2">
+    <div className="bg-[#FDBD5B] rounded-full p-1.5">
+      <Check size={14} />
+    </div>
+    <span className="font-medium">Agreement overview</span>
+  </div>
 
-          </div>
+</div>
 
-          <button
-          onClick={()=>{navigate("/contact")}}
-           className="bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition">
-            Schedule a Franchise Consultation
-          </button>
+        <button
+  onClick={() =>
+    window.open("https://wa.me/918866373077", "_blank")
+  }
+  className="mx-auto flex items-center justify-center gap-2 bg-black text-white px-6 py-3 rounded-lg text-sm hover:bg-gray-900 transition"
+>
+  <FaWhatsapp size={20} />
+  <span>Schedule a Franchise Consultation</span>
+</button>
 
         </div>
 

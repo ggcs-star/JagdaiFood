@@ -4,10 +4,12 @@ import FranchiseInvestment from './components/FranchiseInvestment'
 import FranchiseModels from './components/FranchiseModels'
 import AdditionalFranchises from './components/AdditionalFranchises'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
-import FranchiseCTA from './components/FranchiseCTA'
 import MasterFranchise from './components/MasterFranchise'
+import FranchiseCTA from '../Home/components/FranchiseCTA'
 
 const FranchiseFormats = () => {
+
+  
   return (
     <div>
         <InvestmentROI/>

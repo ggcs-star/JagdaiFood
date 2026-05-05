@@ -279,7 +279,7 @@ export default function BrandsPower() {
     }
   };
 
-   
+
 
   return (
     <div className="text-center overflow-x-hidden">
@@ -287,19 +287,24 @@ export default function BrandsPower() {
 
       <div className="max-w-7xl mx-auto">
         {/* HEADER */}
-        <HeaderSection>
-          <HeaderTitle className="font-bricolageBold">
-            24+ Brands Power
-          </HeaderTitle>
+        {/* <HeaderSection> */}
 
-          <HeaderSubtitle>
-            Multiple brands. One kitchen. One investment
-          </HeaderSubtitle>
-        </HeaderSection>
+        <h1 className="text-4xl md:text-5xl font-bricolageBold text-white relative z-10">
+          24+ Brands Power
+        </h1>
+
+        <p className="text-white text-[18px] my-3 max-w-xl mx-auto leading-relaxed">
+          Multiple brands. One kitchen. One investment
+
+        </p>
+
+
+        {/* </HeaderSection> */}
 
         {/* GRID */}
         <div className="">
-          <div className="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-5">
+          <div className="h-full grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 lg:grid-cols-8 gap-5 overflow-hidden
+">
             {brandImages.map((img, index) => {
               const brand = brands[index];
               return (
@@ -312,7 +317,7 @@ export default function BrandsPower() {
                       state: { slug: brand.slug },
                     });
                   }}
-                                className="
+                  className="
                   rounded-xl
                   overflow-hidden
                   flex items-center justify-center

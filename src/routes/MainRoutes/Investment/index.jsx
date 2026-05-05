@@ -3,8 +3,18 @@ import InvestmentROI from './components/InvestmentROI'
 import FranchiseTabs from './components/FranchiseTabs'
 import WhyReturnsStructured from './components/WhyReturnsStructured'
 import Breadcrumbs from '../../../components/Breadcrumbs'
+import { useEffect } from 'react'
 
 const Investment = () => {
+
+
+    useEffect(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth", // change to "auto" if you want instant
+      });
+    }, []);
+    
   return (
     <div>
       <Breadcrumbs

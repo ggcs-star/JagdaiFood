@@ -5,7 +5,7 @@ import WhiteLabelProfitCard from "./WhiteLabelProfitCard";
 
 export default function FofoModelSection() {
   return (
-    <section className="w-full flex justify-center px-3">
+    <section className="w-full flex justify-center py-10 lg:py-16 px-[16px] sm:px-[20px]">
       <div className="relative w-full max-w-7xl my-[40px] rounded-[24px] overflow-hidden text-center pt-[60px] md:pt-[80px] pb-[20px] lg:pb-[40px] bg-gradient-to-b from-[#2b2b2b] to-[#1f1f1f] backdrop-blur-[30px]">
         {" "}
         <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[300px] md:w-[420px] h-[240px] md:h-[320px] bg-[#FDBD5B] opacity-30 blur-[70px]" />

@@ -76,9 +76,9 @@ export default function PrivacyPolicyPage() {
   ];
 
   return (
-    <div className="w-full bg-black min-h-screen pt-[70px] sm:pt-[90px] md:pt-[100px] pb-[70px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[24px] md:px-[30px]">
+    <div className="w-full bg-black min-h-screen pt-[96px] md:pt-[100px] pb-[70px] sm:pb-[100px] md:pb-[120px] px-[16px] sm:px-[24px] md:px-[30px]">
       <div className="max-w-[1000px] mx-auto text-center mb-[40px] sm:mb-[50px] md:mb-[60px]">
-        <h1 className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[48px] font-bricolageSemiBold text-[#34D399] leading-tight">
+        <h1 className="text-[28px] sm:text-[34px] md:text-[40px] lg:text-[48px] font-bricolageSemiBold text-[#60D186] leading-tight">
           Privacy Policy
         </h1>
 
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
               <ul className="space-y-[6px] sm:space-y-[8px]">
                 {section.points.map((point, i) => (
                   <li key={i} className="flex items-start gap-[10px]">
-                    <span className="mt-[8px] w-[6px] h-[6px] sm:w-[7px] sm:h-[7px] rounded-full bg-[#34D399] shrink-0"></span>
+                    <span className="mt-[8px] w-[6px] h-[6px] sm:w-[7px] sm:h-[7px] rounded-full bg-[#60D186] shrink-0"></span>
 
                     <span className="flex-1 text-gray-200 text-[13px] sm:text-[14px] md:text-[16px] leading-[22px] sm:leading-[24px]">
                       {point}

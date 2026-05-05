@@ -79,7 +79,7 @@ export default function FoodTempoIntro() {
             {/* YOUTUBE IFRAME */}
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/G6fWrRyl4Ak?autoplay=1"
+              src="https://youtube.com/embed/rWImfHLv3mI?autoplay=1"
               title="Food Tempo Video"
               allow="autoplay; encrypted-media"
               allowFullScreen

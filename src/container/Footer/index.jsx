@@ -14,7 +14,7 @@ const Footer = () => {
       slug: "/franchise-formats/qsr-restaurant-franchise",
     },
     {
-      label: "Cloud Kitchen",
+      label: "Internet Franchise",
       slug: "/franchise-formats/internet-restaurants-franchise",
     },
     {
@@ -41,14 +41,17 @@ const Footer = () => {
     { label: "Investment & ROI", slug: "/investment" },
   ];
 
-  const resources = [
-    { label: "Download Investment Brochure", slug: "/brochure" },
-    { label: "Schedule Consultation", slug: "/contact" },
-    { label: "Franchise FAQs", slug: "/faq" },
-    { label: "Terms & Conditions", slug: "/terms" },
-    { label: "Privacy Policy", slug: "/privacy" },
-    { label: "Disclaimer", slug: "/disclaimer" }
-  ];
+const resources = [
+  { 
+    label: "Download Investment Brochure", 
+    link: "https://docs.google.com/presentation/d/1ZPjTRlHECxbquTQxWZ732k20ZsFYlWao/edit?usp=sharing&ouid=104598933576124029697&rtpof=true&sd=true"
+  },
+  { label: "Schedule Consultation", link: "https://wa.me/918866373077" },
+  { label: "Franchise FAQs", slug: "/faq" },
+  { label: "Terms & Conditions", slug: "/terms" },
+  { label: "Privacy Policy", slug: "/privacy" },
+  { label: "Disclaimer", slug: "/disclaimer" }
+];
 
   const socials = [
     { icon: <FaFacebookF />, url: "https://www.facebook.com/share/1aRjrPt6AL/" },
@@ -164,17 +167,23 @@ const Footer = () => {
               Resources
             </h4>
 
-            <ul className="space-y-4">
-              {resources.map((item, index) => (
-                <li
-                  key={index}
-                  onClick={() => navigate(item.slug)}
-                  className="cursor-pointer hover:text-white transition"
-                >
-                  {item.label}
-                </li>
-              ))}
-            </ul>
+    <ul className="space-y-4">
+  {resources.map((item, index) => (
+    <li
+      key={index}
+      onClick={() => {
+        if (item.link) {
+          window.open(item.link, "_blank");
+        } else {
+          navigate(item.slug);
+        }
+      }}
+      className="cursor-pointer hover:text-white transition"
+    >
+      {item.label}
+    </li>
+  ))}
+</ul>
           </div>
 
         </div>

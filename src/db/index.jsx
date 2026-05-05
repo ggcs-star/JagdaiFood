@@ -68,6 +68,9 @@ import reel7 from "../assets/reels/reel7.mp4";
 import reel8 from "../assets/reels/reel8.mp4";
 import reel9 from "../assets/reels/reel9.mp4";
 
+import reelimage1 from "../assets/reels/reel1.jpg";
+
+
 import dilliBackground from "../assets/brands/background/dillibackground.png";
 import scanner from "../assets/brands/scanner.png";
 import playstoreimage from "../assets/brands/playstoreimage.png";
@@ -950,7 +953,7 @@ export const franchise = [
     desc: "Jagdai Foods introduces an exciting opportunity with its Food Trolley Franchise! It's compact, cost-effective, and versatile, a stylish, mobile eatery designed for parks, offices, and events. Serve delicious food on the go with Jagdai Foods' trusted brand support",
     icon: trolleyFranchise,
     image: ftf,
-     imageConfig: {
+    imageConfig: {
       width: "620px",        // desktop width
       height: "auto",        // or "300px"
       right: "80px",          // gap from right
@@ -1083,7 +1086,7 @@ export const franchise = [
         {
           label: "Other Interior",
           subTitle: "₹50 lac (approx)",
-                    desc: " (Food court setup)",
+          desc: " (Food court setup)",
 
         },
         {
@@ -1141,6 +1144,83 @@ export const franchise = [
         },
       ],
     },
+    stats: {
+      title:
+        "Food Trolley market in India is experiencing robust growth. Here are some key figures",
+      list: [
+        {
+          label:
+            "India's food truck market is rapidly expanding, with an estimated size of USD 152.45 million in 2022, indicating a significant shift in the nation's gastronomic scene",
+        },
+        {
+          label:
+            "Food trucks are a crucial part of urban dining, offering affordability, variety, and convenience in both thriving metropolises and developing tier-2 and tier-3 communities",
+        },
+        {
+          label:
+            "Indian street food accounts for over 40% of food truck specialisations, followed by fast food (30%) and other cuisines (30%)",
+        },
+        {
+          label:
+            "The food truck market in India is expected to grow at a compound annual growth rate (CAGR) of 7-10% from 2023 to 2028. Valued at approximately USD 30 million in 2023, the market size is projected to reach around USD 50 million by 2028",
+        },
+      ],
+      image: null,
+    },
+    // banner: {
+    //   img1: null,
+    //   img2: null,
+    // },
+  },
+
+  {
+    title: "Master Franchise",
+    sub_title: "Master Franchise",
+    slug: "master-franchise",
+    largeImage: chatorigali,
+    desc: "Chatori Gali is a dynamic food court that features a wide range of food stalls, offering both vegetarian and non-vegetarian options.",
+    icon: trolleyFranchise,
+    image: cgf,
+    imageConfig: {
+      width: "620px",        // desktop width
+      height: "auto",        // or "300px"
+      right: "0px",          // gap from right
+      bottom: "-100px",        // push image DOWN (+ve), up (-ve)
+      mobileWidth: "600px",
+      mobileBottom: "0px"
+    },
+    extraDetails: {
+      label: "Franchise Fees",
+      fees: "₹1 Crore",
+      // percent: "6% Royalty from the Trolley",
+      total: " +GST",
+      price: "1 Crore",
+      // note: "NON-VEG Option also available",
+      list: [
+        {
+          label: "Earn",
+          subTitle: "70% of franchise fee",
+          desc: "on franchises you sell"
+        },
+        {
+          label: "Earn",
+          subTitle: "30% of Franchise Fee",
+          desc: "on company-driven sales in your territory",
+
+        },
+        {
+          label: "Earn",
+          subTitle: "7% recurring revenue on total billing",
+          desc: "from all active outlets",
+        },
+        {
+          label: "Earn from",
+          subTitle: "Multiple formats",
+          desc: "QSR, Trolley, Internet & Influencer models",
+        },
+      ],
+    },
+
     stats: {
       title:
         "Food Trolley market in India is experiencing robust growth. Here are some key figures",
@@ -2348,3 +2428,229 @@ export const sliderCategories = [
     ],
   },
 ];
+
+
+
+export const allVideos = [
+  // Promotional Content Videos
+{
+  id: 1,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DKtfMeRTOo2/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 1",
+  // No thumbnail field needed for Instagram anymore
+},
+
+{
+  id: 2,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DKbh0gPuqJu/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 2",
+  // No thumbnail field needed for Instagram anymore
+},
+{
+  id: 3,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DJ8-SMKT-1i/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 3",
+  // No thumbnail field needed for Instagram anymore
+},
+  {
+  id: 4,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DJ3vvXhR3s7/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 4",
+  // No thumbnail field needed for Instagram anymore
+},
+   {
+  id: 5,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DJdsHGnTnIP/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 5",
+  // No thumbnail field needed for Instagram anymore
+},
+   {
+  id: 6,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DJRVnAKTm1t/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 6",
+  // No thumbnail field needed for Instagram anymore
+},
+     {
+  id: 7,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DIyMd1OTDhN/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 7",
+  // No thumbnail field needed for Instagram anymore
+},
+       {
+  id: 8,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DH8Ji5OTFDX/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 8",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 9,
+  category: "qsr_franchise",
+  categoryLabel: "QSR Franchise",
+  videoUrl: "https://www.instagram.com/reel/DG8IMk3OXhH/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 9",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 10,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DKtfMeRTOo2/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 10",
+  // No thumbnail field needed for Instagram anymore
+},
+
+
+       {
+  id: 11,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DGDcsYaTMqj/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 11",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 12,
+  category: "franchise_format",
+  categoryLabel: "Franchise Format",
+  videoUrl: "https://www.instagram.com/reel/DF7Bhp4zvH6/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 12",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 13,
+  category: "qsr_franchise",
+  categoryLabel: "QSR Franchise",
+  videoUrl: "https://www.instagram.com/reel/DFZqjBgzAaY/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 13",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 14,
+  category: "foco_model_franchise",
+  categoryLabel: "FOCO Model Franchise",
+  videoUrl: "https://www.instagram.com/reel/DE9d3FNzF0q/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 14",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 15,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DEkJjmITH0a/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 15",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 16,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DER7eX6zNdK/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 16",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 17,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DENIBFcTUZa/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 17",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 18,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DEFYMQfIUDi/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 18",
+  // No thumbnail field needed for Instagram anymore
+},
+       {
+  id: 19,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DCO5RYsul_c/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 19",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 20,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DA6AbB0NgHU/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 20",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 21,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DBMAFMyxXEG/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 21",
+  // No thumbnail field needed for Instagram anymore
+},
+
+       {
+  id: 22,
+  category: "promotional_content",
+  categoryLabel: "Promotional Content",
+  videoUrl: "https://www.instagram.com/reel/DBjLHT2tFJ9/", // or /reels/DKtfMeRTOo2/
+  title: "Promotional Video 22",
+  // No thumbnail field needed for Instagram anymore
+},
+
+ 
+  
+
+ 
+];
+
+// Helper function to get unique categories
+export const getUniqueCategories2 = () => {
+  const categoriesMap = new Map();
+  allVideos.forEach(video => {
+    if (!categoriesMap.has(video.category)) {
+      categoriesMap.set(video.category, {
+        id: categoriesMap.size + 1,
+        label: video.categoryLabel,
+        value: video.category
+      });
+    }
+  });
+  return Array.from(categoriesMap.values());
+};
+
+// Helper function to get videos by category
+export const getVideosByCategory2 = (categoryValue) => {
+  if (!categoryValue) return allVideos;
+  return allVideos.filter(video => video.category === categoryValue);
+};
+
+// For backward compatibility
+export const sliderCategories2 = getUniqueCategories2();

@@ -28,7 +28,7 @@ export default function NavbarContent() {
           link: "/franchise-formats/qsr-restaurant-franchise",
         },
         {
-          name: "Cloud Kitchen",
+          name: "Internet Franchise",
           link: "/franchise-formats/internet-restaurants-franchise",
         },
         {
@@ -59,7 +59,7 @@ export default function NavbarContent() {
           link: "https://docs.google.com/presentation/d/1ZPjTRlHECxbquTQxWZ732k20ZsFYlWao/edit?usp=sharing&ouid=104598933576124029697&rtpof=true&sd=true",
         },
         { name: "FAQs", link: "/faq" },
-        { name: "Contact", link: "/contact" },
+        // { name: "Contact", link: "/contact" },
       ],
     },
     {
@@ -71,17 +71,20 @@ export default function NavbarContent() {
         { name: "What We Do", link: "/what-we-do" },
       ],
     },
+    { name: "Marketing Support", link: "/marketing-support" },
+
+
   ];
 
   return (
     <header className="h-[100px] w-full bg-black text-white fixed  top-0 left-0 z-[9999]">
-<div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between h-full">        {/* Logo */}
+      <div className="max-w-[1300px] mx-auto px-3 lg:px-0 flex items-center justify-between h-full">        {/* Logo */}
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Jagdai Foods" className="h-20 object-contain" />
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-8 text-sm font-medium">
+        <ul className="hidden lg:flex items-center gap-8 text-sm font-medium ">
           {navLinks.map((item, index) => (
             <li key={index} className="relative group">
               {/* Parent Menu */}
@@ -100,10 +103,9 @@ export default function NavbarContent() {
                   <NavLink
                     to={item.link}
                     className={({ isActive }) =>
-                      `flex items-center gap-1 ${
-                        isActive
-                          ? "text-[#FDBD5B]"
-                          : "hover:text-[#FDBD5B] transition"
+                      `flex items-center gap-1 ${isActive
+                        ? "text-[#FDBD5B]"
+                        : "hover:text-[#FDBD5B] transition"
                       }`
                     }
                   >
@@ -120,28 +122,30 @@ export default function NavbarContent() {
 
               {/* Dropdown */}
               {item.dropdown && (
-                <div className="absolute left-0 top-full mt-3 w-[220px] bg-[#2c2c2c] rounded-xl border border-gray-600 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
-                  {item.dropdown.map((subItem, i) =>
-                    isExternal(subItem.link) ? (
-                      <a
-                        key={i}
-                        href={subItem.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
-                      >
-                        {subItem.name}
-                      </a>
-                    ) : (
-                      <NavLink
-                        key={i}
-                        to={subItem.link}
-                        className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
-                      >
-                        {subItem.name}
-                      </NavLink>
-                    ),
-                  )}
+                <div
+                  className={`absolute left-0 top-full mt-3 ${item.name === "Franchise Formats" ? "w-[250px]" : "w-[200px]"
+                    } bg-[#2c2c2c] rounded-xl border border-gray-600 shadow-lg overflow-hidden opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300`}
+                >                  {item.dropdown.map((subItem, i) =>
+                  isExternal(subItem.link) ? (
+                    <a
+                      key={i}
+                      href={subItem.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
+                    >
+                      {subItem.name}
+                    </a>
+                  ) : (
+                    <NavLink
+                      key={i}
+                      to={subItem.link}
+                      className="block px-5 py-3 text-sm hover:bg-[#3a3a3a] border-b border-gray-600 last:border-none"
+                    >
+                      {subItem.name}
+                    </NavLink>
+                  ),
+                )}
                 </div>
               )}
             </li>
@@ -149,98 +153,99 @@ export default function NavbarContent() {
         </ul>
 
         {/* Desktop Phone */}
-      <div className="hidden lg:flex items-center gap-6">
-  <div className="hidden lg:flex items-center">
-    <div
-      className="relative"
-      onMouseEnter={() => setShowQR(true)}
-      onMouseLeave={() => setShowQR(false)}
-    >
-      {/* DOWNLOAD ICON */}
-      <img
-        src={downloadIcon}
-        alt="download"
-        className="w-5 h-5 object-contain cursor-pointer hover:scale-110 transition"
-      />
+        <div className="hidden lg:flex items-center gap-6">
+          <div className="hidden lg:flex items-center">
+            <div
+              className="relative"
+              onMouseEnter={() => setShowQR(true)}
+              onMouseLeave={() => setShowQR(false)}
+            >
+              {/* DOWNLOAD ICON */}
+              <img
+                src={downloadIcon}
+                alt="download"
+                className="w-5 h-5 object-contain cursor-pointer hover:scale-110 transition"
+              />
 
-      {/* HOVER SAFE AREA (IMPORTANT FIX) */}
-      <div className="absolute -right-8 top-full pt-2">
-        {showQR && (
-          <div
-            className="
+              {/* HOVER SAFE AREA (IMPORTANT FIX) */}
+              <div className="absolute -right-8 top-full pt-2">
+                {showQR && (
+                  <div
+                    className="
               w-[260px] bg-[#f1f1f1]
               rounded-[12px] shadow-xl p-4
               z-[9999]
             "
-          >
-            {/* ARROW */}
-            {/* <div className="absolute -top-1 right-4 w-3 h-3 bg-[#f1f1f1] rotate-45"></div> */}
+                  >
+                    {/* ARROW */}
+                    {/* <div className="absolute -top-1 right-4 w-3 h-3 bg-[#f1f1f1] rotate-45"></div> */}
 
-            <div className="flex justify-between items-center gap-3">
-              {/* LEFT */}
-              <div className="flex flex-col gap-6 text-black text-sm font-medium">
-                <a
-                  href="https://play.google.com/store/apps/details?id=com.jagods.customer"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 hover:opacity-70"
-                >
-                  <FaGooglePlay className="text-black text-[20px]" />
-                  <span className="text-[15px] font-medium">
-                    Play Store
-                  </span>
-                </a>
+                    <div className="flex justify-between items-center gap-3">
+                      {/* LEFT */}
+                      <div className="flex flex-col gap-6 text-black text-sm font-medium">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.jagods.customer"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-70"
+                        >
+                          <FaGooglePlay className="text-black text-[20px]" />
+                          <span className="text-[15px] font-medium">
+                            Play Store
+                          </span>
+                        </a>
 
-                {/* APP STORE */}
-                <div className="flex items-start gap-2">
-                  <FaApple className="text-black text-[25px] mt-[2px]" />
+                        {/* APP STORE */}
+                        <a
+                          href="https://apps.apple.com/in/app/jagods/id6749576808"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 hover:opacity-70"
+                        >
+                          <FaApple className="text-black text-[22px]" />
 
-                  <div className="flex flex-col leading-tight">
-                    <span className="text-[15px] font-medium">
-                      App Store
-                    </span>
-                    <span className="text-[10px] text-gray-500">
-                      Coming Soon
-                    </span>
+                          <span className="text-[15px] font-medium leading-none">
+                            App Store
+                          </span>
+                        </a>
+
+                      </div>
+
+                      {/* QR */}
+                      <div className="flex flex-col items-center">
+                        <img
+                          src={qrImg}
+                          alt="QR"
+                          className="w-[95px] h-[95px] object-contain"
+                        />
+                        <p className="text-[12px] text-gray-800 mt-1 text-center">
+                          Visit Our Website
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-
-              {/* QR */}
-              <div className="flex flex-col items-center">
-                <img
-                  src={qrImg}
-                  alt="QR"
-                  className="w-[95px] h-[95px] object-contain"
-                />
-                <p className="text-[12px] text-gray-800 mt-1 text-center">
-                  Visit Our Website
-                </p>
+                )}
               </div>
             </div>
           </div>
-        )}
-      </div>
-    </div>
-  </div>
 
-  <div className="h-10 w-[1px] bg-gray-600"></div>
+          <div className="h-10 w-[1px] bg-gray-600"></div>
 
-  <div className="flex items-center gap-3">
-    <div className="bg-[#FDBD5B] p-2 rounded-full text-black">
-      <FaPhoneAlt size={14} />
-    </div>
+          <div className="flex items-center gap-3">
+            <div className="bg-[#FDBD5B] p-2 rounded-full text-black">
+              <FaPhoneAlt size={14} />
+            </div>
 
-    <div>
-      <p className="text-xs text-gray-300">For Franchise</p>
-      <a href="tel:+918866373077">
-        <p className="font-semibold text-[#FDBD5B] cursor-pointer">
-          +91 88663 73077
-        </p>
-      </a>
-    </div>
-  </div>
-</div>
+            <div>
+              <p className="text-xs text-gray-300">For Franchise</p>
+              <a href="tel:+918866373077">
+                <p className="font-semibold text-[#FDBD5B] cursor-pointer">
+                  +91 88663 73077
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
 
         {/* Mobile Menu Button */}
         <div
@@ -297,6 +302,7 @@ export default function NavbarContent() {
 
                     {item.dropdown && (
                       <button
+                        className="text-3xl"
                         onClick={() =>
                           setOpenDropdown(openDropdown === index ? null : index)
                         }
