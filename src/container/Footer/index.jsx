@@ -150,73 +150,73 @@ const Footer = () => {
 
         </div>
 
-<div className="mt-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+        <div className="mt-12 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
 
-  {/* Phone */}
-  <div className="flex items-center gap-4">
-    <div className="bg-gray-700 p-3 rounded-full shrink-0">
-      <HiOutlinePhone className="text-white" />
-    </div>
+          {/* Phone */}
+          <div className="flex items-center gap-4">
+            <div className="bg-gray-700 p-3 rounded-full shrink-0">
+              <HiOutlinePhone className="text-white" />
+            </div>
 
-    <div>
-      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-        Phone
-      </p>
+            <div>
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+                Phone
+              </p>
 
-      <a
-        href="tel:+918866373077"
-        className="text-white hover:underline text-sm sm:text-base"
-      >
-        +91 88663 73077
-      </a>
-    </div>
-  </div>
+              <a
+                href="tel:+918866373077"
+                className="text-white hover:underline text-sm sm:text-base"
+              >
+                +91 88663 73077
+              </a>
+            </div>
+          </div>
 
-  {/* Email */}
-  <div className="flex items-center gap-4">
-    <div className="bg-gray-700 p-3 rounded-full shrink-0">
-      <HiOutlineMail className="text-white" />
-    </div>
+          {/* Email */}
+          <div className="flex items-center gap-4">
+            <div className="bg-gray-700 p-3 rounded-full shrink-0">
+              <HiOutlineMail className="text-white" />
+            </div>
 
-    <div>
-      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-        Email
-      </p>
+            <div>
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+                Email
+              </p>
 
-      <a
-        href="mailto:info@jagdaifoods.com"
-        className="text-white hover:underline text-sm sm:text-base break-all"
-      >
-        info@jagdaifoods.com
-      </a>
-    </div>
-  </div>
+              <a
+                href="mailto:info@jagdaifoods.com"
+                className="text-white hover:underline text-sm sm:text-base break-all"
+              >
+                info@jagdaifoods.com
+              </a>
+            </div>
+          </div>
 
-  {/* Address */}
-  <div className="flex items-start gap-4 lg:w-[42%]">
-    <div className="bg-gray-700 p-3 rounded-full shrink-0">
-      <HiOutlineLocationMarker className="text-white" />
-    </div>
+          {/* Address */}
+          <div className="flex items-start gap-4 lg:w-[42%]">
+            <div className="bg-gray-700 p-3 rounded-full shrink-0">
+              <HiOutlineLocationMarker className="text-white" />
+            </div>
 
-    <div>
-      <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
-        Address
-      </p>
+            <div>
+              <p className="text-xs text-gray-400 uppercase tracking-wider mb-1">
+                Address
+              </p>
 
-      <a
-        href="https://share.google/MoIbAT1dvnNDM4V7w"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-white leading-6 hover:underline text-sm sm:text-base"
-      >
-        5th Floor, Grand Empio, Shiv Habitat B-Block,
-        Motera Stadium Rd, opp. S Mall, Motera,
-        Ahmedabad, Gujarat 380005, India
-      </a>
-    </div>
-  </div>
+              <a
+                href="https://share.google/MoIbAT1dvnNDM4V7w"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white leading-6 hover:underline text-sm sm:text-base"
+              >
+                5th Floor, Grand Empio, Shiv Habitat B-Block,
+                Motera Stadium Rd, opp. S Mall, Motera,
+                Ahmedabad, Gujarat 380005, India
+              </a>
+            </div>
+          </div>
 
-</div>
+        </div>
 
       </Container>
 
